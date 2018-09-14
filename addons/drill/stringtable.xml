@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="mts">
+    <Package name="Drill">
+        <Key ID="STR_mts_Drill">
+            <Original>Drill</Original>
+            <German>Formaldienst</German>
+        </Key>
+        <Key ID="STR_mts_Drill_CBA_Category">
+            <Original>vLehrBrig16 Drill</Original>
+            <German>vLehrBrig16 Formaldienst</German>
+        </Key>
+		<Key ID="STR_mts_Drill_StandStill">
+            <Original>Stand still</Original>
+            <German>Stillgestanden</German>
+        </Key>
+		<Key ID="STR_mts_Drill_AtEase">
+            <Original>At ease</Original>
+            <German>Rührt euch</German>
+        </Key>
+		<Key ID="STR_mts_Drill_FY">
+            <Original>Give the Finger</Original>
+            <German>Stinkefinger zeigen</German>
+        </Key>
+        <Key ID="STR_mts_Drill_UI_Setting">
+            <Original>Drill UI</Original>
+            <German>Formaldienst UI</German>
+        </Key>
+	</Package>
+</Project>

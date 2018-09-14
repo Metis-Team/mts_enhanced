@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MTS">
+    <Package name="main">
+    <Container name="CBA_Settings">
+        <Key ID="STR_mts_main_settingCategoryCommon">
+            <English>Metis</English>
+            <German>Metis</German>
+        </Key>
+        <Key ID="STR_mts_main_settingCheckboxDescription">
+            <Original>Enable/disable %1</Original>
+            <German>%1 aktivieren/deaktivieren</German>
+        </Key>
+        <Key ID="STR_mts_main_statusEnable">
+            <Original>Enable</Original>
+            <German>Aktivieren</German>
+        </Key>
+        <Key ID="STR_mts_main_statusDisable">
+            <Original>Disable</Original>
+            <German>Deaktivieren</German>
+        </Key>
+    </Container>
+</Package>
+</Project>

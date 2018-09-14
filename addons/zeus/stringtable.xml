@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MTS">
+    <Package name="zeus">
+    <Container name="CBA_Keybinding">
+        <Key ID="STR_mts_zeus_cba_keybinding_categoryName">
+            <Original>vLehrBrig16 Zeus</Original>
+            <German>vLehrBrig16 Zeus</German>
+        </Key>
+        <Key ID="STR_mts_zeus_cba_keybinding_AIStanceUp">
+            <Original>Switch unit's stance to standing</Original>
+            <German>Haltung der Einheit auf aufrecht umschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_cba_keybinding_AIStanceMiddle">
+            <Original>Switch unit's stance to crouch</Original>
+            <German>Haltung der Einheit auf geduckt umschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_cba_keybinding_AIStanceDown">
+            <Original>Switch unit's stance to prone</Original>
+            <German>Haltung der Einheit auf liegend umschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_cba_keybinding_AIBehaviourCareless">
+            <Original>Switch group's behaviour to careless</Original>
+            <German>Verhalten der Gruppe auf achtlos umschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_cba_keybinding_AIBehaviourCombat">
+            <Original>Switch group's behaviour to combat</Original>
+            <German>Verhalten der Gruppe auf angriff umschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_cba_keybinding_AICombatModeBlue">
+            <Original>Switch group's combat mode to never fire</Original>
+            <German>Feuereröffnung der Gruppe auf feuerverbot umschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_cba_keybinding_AICombatModeYellow">
+            <Original>Switch group's combat mode to fire at will</Original>
+            <German>Feuereröffnung der Gruppe auf feuerfrei umschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_cba_keybinding_disableAIPathBehaviourPath">
+            <Original>Disable unit's movement</Original>
+            <German>Deaktiviert die Bewegung der Einheit</German>
+        </Key>
+        <Key ID="STR_mts_zeus_cba_keybinding_enableAIPathBehaviourPath">
+            <Original>Enable unit's movement</Original>
+            <German>Aktiviert die Bewegung der Einheit</German>
+        </Key>
+        <Key ID="STR_mts_zeus_cba_keybinding_disableAIPathBehaviourMove">
+            <Original>Disable unit's movement and alignment</Original>
+            <German>Deaktiviert die Bewegung und Zielsuche der Einheit</German>
+        </Key>
+        <Key ID="STR_mts_zeus_cba_keybinding_enableAIPathBehaviourMove">
+            <Original>Enable unit's movement and alignment</Original>
+            <German>Aktiviert die Bewegung und Zielsuche der Einheit</German>
+        </Key>
+    </Container>
+    <Container name="ACRE">
+        <Key ID="STR_mts_zeus_acreSpectator">
+            <Original>ACRE Spectator</Original>
+            <German>ACRE Zuschauer</German>
+        </Key>
+        <Key ID="STR_mts_zeus_statusEnable">
+            <Original>Enable</Original>
+            <German>Aktivieren</German>
+        </Key>
+        <Key ID="STR_mts_zeus_statusDisable">
+            <Original>Disable</Original>
+            <German>Deaktivieren</German>
+        </Key>
+        <Key ID="STR_mts_zeus_acreSpectator_hotkey">
+            <Original>Switch ACRE Spectator Mode</Original>
+            <German>ACRE Zuschauer Modus umschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_acreSpectator_enabled">
+            <Original>ACRE Spectator Mode enabled</Original>
+            <German>ACRE Zuschauer Modus aktiviert</German>
+        </Key>
+        <Key ID="STR_mts_zeus_acreSpectator_disabled">
+            <Original>ACRE Spectator Mode disabled</Original>
+            <German>ACRE Zuschauer Modus deaktiviert</German>
+        </Key>
+    </Container>
+    <Container name="traceProjectiles">
+        <Key ID="STR_mts_zeus_showProjectiles">
+            <Original>Show projectiles</Original>
+            <German>Projektile anzeigen</German>
+        </Key>
+        <Key ID="STR_mts_zeus_showProjectiles_duration">
+            <Original>Duration (Seconds)</Original>
+            <German>Dauer (Sekunden)</German>
+        </Key>
+        <Key ID="STR_mts_zeus_showProjectiles_errorNoUnit">
+            <Original>No unit was selected!</Original>
+            <German>Keine Einheit wurde ausgewählt!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_showProjectiles_errorMaxDuration">
+            <Original>Max duration is 600 seconds!</Original>
+            <German>Die Dauer darf höchstens 600 Sekunden sein!</German>
+        </Key>
+    </Container>
+    <Container name="artillery">
+        <Key ID="STR_mts_zeus_artillery">
+            <Original>Artillery strike</Original>
+            <German>Artillerieschlag</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_pos">
+            <Original>Artillery strike (Position)</Original>
+            <German>Artillerieschlag (Position)</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_firemission_he">
+            <Original>Artillery strike (Firemission for HE)</Original>
+            <German>Artillerieschlag (Feuerbefehl für HE)</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_firemission_smoke">
+            <Original>Artillery strike (Firemission for SMOKE)</Original>
+            <German>Artillerieschlag (Feuerbefehl für SMOKE)</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_firemission_illum">
+            <Original>Artillery strike (Firemission for ILLUM)</Original>
+            <German>Artillerieschlag (Feuerbefehl für ILLUM)</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_ammoType">
+            <Original>Ammo type</Original>
+            <German>Munitionsart</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_centerPositionType">
+            <Original>Center position</Original>
+            <German>Zielmitte</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_modulePos">
+            <Original>Module position</Original>
+            <German>Modulposition</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_customPos">
+            <Original>Target location</Original>
+            <German>Zielort</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_centerPositionXPos">
+            <Original>X Coordinate (Target location only)</Original>
+            <German>X Koordinate (nur Zielort)</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_centerPositionYPos">
+            <Original>Y Coordinate (Target location only)</Original>
+            <German>Y Koordinate (nur Zielort)</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_ammoAmount">
+            <Original>Total amount of shells</Original>
+            <German>Gesamtanzahl der Geschosse</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_delayType">
+            <Original>Delay types</Original>
+            <German>Zeitverzögerungsarten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_delay">
+            <Original>Delay between shells</Original>
+            <German>Zeitl. Verzögerung zwischen Geschossen</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_duration">
+            <Original>Duration of fire mission [s]</Original>
+            <German>Wirkdauer [s]</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_durationWithAmmo">
+            <Original>Duration with dependency on ammo</Original>
+            <German>Wirkdauer in Abhängigkeit der Munitionsanzahl</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_durationWithDelay">
+            <Original>Duration with dependency on delay</Original>
+            <German>Wirkdauer in Abhängigkeit der Verzögerung</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_detonationHight">
+            <Original>Detonation hight of shells above terrain</Original>
+            <German>Zündhöhe der Geschosse über Boden</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_airburst">
+            <Original>Ignition type</Original>
+            <German>Zündart</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_airburst_no">
+            <Original>Impact</Original>
+            <German>Aufschlag</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_airburst_low">
+            <Original>Low ignition altidude (15m)</Original>
+            <German>Niedrige Zündhöhe (15m)</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_airburst_med">
+            <Original>Medium ignition altidude (20m)</Original>
+            <German>Mittlere Zündhöhe (20m)</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_airburst_high">
+            <Original>High ignition altidude (30m)</Original>
+            <German>Hohe Zündhöhe (30m)</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_areaLenght">
+            <Original>Target lenght [m]</Original>
+            <German>Zielbreite [m]</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_areaWidth">
+            <Original>Target width [m]</Original>
+            <German>Zieltiefe [m]</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_areaAngle">
+            <Original>Target attitude [mils]</Original>
+            <German>Zielachse [Strich]</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_timeOnTarget">
+            <Original>Time On Target [s]</Original>
+            <German>Zeitpunkt für Feuerbeginn [s]</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_errorInvalidAngle">
+            <Original>The Attitude cannot be less than 0 or greater than 6400!</Original>
+            <German>Die Zielachse darf nicht kleiner als 0 oder größer als 6400 sein!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_errorNoPos">
+            <Original>Position cannot be empty!</Original>
+            <German>Die Position darf nicht leer sein!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_errorDelayOrHight">
+            <Original>The delay or the detonation hight have invalid values!</Original>
+            <German>Die Verzögerung oder die Zündhöhe haben ungültige Werte!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_errorAmount">
+            <Original>The total amount of shells can't be less than 0!</Original>
+            <German>Die Gesamtanzahl der Geschosse kann nicht kleiner als 0 sein!</German>
+        </Key>
+    </Container>
+    <Container name="ACEUnconsciousIcon">
+        <Key ID="STR_mts_zeus_ACEUnconsciousIcon">
+            <Original>Zeus ACE unconscious icon</Original>
+            <German>Zeus ACE Bewusstlosigkeit Icon</German>
+        </Key>
+    </Container>
+    <Container name="unflipVehicle">
+        <Key ID="STR_mts_zeus_unflipVehicle">
+            <Original>Unflip vehicle</Original>
+            <German>Fahrzeug umdrehen</German>
+        </Key>
+        <Key ID="STR_mts_zeus_unflipVehicle_noVeh">
+            <Original>No vehicle selected!</Original>
+            <German>Kein Fahrzeug ausgewählt!</German>
+        </Key>
+    </Container>
+    <Container name="AI">
+        <Key ID="STR_mts_zeus_AI_revealTarget">
+            <Original>Reveal target</Original>
+            <German>Einheit aufdecken</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_forgetTarget">
+            <Original>Forget target</Original>
+            <German>Einheit vergessen</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_targetKnowledge">
+            <Original>Knowledge of target</Original>
+            <German>Wissen über Einheit</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_noAI">
+            <Original>No AI selected!</Original>
+            <German>Keine KI ausgewählt!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_noTarget">
+            <Original>No target selected!</Original>
+            <German>Keine Zieleinheit ausgewählt!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_revealedInfo">
+            <Original>Target revealed to AI unit</Original>
+            <German>Zieleinheit wurde der KI Einheit aufgedeckt</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_forgotInfo">
+            <Original>AI unit's knowledge about the target was resetted</Original>
+            <German>Wissen der KI Einheit über die Zieleinheit wurde zurückgesetzt</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_addedInfo">
+            <Original>Read information</Original>
+            <German>Information ausgelesen</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_knownByGroup">
+            <Original>Target known by group</Original>
+            <German>Zieleinheit der Gruppe bekannt</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_knownByUnit">
+            <Original>Target known by AI unit</Original>
+            <German>Zieleinheit der KI Einheit bekannt</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_true">
+            <Original>Yes</Original>
+            <German>Ja</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_false">
+            <Original>No</Original>
+            <German>Nein</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_pathBehaviour_path_true">
+            <Original>Enabled unit's movement</Original>
+            <German>Bewegung der Einheit aktiviert</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_pathBehaviour_path_false">
+            <Original>Disabled unit's movement</Original>
+            <German>Bewegung der Einheit deaktiviert</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_pathBehaviour_move_true">
+            <Original>Enabled unit's movement and alignment</Original>
+            <German>Bewegung und Zielsuche der Einheit aktiviert</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_pathBehaviour_move_false">
+            <Original>Disabled unit's movement and alignment</Original>
+            <German>Bewegung und Zielsuche der Einheit deaktiviert</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_behaviour_careless">
+            <Original>Groups's behaviour set to careless</Original>
+            <German>Verhalten der Gruppe auf achtlos geschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_behaviour_combat">
+            <Original>Groups's behaviour set to combat</Original>
+            <German>Verhalten der Gruppe auf angriff geschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_combatMode_blue">
+            <Original>Group's combat mode set to never fire</Original>
+            <German>Feuereröffnung der Gruppe auf feuerverbot geschaltet</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_combatMode_yellow">
+            <Original>Group's combat mode set to fire at will</Original>
+            <German>Feuereröffnung der Gruppe auf feuerfrei geschaltet</German>
+        </Key>
+    </Container>
+    </Package>
+</Project>

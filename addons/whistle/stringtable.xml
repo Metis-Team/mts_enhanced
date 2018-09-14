@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="mts">
+    <Package name="whistle">
+    <Container name="misc">
+            <Key ID="STR_mts_whistle_authors">
+                <Original>Timi007</Original>
+                <German>Timi007</German>
+            </Key>
+            <Key ID="STR_mts_whistle_whistleDisplayName">
+                <Original>FOX 40 Whistle</Original>
+                <German>FOX 40 Pfeife</German>
+            </Key>
+            <Key ID="STR_mts_whistle_description">
+                <Original>Produces a sound if you blow air into it.</Original>
+                <German>Erzeugt ein Geräusch wenn Luft hineingeblasen wird.</German>
+            </Key>
+    </Container>
+    <Container name="cba_keybinding">
+            <Key ID="STR_mts_whistle_cba_keybinding_categoryName">
+                <Original>vLehrBrig16 Whistle</Original>
+                <German>vLehrBrig16 Pfeife</German>
+            </Key>
+            <Key ID="STR_mts_whistle_cba_keybinding_blow_whistle">
+                <Original>Whistle</Original>
+                <German>Pfeifen</German>
+            </Key>
+    </Container>
+    </Package>
+</Project>

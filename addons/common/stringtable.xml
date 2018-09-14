@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="mts">
+    <Package name="common">
+        <Container name="Grasscutter">
+            <Key ID="STR_mts_common_grasscutter">
+        		<Original>Grass cutter</Original>
+                <German>Grasschneider</German>
+        	</Key>
+            <Key ID="STR_mts_common_grasscutter_removeGrass">
+                <Original>Remove grass</Original>
+                <German>Gras entfernen</German>
+            </Key>
+            <Key ID="STR_mts_common_grasscutter_size">
+                <Original>Grass cutter size</Original>
+                <German>Grasschneidergröße</German>
+            </Key>
+            <Key ID="STR_mts_common_grasscutter_size_tooltip">
+                <Original>Changes the size of the grass cutter</Original>
+                <German>Ändert die Größe des Grasschneiders</German>
+            </Key>
+            <Key ID="STR_mts_common_grasscutter_size_large">
+                <Original>Large</Original>
+                <German>Groß</German>
+            </Key>
+            <Key ID="STR_mts_common_grasscutter_size_medium">
+                <Original>Medium</Original>
+                <German>Mittel</German>
+            </Key>
+        </Container>
+        <Container name="chatCommands">
+            <Key ID="STR_mts_common_chatCommands_zeusCreated">
+                <Original>You can now use zeus.</Original>
+                <German>Du kannst jetzt Zeus benutzen.</German>
+            </Key>
+            <Key ID="STR_mts_common_chatCommands_falseArgument">
+                <Original>One or more arguments are false!</Original>
+                <German>Ein oder mehrere Argumente sind falsch!</German>
+            </Key>
+            <Key ID="STR_mts_common_chatCommands_teleportError">
+                <Original>Can't teleport!</Original>
+                <German>Teleport nicht möglich!</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>

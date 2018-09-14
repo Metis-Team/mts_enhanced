@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="mts">
+	<Package name="Cords">
+        <Key ID="STR_mts_Cords_major_rank">
+    		<Original>Major rank</Original>
+            <German>Major Dienstgrad</German>
+    	</Key>
+        <Key ID="STR_mts_Cords_cords">
+    		<Original>Cords</Original>
+            <German>Litzen</German>
+    	</Key>
+        <Key ID="STR_mts_Cords_inf">
+    		<Original>Infantry</Original>
+            <German>Infanterie</German>
+    	</Key>
+        <Key ID="STR_mts_Cords_pz">
+    		<Original>Armored</Original>
+            <German>Panzer</German>
+    	</Key>
+        <Key ID="STR_mts_Cords_fa">
+    		<Original>FA Cord</Original>
+            <German>FA Litze</German>
+    	</Key>
+        <Key ID="STR_mts_Cords_oa">
+    		<Original>OA Cord</Original>
+            <German>OA Litze</German>
+    	</Key>
+	</Package>
+</Project>

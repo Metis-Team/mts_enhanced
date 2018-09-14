@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="mts">
+	<Package name="map">
+        <Key ID="STR_mts_map_placeMap">
+    		<Original>Unfold Map</Original>
+            <German>Karte ausbreiten</German>
+    	</Key>
+        <Key ID="STR_mts_map_pickupMap">
+    		<Original>Pickup Map</Original>
+            <German>Karte aufheben</German>
+    	</Key>
+        <Key ID="STR_mts_map_openMap">
+    		<Original>Look in Map</Original>
+            <German>In Karte schauen</German>
+    	</Key>
+	</Package>
+</Project>

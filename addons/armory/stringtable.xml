@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="mts">
+	<Package name="Armory">
+        <Key ID="STR_mts_Armory_displayName">
+    		<Original>Armory</Original>
+            <German>Waffenkammer</German>
+    	</Key>
+        <Key ID="STR_mts_Armory_checkbox_arsenalToggle_tooltip">
+            <Original>Enable/disable Arsenal for everyone</Original>
+            <German>Arsenal für jeden freigeben/entziehen</German>
+        </Key>
+        <Key ID="STR_mts_Armory_button_createEquipmentCategory_tooltip">
+            <Original>Create new equipment category</Original>
+            <German>Neue Ausrüstungkategorie erstellen</German>
+        </Key>
+        <Key ID="STR_mts_Armory_button_toggleSettings_tooltip">
+            <Original>Show/hide settings</Original>
+            <German>Einstellungen anzeigen/verbergen</German>
+        </Key>
+        <Key ID="STR_mts_Armory_button_exitDialog_tooltip">
+            <Original>Close window</Original>
+            <German>Fenster schließen</German>
+        </Key>
+        <Key ID="STR_mts_Armory_text_loadout_title">
+            <Original>Loadouts</Original>
+            <German>Ausrüstung</German>
+        </Key>
+        <Key ID="STR_mts_Armory_text_backpack_title">
+            <Original>Backpacks</Original>
+            <German>Rucksäcke</German>
+        </Key>
+        <Key ID="STR_mts_Armory_editbox_equipmentName_tooltip">
+            <Original>Equipment name</Original>
+            <German>Ausrüstungsname</German>
+        </Key>
+        <Key ID="STR_mts_Armory_button_save_displayName">
+            <Original>Save</Original>
+            <German>Speichern</German>
+        </Key>
+        <Key ID="STR_mts_Armory_button_deleteEquipment_tooltip">
+            <Original>Delete equipment</Original>
+            <German>Ausrüstung löschen</German>
+        </Key>
+        <Key ID="STR_mts_Armory_button_createEquipmentCategory_displayName">
+            <Original>Create</Original>
+            <German>Erstellen</German>
+        </Key>
+        <Key ID="STR_mts_Armory_checkbox_initializeEquipmentCategory_tooltip">
+            <Original>Initializes equipment category after creation and if possible adds action for everyone</Original>
+            <German>Initialisiert die Ausrüstungskategorie und fügt, falls möglich, eine Aktion für jeden hinzu</German>
+        </Key>
+        <Key ID="STR_mts_Armory_error_equipmentCategoryCreation">
+            <Original>Equipment category '%1' couldn't be created!</Original>
+            <German>Ausrüstungskategorie '%1' konnte nicht erstellt werden!</German>
+        </Key>
+        <Key ID="STR_mts_Armory_error_EquipmentCategoryNotExists">
+            <Original>Equipment category '%1' doesn't exist!</Original>
+            <German>Ausrüstungskategorie '%1' existiert nicht!</German>
+        </Key>
+        <Key ID="STR_mts_Armory_text_medic">
+            <Original>Medic</Original>
+            <German>Sanitäter</German>
+        </Key>
+        <Key ID="STR_mts_Armory_text_doctor">
+            <Original>Doctor</Original>
+            <German>Arzt</German>
+        </Key>
+        <Key ID="STR_mts_Armory_text_engineer">
+            <Original>Engineer</Original>
+            <German>Pionier</German>
+        </Key>
+        <Key ID="STR_mts_Armory_text_AdvEngineer">
+            <Original>Adv. Engineer</Original>
+            <German>Instandsetzer</German>
+        </Key>
+        <Key ID="STR_mts_Armory_text_none">
+            <Original>None</Original>
+            <German>Nichts</German>
+        </Key>
+        <Key ID="STR_mts_Armory_error_nameNotEmpty">
+            <Original>The equipment name must have at least one character!</Original>
+            <German>Der Ausrüstungsname muss mindestens ein Zeichen besitzen!</German>
+        </Key>
+        <Key ID="STR_mts_Armory_editbox_editors">
+            <Original>Who is permitted to edit this equipment category? Format: ["PlayerUID", "PlayerUID", ...]</Original>
+            <German>Wer darf diese Ausrüstungskategorie bearbeiten? Format: ["PlayerUID", "PlayerUID", ...]</German>
+        </Key>
+	</Package>
+</Project>
