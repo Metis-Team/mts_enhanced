@@ -12,7 +12,7 @@ PREP_RECOMPILE_END;
     [LLSTRING(UI_Setting), format [LELSTRING(main,settingCheckboxDescription), LLSTRING(UI_Setting)]],
     LELSTRING(main,settingCategoryCommon),
     true,
-    2,
+    0,
     {
         cutText ["", "PLAIN"];
     }
