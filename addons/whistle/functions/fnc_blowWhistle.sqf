@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-if ("MTS_FOX40_Whistle" in (items player) && {!GVAR(soundIsPlaying)}) then {
+if (QGVAR(FOX40) in (items player) && {!GVAR(soundIsPlaying)}) then {
     GVAR(soundIsPlaying) = true;
 
     private _isInside = false;

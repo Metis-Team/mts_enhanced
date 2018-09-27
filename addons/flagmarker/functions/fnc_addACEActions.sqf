@@ -26,10 +26,10 @@ private _flagAction = [
     {
         [player, objNull] call ace_common_fnc_canInteractWith &&
         (
-            ("MTS_Flag_Red" in (items player)) ||
-            ("MTS_Flag_Blue" in (items player)) ||
-            ("MTS_Flag_Green" in (items player)) ||
-            ("MTS_Flag_Yellow" in (items player)) ||
+            (QGVAR(red) in (items player)) ||
+            (QGVAR(blue) in (items player)) ||
+            (QGVAR(green) in (items player)) ||
+            (QGVAR(yellow) in (items player)) ||
             !((getForcedFlagTexture player) isEqualTo "")
         )
     }
@@ -45,7 +45,7 @@ private _carryRedFlagAction = [
         ["red"] call FUNC(carryFlag);
     },
     {
-        ("MTS_Flag_Red" in (items player)) &&
+        (QGVAR(red) in (items player)) &&
         ((getForcedFlagTexture player) isEqualTo "")
     }
 ] call ace_interact_menu_fnc_createAction;
@@ -59,7 +59,7 @@ private _carryBlueFlagAction = [
         ["blue"] call FUNC(carryFlag);
     },
     {
-        ("MTS_Flag_Blue" in (items player)) &&
+        (QGVAR(blue) in (items player)) &&
         ((getForcedFlagTexture player) isEqualTo "")
     }
 ] call ace_interact_menu_fnc_createAction;
@@ -73,7 +73,7 @@ private _carryGreenFlagAction = [
         ["green"] call FUNC(carryFlag);
     },
     {
-        ("MTS_Flag_Green" in (items player)) &&
+        (QGVAR(green) in (items player)) &&
         ((getForcedFlagTexture player) isEqualTo "")
     }
 ] call ace_interact_menu_fnc_createAction;
@@ -87,7 +87,7 @@ private _carryYellowFlagAction = [
         ["yellow"] call FUNC(carryFlag);
     },
     {
-        ("MTS_Flag_Yellow" in (items player)) &&
+        (QGVAR(yellow) in (items player)) &&
         ((getForcedFlagTexture player) isEqualTo "")
     }
 ] call ace_interact_menu_fnc_createAction;
@@ -115,7 +115,7 @@ private _placeRedFlagAction = [
         ["red"] call FUNC(placeFlag);
     },
     {
-        ("MTS_Flag_Red" in (items player))
+        (QGVAR(red) in (items player))
     }
 ] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "ACE_Equipment", QGVAR(flagAction)], _placeRedFlagAction] call ace_interact_menu_fnc_addActionToClass;
@@ -128,7 +128,7 @@ private _placeBlueFlagAction = [
         ["blue"] call FUNC(placeFlag);
     },
     {
-        ("MTS_Flag_Blue" in (items player))
+        (QGVAR(blue) in (items player))
     }
 ] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "ACE_Equipment", QGVAR(flagAction)], _placeBlueFlagAction] call ace_interact_menu_fnc_addActionToClass;
@@ -141,7 +141,7 @@ private _placeGreenFlagAction = [
         ["green"] call FUNC(placeFlag);
     },
     {
-        ("MTS_Flag_Green" in (items player))
+        (QGVAR(green) in (items player))
     }
 ] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "ACE_Equipment", QGVAR(flagAction)], _placeGreenFlagAction] call ace_interact_menu_fnc_addActionToClass;
@@ -154,7 +154,7 @@ private _placeYellowFlagAction = [
         ["yellow"] call FUNC(placeFlag);
     },
     {
-        ("MTS_Flag_Yellow" in (items player))
+        (QGVAR(yellow) in (items player))
     }
 ] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "ACE_Equipment", QGVAR(flagAction)], _placeYellowFlagAction] call ace_interact_menu_fnc_addActionToClass;

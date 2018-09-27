@@ -51,12 +51,12 @@ if (_ammoAmount <= 0) exitWith {
 };
 
 if (_delayType isEqualTo 0) then {
-    [_position, "MTS_Artillery_ILLUM", _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+    [_position, QGVAR(artillery_ILLUM), _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
 };
 if (_delayType isEqualTo 1) then {
-    [_position, "MTS_Artillery_ILLUM", _ammoAmount, true, _duration, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+    [_position, QGVAR(artillery_ILLUM), _ammoAmount, true, _duration, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
 };
 if (_delayType isEqualTo 2) then {
     _ammoAmount = ceil (_duration / _delay);
-    [_position, "MTS_Artillery_ILLUM", _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+    [_position, QGVAR(artillery_ILLUM), _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
 };

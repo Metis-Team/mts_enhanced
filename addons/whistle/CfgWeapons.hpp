@@ -2,7 +2,7 @@ class CfgWeapons {
     class CBA_MiscItem;
     class CBA_MiscItem_ItemInfo;
 
-    class MTS_FOX40_Whistle: CBA_MiscItem {
+    class GVAR(FOX40): CBA_MiscItem {
         scope = 2;
         displayName = CSTRING(whistleDisplayName);
         picture = QPATHTOF(data\ui\fox40_whistle_icon.paa);
