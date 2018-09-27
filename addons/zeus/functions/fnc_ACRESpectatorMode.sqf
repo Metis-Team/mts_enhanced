@@ -20,7 +20,7 @@
 CHECK(!isClass (configFile >> "CfgPatches" >> "acre_api") || !hasinterface);
 
 //Zeus module
-["vLehrBrig16", LLSTRING(acreSpectator),
+["Metis", LLSTRING(acreSpectator),
     {
         private _dialog_result = [
             LLSTRING(acreSpectator),

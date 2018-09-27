@@ -18,7 +18,7 @@
 
 CHECK(!hasinterface);
 
-["vLehrBrig16", LLSTRING(artillery), {
+["Metis", LLSTRING(artillery), {
     params [["_modulePosition", [0,0,0], [[]]]];
     private ["_position"];
 
