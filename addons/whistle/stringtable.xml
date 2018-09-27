@@ -17,8 +17,8 @@
     </Container>
     <Container name="cba_keybinding">
             <Key ID="STR_mts_whistle_cba_keybinding_categoryName">
-                <Original>vLehrBrig16 Whistle</Original>
-                <German>vLehrBrig16 Pfeife</German>
+                <Original>Metis Whistle</Original>
+                <German>Metis Pfeife</German>
             </Key>
             <Key ID="STR_mts_whistle_cba_keybinding_blow_whistle">
                 <Original>Whistle</Original>

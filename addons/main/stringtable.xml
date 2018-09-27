@@ -3,8 +3,8 @@
     <Package name="main">
     <Container name="CBA_Settings">
         <Key ID="STR_mts_main_settingCategoryCommon">
-            <English>Metis</English>
-            <German>Metis</German>
+            <English>Metis Enhanced</English>
+            <German>Metis Enhanced</German>
         </Key>
         <Key ID="STR_mts_main_settingCheckboxDescription">
             <Original>Enable/disable %1</Original>

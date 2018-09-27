@@ -3,8 +3,8 @@
     <Package name="zeus">
     <Container name="CBA_Keybinding">
         <Key ID="STR_mts_zeus_cba_keybinding_categoryName">
-            <Original>vLehrBrig16 Zeus</Original>
-            <German>vLehrBrig16 Zeus</German>
+            <Original>Metis Zeus</Original>
+            <German>Metis Zeus</German>
         </Key>
         <Key ID="STR_mts_zeus_cba_keybinding_AIStanceUp">
             <Original>Switch unit's stance to standing</Original>
