@@ -3,7 +3,7 @@
  *  Author: Timi007
  *
  *  Description:
- *      Adds an action to place a unit's map no the vehicle.
+ *      Adds an action to place a unit's map on the vehicle.
  *      The map will be attached to the vehicle with the given offset and orientation.
  *      This function has a local effect.
  *
