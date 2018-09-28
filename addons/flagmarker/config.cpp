@@ -4,18 +4,18 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-            "MTS_Flag_Item_Base",
-            "MTS_Flag_Red_Item",
-            "MTS_Flag_Blue_Item",
-            "MTS_Flag_Green_Item",
-            "MTS_Flag_Yellow_Item"
+            QGVAR(item_base),
+            QGVAR(red_item),
+            QGVAR(blue_item),
+            QGVAR(green_item),
+            QGVAR(yellow_item)
         };
         weapons[] = {
-            "MTS_Flag_Base",
-            "MTS_Flag_Red",
-            "MTS_Flag_Blue",
-            "MTS_Flag_Green",
-            "MTS_Flag_Yellow"
+            QGVAR(base),
+            QGVAR(red),
+            QGVAR(blue),
+            QGVAR(green),
+            QGVAR(yellow)
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"mts_main", "ace_interact_menu", "ace_common", "ace_interaction"};

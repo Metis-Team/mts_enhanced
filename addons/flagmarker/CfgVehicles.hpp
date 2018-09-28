@@ -1,7 +1,7 @@
 class CfgVehicles {
     class Item_Base_F;
 
-    class MTS_Flag_Item_Base: Item_Base_F {
+    class GVAR(item_base): Item_Base_F {
         author = CSTRING(authors);
         scope = 0;
         scopeCurator = 0;
@@ -11,50 +11,50 @@ class CfgVehicles {
         model = "\A3\Weapons_F\DummyItemHorizontal.p3d";
         class TransportItems {};
     };
-    class MTS_Flag_Red_Item: MTS_Flag_Item_Base {
+    class GVAR(red_item): GVAR(item_base) {
         author = CSTRING(authors);
         displayName = CSTRING(flagRedDisplayName);
         scope = 2;
         scopeCurator = 2;
         class TransportItems {
-            class MTS_Flag_Red {
-                name = "MTS_Flag_Red";
+            class GVAR(red) {
+                name = QGVAR(red);
                 count = 1;
             };
         };
     };
-    class MTS_Flag_Blue_Item: MTS_Flag_Item_Base {
+    class GVAR(blue_item): GVAR(item_base) {
         author = CSTRING(authors);
         displayName = CSTRING(flagBlueDisplayName);
         scope = 2;
         scopeCurator = 2;
         class TransportItems {
-            class MTS_Flag_Blue {
-                name = "MTS_Flag_Blue";
+            class GVAR(blue) {
+                name = QGVAR(blue);
                 count = 1;
             };
         };
     };
-    class MTS_Flag_Green_Item: MTS_Flag_Item_Base {
+    class GVAR(green_item): GVAR(item_base) {
         author = CSTRING(authors);
         displayName = CSTRING(flagGreenDisplayName);
         scope = 2;
         scopeCurator = 2;
         class TransportItems {
-            class MTS_Flag_Green {
-                name = "MTS_Flag_Green";
+            class GVAR(green) {
+                name = QGVAR(green);
                 count = 1;
             };
         };
     };
-    class MTS_Flag_Yellow_Item: MTS_Flag_Item_Base {
+    class GVAR(yellow_item): GVAR(item_base) {
         author = CSTRING(authors);
         displayName = CSTRING(flagYellowDisplayName);
         scope = 2;
         scopeCurator = 2;
         class TransportItems {
-            class MTS_Flag_Yellow {
-                name = "MTS_Flag_Yellow";
+            class GVAR(yellow) {
+                name = QGVAR(yellow);
                 count = 1;
             };
         };

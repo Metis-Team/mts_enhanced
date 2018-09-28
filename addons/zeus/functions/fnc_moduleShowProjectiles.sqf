@@ -18,7 +18,7 @@
 
 CHECK(!hasinterface);
 
-["vLehrBrig16", LLSTRING(showProjectiles),
+["Metis", LLSTRING(showProjectiles),
     {
         private _dialog_result = [
             LLSTRING(showProjectiles),

@@ -1,6 +1,6 @@
 class CfgVehicles {
     class Item_Base_F;
-    class MTS_FOX40_ItemWhistle: Item_Base_F {
+    class GVAR(FOX40_Item): Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(whistleDisplayName);
@@ -10,8 +10,8 @@ class CfgVehicles {
         vehicleClass = "Items";
         model = "\A3\Weapons_F\DummyItemHorizontal.p3d";
         class TransportItems {
-            class MTS_FOX40_Whistle {
-                name = "MTS_FOX40_Whistle";
+            class GVAR(FOX40) {
+                name = QGVAR(FOX40);
                 count = 1;
             };
         };

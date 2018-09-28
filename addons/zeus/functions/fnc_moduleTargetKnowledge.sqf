@@ -18,7 +18,7 @@
 
 CHECK(!hasinterface);
 
-["vLehrBrig16", LLSTRING(AI_targetKnowledge), {
+["Metis", LLSTRING(AI_targetKnowledge), {
     params["", ["_AI", objNull, [objNull]]];
 
     //Check if selected unit is an AI

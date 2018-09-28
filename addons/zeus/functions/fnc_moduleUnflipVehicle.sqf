@@ -18,7 +18,7 @@
 
 CHECK(!hasinterface);
 
-["vLehrBrig16", LLSTRING(unflipVehicle),
+["Metis", LLSTRING(unflipVehicle),
     {
         params["", ["_vehicle", objNull, [objNull]]];
 

@@ -36,7 +36,7 @@ if (_color in ["red", "blue", "green", "yellow"]) then {
         params ["_loadout", "_color"];
 
         player setUnitLoadout _loadout;
-        player removeItem format ["MTS_Flag_%1", _color];
+        player removeItem format [QGVAR(%1), _color];
     }, [_loadout, _color]] call CBA_fnc_execNextFrame;
 } else {
     //remove carried flag
@@ -46,6 +46,6 @@ if (_color in ["red", "blue", "green", "yellow"]) then {
         private _flagColorPath = _flagTexture splitString "_";
         reverse _flagColorPath;
         private _flagColor = _flagColorPath select 1;
-        player addItem format ["MTS_Flag_%1", _flagColor];
+        player addItem format [QGVAR(%1), _flagColor];
     };
 };

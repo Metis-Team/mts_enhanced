@@ -61,7 +61,7 @@ for "_i" from 0 to (_ammoAmount - 1) do {
     private _randPosInArea = [[_centerPos, _areaLenght, _areaWidth, _areaAngle, true]] call CBA_fnc_randPosArea; //Find random pos in impact area
 
     //Set spawn hight
-    if (_ammoType isEqualTo "MTS_Artillery_ILLUM") then {
+    if (_ammoType isEqualTo QGVAR(artillery_ILLUM)) then {
         _randPosInArea set [2, _detonationHight];
     } else {
         private _randSpawnHight = random [300,600,900]; //Again for inaccuracy
@@ -83,7 +83,7 @@ for "_i" from 0 to (_ammoAmount - 1) do {
         //Spawn projectile
         params ["_ammoType", "_randPosInArea", "_detonationHight"];
         private _projectile = createVehicle [_ammotype, _randPosInArea, [], 0, "NONE"];
-        if (_ammoType isEqualTo "MTS_Artillery_ILLUM") then {
+        if (_ammoType isEqualTo QGVAR(artillery_ILLUM)) then {
             _projectile setvelocity [0,0,-3];
         } else {
             _projectile setvelocity [0,0,-150];

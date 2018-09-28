@@ -40,7 +40,7 @@ private _pickupFlag = [
             private _flagColor = _flagColorPath select 1;
 
             //add the flag item with the right color to the player
-            player addItem format ["MTS_Flag_%1", _flagColor];
+            player addItem format [QGVAR(%1), _flagColor];
 
             //remove the flag
             deleteVehicle _flag;

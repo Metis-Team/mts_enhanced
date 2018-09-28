@@ -72,7 +72,7 @@ private _mouseClickID = [player, "DefaultAction", {GVAR(isPlacing) isEqualTo PLA
                 private _flagTexture = flagTexture _flag;
                 deleteVehicle _flag;
 
-                player removeItem format ["MTS_Flag_%1", _color];
+                player removeItem format [QGVAR(%1), _color];
 
                 private _globalFlag = "FlagChecked_F" createVehicle [0, 0, 0];
                 _globalFlag setFlagTexture _flagTexture;
