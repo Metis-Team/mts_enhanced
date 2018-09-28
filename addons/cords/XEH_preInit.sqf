@@ -12,7 +12,7 @@ PREP_RECOMPILE_END;
     [LLSTRING(cords), format [LELSTRING(main,settingCheckboxDescription), LLSTRING(cords)]],
     LELSTRING(main,settingCategoryCommon),
     true,
-    1,
+    0,
     {}
 ] call CBA_Settings_fnc_init;
 
