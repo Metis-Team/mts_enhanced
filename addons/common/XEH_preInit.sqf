@@ -13,7 +13,7 @@ PREP_RECOMPILE_END;
     [LLSTRING(grasscutter), format [LELSTRING(main,settingCheckboxDescription),LLSTRING(grasscutter)]],
     LELSTRING(main,settingCategoryCommon),
     true,
-    1,
+    0,
     {}
 ] call CBA_Settings_fnc_init;
 
@@ -28,7 +28,7 @@ PREP_RECOMPILE_END;
         [LLSTRING(grasscutter_size_large), LLSTRING(grasscutter_size_medium)],
         1
     ],
-    1,
+    0,
     {}
 ] call CBA_Settings_fnc_init;
 
