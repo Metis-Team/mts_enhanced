@@ -7,6 +7,7 @@
  *
  *  Parameter(s):
  *      0: OBJECT - Placed map
+ *      1: OBJECT - The vehicle which the map is placed on. (Optional, only needed if actions are called from vehicle interaction)
  *
  *  Returns:
  *      Nothing.
@@ -16,7 +17,7 @@
  *
  */
 #include "script_component.hpp"
-params [["_map", objNull, [objNull]]];
+params [["_map", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
 
 CHECK(isNull _map);
 
@@ -48,23 +49,31 @@ private _pickupMap = [
     LLSTRING(pickupMap),
     "A3\Ui_f\data\MAP\Markers\Military\pickup_ca.paa",
     {
-        params ["_map"];
+        params ["_map", "", "_args"];
+        _args params ["_vehicle"];
 
         playSound3D ["z\mts_enhanced\addons\map\data\sounds\pickup_map.ogg", player, false, getPosASL player, 10, 1, 15];
         player playAction "PutDown";
 
         [{((animationState player) select [25,7]) isEqualTo "putdown"}, {
-            params ["_map"];
+            params ["_map", "_vehicle"];
 
             [QGVAR(removeMap), _map] call CBA_fnc_remoteEvent;
 
             deleteVehicle _map;
+
+            if (!isNull _vehicle) then {
+                _vehicle setVariable [QGVAR(isMapOnVehicle), false, true];
+            };
+
             GVAR(hasMap) = true;
             player linkItem "ItemMap";
-        }, [_map]] call CBA_fnc_waitUntilAndExecute;
+        }, [_map, _vehicle]] call CBA_fnc_waitUntilAndExecute;
     },
     {
         !("ItemMap" in (assignedItems player))
-    }
+    },
+    {},
+    [_vehicle]
 ] call ace_interact_menu_fnc_createAction;
 [_map, 0, ["ACE_MainActions"], _pickupMap] call ace_interact_menu_fnc_addActionToObject;
