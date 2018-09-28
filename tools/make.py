@@ -66,7 +66,7 @@ make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "mts"
+key_name = "mts_enhanced_"
 key = ""
 dssignfile = ""
 prefix = "mts"
@@ -665,10 +665,10 @@ def restore_version_files():
 
 
 def get_private_keyname(commitID,module="main"):
-    global pbo_name_prefix
+    global key_name
     global project_version
 
-    keyName = str("{prefix}{version}-{commit_id}".format(prefix=pbo_name_prefix,version=project_version,commit_id=commitID))
+    keyName = str("{prefix}{version}-{commit_id}".format(prefix=key_name,version=project_version,commit_id=commitID))
     return keyName
 
 
@@ -767,7 +767,7 @@ def version_stamp_pboprefix(module,commitID):
 
 def main(argv):
     """Build an Arma addon suite in a directory from rules in a make.cfg file."""
-    print_blue("\nmake.py for Arma, modified for vLehrBrig16 v{}".format(__version__))
+    print_blue("\nmake.py for Arma, modified for Metis Enhanced v{}".format(__version__))
 
     global project_version
     global arma3tools_path

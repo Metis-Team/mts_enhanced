@@ -26,7 +26,7 @@ def main():
   This script will create your MTS dev environment for you.
 
   Before you run this, you should already have:
-    - A properly setup vLehrBrig16 Development Environment
+    - A properly setup Metis Enhanced Development Environment
 
   If you have not done those things yet, please abort this script in the next step and do so first.
 
@@ -92,7 +92,7 @@ if __name__ == "__main__":
     exitcode = main()
 
     if exitcode > 0:
-        print("\nSomething went wrong during the setup. Make sure you run this script as administrator. If these issues persist, please follow the instructions on the vLehrBrig16 wiki to perform the setup manually.")
+        print("\nSomething went wrong during the setup. Make sure you run this script as administrator. If these issues persist, please follow the instructions on the Metis Enhanced wiki to perform the setup manually.")
     else:
         print("\nSetup successfully completed.")
 
