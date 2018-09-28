@@ -12,7 +12,7 @@ PREP_RECOMPILE_END;
     [LLSTRING(ACEUnconsciousIcon), format [LELSTRING(main,settingCheckboxDescription), LLSTRING(ACEUnconsciousIcon)]],
     LELSTRING(main,settingCategoryCommon),
     false,
-    2,
+    0,
     {}
 ] call CBA_Settings_fnc_init;
 
