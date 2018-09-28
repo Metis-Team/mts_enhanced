@@ -25,8 +25,8 @@ CHECK(_groups isEqualTo []);
 
 //set behaviour for each selected group
 {
-    _x setBehaviour _behaviour;
-} count _groups;
+    [_x, _behaviour] remoteExecCall ["setBehaviour", groupOwner _x];
+} forEach _groups;
 
 //give the curator feedback
-[localize format[LSTRING(AI_behaviour_%1), tolower(_behaviour)]] call Ares_fnc_ShowZeusMessage;
+[localize format[LSTRING(AI_behaviour_%1), toLower(_behaviour)]] call Ares_fnc_ShowZeusMessage;
