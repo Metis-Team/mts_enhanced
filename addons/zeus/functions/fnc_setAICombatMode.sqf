@@ -25,8 +25,8 @@ CHECK(_groups isEqualTo []);
 
 //set combat mode for each selected group
 {
-    _x setCombatMode _combatMode;
-} count _groups;
+    [_x, _combatMode] remoteExecCall ["setCombatMode", groupOwner _x];
+} forEach _groups;
 
 //give the curator feedback
-[localize format[LSTRING(AI_combatMode_%1), tolower(_combatMode)]] call Ares_fnc_ShowZeusMessage;
+[localize format[LSTRING(AI_combatMode_%1), toLower(_combatMode)]] call Ares_fnc_ShowZeusMessage;

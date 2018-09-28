@@ -28,11 +28,11 @@ curatorSelected params ["_objects"];
 {
     CHECK((isPlayer _x) || {(count (crew _x)) isEqualTo 0} || {isnull _x});
     if (_enableAI) then {
-        _x enableAI _section;
+        [_x, _section] remoteExecCall ["enableAI", _x];
     } else {
-        _x disableAI _section;
+        [_x, _section] remoteExecCall ["disableAI", _x];
     };
-} count _objects;
+} forEach _objects;
 
 //give the curator feedback
 [localize format[LSTRING(AI_pathBehaviour_%1_%2), _section, _enableAI]] call Ares_fnc_ShowZeusMessage;
