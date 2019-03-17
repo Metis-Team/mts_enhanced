@@ -47,7 +47,7 @@ private _openMap = [
 private _pickupMap = [
     QGVAR(pickupMap),
     LLSTRING(pickupMap),
-    "A3\Ui_f\data\MAP\Markers\Military\pickup_ca.paa",
+    "A3\Ui_f\data\IGUI\Cfg\Actions\take_ca.paa",
     {
         params ["_map", "", "_args"];
         _args params ["_vehicle"];
