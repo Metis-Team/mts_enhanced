@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX, Timi007
  *
@@ -16,7 +17,7 @@
  *      [_map] call mts_map_fnc_mapActionsMenu
  *
  */
-#include "script_component.hpp"
+
 params [["_map", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
 
 CHECK(isNull _map);
@@ -39,7 +40,7 @@ private _openMap = [
         openMap true;
     },
     {
-        true
+        [player, _this select 0] call ace_common_fnc_canInteractWith
     }
 ] call ace_interact_menu_fnc_createAction;
 [_map, 0, ["ACE_MainActions"], _openMap] call ace_interact_menu_fnc_addActionToObject;
@@ -71,7 +72,7 @@ private _pickupMap = [
         }, [_map, _vehicle]] call CBA_fnc_waitUntilAndExecute;
     },
     {
-        !("ItemMap" in (assignedItems player))
+        !("ItemMap" in (assignedItems player)) && {[player, _this select 0] call ace_common_fnc_canInteractWith}
     },
     {},
     [_vehicle]
