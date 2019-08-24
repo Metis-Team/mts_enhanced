@@ -27,20 +27,21 @@ private _openMap = [
     LLSTRING(openMap),
     "A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\map_ca.paa",
     {
-        params ["_map"];
+        params ["_map", "_player"];
 
-        if ("ItemMap" in (assignedItems player)) then {
+        if ("ItemMap" in (assignedItems _player)) then {
             GVAR(hasMap) = true;
         } else {
             GVAR(hasMap) = false;
-            player linkItem "ItemMap";
+            _player linkItem "ItemMap";
         };
 
         GVAR(map) = _map;
         openMap true;
     },
     {
-        [player, _this select 0] call ace_common_fnc_canInteractWith
+        params ["_map", "_player"];
+        [_player, _map] call ace_common_fnc_canInteractWith
     }
 ] call ace_interact_menu_fnc_createAction;
 [_map, 0, ["ACE_MainActions"], _openMap] call ace_interact_menu_fnc_addActionToObject;
@@ -50,14 +51,14 @@ private _pickupMap = [
     LLSTRING(pickupMap),
     "A3\Ui_f\data\IGUI\Cfg\Actions\take_ca.paa",
     {
-        params ["_map", "", "_args"];
+        params ["_map", "_player", "_args"];
         _args params ["_vehicle"];
 
-        playSound3D ["z\mts_enhanced\addons\map\data\sounds\pickup_map.ogg", player, false, getPosASL player, 10, 1, 15];
-        player playAction "PutDown";
+        playSound3D ["z\mts_enhanced\addons\map\data\sounds\pickup_map.ogg", _player, false, getPosASL _player, 10, 1, 15];
+        _player playAction "PutDown";
 
-        [{((animationState player) select [25,7]) isEqualTo "putdown"}, {
-            params ["_map", "_vehicle"];
+        [{((animationState (_this select 1)) select [25,7]) isEqualTo "putdown"}, {
+            params ["_map", "_player", "_vehicle"];
 
             [QGVAR(removeMap), _map] call CBA_fnc_remoteEvent;
 
@@ -68,11 +69,12 @@ private _pickupMap = [
             };
 
             GVAR(hasMap) = true;
-            player linkItem "ItemMap";
-        }, [_map, _vehicle]] call CBA_fnc_waitUntilAndExecute;
+            _player linkItem "ItemMap";
+        }, [_map, _player, _vehicle]] call CBA_fnc_waitUntilAndExecute;
     },
     {
-        !("ItemMap" in (assignedItems player)) && {[player, _this select 0] call ace_common_fnc_canInteractWith}
+        params ["_map", "_player"];
+        !("ItemMap" in (assignedItems _player)) && {[_player, _map] call ace_common_fnc_canInteractWith}
     },
     {},
     [_vehicle]
