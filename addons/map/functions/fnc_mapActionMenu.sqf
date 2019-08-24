@@ -52,7 +52,7 @@ private _pickupMap = [
         params ["_map", "", "_args"];
         _args params ["_vehicle"];
 
-        playSound3D ["z\mts_enhanced\addons\map\data\sounds\pickup_map.ogg", player, false, getPosASL player, 10, 1, 15];
+        [player, [QGVAR(pickupSound), 300]] remoteExecCall ["say3D"];
         player playAction "PutDown";
 
         [{((animationState player) select [25,7]) isEqualTo "putdown"}, {

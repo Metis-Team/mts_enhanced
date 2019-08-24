@@ -1,2 +1,1 @@
 PREP(blowWhistle);
-PREP(isInBuilding);

@@ -38,8 +38,8 @@ private _placeMapOnVehAction = [
         _args params ["_offset", "_vectorDirAndUp"];
 
         player playAction "putdown";
-        private _soundFile = format ["z\mts_enhanced\addons\map\data\sounds\unfold_map_%1.ogg", ((floor random 4) + 1)];
-        playSound3D [_soundFile, player, false, getPosASL player, 10, 1, 15];
+        private _sound = format [QGVAR(unfoldSound_%1), ((floor random 4) + 1)];
+        [player, [_sound, 300]] remoteExecCall ["say3D"];
 
         [{((animationState player) select [25,7]) isEqualTo "putdown"}, {
             params ["_vehicle", "_offset", "_vectorDirAndUp"];
