@@ -29,15 +29,15 @@ private _placeMapAction = [
             _player playAction "crouch";
         };
 
-        [{(toLower (stance (_this select 0))) isEqualTo "crouch"}, {
+        [{(toLower (stance _this)) isEqualTo "crouch"}, {
             params ["_player"];
 
             _player playAction "putdown";
             private _soundFile = format ["z\mts_enhanced\addons\map\data\sounds\unfold_map_%1.ogg", ((floor random 4) + 1)];
             playSound3D [_soundFile, _player, false, getPosASL _player, 10, 1, 15];
-        }, [_player]] call CBA_fnc_waitUntilAndExecute;
+        }, _player] call CBA_fnc_waitUntilAndExecute;
 
-        [{((animationState (_this select 0)) select [25,7]) isEqualTo "putdown"}, {
+        [{((animationState _this) select [25,7]) isEqualTo "putdown"}, {
             params ["_player"];
 
             private _pos = _player getRelPos [1, 0];
@@ -49,7 +49,7 @@ private _placeMapAction = [
             [_map] remoteExecCall [QFUNC(mapActionMenu), 0, _map];
 
             _player unlinkItem "ItemMap";
-        }, [_player]] call CBA_fnc_waitUntilAndExecute;
+        }, _player] call CBA_fnc_waitUntilAndExecute;
     },
     {
         params ["", "_player"];
