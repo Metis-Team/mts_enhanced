@@ -1,66 +1,68 @@
 class CfgVehicles {
-    class Thing;
-    class Building;
-    class Strategic;
-    class NonStrategic: Building {
-        class DestructionEffects;
+    class NonStrategic;
+    class GVAR(bush_base): NonStrategic {
+        author = "$STR_A3_Bohemia_Interactive";
+        scope = 0;
+        destrType = "DestructTent";
+        icon = QPATHTOF(data\ui\mts_nature_ui_bush.paa);
+        editorCategory = "EdCat_Environment";
+        editorSubcategory = QGVAR(bush_faction);
     };
-    class Fence;
-    class Land_VASICore;
-    class Fence_Ind: Fence {
-        class DestructionEffects;
+
+    class GVAR(plant_base): GVAR(bush_base) {
+        icon = QPATHTOF(data\ui\mts_nature_ui_plant.paa);
+        editorSubcategory = QGVAR(plant_faction);
+    };
+
+    class GVAR(tree_base): GVAR(bush_base) {
+        destrType = "DestructTree";
+        icon = QPATHTOF(data\ui\mts_nature_ui_tree.paa);
+        editorSubcategory = QGVAR(tree_faction);
+    };
+
+    // Only for BWC
+    class Rocks_base_F;
+    class GVAR(rock_base): Rocks_base_F {
+        author = "$STR_A3_Bohemia_Interactive";
+        scope = 0;
+        icon = QPATHTOF(data\ui\mts_nature_ui_rock.paa);
+        accuracy = 1000;
     };
 
     #define BUSH(NAME,MODELPATH) \
-    class NAME##: Fence_Ind { \
-        author = $STR_A3_Bohemia_Interactive; \
+    class NAME##: GVAR(bush_base) { \
         scope = 2; \
         scopeCurator = 2; \
         model = MODELPATH##; \
-        icon = QPATHTOF(data\ui\mts_nature_ui_bush.paa); \
         displayName = CSTRING(NAME); \
         editorPreview = QPATHTOF(data\editorpreview\NAME.jpg); \
-        editorCategory = QGVAR(faction); \
-        editorSubcategory = QGVAR(bush_faction); \
     }
 
     #define PLANT(NAME,MODELPATH) \
-    class NAME##: Fence_Ind { \
-        author = $STR_A3_Bohemia_Interactive; \
+    class NAME##: GVAR(plant_base) { \
         scope = 2; \
         scopeCurator = 2; \
         model = MODELPATH##; \
-        icon = QPATHTOF(data\ui\mts_nature_ui_plant.paa); \
         displayName = CSTRING(NAME); \
         editorPreview = QPATHTOF(data\editorpreview\NAME.jpg); \
-        editorCategory = QGVAR(faction); \
-        editorSubcategory = QGVAR(plant_faction); \
     }
 
     #define TREE(NAME,MODELPATH) \
-    class NAME##: Fence_Ind { \
-        author = $STR_A3_Bohemia_Interactive; \
+    class NAME##: GVAR(tree_base) { \
         scope = 2; \
         scopeCurator = 2; \
         model = MODELPATH##; \
-        icon = QPATHTOF(data\ui\mts_nature_ui_tree.paa); \
         displayName = CSTRING(NAME); \
         editorPreview = QPATHTOF(data\editorpreview\NAME.jpg); \
-        editorCategory = QGVAR(faction); \
-        editorSubcategory = QGVAR(tree_faction); \
     }
 
     #define ROCK(NAME,MODELPATH) \
-    class NAME##: Fence_Ind { \
-        author = $STR_A3_Bohemia_Interactive; \
+    class NAME##: GVAR(rock_base) { \
         scope = 2; \
         scopeCurator = 2; \
         model = MODELPATH##; \
         icon = QPATHTOF(data\ui\mts_nature_ui_rock.paa); \
         displayName = CSTRING(NAME); \
-        editorPreview = QPATHTOF(data\editorpreview\NAME.jpg); \
-        editorCategory = QGVAR(faction); \
-        editorSubcategory = QGVAR(rock_faction); \
     }
 
     #include "CfgVehicles_Bush.hpp"

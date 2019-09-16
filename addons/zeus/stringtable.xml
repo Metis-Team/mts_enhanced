@@ -51,32 +51,6 @@
             <German>Aktiviert die Bewegung und Zielsuche der Einheit</German>
         </Key>
     </Container>
-    <Container name="ACRE">
-        <Key ID="STR_mts_zeus_acreSpectator">
-            <Original>ACRE Spectator</Original>
-            <German>ACRE Zuschauer</German>
-        </Key>
-        <Key ID="STR_mts_zeus_statusEnable">
-            <Original>Enable</Original>
-            <German>Aktivieren</German>
-        </Key>
-        <Key ID="STR_mts_zeus_statusDisable">
-            <Original>Disable</Original>
-            <German>Deaktivieren</German>
-        </Key>
-        <Key ID="STR_mts_zeus_acreSpectator_hotkey">
-            <Original>Switch ACRE Spectator Mode</Original>
-            <German>ACRE Zuschauer Modus umschalten</German>
-        </Key>
-        <Key ID="STR_mts_zeus_acreSpectator_enabled">
-            <Original>ACRE Spectator Mode enabled</Original>
-            <German>ACRE Zuschauer Modus aktiviert</German>
-        </Key>
-        <Key ID="STR_mts_zeus_acreSpectator_disabled">
-            <Original>ACRE Spectator Mode disabled</Original>
-            <German>ACRE Zuschauer Modus deaktiviert</German>
-        </Key>
-    </Container>
     <Container name="traceProjectiles">
         <Key ID="STR_mts_zeus_showProjectiles">
             <Original>Show projectiles</Original>

@@ -14,14 +14,6 @@
 			<Original>Plants</Original>
 			<German>Pflanzen</German>
 		</Key>
-		<Key ID="str_mts_nature_Rock_Faction">
-			<Original>Rocks</Original>
-			<German>Steine</German>
-		</Key>
-		<Key ID="str_mts_nature_Faction">
-			<Original>ArmA 3 Nature</Original>
-			<German>ArmA 3 Natur</German>
-		</Key>
     </Container>
 	<Container name="Bush">
 		<Key ID="str_mts_nature_Cane1">
