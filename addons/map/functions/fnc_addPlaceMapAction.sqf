@@ -31,10 +31,10 @@ private _placeMapAction = [
 
         [{(toLower (stance _this)) isEqualTo "crouch"}, {
             params ["_player"];
-
+            
             _player playAction "putdown";
-            private _soundFile = format ["z\mts_enhanced\addons\map\data\sounds\unfold_map_%1.ogg", ((floor random 4) + 1)];
-            playSound3D [_soundFile, _player, false, getPosASL _player, 10, 1, 15];
+            private _sound = format [QGVAR(unfoldSound_%1), ((floor random 4) + 1)];
+            [_player, [_sound, 300]] remoteExecCall ["say3D"];
         }, _player] call CBA_fnc_waitUntilAndExecute;
 
         [{((animationState _this) select [25,7]) isEqualTo "putdown"}, {
@@ -42,6 +42,7 @@ private _placeMapAction = [
 
             private _pos = _player getRelPos [1, 0];
             _pos set [2, ((getposATL _player) select 2)];
+
             private _map = GVAR(itemMapClassname) createVehicle [0,0,0];
             _map setDir ((getDir _player) + 90);
             _map setPosATL _pos;

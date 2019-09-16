@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -14,14 +15,11 @@
  *      call mts_whistle_fnc_blowWhistle
  *
  */
-#include "script_component.hpp"
 
-if (QGVAR(FOX40) in (items player) && {!GVAR(soundIsPlaying)}) then {
+if (QGVAR(FOX40) in ([player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems) && {!GVAR(soundIsPlaying)}) then {
     GVAR(soundIsPlaying) = true;
 
-    private _isInside = false;
-    if ([player] call FUNC(isInBuilding)) then {_isInside = true;};
-    playSound3D ["z\mts_enhanced\addons\whistle\data\sounds\fox40_whistle_sound.ogg", player, _isInside, getPosASL player, 10, 1, 300];
+    [player, [QGVAR(FOX40Sound), 300]] remoteExecCall ["say3D"];
 
     [{
         GVAR(soundIsPlaying) = false;
