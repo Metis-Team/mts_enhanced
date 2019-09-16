@@ -16,4 +16,14 @@ PREP_RECOMPILE_END;
     {}
 ] call CBA_Settings_fnc_init;
 
+[
+    QGVAR(playerIDs),
+    "EDITBOX",
+    [LLSTRING(playerIDs), LLSTRING(playerIDs_tooltip)],
+    LELSTRING(main,settingCategoryCommon),
+    "[""""]",
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
 ADDON = true;
