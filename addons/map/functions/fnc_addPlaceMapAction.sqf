@@ -23,29 +23,38 @@ private _placeMapAction = [
     LLSTRING(placeMap),
     "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\map_ca.paa",
     {
-        if !((toLower (stance player)) isEqualTo "crouch") then {
-            player playAction "crouch";
-        };
-        [{(toLower (stance player)) isEqualTo "crouch"}, {
-            player playAction "putdown";
-            private _soundFile = format["z\mts_enhanced\addons\map\data\sounds\unfold_map_%1.ogg", ((floor random 4) + 1)];
-            playSound3D [_soundFile, player, false, getPosASL player, 10, 1, 15];
-        }] call CBA_fnc_waitUntilAndExecute;
+        params ["", "_player"];
 
-        [{(animationState player select [25,7]) isEqualTo "putdown"}, {
-            private _pos = player getRelPos [1, 0];
-            _pos set [2, ((getposATL player) select 2)];
+        if !((toLower (stance _player)) isEqualTo "crouch") then {
+            _player playAction "crouch";
+        };
+
+        [{(toLower (stance _this)) isEqualTo "crouch"}, {
+            params ["_player"];
+            
+            _player playAction "putdown";
+            private _sound = format [QGVAR(unfoldSound_%1), ((floor random 4) + 1)];
+            [_player, [_sound, 300]] remoteExecCall ["say3D"];
+        }, _player] call CBA_fnc_waitUntilAndExecute;
+
+        [{((animationState _this) select [25,7]) isEqualTo "putdown"}, {
+            params ["_player"];
+
+            private _pos = _player getRelPos [1, 0];
+            _pos set [2, ((getposATL _player) select 2)];
+
             private _map = GVAR(itemMapClassname) createVehicle [0,0,0];
-            _map setDir ((getDir player) + 90);
+            _map setDir ((getDir _player) + 90);
             _map setPosATL _pos;
 
             [_map] remoteExecCall [QFUNC(mapActionMenu), 0, _map];
 
-            player unlinkItem "ItemMap";
-        }] call CBA_fnc_waitUntilAndExecute;
+            _player unlinkItem "ItemMap";
+        }, _player] call CBA_fnc_waitUntilAndExecute;
     },
     {
-        ("ItemMap" in (assignedItems player)) && {[player, objNull] call ace_common_fnc_canInteractWith}
+        params ["", "_player"];
+        ("ItemMap" in (assignedItems _player)) && {[_player, objNull] call ace_common_fnc_canInteractWith}
     }
 ] call ace_interact_menu_fnc_createAction;
 

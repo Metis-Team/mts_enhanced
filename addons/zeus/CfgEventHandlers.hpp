@@ -21,9 +21,3 @@ class Extended_DisplayLoad_EventHandlers {
         GVAR(curatorDisplayOpened) = QUOTE(CHECK(!GVAR(enableACEUnconsciousIcon)); call FUNC(initDrawIconEH));
     };
 };
-
-class Extended_DisplayUnload_EventHandlers {
-    class RscDisplayCurator {
-        GVAR(curatorDisplayClosed) = QUOTE(CHECK(!isClass (configFile >> 'CfgPatches' >> 'acre_api')); [false] call acre_api_fnc_setSpectator;);
-    };
-};

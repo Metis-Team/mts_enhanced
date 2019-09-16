@@ -1,4 +1,3 @@
-PREP(ACRESpectatorMode);
 PREP(moduleShowProjectiles);
 PREP(moduleArtillery);
 PREP(artyFireMissionHE);

@@ -7,7 +7,6 @@ class CfgVehicles {
         author = CSTRING(authors);
         editorCategory = "EdCat_Equipment";
         editorSubcategory = "EdSubcat_InventoryItems";
-        vehicleClass = "Items";
         model = "\A3\Weapons_F\DummyItemHorizontal.p3d";
         class TransportItems {
             class GVAR(FOX40) {

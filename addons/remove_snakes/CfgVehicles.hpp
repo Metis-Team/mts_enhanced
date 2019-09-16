@@ -11,5 +11,8 @@ class CfgVehicles {
     };
     class Snake_vipera_random_F: Snake_random_F {
         scope = 0;
+        class EventHandlers: EventHandlers {
+            init = "";
+        };
     };
 };

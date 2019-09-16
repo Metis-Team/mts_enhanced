@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"mts_main", "ace_common", "ace_interact_menu", "A3_Animals_F_Snakes"};
+        requiredAddons[] = {"mts_main", "ace_common", "ace_interact_menu"};
         author = "";
         authors[] = {"PhILoX", "Timi007"};
         VERSION_CONFIG;
@@ -14,4 +14,3 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgVehicles.hpp"

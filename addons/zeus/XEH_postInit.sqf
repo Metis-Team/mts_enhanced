@@ -2,7 +2,6 @@
 
 CHECK(!hasinterface);
 
-call FUNC(ACRESpectatorMode);
 call FUNC(moduleShowProjectiles);
 call FUNC(moduleArtillery);
 call FUNC(moduleUnflipVehicle);
