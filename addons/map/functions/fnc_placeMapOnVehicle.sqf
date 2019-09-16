@@ -34,15 +34,15 @@ private _placeMapOnVehAction = [
     LLSTRING(placeMap),
     "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\map_ca.paa",
     {
-        params ["_vehicle", "", "_args"];
+        params ["_vehicle", "_player", "_args"];
         _args params ["_offset", "_vectorDirAndUp"];
 
-        player playAction "putdown";
+        _player playAction "putdown";
         private _soundFile = format ["z\mts_enhanced\addons\map\data\sounds\unfold_map_%1.ogg", ((floor random 4) + 1)];
-        playSound3D [_soundFile, player, false, getPosASL player, 10, 1, 15];
+        playSound3D [_soundFile, _player, false, getPosASL _player, 10, 1, 15];
 
-        [{((animationState player) select [25,7]) isEqualTo "putdown"}, {
-            params ["_vehicle", "_offset", "_vectorDirAndUp"];
+        [{((animationState (_this select 1)) select [25,7]) isEqualTo "putdown"}, {
+            params ["_vehicle", "_player", "_offset", "_vectorDirAndUp"];
 
             private _map = GVAR(itemMapClassname) createVehicle [0,0,0];
             _map attachTo [_vehicle, _offset];
@@ -52,13 +52,14 @@ private _placeMapOnVehAction = [
 
             [_map, _vehicle] remoteExecCall [QFUNC(mapActionMenu), 0, _map];
 
-            player unlinkItem "ItemMap";
-        }, [_vehicle, _offset, _vectorDirAndUp]] call CBA_fnc_waitUntilAndExecute;
+            _player unlinkItem "ItemMap";
+        }, [_vehicle, _player, _offset, _vectorDirAndUp]] call CBA_fnc_waitUntilAndExecute;
     },
     {
-        ("ItemMap" in (assignedItems player)) &&
-        {[player, objNull] call ace_common_fnc_canInteractWith} &&
-        {!(_target getVariable [QGVAR(isMapOnVehicle), false])}
+        params ["_vehicle", "_player"];
+        ("ItemMap" in (assignedItems _player)) &&
+        {[_player, objNull] call ace_common_fnc_canInteractWith} &&
+        {!(_vehicle getVariable [QGVAR(isMapOnVehicle), false])}
     },
     {},
     [_offset, _vectorDirAndUp],
