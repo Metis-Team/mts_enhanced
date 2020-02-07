@@ -149,7 +149,7 @@ if (isServer) then {
 
 ["healall", {
     {
-        ["ace_medical_treatmentAdvanced_fullHealLocal", [_x, _x], _x] call CBA_fnc_targetEvent;
+        ["ace_medical_treatment_fullHealLocal", _x, _x] call CBA_fnc_targetEvent;
     } forEach (call CBA_fnc_players);
 }, "adminLogged"] call CBA_fnc_registerChatCommand;
 
@@ -173,7 +173,7 @@ if (isServer) then {
     };
     CHECK(isNull _unit);
 
-    ["ace_medical_treatmentAdvanced_fullHealLocal", [_unit, _unit], _unit] call CBA_fnc_targetEvent;
+    ["ace_medical_treatment_fullHealLocal", _unit, _unit] call CBA_fnc_targetEvent;
 }, "adminLogged"] call CBA_fnc_registerChatCommand;
 
 ["teleport", {
