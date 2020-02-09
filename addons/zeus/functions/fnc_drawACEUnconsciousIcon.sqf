@@ -19,6 +19,8 @@
 params[["_unit", objnull, [objnull]], ["_isUnconscious", false, [false]]];
 private["_iconID"];
 
+CHECK(isNull _unit || !isPlayer _unit);
+
 private _curatorModule = getAssignedCuratorLogic player;
 private _iconIDArray = _curatorModule getVariable [QGVAR(iconIDArray), []];
 
