@@ -41,5 +41,5 @@ if (isNil {(_curatorModule getVariable QGVAR(iconIDArray))}) then {
                 [_unit, true] call FUNC(drawACEUnconsciousIcon);
             };
         } forEach _iconIDArray;
-    }, 0.1, _curatorModule] call CBA_fnc_addPerFrameHandler;
+    }, 0.2, _curatorModule] call CBA_fnc_addPerFrameHandler;
 };
