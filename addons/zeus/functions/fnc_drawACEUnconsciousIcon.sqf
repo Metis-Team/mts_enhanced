@@ -16,24 +16,27 @@
  *
  */
 #include "script_component.hpp"
-params[["_unit", objnull, [objnull]], ["_isUnconscious", false, [false]]];
-private["_iconID"];
+
+params [["_unit", objnull, [objnull]], ["_isUnconscious", false, [false]]];
+
+CHECK(isNull _unit || !isPlayer _unit);
 
 private _curatorModule = getAssignedCuratorLogic player;
 private _iconIDArray = _curatorModule getVariable [QGVAR(iconIDArray), []];
 
 if (_isUnconscious) then {
-    _iconID = [_curatorModule, [
+    private _pos2D = [(getPos _unit) select 0, (getPos _unit) select 1];
+    private _iconID = [_curatorModule, [
         "z\ace\addons\zeus\ui\Icon_Module_Zeus_Unconscious_ca.paa", /*"kia" call BIS_fnc_textureMarker,*/
         [1,0,0,1], //color
-        [(getPos _unit) select 0, (getPos _unit) select 1, 2],
+        [_pos2D select 0, _pos2D select 1, 2],
         1.5,
         1.5,
         0,
         "",
         1
     ]] call BIS_fnc_addCuratorIcon;
-    _iconIDArray pushbackUnique [_unit, _iconID];
+    _iconIDArray pushbackUnique [_unit, _iconID, _pos2D];
     _curatorModule setVariable [QGVAR(iconIDArray), _iconIDArray];
 } else {
     private _iconIndex = _iconIDArray findIf {(_x select 0) isEqualTo _unit};
