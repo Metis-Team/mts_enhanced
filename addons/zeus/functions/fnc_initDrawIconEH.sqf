@@ -20,12 +20,12 @@
 private _curatorModule = getAssignedCuratorLogic player;
 
 if (isNil {(_curatorModule getVariable QGVAR(iconIDArray))}) then {
-    ["ace_unconscious", LINKFUNC(drawACEUnconsciousIcon)] call CBA_fnc_addEventHandler;
     {
         if (_x getVariable ["ACE_isUnconscious", false]) then {
             [_x, true] call FUNC(drawACEUnconsciousIcon);
         };
     } count (call CBA_fnc_players);
+    ["ace_unconscious", LINKFUNC(drawACEUnconsciousIcon)] call CBA_fnc_addEventHandler;
 
     // Update position if body is moved
     [{
@@ -38,7 +38,7 @@ if (isNil {(_curatorModule getVariable QGVAR(iconIDArray))}) then {
             if !(_oldPos2D isEqualTo _pos2D) then {
                 [_unit, false] call FUNC(drawACEUnconsciousIcon);
                 [_unit, true] call FUNC(drawACEUnconsciousIcon);
-            }
+            };
         } forEach _iconIDArray;
     }, 0.1, _curatorModule] call CBA_fnc_addPerFrameHandler;
 };
