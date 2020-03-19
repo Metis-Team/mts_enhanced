@@ -26,6 +26,7 @@ if (isNil {(_curatorModule getVariable QGVAR(iconIDArray))}) then {
         };
     } count (call CBA_fnc_players);
     ["ace_unconscious", LINKFUNC(drawACEUnconsciousIcon)] call CBA_fnc_addEventHandler;
+    [QGVAR(killed), LINKFUNC(drawACEUnconsciousIcon)] call CBA_fnc_addEventHandler;
 
     // Update position if body is moved
     [{
