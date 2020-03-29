@@ -22,22 +22,6 @@
             <Original>Flag (Yellow)</Original>
             <German>Flagge (Gelb)</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_red">
-            <Original>Red</Original>
-            <German>Rot</German>
-        </Key>
-        <Key ID="STR_mts_flagmarker_blue">
-            <Original>Blue</Original>
-            <German>Blau</German>
-        </Key>
-        <Key ID="STR_mts_flagmarker_green">
-            <Original>Green</Original>
-            <German>Grün</German>
-        </Key>
-        <Key ID="STR_mts_flagmarker_yellow">
-            <Original>Yellow</Original>
-            <German>Gelb</German>
-        </Key>
         <Key ID="STR_mts_flagmarker_flagDescription">
             <Original>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</Original>
             <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten genutzt.</German>
@@ -48,17 +32,17 @@
             <Original>Flags</Original>
             <German>Flaggen</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_carryFlag">
-            <Original>Carry Flag (%1)</Original>
-            <German>Flagge (%1) tragen</German>
+        <Key ID="STR_mts_flagmarker_carryItem">
+            <Original>Carry %1</Original>
+            <German>%1 tragen</German>
         </Key>
         <Key ID="STR_mts_flagmarker_furlFlag">
             <Original>Furl Flag</Original>
             <German>Flagge einrollen</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_placeFlag">
-            <Original>Place Flag (%1)</Original>
-            <German>Flagge (%1) platzieren</German>
+        <Key ID="STR_mts_flagmarker_placeItem">
+            <Original>Place %1</Original>
+            <German>%1 platzieren</German>
         </Key>
         <Key ID="STR_mts_flagmarker_cancel">
             <Original>Cancel</Original>
@@ -68,9 +52,9 @@
             <Original>Adjust height</Original>
             <German>Höhe anpassen</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_pickupFlag">
-            <Original>Pickup Flag</Original>
-            <German>Flagge aufnehmen</German>
+        <Key ID="STR_mts_flagmarker_pickupItem">
+            <Original>Pickup %1</Original>
+            <German>%1 aufnehmen</German>
         </Key>
     </Container>
     </Package>
