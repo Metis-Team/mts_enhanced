@@ -6,6 +6,8 @@
             <Original>Timi007, Dan</Original>
             <German>Timi007, Dan</German>
         </Key>
+    </Container>
+    <Container name="flags">
         <Key ID="STR_mts_flagmarker_flagRedDisplayName">
             <Original>Flag (Red)</Original>
             <German>Flagge (Rot)</German>
@@ -24,13 +26,31 @@
         </Key>
         <Key ID="STR_mts_flagmarker_flagDescription">
             <Original>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</Original>
-            <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten genutzt.</German>
+            <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten eingesetzt.</German>
+        </Key>
+    </Container>
+    <Container name="markers">
+        <Key ID="STR_mts_flagmarker_markerYellowDisplayName">
+            <Original>Marker (Yellow)</Original>
+            <German>Markierung (Gelb)</German>
+        </Key>
+        <Key ID="STR_mts_flagmarker_markerMinesDisplayName">
+            <Original>Marker (Mines)</Original>
+            <German>Markierung (Minen)</German>
+        </Key>
+        <Key ID="STR_mts_flagmarker_markerDescription">
+            <Original>Can only be placed. Markers are used to mark a specific point in terrain.</Original>
+            <German>Kann nur platziert werden. Markierungen werden zur Kennzeichnung von bestimmten Geländepunkte eingesetzt.</German>
         </Key>
     </Container>
     <Container name="actions">
         <Key ID="STR_mts_flagmarker_flags">
             <Original>Flags</Original>
             <German>Flaggen</German>
+        </Key>
+        <Key ID="STR_mts_flagmarker_marker">
+            <Original>Markers</Original>
+            <German>Markierungen</German>
         </Key>
         <Key ID="STR_mts_flagmarker_carryItem">
             <Original>Carry %1</Original>

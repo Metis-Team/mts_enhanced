@@ -11,7 +11,7 @@
  *      Nothing.
  *
  *  Example:
- *      call mts_flagmarker_fnc_addACEActions
+ *      call mts_flagmarker_fnc_addFlagACEActions
  *
  */
 #include "script_component.hpp"
@@ -24,13 +24,18 @@ private _flagAction = [
     QPATHTOF(data\ui\mts_flag_white_icon.paa),
     {},
     {
-        [player, objNull] call ace_common_fnc_canInteractWith &&
+        params ["", "_player"];
+
+        private _items = [_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems;
+
+        [_player, objNull] call ace_common_fnc_canInteractWith &&
         (
-            (QGVAR(red) in (items player)) ||
-            (QGVAR(blue) in (items player)) ||
-            (QGVAR(green) in (items player)) ||
-            (QGVAR(yellow) in (items player)) ||
-            !((getForcedFlagTexture player) isEqualTo "")
+
+            (QGVAR(flag_red) in _items) ||
+            (QGVAR(flag_blue) in _items) ||
+            (QGVAR(flag_green) in _items) ||
+            (QGVAR(flag_yellow) in _items) ||
+            !((getForcedFlagTexture _player) isEqualTo "")
         )
     }
 ] call ace_interact_menu_fnc_createAction;
@@ -44,7 +49,9 @@ private _furlFlagAction = [
         [""] call FUNC(carryFlag);
     },
     {
-        !((getForcedFlagTexture player) isEqualTo "")
+        params ["", "_player"];
+
+        !((getForcedFlagTexture _player) isEqualTo "")
     }
 ] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "ACE_Equipment", QGVAR(flagAction)], _furlFlagAction] call ace_interact_menu_fnc_addActionToClass;
@@ -65,7 +72,7 @@ private _furlFlagAction = [
         {
             params ["", "_player", "_color"];
 
-            (format [QGVAR(%1), _color] in ([_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems)) &&
+            (format [QGVAR(flag_%1), _color] in ([_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems)) &&
             ((getForcedFlagTexture _player) isEqualTo "")
         },
         {},
@@ -107,14 +114,15 @@ private _furlFlagAction = [
                         _flag setFlagTexture format ["\A3\Data_F\Flags\Flag_%1_co.paa", _color];
                     };
 
-                    _player removeItem format [QGVAR(%1), _color];
+                    _player removeItem format [QGVAR(flag_%1), _color];
                 },
                 {
                     params ["", "_player", "_color"];
 
-                    _player addItem format [QGVAR(%1), _color];
+                    _player addItem format [QGVAR(flag_%1), _color];
                 },
                 _color,
+                nil,
                 QPATHTOF(data\ui\mts_flag_pickup_icon.paa),
                 [0, -0.45, 1.25],
                 2
@@ -124,7 +132,7 @@ private _furlFlagAction = [
             params ["", "_player", "_args"];
             _args params ["_color"];
 
-            format [QGVAR(%1), _color] in ([_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems)
+            format [QGVAR(flag_%1), _color] in ([_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems)
         },
         {},
         [_color, _displayName]
