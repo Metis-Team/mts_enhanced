@@ -11,9 +11,10 @@
  *      3: CODE - Code executed after the placing is approved and the global object is created but before obj is moved. (Optional)
  *      4: CODE - Code executed if ACE pickup action is executed. (Optional)
  *      5: ANY - Arguments passed to every custom code. (Optional)
- *      6: STRING - Icon path for ACE pickup action. (Optional, default: Arma take icon)
- *      7: ARRAY - Relative positon of ACE pickup action on the object. (Optional, default: Object center)
- *      8: NUMBER - Max distance player can be from ACE pickup action point. (Optional, default: 2)
+ *      6: NUMBER - Object start placing height (Optional, default -0.5)
+ *      7: STRING - Icon path for ACE pickup action. (Optional, default: Arma take icon)
+ *      8: ARRAY - Relative positon of ACE pickup action on the object. (Optional, default: Object center)
+ *      9: NUMBER - Max distance player can be from ACE pickup action point. (Optional, default: 2)
  *
  *  Following arguments are passed to every custom code (param 2, 3, 4):
  *      0: OBJECT - Local (for param 2) or global (for param 3, 4) object created.
@@ -36,6 +37,7 @@ params [
     ["_afterCode", nil, [{}]],
     ["_pickupCode", nil, [{}]],
     ["_args", []],
+    ["_startHeight", MIN_HEIGHT, [0]],
     ["_pickupIcon", "A3\Ui_f\data\IGUI\Cfg\Actions\take_ca.paa", [""]],
     ["_pickupAcPos", [0, 0, 0], [[]]],
     ["_pickupAcRad", 2, [0]]
@@ -48,7 +50,7 @@ private _obj = _classname createVehicleLocal [0, 0, 0];
 _obj disableCollisionWith player;
 
 // Set object start height
-GVAR(objectHeight) = MIN_HEIGHT;
+GVAR(objectHeight) = _startHeight;
 
 // Call custom code
 if !(isNil "_beforeCode") then {
