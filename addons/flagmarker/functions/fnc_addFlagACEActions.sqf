@@ -21,7 +21,7 @@ CHECK(!hasInterface);
 private _flagAction = [
     QGVAR(flagAction),
     LLSTRING(flags),
-    QPATHTOF(data\ui\mts_flag_white_icon.paa),
+    QPATHTOF(data\ui\flags\mts_flag_white_icon.paa),
     {},
     {
         params ["", "_player"];
@@ -44,7 +44,7 @@ private _flagAction = [
 private _furlFlagAction = [
     QGVAR(furlFlagAction),
     LLSTRING(furlFlag),
-    QPATHTOF(data\ui\mts_flag_furl_icon.paa),
+    QPATHTOF(data\ui\flags\mts_flag_furl_icon.paa),
     {
         [""] call FUNC(carryFlag);
     },
@@ -63,7 +63,7 @@ private _furlFlagAction = [
     private _carryFlagAction = [
         format [QGVAR(carry%1FlagAction), _x],
         format [LLSTRING(carryItem), _displayName],
-        format [QPATHTOF(data\ui\mts_flag_%1_carry_icon.paa), _color],
+        format [QPATHTOF(data\ui\flags\mts_flag_%1_carry_icon.paa), _color],
         {
             params ["", "", "_color"];
 
@@ -88,7 +88,7 @@ private _furlFlagAction = [
     private _placeFlagAction = [
         format [QGVAR(place%1FlagAction), _x],
         format [LLSTRING(placeItem), _displayName],
-        format [QPATHTOF(data\ui\mts_flag_%1_place_icon.paa), _color],
+        format [QPATHTOF(data\ui\flags\mts_flag_%1_place_icon.paa), _color],
         {
             params ["", "", "_args"];
             _args params ["_color", "_displayName"];
@@ -123,7 +123,7 @@ private _furlFlagAction = [
                 },
                 _color,
                 nil,
-                QPATHTOF(data\ui\mts_flag_pickup_icon.paa),
+                QPATHTOF(data\ui\flags\mts_flag_pickup_icon.paa),
                 [0, -0.45, 1.25],
                 2
             ] call FUNC(placeItem);

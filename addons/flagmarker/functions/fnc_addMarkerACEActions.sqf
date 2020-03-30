@@ -21,7 +21,7 @@ CHECK(!hasInterface);
 private _markerAction = [
     QGVAR(markerAction),
     LLSTRING(marker),
-    QPATHTOF(data\ui\mts_flag_white_icon.paa),
+    QPATHTOF(data\ui\markers\mts_marker_white_icon.paa),
     {},
     {
         params ["", "_player"];
@@ -40,7 +40,7 @@ private _markerAction = [
 private _placeMarkerYellowAction = [
     QGVAR(placeMarkerYellowAction),
     format [LLSTRING(placeItem), LLSTRING(markerYellowDisplayName)],
-    QPATHTOF(data\ui\mts_flag_yellow_place_icon.paa),
+    QPATHTOF(data\ui\markers\mts_marker_yellow_place_icon.paa),
     {
         [
             "FlagSmall_F",
@@ -56,7 +56,7 @@ private _placeMarkerYellowAction = [
             },
             nil,
             0,
-            QPATHTOF(data\ui\mts_flag_pickup_icon.paa),
+            QPATHTOF(data\ui\markers\mts_marker_pickup_icon.paa),
             [0, 0, 0.6],
             2
         ] call FUNC(placeItem);
@@ -72,7 +72,7 @@ private _placeMarkerYellowAction = [
 private _placeMarkerMinesAction = [
     QGVAR(placeMarkerMinesAction),
     format [LLSTRING(placeItem), LLSTRING(markerMinesDisplayName)],
-    QPATHTOF(data\ui\mts_flag_yellow_place_icon.paa),
+    QPATHTOF(data\ui\markers\mts_marker_mines_place_icon.paa),
     {
         [
             "Land_Sign_MinesTall_English_F",
@@ -88,7 +88,7 @@ private _placeMarkerMinesAction = [
             },
             nil,
             0,
-            nil,
+            QPATHTOF(data\ui\markers\mts_marker_pickup_icon.paa),
             [0, 0, 0.55],
             2
         ] call FUNC(placeItem);

@@ -15,22 +15,22 @@ class CfgWeapons {
     class GVAR(flag_red): GVAR(flag_base) {
         scope = 2;
         displayName = CSTRING(flagRedDisplayName);
-        picture = QPATHTOF(data\ui\mts_flag_red_item_icon.paa);
+        picture = QPATHTOF(data\ui\flags\mts_flag_red_item_icon.paa);
     };
     class GVAR(flag_blue): GVAR(flag_base) {
         scope = 2;
         displayName = CSTRING(flagBlueDisplayName);
-        picture = QPATHTOF(data\ui\mts_flag_blue_item_icon.paa);
+        picture = QPATHTOF(data\ui\flags\mts_flag_blue_item_icon.paa);
     };
     class GVAR(flag_green): GVAR(flag_base) {
         scope = 2;
         displayName = CSTRING(flagGreenDisplayName);
-        picture = QPATHTOF(data\ui\mts_flag_green_item_icon.paa);
+        picture = QPATHTOF(data\ui\flags\mts_flag_green_item_icon.paa);
     };
     class GVAR(flag_yellow): GVAR(flag_base) {
         scope = 2;
         displayName = CSTRING(flagYellowDisplayName);
-        picture = QPATHTOF(data\ui\mts_flag_yellow_item_icon.paa);
+        picture = QPATHTOF(data\ui\flags\mts_flag_yellow_item_icon.paa);
     };
 
 
@@ -47,11 +47,11 @@ class CfgWeapons {
     class GVAR(marker_yellow): GVAR(marker_base) {
         scope = 2;
         displayName = CSTRING(markerYellowDisplayName);
-        picture = QPATHTOF(data\ui\mts_flag_red_item_icon.paa);
+        picture = QPATHTOF(data\ui\markers\mts_marker_yellow_item_icon.paa);
     };
     class GVAR(marker_mines): GVAR(marker_base) {
         scope = 2;
         displayName = CSTRING(markerMinesDisplayName);
-        picture = QPATHTOF(data\ui\mts_flag_red_item_icon.paa);
+        picture = QPATHTOF(data\ui\markers\mts_marker_mines_item_icon.paa);
     };
 };
