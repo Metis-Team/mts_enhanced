@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="mts">
-    <Package name="flagmarker">
+    <Package name="items">
     <Container name="misc">
-        <Key ID="STR_mts_flagmarker_authors">
+        <Key ID="STR_mts_items_authors">
             <Original>Timi007, Dan</Original>
             <German>Timi007, Dan</German>
         </Key>
     </Container>
     <Container name="flags">
-        <Key ID="STR_mts_flagmarker_flagRedDisplayName">
+        <Key ID="STR_mts_items_flagRedDisplayName">
             <Original>Flag (Red)</Original>
             <German>Flagge (Rot)</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_flagBlueDisplayName">
+        <Key ID="STR_mts_items_flagBlueDisplayName">
             <Original>Flag (Blue)</Original>
             <German>Flagge (Blau)</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_flagGreenDisplayName">
+        <Key ID="STR_mts_items_flagGreenDisplayName">
             <Original>Flag (Green)</Original>
             <German>Flagge (Grün)</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_flagYellowDisplayName">
+        <Key ID="STR_mts_items_flagYellowDisplayName">
             <Original>Flag (Yellow)</Original>
             <German>Flagge (Gelb)</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_flagDescription">
+        <Key ID="STR_mts_items_flagDescription">
             <Original>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</Original>
             <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten eingesetzt.</German>
         </Key>
     </Container>
     <Container name="markers">
-        <Key ID="STR_mts_flagmarker_markerYellowDisplayName">
+        <Key ID="STR_mts_items_markerYellowDisplayName">
             <Original>Marker (Yellow)</Original>
             <German>Markierung (Gelb)</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_markerMinesDisplayName">
+        <Key ID="STR_mts_items_markerMinesDisplayName">
             <Original>Marker (Mines)</Original>
             <German>Markierung (Minen)</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_markerDescription">
+        <Key ID="STR_mts_items_markerDescription">
             <Original>Can only be placed. Markers are used to mark a specific point in terrain.</Original>
             <German>Kann nur platziert werden. Markierungen werden zur Kennzeichnung von bestimmten Geländepunkte eingesetzt.</German>
         </Key>
     </Container>
     <Container name="actions">
-        <Key ID="STR_mts_flagmarker_flags">
+        <Key ID="STR_mts_items_flags">
             <Original>Flags</Original>
             <German>Flaggen</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_marker">
+        <Key ID="STR_mts_items_marker">
             <Original>Markers</Original>
             <German>Markierungen</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_carryItem">
+        <Key ID="STR_mts_items_carryItem">
             <Original>Carry %1</Original>
             <German>%1 tragen</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_furlFlag">
+        <Key ID="STR_mts_items_furlFlag">
             <Original>Furl Flag</Original>
             <German>Flagge einrollen</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_placeItem">
+        <Key ID="STR_mts_items_placeItem">
             <Original>Place %1</Original>
             <German>%1 platzieren</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_cancel">
+        <Key ID="STR_mts_items_cancel">
             <Original>Cancel</Original>
             <German>Abbrechen</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_adjustHeight">
+        <Key ID="STR_mts_items_adjustHeight">
             <Original>Adjust height</Original>
             <German>Höhe anpassen</German>
         </Key>
-        <Key ID="STR_mts_flagmarker_pickupItem">
+        <Key ID="STR_mts_items_pickupItem">
             <Original>Pickup %1</Original>
             <German>%1 aufnehmen</German>
         </Key>

@@ -23,7 +23,7 @@
  *      Nothing
  *
  *  Example:
- *      [_obj, "Flag (green)", {systemChat str _this}, ["green"], nil, [0, -0.45, 1.25]] call mts_flagmarker_fnc_pickupItem
+ *      [_obj, "Flag (green)", {systemChat str _this}, ["green"], nil, [0, -0.45, 1.25]] call mts_items_fnc_pickupItem
  *
  */
 #include "script_component.hpp"

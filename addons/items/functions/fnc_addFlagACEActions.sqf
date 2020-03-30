@@ -11,7 +11,7 @@
  *      Nothing.
  *
  *  Example:
- *      call mts_flagmarker_fnc_addFlagACEActions
+ *      call mts_items_fnc_addFlagACEActions
  *
  */
 #include "script_component.hpp"

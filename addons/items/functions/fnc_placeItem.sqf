@@ -25,7 +25,7 @@
  *      Nothing.
  *
  *  Example:
- *      ["FlagChecked_F", {systemChat str _this}, {}, {}, ["green"]] call mts_flagmarker_fnc_placeItem
+ *      ["FlagChecked_F", {systemChat str _this}, {}, {}, ["green"]] call mts_items_fnc_placeItem
  *
  */
 #include "script_component.hpp"

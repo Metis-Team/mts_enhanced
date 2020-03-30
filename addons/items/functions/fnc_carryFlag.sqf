@@ -11,7 +11,7 @@
  *      Nothing.
  *
  *  Example:
- *      ["red"] call mts_flagmarker_fnc_carryFlag
+ *      ["red"] call mts_items_fnc_carryFlag
  *
  */
 #include "script_component.hpp"

@@ -11,7 +11,7 @@
  *      BOOLEAN - Handled.
  *
  *  Example:
- *      [5] call mts_flagmarker_fnc_handleScrollWheel
+ *      [5] call mts_items_fnc_handleScrollWheel
  *
  */
 #include "script_component.hpp"
