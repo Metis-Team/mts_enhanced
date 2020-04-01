@@ -8,7 +8,7 @@
  *      0: STRING - Classname of object which should be placed.
  *      1: STRING - Display name of the object for info and pickup text.(Optional, default: Config display name)
  *      2: CODE - Code executed before the placing but after the creation of the local object. (Optional)
- *      3: CODE - Code executed after the placing is approved and the global object is created but before obj is moved. (Optional)
+ *      3: CODE - Code executed after the placing is approved and the global object is created but before object is moved. (Optional)
  *      4: CODE - Code executed if ACE pickup action is executed. (Optional)
  *      5: ANY - Arguments passed to every custom code. (Optional)
  *      6: NUMBER - Object start placing height (Optional, default -0.5)
