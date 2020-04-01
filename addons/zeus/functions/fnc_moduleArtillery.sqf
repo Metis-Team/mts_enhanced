@@ -15,8 +15,6 @@
  *
  */
 #include "script_component.hpp"
-//CHECK even neccessary?
-CHECK(!hasinterface);
 
 ["Metis", LLSTRING(artillery), {
     params [["_modulePosition", [0,0,0], [[]]]];
@@ -35,7 +33,7 @@ CHECK(!hasinterface);
             ["EDIT", LLSTRING(artillery_timeOnTarget), ["5"]]
         ],
         {
-            private ["_position"];
+            private "_position";
             params ["_dialogData", "_modulePosition"];
             _dialogData params ["_ammoType", "_positionType", "_positionX", "_positionY", "_areaLenght", "_areaWidth", "_areaAngle", "_timeOnTarget"];
 

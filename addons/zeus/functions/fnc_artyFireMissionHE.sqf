@@ -37,7 +37,6 @@ params [
         ["EDIT", LLSTRING(artillery_duration), ["60"]]
     ],
     {
-        private ["_detonationHight"];
         (_this select 0) params ["_ammoAmount", "_airburstType", "_delayType", "_delay", "_duration"];
         (_this select 1) params ["_position", "_ammoType", "_impactArea", "_timeOnTarget"];
 
@@ -53,7 +52,7 @@ params [
         };
 
         //select airburst hight
-        _detonationHight = [0, 15, 20, 30] select _airburstType;
+        private _detonationHight = [0, 15, 20, 30] select _airburstType;
 
         if (_delayType isEqualTo 0) then {
             [_position, _ammoType, _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
