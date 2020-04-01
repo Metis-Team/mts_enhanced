@@ -30,7 +30,7 @@ private _action = [
         };
 
         [5, [], {
-            private _cutter = GVAR(grasscutter_size) createVehicle [0,0,0];
+            private _cutter = (["Land_ClutterCutter_Large_F", "Land_ClutterCutter_Medium_F"] select GVAR(grasscutter_size)) createVehicle [0,0,0];
             _cutter setPos (getpos player);
         }, {}, LLSTRING(grasscutter_removeGrass)
         ] call ace_common_fnc_progressBar;
