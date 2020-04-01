@@ -19,7 +19,7 @@ INFO_1("Metis Enhanced version: %1.", _version);
     true,
     0,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 //grasscutter size
 [
@@ -34,6 +34,6 @@ INFO_1("Metis Enhanced version: %1.", _version);
     ],
     0,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 ADDON = true;
