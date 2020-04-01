@@ -16,8 +16,6 @@
  */
 #include "script_component.hpp"
 
-CHECK(!hasinterface);
-
 ["Metis", LLSTRING(AI_targetKnowledge), {
     params["", ["_AI", objNull, [objNull]]];
 

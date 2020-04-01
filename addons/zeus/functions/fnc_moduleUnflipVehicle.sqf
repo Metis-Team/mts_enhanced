@@ -16,8 +16,6 @@
  */
 #include "script_component.hpp"
 
-CHECK(!hasinterface);
-
 ["Metis", LLSTRING(unflipVehicle),
     {
         params["", ["_vehicle", objNull, [objNull]]];
