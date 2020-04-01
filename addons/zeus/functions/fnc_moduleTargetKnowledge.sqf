@@ -23,7 +23,7 @@ CHECK(!hasinterface);
 
     //Check if selected unit is an AI
     if ((isPlayer _AI) || {isnull _AI}) exitWith {
-        [LLSTRING(AI_noAI)] call Ares_fnc_ShowZeusMessage;
+        [LLSTRING(AI_noAI)] call zen_common_fnc_showMessage;
     };
 
     //Draw line and icon from AI to mouse
@@ -37,7 +37,7 @@ CHECK(!hasinterface);
 
         //make sure cursor object is an AI or a player
         if (!(_typeName isEqualTo "OBJECT") || {(count (crew _target)) isEqualTo 0} || {isnull _target}) exitWith {
-            [LLSTRING(AI_noTarget)] call Ares_fnc_ShowZeusMessage;
+            [LLSTRING(AI_noTarget)] call zen_common_fnc_showMessage;
         };
 
         //get info
@@ -45,10 +45,10 @@ CHECK(!hasinterface);
         _info params ["_knownByGroup", "_knownByUnit"];
 
         //give the curator the info
-        [LLSTRING(AI_addedInfo)] call Ares_fnc_ShowZeusMessage;
+        [LLSTRING(AI_addedInfo)] call zen_common_fnc_showMessage;
 
         systemChat format ["1. %1: %2.", LLSTRING(AI_knownByGroup), localize format [LSTRING(AI_%1), _knownByGroup]];
         systemChat format ["2. %1: %2.", LLSTRING(AI_knownByUnit), localize format [LSTRING(AI_%1), _knownByUnit]];
 
     }, LLSTRING(AI_targetKnowledge), "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1, 0, 0, 1], 45] call ace_zeus_fnc_getModuleDestination;
-}] call Ares_fnc_RegisterCustomModule;
+}] call zen_custom_modules_fnc_register;

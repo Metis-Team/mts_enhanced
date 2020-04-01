@@ -23,10 +23,10 @@ CHECK(!hasinterface);
         params["", ["_vehicle", objNull, [objNull]]];
 
         if (!(_vehicle isKindOf "LandVehicle") || {isnull _vehicle}) exitWith {
-            [LLSTRING(unflipVehicle_noVeh)] call Ares_fnc_ShowZeusMessage;
+            [LLSTRING(unflipVehicle_noVeh)] call zen_common_fnc_showMessage;
         };
 
         _vehicle setVectorUp (surfaceNormal (getPos _vehicle));
         _vehicle setPosATL [((getPos _vehicle) select 0), ((getPos _vehicle) select 1), 0.5];
     }
-] call Ares_fnc_RegisterCustomModule;
+] call zen_custom_modules_fnc_register;
