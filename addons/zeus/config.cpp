@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"mts_main", "zen_custom_modules", "ace_medical", "ace_zeus"};
+        requiredAddons[] = {"mts_main", "zen_custom_modules", "zen_dialog", "zen_common", "ace_medical", "ace_zeus"};
         author = "";
         authors[] = {"PhILoX", "Timi007"};
         VERSION_CONFIG;
