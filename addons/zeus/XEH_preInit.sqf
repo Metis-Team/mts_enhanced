@@ -11,9 +11,9 @@ PREP_RECOMPILE_END;
     "CHECKBOX",
     [LLSTRING(ACEUnconsciousIcon), format [LELSTRING(main,settingCheckboxDescription), LLSTRING(ACEUnconsciousIcon)]],
     LELSTRING(main,settingCategoryCommon),
-    false,
+    true,
     0,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 ADDON = true;

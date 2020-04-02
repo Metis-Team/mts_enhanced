@@ -1,4 +1,3 @@
-PREP(moduleShowProjectiles);
 PREP(moduleArtillery);
 PREP(artyFireMissionHE);
 PREP(artyFireMissionSMOKE);
