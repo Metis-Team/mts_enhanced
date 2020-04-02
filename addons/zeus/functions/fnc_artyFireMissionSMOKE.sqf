@@ -24,37 +24,40 @@ params [
     ["_timeOnTarget", 0, [0]]
 ];
 
-private _dialog_data = [
+[
     LLSTRING(artillery_firemission_smoke),
     [
-        [LLSTRING(artillery_ammoAmount), "", "1"],
-        [LLSTRING(artillery_delayType), [LLSTRING(artillery_delay), LLSTRING(artillery_durationWithAmmo), LLSTRING(artillery_durationWithDelay)], 0],
-        [LLSTRING(artillery_delay), "", "15"],
-        [LLSTRING(artillery_duration), "", "60"]
-    ]
-] call Ares_fnc_showChooseDialog;
+        ["EDIT", LLSTRING(artillery_ammoAmount), ["1"]],
+        ["COMBO", LLSTRING(artillery_delayType), [[0, 1, 2], [LLSTRING(artillery_delay), LLSTRING(artillery_durationWithAmmo), LLSTRING(artillery_durationWithDelay)], 0]],
+        ["EDIT", LLSTRING(artillery_delay), ["15"]],
+        ["EDIT", LLSTRING(artillery_duration), ["60"]]
+    ],
+    {
+        (_this select 0) params ["_ammoAmount", "_delayType", "_delay", "_duration"];
+        (_this select 1) params ["_position", "_impactArea", "_timeOnTarget"];
 
-CHECK(_dialog_data isEqualTo []);
+        _ammoAmount = parseNumber _ammoAmount;
+        _delay = parseNumber _delay;
+        _duration = parseNumber _duration;
 
-_dialog_data params ["_ammoAmount", "_delayType", "_delay", "_duration"];
-_ammoAmount = parseNumber _ammoAmount;
-_delay = parseNumber _delay;
-_duration = parseNumber _duration;
+        if (_delay < 0 || _duration < 0) exitWith {
+            [LLSTRING(artillery_errorDelayOrHight)] call zen_common_fnc_showMessage;
+        };
+        if (_ammoAmount <= 0) exitWith {
+            [LLSTRING(artillery_errorAmount)] call zen_common_fnc_showMessage;
+        };
 
-if (_delay < 0 || _duration < 0) exitWith {
-    [LLSTRING(artillery_errorDelayOrHight)] call Ares_fnc_ShowZeusMessage;
-};
-if (_ammoAmount <= 0) exitWith {
-    [LLSTRING(artillery_errorAmount)] call Ares_fnc_ShowZeusMessage;
-};
-
-if (_delayType isEqualTo 0) then {
-    [_position, "Smoke_120mm_AMOS_White", _ammoAmount, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
-};
-if (_delayType isEqualTo 1) then {
-    [_position, "Smoke_120mm_AMOS_White", _ammoAmount, true, _duration, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
-};
-if (_delayType isEqualTo 2) then {
-    _ammoAmount = ceil (_duration / _delay);
-    [_position, "Smoke_120mm_AMOS_White", _ammoAmount, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
-};
+        if (_delayType isEqualTo 0) then {
+            [_position, "Smoke_120mm_AMOS_White", _ammoAmount, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+        };
+        if (_delayType isEqualTo 1) then {
+            [_position, "Smoke_120mm_AMOS_White", _ammoAmount, true, _duration, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+        };
+        if (_delayType isEqualTo 2) then {
+            _ammoAmount = ceil (_duration / _delay);
+            [_position, "Smoke_120mm_AMOS_White", _ammoAmount, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+        };
+    },
+    {},
+    [_position, _impactArea, _timeOnTarget]
+] call zen_dialog_fnc_create;
