@@ -51,24 +51,6 @@
             <German>Aktiviert die Bewegung und Zielsuche der Einheit</German>
         </Key>
     </Container>
-    <Container name="traceProjectiles">
-        <Key ID="STR_mts_zeus_showProjectiles">
-            <Original>Show projectiles</Original>
-            <German>Projektile anzeigen</German>
-        </Key>
-        <Key ID="STR_mts_zeus_showProjectiles_duration">
-            <Original>Duration (Seconds)</Original>
-            <German>Dauer (Sekunden)</German>
-        </Key>
-        <Key ID="STR_mts_zeus_showProjectiles_errorNoUnit">
-            <Original>No unit was selected!</Original>
-            <German>Keine Einheit wurde ausgewählt!</German>
-        </Key>
-        <Key ID="STR_mts_zeus_showProjectiles_errorMaxDuration">
-            <Original>Max duration is 600 seconds!</Original>
-            <German>Die Dauer darf höchstens 600 Sekunden sein!</German>
-        </Key>
-    </Container>
     <Container name="artillery">
         <Key ID="STR_mts_zeus_artillery">
             <Original>Artillery strike</Original>

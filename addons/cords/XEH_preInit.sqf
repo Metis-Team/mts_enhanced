@@ -14,7 +14,7 @@ PREP_RECOMPILE_END;
     true,
     0,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(playerIDs),
@@ -24,6 +24,6 @@ PREP_RECOMPILE_END;
     "[""""]",
     1,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 ADDON = true;

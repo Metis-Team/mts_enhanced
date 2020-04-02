@@ -16,6 +16,6 @@ PREP_RECOMPILE_END;
     {
         cutText ["", "PLAIN"];
     }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 ADDON = true;

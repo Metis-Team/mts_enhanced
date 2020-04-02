@@ -35,4 +35,4 @@ curatorSelected params ["_objects"];
 } forEach _objects;
 
 //give the curator feedback
-[localize format[LSTRING(AI_pathBehaviour_%1_%2), _section, _enableAI]] call Ares_fnc_ShowZeusMessage;
+[localize format[LSTRING(AI_pathBehaviour_%1_%2), _section, _enableAI]] call zen_common_fnc_showMessage;

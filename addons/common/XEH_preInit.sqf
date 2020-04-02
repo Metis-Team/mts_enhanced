@@ -19,7 +19,7 @@ INFO_1("Metis Enhanced version: %1.", _version);
     true,
     0,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 //grasscutter size
 [
@@ -28,12 +28,12 @@ INFO_1("Metis Enhanced version: %1.", _version);
     [LLSTRING(grasscutter_size), LLSTRING(grasscutter_size_tooltip)],
     LELSTRING(main,settingCategoryCommon),
     [
-        ["Land_ClutterCutter_Large_F", "Land_ClutterCutter_Medium_F"],
+        [0, 1],
         [LLSTRING(grasscutter_size_large), LLSTRING(grasscutter_size_medium)],
         1
     ],
     0,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 ADDON = true;

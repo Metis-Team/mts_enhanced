@@ -1,17 +1,17 @@
-#define COMPONENT flagmarker
-#define COMPONENT_BEAUTIFIED Flag marker
+#define COMPONENT items
+#define COMPONENT_BEAUTIFIED Items
 #include "\z\mts_enhanced\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
+ #define DEBUG_MODE_FULL
+ #define DISABLE_COMPILE_CACHE
 // #define CBA_DEBUG_SYNCHRONOUS
 
-#ifdef DEBUG_ENABLED_FLAGMARKER
+#ifdef DEBUG_ENABLED_ITEMS
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_FLAGMARKER
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_FLAGMARKER
+#ifdef DEBUG_SETTINGS_ITEMS
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_ITEMS
 #endif
 
 #include "\z\mts_enhanced\addons\main\script_macros.hpp"

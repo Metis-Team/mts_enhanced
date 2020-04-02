@@ -29,4 +29,4 @@ CHECK(_groups isEqualTo []);
 } forEach _groups;
 
 //give the curator feedback
-[localize format[LSTRING(AI_combatMode_%1), toLower(_combatMode)]] call Ares_fnc_ShowZeusMessage;
+[localize format[LSTRING(AI_combatMode_%1), toLower(_combatMode)]] call zen_common_fnc_showMessage;
