@@ -11,7 +11,7 @@ class CfgVehicles {
         model = "\A3\Weapons_F\DummyItemHorizontal.p3d";
         class TransportItems {};
     };
-    class GVAR(red_item): GVAR(item_base) {
+    class GVAR(flag_red_item): GVAR(item_base) {
         author = CSTRING(authors);
         displayName = CSTRING(flagRedDisplayName);
         scope = 2;
@@ -23,7 +23,7 @@ class CfgVehicles {
             };
         };
     };
-    class GVAR(blue_item): GVAR(item_base) {
+    class GVAR(flag_blue_item): GVAR(item_base) {
         author = CSTRING(authors);
         displayName = CSTRING(flagBlueDisplayName);
         scope = 2;
@@ -35,7 +35,7 @@ class CfgVehicles {
             };
         };
     };
-    class GVAR(green_item): GVAR(item_base) {
+    class GVAR(flag_green_item): GVAR(item_base) {
         author = CSTRING(authors);
         displayName = CSTRING(flagGreenDisplayName);
         scope = 2;
@@ -47,7 +47,7 @@ class CfgVehicles {
             };
         };
     };
-    class GVAR(yellow_item): GVAR(item_base) {
+    class GVAR(flag_yellow_item): GVAR(item_base) {
         author = CSTRING(authors);
         displayName = CSTRING(flagYellowDisplayName);
         scope = 2;
@@ -55,6 +55,31 @@ class CfgVehicles {
         class TransportItems {
             class GVAR(yellow) {
                 name = QGVAR(yellow);
+                count = 1;
+            };
+        };
+    };
+
+    class GVAR(marker_yellow_item): GVAR(item_base) {
+        author = CSTRING(authors);
+        displayName = CSTRING(markerYellowDisplayName);
+        scope = 2;
+        scopeCurator = 2;
+        class TransportItems {
+            class GVAR(marker_yellow) {
+                name = QGVAR(marker_yellow);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(marker_mines_item): GVAR(item_base) {
+        author = CSTRING(authors);
+        displayName = CSTRING(markerMinesDisplayName);
+        scope = 2;
+        scopeCurator = 2;
+        class TransportItems {
+            class GVAR(marker_mines) {
+                name = QGVAR(marker_mines);
                 count = 1;
             };
         };
