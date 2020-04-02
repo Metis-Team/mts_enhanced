@@ -40,6 +40,8 @@ if (_isUnconscious) then {
     _curatorModule setVariable [QGVAR(iconIDArray), _iconIDArray];
 } else {
     private _iconIndex = _iconIDArray findIf {(_x select 0) isEqualTo _unit};
+    // Unit wasn't unconscious before. Unit respawned manually -> do nothing
+    CHECK(_iconIndex < 0);
     private _iconID = (_iconIDArray select _iconIndex) select 1;
     [_curatorModule, _iconID] call BIS_fnc_removeCuratorIcon;
     _iconIDArray deleteAt _iconIndex;
