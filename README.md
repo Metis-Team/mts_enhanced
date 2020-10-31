@@ -7,7 +7,7 @@ A collection of useful components to enhance the MilSim gameplay experience for 
         <img src="https://img.shields.io/badge/Version-1.2.1-blue.svg?style=flat-square" alt="Metis Marker Version">
     </a>
     <a href="https://github.com/Metis-Team/mts_enhanced/releases/latest">
-        <img src="https://img.shields.io/github/downloads/Metis-Team/mts_marker/total.svg?style=flat-square&label=Downloads" alt="Metis Marker Downloads">
+        <img src="https://img.shields.io/github/downloads/Metis-Team/mts_enhanced/total.svg?style=flat-square&label=Downloads" alt="Metis Marker Downloads">
     </a>
     <a href="https://github.com/Metis-Team/mts_enhanced/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-APL--ND-red.svg?style=flat-square" alt="APL-ND License">
