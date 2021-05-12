@@ -193,7 +193,17 @@
             <German>Kein Fahrzeug ausgewählt!</German>
         </Key>
     </Container>
+    <Container name="misc">
+        <Key ID="STR_mts_zeus_measureDistance">
+            <Original>Measure distance</Original>
+            <German>Entfernungsmessung</German>
+        </Key>
+    </Container>
     <Container name="AI">
+        <Key ID="STR_mts_zeus_AI_knowledgeCategory">
+            <Original>Knowledge</Original>
+            <German>Wissen</German>
+        </Key>
         <Key ID="STR_mts_zeus_AI_revealTarget">
             <Original>Reveal target</Original>
             <German>Einheit aufdecken</German>
@@ -213,6 +223,10 @@
         <Key ID="STR_mts_zeus_AI_noTarget">
             <Original>No target selected!</Original>
             <German>Keine Zieleinheit ausgewählt!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_AI_tooManySelected">
+            <Original>You can only read target knowledge from one selected unit!</Original>
+            <German>Zieleinheitinformationen können nur von einer ausgewählten Einheit ausgelesen werden!</German>
         </Key>
         <Key ID="STR_mts_zeus_AI_revealedInfo">
             <Original>Target revealed to AI unit</Original>

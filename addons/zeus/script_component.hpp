@@ -2,8 +2,8 @@
 #define COMPONENT_BEAUTIFIED Zeus
 #include "\z\mts_enhanced\addons\main\script_mod.hpp"
 
-//#define DEBUG_MODE_FULL
-//#define DISABLE_COMPILE_CACHE
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
 // #define CBA_DEBUG_SYNCHRONOUS
 
 #ifdef DEBUG_ENABLED_ZEUS
@@ -19,4 +19,4 @@
 #define ZEUS_DISPLAY 312
 #define PAUSE_MENU_DISPLAY 49
 
-#define ZEUS_CTRL 51
+#define ZEUS_MAP_CTRL 50

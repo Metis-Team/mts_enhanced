@@ -3,36 +3,36 @@
  *  Author: Timi007
  *
  *  Description:
- *      [Description]
+ *      Adds the measure distance action to the zeus context menu.
  *
  *  Parameter(s):
- *      0: [TYPE] - [argument name]
+ *      None.
  *
  *  Returns:
- *      [TYPE] - [return name]
+ *      Nothing.
  *
  *  Example:
- *      [[arguments]] call [function name]
+ *      call mts_zeus_fnc_contextMeasureDistance
  *
  */
 
  private _action = [
-    "MeasureDistance",
-    "Measure Distance",
+    QGVAR(measureDistance),
+    LLSTRING(measureDistance),
     "\a3\ui_f\data\IGUI\Cfg\Actions\autohover_ca.paa",
     {
         params ["_position"];
 
-        [_position, {}, "", "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1, 0, 0, 1], 45, {
-            params ["_startPosAGL", "_mousePos", "_text", "_icon", "_color", "_angle", "_is3d"];
+        [_position, {}, [], "", "\a3\ui_f\data\map\markerbrushes\cross_ca.paa", [0.1, 0.2, 1, 1], 0, true, true, {
+            params ["_startPosAGL", "_mousePosAGL", "_text", "_icon", "_color", "_angle", "_is3d"];
 
-            private _distance = _startPosAGL vectorDistance _mousePos;
-            private _azimuth = _startPosAGL getDir _mousePos;
+            private _distance = _startPosAGL vectorDistance _mousePosAGL;
+            private _azimuth = _startPosAGL getDir _mousePosAGL;
 
-            private _newText = format ["%1 m - %2°", round _distance, round _azimuth];
+            private _newText = format ["%1 m - %2°", _distance toFixed 1, floor _azimuth];
 
-            [[_mousePos, _newText, _icon, _color, _angle], [_startPosAGL, _mousePos, _color]]
-        }] call mts_zeus_fnc_getModuleDestination;
+            [[_mousePosAGL, _newText, _icon, _color, _angle], [_startPosAGL, _mousePosAGL, _color]]
+        }] call FUNC(getModuleDestination);
     }
 ] call zen_context_menu_fnc_createAction;
 [_action, [], 0] call zen_context_menu_fnc_addAction;

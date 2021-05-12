@@ -1,8 +1,9 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
  *  Description:
- *      Adds a zeus module which shows the zeus what the AI knows about the target.
+ *      Adds unit knowledge, reveal and forget actions as modules and to the context menu.
  *
  *  Parameter(s):
  *      None.
@@ -14,39 +15,81 @@
  *      call mts_zeus_fnc_moduleTargetKnowledge
  *
  */
-#include "script_component.hpp"
 
-["Metis", LLSTRING(AI_targetKnowledge), {
-    params["", ["_AI", objNull, [objNull]]];
+["Metis", LLSTRING(AI_targetKnowledge),
+    {
+        params ["", "_attachedObj"];
+        [_attachedObj] call FUNC(getTargetKnowledge);
+    },
+    "\a3\ui_f\data\igui\cfg\holdactions\holdaction_search_ca.paa"
+] call zen_custom_modules_fnc_register;
 
-    //Check if selected unit is an AI
-    if ((isPlayer _AI) || {isnull _AI}) exitWith {
-        [LLSTRING(AI_noAI)] call zen_common_fnc_showMessage;
-    };
+["Metis", LLSTRING(AI_forgetTarget),
+    {
+        params ["", "_attachedObj"];
+        ["FORGET", [_attachedObj]] call FUNC(setTargetKnowledge);
+    },
+    "\a3\ui_f\data\igui\cfg\simpletasks\types\unknown_ca.paa"
+] call zen_custom_modules_fnc_register;
 
-    //Draw line and icon from AI to mouse
-    [_AI, {
-        params ["_successful", "_AI"];
+["Metis", LLSTRING(AI_revealTarget),
+    {
+        params ["", "_attachedObj"];
+        ["REVEAL", [_attachedObj]] call FUNC(setTargetKnowledge);
+    },
+    "\a3\ui_f\data\igui\cfg\simpletasks\types\scout_ca.paa"
+] call zen_custom_modules_fnc_register;
 
-        CHECK(!(_successful && {alive _AI}));
+private _parentTargetKnowledgeAction = [
+   QGVAR(parentTargetKnowledge),
+   LLSTRING(AI_knowledgeCategory),
+   "\a3\ui_f\data\gui\rsc\rscdisplayegspectator\fps.paa",
+   {},
+   {
+       params ["", "_objects"];
+       count _objects > 0 && _objects findIf {_x isKindOf "man" && !isPlayer _x} >= 0
+   }
+] call zen_context_menu_fnc_createAction;
+private _parentAction = [_parentTargetKnowledgeAction, [], 0] call zen_context_menu_fnc_addAction;
 
-        //get cursor info
-        curatorMouseOver params ["_typeName", "_target"];
+private _targetKnowledgeAction = [
+   QGVAR(targetKnowledge),
+   LLSTRING(AI_targetKnowledge),
+   "\a3\ui_f\data\igui\cfg\holdactions\holdaction_search_ca.paa",
+   {
+       params ["", "_objects"];
 
-        //make sure cursor object is an AI or a player
-        if (!(_typeName isEqualTo "OBJECT") || {(count (crew _target)) isEqualTo 0} || {isnull _target}) exitWith {
-            [LLSTRING(AI_noTarget)] call zen_common_fnc_showMessage;
-        };
+       if (count _objects isNotEqualTo 1) exitWith {
+           [LLSTRING(AI_tooManySelected)] call zen_common_fnc_showMessage;
+       };
 
-        //get info
-        private _info = _AI targetKnowledge _target;
-        _info params ["_knownByGroup", "_knownByUnit"];
+       [_objects select 0] call FUNC(getTargetKnowledge);
+   },
+   {
+       params ["", "_objects"];
+       count _objects isEqualTo 1
+   }
+] call zen_context_menu_fnc_createAction;
+[_targetKnowledgeAction, _parentAction, 0] call zen_context_menu_fnc_addAction;
 
-        //give the curator the info
-        [LLSTRING(AI_addedInfo)] call zen_common_fnc_showMessage;
+private _forgetTargetAction = [
+   QGVAR(revealTarget),
+   LLSTRING(AI_forgetTarget),
+   "\a3\ui_f\data\igui\cfg\simpletasks\types\unknown_ca.paa",
+   {
+       params ["", "_objects"];
+       ["FORGET", _objects] call FUNC(setTargetKnowledge);
+   }
+] call zen_context_menu_fnc_createAction;
+[_forgetTargetAction, _parentAction, 0] call zen_context_menu_fnc_addAction;
 
-        systemChat format ["1. %1: %2.", LLSTRING(AI_knownByGroup), localize format [LSTRING(AI_%1), _knownByGroup]];
-        systemChat format ["2. %1: %2.", LLSTRING(AI_knownByUnit), localize format [LSTRING(AI_%1), _knownByUnit]];
-
-    }, LLSTRING(AI_targetKnowledge), "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1, 0, 0, 1], 45] call ace_zeus_fnc_getModuleDestination;
-}] call zen_custom_modules_fnc_register;
+private _revealTargetAction = [
+   QGVAR(revealTarget),
+   LLSTRING(AI_revealTarget),
+   "\a3\ui_f\data\igui\cfg\simpletasks\types\scout_ca.paa",
+   {
+       params ["", "_objects"];
+       ["REVEAL", _objects] call FUNC(setTargetKnowledge);
+   }
+] call zen_context_menu_fnc_createAction;
+[_revealTargetAction, _parentAction, 0] call zen_context_menu_fnc_addAction;
