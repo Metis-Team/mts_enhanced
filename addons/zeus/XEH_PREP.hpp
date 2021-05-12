@@ -14,3 +14,5 @@ PREP(setAIStance);
 PREP(switchAIPathBehaviour);
 PREP(setAIBehaviour);
 PREP(setAICombatMode);
+PREP(getModuleDestination);
+PREP(contextMeasureDistance);

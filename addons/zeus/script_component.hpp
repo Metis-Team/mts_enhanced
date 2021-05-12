@@ -15,3 +15,8 @@
 #endif
 
 #include "\z\mts_enhanced\addons\main\script_macros.hpp"
+
+#define ZEUS_DISPLAY 312
+#define PAUSE_MENU_DISPLAY 49
+
+#define ZEUS_CTRL 51
