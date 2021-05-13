@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -16,7 +17,6 @@
  *      [[400,300], [100,100,0], 5] call mts_zeus_fnc_artyFireMissionILLUM
  *
  */
-#include "script_component.hpp"
 
 params [
     ["_position", [0,0], [[]]],

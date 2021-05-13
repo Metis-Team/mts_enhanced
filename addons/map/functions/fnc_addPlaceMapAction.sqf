@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -14,7 +15,6 @@
  *      call mts_map_fnc_addPlaceMapAction
  *
  */
-#include "script_component.hpp"
 
 CHECK(!hasinterface);
 
@@ -31,7 +31,7 @@ private _placeMapAction = [
 
         [{(toLower (stance _this)) isEqualTo "crouch"}, {
             params ["_player"];
-            
+
             _player playAction "putdown";
             private _sound = format [QGVAR(unfoldSound_%1), ((floor random 4) + 1)];
             [_player, [_sound, 300]] remoteExecCall ["say3D"];

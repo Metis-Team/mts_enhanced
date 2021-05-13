@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -15,7 +16,6 @@
  *      ["armory", "armory.ini"] call mts_database_fnc_connectToDB
  *
  */
-#include "script_component.hpp"
 
 params [
     ["_database", "", [""]],

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -15,7 +16,6 @@
  *      ["323","EEH-B"] call mts_armory_fnc_equipBackpack
  *
  */
-#include "script_component.hpp"
 
 private _params = params [["_equipmentName", "", [""]], ["_backpackName", "", [""]]];
 TRACE_3("",_equipmentName,_backpackName,_params);

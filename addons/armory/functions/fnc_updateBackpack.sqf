@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -25,7 +26,6 @@
  *      ["323", "MG1", "MG-1"] call mts_armory_fnc_updateBackpack
  *
  */
-#include "script_component.hpp"
 
 private _params = params [["_equipmentName", "", [""]], ["_name", "", [""]], ["_oldName", "", [""]]];
 

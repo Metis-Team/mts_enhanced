@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -14,7 +15,6 @@
  *      call mts_zeus_fnc_moduleUnflipVehicle
  *
  */
-#include "script_component.hpp"
 
 ["Metis", LLSTRING(unflipVehicle),
     {

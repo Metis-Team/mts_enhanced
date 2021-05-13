@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -28,7 +29,6 @@
  *      ["FlagChecked_F", {systemChat str _this}, {}, {}, ["green"]] call mts_items_fnc_placeItem
  *
  */
-#include "script_component.hpp"
 
 params [
     ["_classname", "", [""]],

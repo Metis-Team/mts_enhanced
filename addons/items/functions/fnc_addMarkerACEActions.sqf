@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -14,7 +15,6 @@
  *      call mts_items_fnc_addMarkerACEActions
  *
  */
-#include "script_component.hpp"
 
 CHECK(!hasInterface);
 
