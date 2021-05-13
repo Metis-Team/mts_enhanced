@@ -16,8 +16,6 @@
  *
  */
 
-CHECK(!hasinterface);
-
 if (isServer) then {
     [QGVAR(createZeus), {
         params [["_unit", objNull, [objNull]]];
@@ -31,6 +29,8 @@ if (isServer) then {
         [LLSTRING(chatCommands_zeusCreated)] remoteExecCall ["hint", _unit];
     }] call CBA_fnc_addEventHandler;
 };
+
+CHECK(!hasinterface);
 
 ["zeus", {
     params ["_name"];
