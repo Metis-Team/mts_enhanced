@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -14,7 +15,6 @@
  *      call mts_cords_fnc_addCordsToACE
  *
  */
-#include "script_component.hpp"
 
 CHECK(!GVAR(enabled) || !hasinterface);
 

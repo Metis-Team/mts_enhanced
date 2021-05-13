@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX, Timi007
  *
@@ -15,7 +16,6 @@
  *      call mts_zeus_fnc_initDrawIconEH
  *
  */
-#include "script_component.hpp"
 
 private _curatorModule = getAssignedCuratorLogic player;
 

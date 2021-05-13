@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -15,7 +16,6 @@
  *      ["enhanced", ["00000000000000000"]] call mts_armory_fnc_saveEditors
  *
  */
-#include "script_component.hpp"
 
 private _params = params [["_equipmentName", "", [""]], ["_editors", [], [[],""]]];
 TRACE_2("",_equipmentName,_editors);

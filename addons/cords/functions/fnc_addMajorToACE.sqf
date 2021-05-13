@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -16,7 +17,6 @@
  *      call mts_cords_fnc_addMajorToACE
  *
  */
-#include "script_component.hpp"
 
 CHECK(!hasinterface);
 

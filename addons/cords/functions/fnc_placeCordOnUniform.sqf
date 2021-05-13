@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -14,7 +15,7 @@
  *      ["inf"] call mts_cords_fnc_placeCordOnUniform
  *
  */
-#include "script_component.hpp"
+
 params[["_cordType","",[""]]];
 private["_path"];
 

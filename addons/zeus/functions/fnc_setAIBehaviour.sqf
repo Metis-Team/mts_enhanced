@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -14,7 +15,6 @@
  *      ["CARELESS"] call mts_zeus_fnc_setAIBehaviour
  *
  */
-#include "script_component.hpp"
 
 params [["_behaviour", "", [""]]];
 CHECK(_behaviour isEqualTo "");

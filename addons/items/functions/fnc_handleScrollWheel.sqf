@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -14,7 +15,6 @@
  *      [5] call mts_items_fnc_handleScrollWheel
  *
  */
-#include "script_component.hpp"
 
 params ["_scrollAmount"];
 

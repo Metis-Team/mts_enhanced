@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -15,7 +16,6 @@
  *      [_projectile, 15] call mts_zeus_fnc_artyAirburst
  *
  */
-#include "script_component.hpp"
 
 params ["_projectile", "_detonationHight"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX, Timi007, Toma
  *
@@ -14,7 +15,6 @@
  *      ["mts_drill_StandStill"] call mts_drill_fnc_playAnimation
  *
  */
-#include "script_component.hpp"
 
 params ["_animName"];
 

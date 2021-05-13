@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -14,7 +15,6 @@
  *      ["DOWN"] call mts_zeus_fnc_setAIStance
  *
  */
-#include "script_component.hpp"
 
 params [["_stance", "", [""]]];
 CHECK(_stance isEqualTo "");
