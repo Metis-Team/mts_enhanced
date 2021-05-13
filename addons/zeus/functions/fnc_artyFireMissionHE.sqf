@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -17,7 +18,6 @@
  *      [[400,300], "Sh_155mm_AMOS", [100,100,0], 5] call mts_zeus_fnc_artyFireMissionHE
  *
  */
-#include "script_component.hpp"
 
 params [
     ["_position", [0,0,0], [[]]],

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -14,7 +15,6 @@
  *      ["red"] call mts_items_fnc_carryFlag
  *
  */
-#include "script_component.hpp"
 
 params [["_color", "", [""]]];
 

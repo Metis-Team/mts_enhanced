@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -17,7 +18,6 @@
  *      [1289, "getAllObjects"] call mts_database_fnc_getData
  *
  */
-#include "script_component.hpp"
 
 CHECK(!GVAR(initialized) || isNil "_this" || !isServer);
 

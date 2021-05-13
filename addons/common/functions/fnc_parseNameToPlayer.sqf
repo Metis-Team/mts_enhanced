@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -14,7 +15,6 @@
  *      ["John Doe"] call mts_common_fnc_parseNameToPlayer
  *
  */
-#include "script_component.hpp"
 
 params [["_name", "", [""]]];
 private _unit = objNull;

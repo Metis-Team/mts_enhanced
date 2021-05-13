@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -21,7 +22,6 @@
  *      [[400,500], "Sh_155mm_AMOS", 5, false, 1, 0, [200,100,25], 5] call mts_zeus_fnc_execArtyStrike
  *
  */
-#include "script_component.hpp"
 
 params [
     ["_centerPos", [], [[]]],

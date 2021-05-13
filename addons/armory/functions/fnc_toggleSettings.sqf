@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -14,7 +15,6 @@
  *      call mts_armory_fnc_toggleSettings
  *
  */
-#include "script_component.hpp"
 
 params [["_fastSwitch", false, [false]]];
 
