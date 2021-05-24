@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -15,7 +16,6 @@
  *      [buttonControl] call mts_armory_fnc_saveEquipment
  *
  */
-#include "script_component.hpp"
 
 params [["_ctrlSave", controlNull, [controlNull]],["_delete", false, [false]]];
 

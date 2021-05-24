@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -14,7 +15,6 @@
  *      call mts_common_fnc_arsenalPBWFix
  *
  */
-#include "script_component.hpp"
 
 CHECK(!isClass (configFile >> "CfgPatches" >> "PBW_German_Uniform") || !hasinterface);
 

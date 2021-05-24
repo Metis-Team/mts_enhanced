@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -15,7 +16,6 @@
  *      [1,1] call mts_armory_fnc_setEditArea
  *
  */
-#include "script_component.hpp"
 
 private _params = params [["_idc", -1, [0]], ["_category", -1, [0]]];
 

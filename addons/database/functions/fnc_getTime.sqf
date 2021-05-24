@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -14,7 +15,6 @@
  *      call mts_database_fnc_database_getTime
  *
  */
-#include "script_component.hpp"
 
 CHECK(!GVAR(initialized) || !isServer);
 

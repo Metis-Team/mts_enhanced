@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -14,7 +15,6 @@
  *      ["323"] call mts_armory_fnc_initEquipment
  *
  */
-#include "script_component.hpp"
 
 params [["_equipmentName", "", [""]]];
 TRACE_1("", _equipmentName);

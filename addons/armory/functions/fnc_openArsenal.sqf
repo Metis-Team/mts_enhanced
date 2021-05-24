@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -14,7 +15,6 @@
  *      [control] call mts_armory_fnc_openArsenal
  *
  */
-#include "script_component.hpp"
 
 params ["_ctrlArsenal"];
 TRACE_1("",_ctrlArsenal);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -14,9 +15,6 @@
  *      call mts_common_fnc_addChatCommands
  *
  */
-#include "script_component.hpp"
-
-CHECK(!hasinterface);
 
 if (isServer) then {
     [QGVAR(createZeus), {
@@ -31,6 +29,8 @@ if (isServer) then {
         [LLSTRING(chatCommands_zeusCreated)] remoteExecCall ["hint", _unit];
     }] call CBA_fnc_addEventHandler;
 };
+
+CHECK(!hasinterface);
 
 ["zeus", {
     params ["_name"];

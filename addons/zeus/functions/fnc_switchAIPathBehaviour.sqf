@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -15,7 +16,6 @@
  *      ["path", true] call mts_zeus_fnc_switchAIPathBehaviour
  *
  */
-#include "script_component.hpp"
 
 params [["_section", "", [""]], ["_enableAI", true, [true]]];
 

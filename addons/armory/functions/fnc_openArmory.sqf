@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -17,7 +18,6 @@
  *      ["323"] call mts_armory_fnc_openArmory
  *
  */
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {
     [{_this call FUNC(openArmory)}, _this] call CBA_fnc_directCall;

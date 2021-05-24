@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -15,7 +16,6 @@
  *      [_unit, true] call mts_zeus_fnc_drawACEUnconsciousIcon
  *
  */
-#include "script_component.hpp"
 
 params [["_unit", objnull, [objnull]], ["_isUnconscious", false, [false]]];
 

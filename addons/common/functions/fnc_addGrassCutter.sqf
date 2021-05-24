@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX, Timi007
  *
@@ -14,7 +15,6 @@
  *      call mts_common_fnc_addGrassCutter
  *
  */
-#include "script_component.hpp"
 
 CHECK(!GVAR(grasscutter_enabled) || !hasinterface);
 

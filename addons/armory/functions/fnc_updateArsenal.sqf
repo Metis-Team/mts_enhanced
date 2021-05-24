@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: PhILoX
  *
@@ -15,7 +16,6 @@
  *      ["323" , false] call mts_armory_fnc_toggleArsenal
  *
  */
-#include "script_component.hpp"
 
 private _params = params [["_equipmentName", "", [""]], ["_status", false, [false]]];
 TRACE_3("", _equipmentName, _status, _params);

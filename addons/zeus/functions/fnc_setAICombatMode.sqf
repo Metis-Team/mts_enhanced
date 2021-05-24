@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  *  Author: Timi007
  *
@@ -14,7 +15,6 @@
  *      ["BLUE"] call mts_zeus_fnc_setAICombatMode
  *
  */
-#include "script_component.hpp"
 
 params [["_combatMode", "", [""]]];
 CHECK(_combatMode isEqualTo "");
