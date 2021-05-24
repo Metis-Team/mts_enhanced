@@ -3,6 +3,8 @@
 
 CHECK(!hasinterface);
 
+GVAR(moduleDestination_running) = false;
+
 player addEventHandler ["killed", {
     params ["_unit"];
     [QGVAR(killed), [_unit, false]] call CBA_fnc_globalEvent;
