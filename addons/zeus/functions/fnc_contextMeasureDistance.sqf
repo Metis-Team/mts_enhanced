@@ -33,6 +33,9 @@
 
             [[_mousePosAGL, _newText, _icon, _color, _angle], [_startPosAGL, _mousePosAGL, _color]]
         }] call FUNC(getModuleDestination);
+    },
+    {
+        !GVAR(moduleDestination_running)
     }
 ] call zen_context_menu_fnc_createAction;
 [_action, [], 0] call zen_context_menu_fnc_addAction;

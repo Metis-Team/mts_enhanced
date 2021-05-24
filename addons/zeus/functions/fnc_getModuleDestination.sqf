@@ -53,7 +53,9 @@ params [
     ["_beforeDrawingCode", {}, [{}]]
 ];
 
-if (missionNamespace getVariable [QGVAR(moduleDestination_running), false]) exitWith {
+TRACE_1("called", GVAR(moduleDestination_running));
+
+if (GVAR(moduleDestination_running)) exitWith {
     [false, _startPosASL, [0,0,0], false, false, false, _args] call _code;
     ERROR("getModuleDestination already running");
 };
