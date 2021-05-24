@@ -14,4 +14,6 @@ call FUNC(moduleForgetTarget);
 call FUNC(moduleRevealTarget);
 call FUNC(moduleTargetKnowledge);
 
+call FUNC(contextMeasureDistance);
+
 #include "initKeybinds.hpp"
