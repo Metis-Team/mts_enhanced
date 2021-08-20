@@ -84,4 +84,24 @@ class CfgVehicles {
             };
         };
     };
+
+    class ReammoBox_F;
+    class GVAR(miclic): ReammoBox_F {
+        author = CSTRING(authors);
+        displayName = CSTRING(miclicDisplayName);
+        editorPreview = "\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_IED_Exp_F.jpg";
+        scope = 2;
+        scopeCurator = 2;
+        model = "\A3\Weapons_F\Ammoboxes\Proxy_UsBasicExplosives.p3d";
+        icon = "iconCrateOrd";
+        editorCategory = "EdCat_Supplies";
+        maximumLoad = 0;
+        class TransportMagazines {};
+        class TransportWeapons {};
+        class TransportItems {};
+        ace_cargo_canLoad = 1;
+        ace_cargo_size = 4;
+        ace_dragging_canCarry = 0;
+        ace_dragging_canDrag = 1;
+    };
 };

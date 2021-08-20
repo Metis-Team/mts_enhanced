@@ -43,6 +43,16 @@
             <German>Kann nur platziert werden. Markierungen werden zur Kennzeichnung von bestimmten Geländepunkte eingesetzt.</German>
         </Key>
     </Container>
+    <Container name="miclic">
+        <Key ID="STR_mts_items_miclicDisplayName">
+            <Original>Mine Clearing Line Charge (MICLIC)</Original>
+            <German>Minenräumleiter</German>
+        </Key>
+        <Key ID="STR_mts_items_igniteMiclic">
+            <Original>Ignite Mine Clearing Line Charge (MICLIC)</Original>
+            <German>Minenräumleiter zünden</German>
+        </Key>
+    </Container>
     <Container name="actions">
         <Key ID="STR_mts_items_flags">
             <Original>Flags</Original>

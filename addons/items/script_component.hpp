@@ -2,8 +2,8 @@
 #define COMPONENT_BEAUTIFIED Items
 #include "\z\mts_enhanced\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
 // #define CBA_DEBUG_SYNCHRONOUS
 
 #ifdef DEBUG_ENABLED_ITEMS
