@@ -3,7 +3,7 @@
  *  Author: Timi007
  *
  *  Description:
- *      Ignites the MICLIC clearing a path through a mine field.
+ *      Ignites the MICLIC clearing a path through a mine field. Execute on server only.
  *
  *  Parameter(s):
  *      0: OBJECT - Object which should act like a MICLIC.
@@ -16,7 +16,7 @@
  *
  */
 
-#define FUSE_DELAY 5
+#define FUSE_DELAY 30
 #define FUSE_CHARGE_DELAY 5
 #define MAX_CARGE_DISTANCE 75
 #define LAUNCH_ANGLE 45 // Degree
@@ -26,7 +26,7 @@
 
 params [["_miclic", objNull, [objNull]]];
 
-CHECK(isNull _miclic);
+CHECK(isNull _miclic || !isServer);
 
 [{
     params ["_miclic"];
@@ -42,11 +42,11 @@ CHECK(isNull _miclic);
     private _rocketPos = [_miclicPosATL select 0, _miclicPosATL select 1, (_miclicPosATL select 2) + SPAWN_HEIGHT];
     private _rocket = createVehicle ["Land_BoreSighter_01_F", _rocketPos, [], 0, "CAN_COLLIDE"];
     _rocket setDir (_miclicDir - 90);
-    _rocket enableSimulation false;
+    _rocket enableSimulationGlobal false;
 
     private _ropeAnchor = createVehicle ["B_Static_Designator_01_F", getPosATL _miclic, [], 0, "CAN_COLLIDE"];
     _ropeAnchor attachTo [_miclic, [0, 0, 0]];
-    [_ropeAnchor, true] remoteExecCall ["hideObjectGlobal", 2];
+    _ropeAnchor hideObjectGlobal true;
 
     private _rope = ropeCreate [_ropeAnchor, [0, 0, 0], _rocket, [0, 0, 0], MAX_CARGE_DISTANCE + 5]; // +5 for buffer
 
@@ -71,12 +71,12 @@ CHECK(isNull _miclic);
         if (_z < 0.01) exitWith {
             [_PFHID] call CBA_fnc_removePerFrameHandler;
 
-            _miclic addForce [_miclic vectorModelToWorld [random [-2000, 0, 2000], 2500, 1500], [0, -1, 0]];
+            _miclic addForce [_miclic vectorModelToWorld [random [-1000, 0, 1000], 1500, 650], [0, -1, 0]];
 
             [{
-                params ["_miclic", "_miclicPosATL", "_dir", "_rocket", "_rope", "_ropeAnchor"];
+                params ["_miclic", "_dir", "_rocket", "_rope", "_ropeAnchor"];
 
-                _miclicPosATL = getPosATL _miclic;
+                private _miclicPosATL = getPosATL _miclic;
                 private _maxDistance = _miclic distance _rocket;
 
                 // Detonate charge every 5 meters
@@ -99,7 +99,10 @@ CHECK(isNull _miclic);
                 ropeDestroy _rope;
                 deleteVehicle _ropeAnchor;
                 deleteVehicle _rocket;
-            }, [_miclic, _miclicPosATL, _dir, _rocket, _rope, _ropeAnchor], FUSE_CHARGE_DELAY] call CBA_fnc_waitAndExecute;
+
+                [_miclic, true] remoteExecCall ["ace_dragging_fnc_setCarryable", 0];
+
+            }, [_miclic, _dir, _rocket, _rope, _ropeAnchor], FUSE_CHARGE_DELAY] call CBA_fnc_waitAndExecute;
         };
     }, 0, [_miclic, _miclicPosATL, _dir, _t0, _v0, _rocket, _rope, _ropeAnchor]] call CBA_fnc_addPerFrameHandler;
 }, [_miclic], FUSE_DELAY] call CBA_fnc_waitAndExecute;

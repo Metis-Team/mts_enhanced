@@ -1,9 +1,5 @@
 #include "script_component.hpp"
 
-[QGVAR(miclic), "InitPost", {
-    _this call FUNC(addMiclicAction);
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
-
 CHECK(!hasinterface);
 
 GVAR(pickupItemActionCounter) = 0;

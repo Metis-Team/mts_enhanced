@@ -18,7 +18,7 @@
 
 params ["_miclic"];
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 [
 	_miclic,
@@ -29,11 +29,15 @@ CHECK(!hasinterface);
 	"_caller distance _target < 2",
 	{},
 	{},
-	{ _this call FUNC(igniteMiclic) },
+	{
+        params ["_miclic"];
+
+        [_miclic] remoteExecCall [QFUNC(igniteMiclic), 2];
+    },
 	{},
 	[],
 	3,
-	0,
+	100,
 	true,
 	false
 ] call BIS_fnc_holdActionAdd;
