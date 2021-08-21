@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="mts">
+    <Package name="engineer">
+    <Container name="misc">
+        <Key ID="STR_mts_items_authors">
+            <Original>Timi007, Mishkar</Original>
+            <German>Timi007, Mishkar</German>
+        </Key>
+    </Container>
+    <Container name="miclic">
+        <Key ID="STR_mts_engineer_miclicDisplayName">
+            <Original>Mine Clearing Line Charge (MICLIC)</Original>
+            <German>Minenräumleiter</German>
+        </Key>
+        <Key ID="STR_mts_engineer_igniteMiclic">
+            <Original>Ignite Mine Clearing Line Charge (MICLIC)</Original>
+            <German>Minenräumleiter zünden</German>
+        </Key>
+    </Container>
+    </Package>
+</Project>
