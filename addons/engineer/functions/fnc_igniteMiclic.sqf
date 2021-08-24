@@ -20,14 +20,6 @@
  *
  */
 
-#define DEFAULT_FUSE_DELAY 30
-#define DEFAULT_CHARGE_FUSE_DELAY 5
-#define DEFAULT_CLEARING_DISTANCE 75
-#define DEFAULT_LAUNCH_ANGLE 45 // Degree
-
-#define G 9.81
-#define SPAWN_HEIGHT 0.5
-
 params [
     ["_miclic", objNull, [objNull]],
     ["_effectiveClearingDistance", DEFAULT_CLEARING_DISTANCE, [0]],
@@ -98,8 +90,6 @@ if (_launchAngle <= 0 || _launchAngle >= 90) then {
 
         if (_z < 0.01) exitWith {
             [_PFHID] call CBA_fnc_removePerFrameHandler;
-
-            TRACE_1("Rope segments", ropeSegments _rope);
 
             _miclic addForce [_miclic vectorModelToWorld [random [-1000, 0, 1000], 1500, 650], [0, -1, 0]];
 
