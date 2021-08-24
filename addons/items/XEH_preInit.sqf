@@ -7,7 +7,3 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 ADDON = true;
-
-[QGVAR(miclic_base), "InitPost", {
-    _this call FUNC(addMiclicAction);
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
