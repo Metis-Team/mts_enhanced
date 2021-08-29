@@ -7,7 +7,7 @@ class CfgVehicles {
         icon = "iconCrateOrd";
         accuracy = 0.2;
         editorCategory = "EdCat_Weapons";
-		editorSubcategory = "EdSubcat_Explosives";
+        editorSubcategory = "EdSubcat_Explosives";
         vehicleClass = "Ammo";
         destrType = "DestructBuilding";
         explosionEffect = "BasicAmmoExplosion";
