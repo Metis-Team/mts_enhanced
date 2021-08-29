@@ -42,10 +42,6 @@ class CfgVehicles {
         waterLinearDampingCoefY = 1;
         waterAngularDampingCoef = 0.1;
         scope = 1;
-        ace_cargo_canLoad = 1;
-        ace_dragging_canCarry = 0;
-        ace_dragging_canDrag = 1;
-        ace_dragging_dragPosition[] = {0, 1.2, 0};
     };
     class GVAR(miclic): GVAR(miclic_base) {
         displayName = CSTRING(miclicDisplayName);
@@ -53,6 +49,11 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         model = "\A3\Weapons_F\Ammoboxes\Proxy_UsBasicExplosives.p3d";
+        ace_cargo_canLoad = 1;
         ace_cargo_size = 4;
+        ace_dragging_canCarry = 1;
+        ace_dragging_carryPosition[] = {0, 1.2, 1};
+        ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0, 1.2, 0};
     };
 };

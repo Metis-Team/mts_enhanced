@@ -20,6 +20,8 @@
  *
  */
 
+#define CHARGE_FUSE_TRIGGER_HEIGHT 0.01
+
 params [
     ["_miclic", objNull, [objNull]],
     ["_effectiveClearingDistance", DEFAULT_CLEARING_DISTANCE, [0]],
@@ -30,6 +32,7 @@ params [
 
 CHECK(!isServer);
 
+// Param checks
 CHECKRET(isNull _miclic, ERROR("Given miclic object does not exist."));
 if (_effectiveClearingDistance <= 0) then {
     WARNING("Effective clearing distance must be greater 0. Using default value.");
@@ -48,6 +51,7 @@ if (_launchAngle <= 0 || _launchAngle >= 90) then {
     _launchAngle = DEFAULT_LAUNCH_ANGLE;
 };
 
+// Ignite inital delay which will shoot the rocket
 [{
     params ["_miclic", "_effectiveClearingDistance", "_chargeFuseDelay", "_launchAngle"];
 
@@ -59,7 +63,7 @@ if (_launchAngle <= 0 || _launchAngle >= 90) then {
     private _smallRocketExplosive = createMine ["APERSMine", _miclicPosATL, [], 0];
     _smallRocketExplosive setDamage 1;
 
-    private _rocketPos = [_miclicPosATL select 0, _miclicPosATL select 1, (_miclicPosATL select 2) + SPAWN_HEIGHT];
+    private _rocketPos = [_miclicPosATL select 0, _miclicPosATL select 1, (_miclicPosATL select 2) + SPAWN_HEIGHT_OFFSET];
     private _rocket = createVehicle ["Land_BoreSighter_01_F", _rocketPos, [], 0, "CAN_COLLIDE"];
     _rocket setDir (_miclicDir - 90);
     _rocket enableSimulationGlobal false;
@@ -70,29 +74,31 @@ if (_launchAngle <= 0 || _launchAngle >= 90) then {
 
     private _rope = ropeCreate [_ropeAnchor, [0, 0, 0], _rocket, [0, 0, 0], _effectiveClearingDistance + 5]; // +5 for buffer
 
-    private _v0 = sqrt (((_effectiveClearingDistance - 1) * G) / sin (2 * _launchAngle)); // _effectiveClearingDistance - 1 for height difference buffer
+    private _v0 = sqrt (((_effectiveClearingDistance - 1) * G) / sin (2 * _launchAngle)); // _effectiveClearingDistance - 1 for height difference (no need to calc it precisely)
     private _t0 = CBA_missionTime;
-    // Top is y => 0°, right x => 90°, thus we need to subtract 90°, so that all formula using an angle are relativ from the x-axis.
+    // Top axis is y => 0°, right x => 90°, thus we need to subtract 90°, so that all formula using an angle are relativ from the x-axis.
     private _dir = 90 - _miclicDir;
 
     [{
         params ["_PFHArgs", "_PFHID"];
-        _PFHArgs params ["_miclic", "_chargeFuseDelay", "_launchAngle", "_miclicPosATL", "_dir", "_t0", "_v0", "_rocket", "_rope", "_ropeAnchor"];
+        _PFHArgs params ["_miclic", "_chargeFuseDelay", "_launchAngle", "_rocketPos0", "_dir", "_t0", "_v0", "_rocket", "_rope", "_ropeAnchor"];
 
         private _t = CBA_missionTime - _t0;
 
         // Projectile motion without air resistance (to keep it simple)
-        private _x = (_miclicPosATL select 0) + _t * _v0 * cos _launchAngle * cos _dir;
-        private _y = (_miclicPosATL select 1) + _t * _v0 * cos _launchAngle * sin _dir;
-        private _z = (_miclicPosATL select 2) + SPAWN_HEIGHT + _t * _v0 * sin _launchAngle - 0.5 * G * _t*_t;
+        private _x = (_rocketPos0 select 0) + _t * _v0 * cos _launchAngle * cos _dir;
+        private _y = (_rocketPos0 select 1) + _t * _v0 * cos _launchAngle * sin _dir;
+        private _z = (_rocketPos0 select 2) + _t * _v0 * sin _launchAngle - 0.5 * G * _t^2;
 
         _rocket setPosATL [_x, _y, _z];
 
-        if (_z < 0.01) exitWith {
+        if (_z < CHARGE_FUSE_TRIGGER_HEIGHT) exitWith {
             [_PFHID] call CBA_fnc_removePerFrameHandler;
 
+            // Rope pulling on MILIC effect
             _miclic addForce [_miclic vectorModelToWorld [random [-1000, 0, 1000], 1500, 650], [0, -1, 0]];
 
+            // Detonate line after small delay
             [{
                 params ["_miclic", "_dir", "_rocket", "_rope", "_ropeAnchor"];
 
@@ -114,15 +120,11 @@ if (_launchAngle <= 0 || _launchAngle >= 90) then {
                     createVehicle ["Land_ClutterCutter_medium_F", getPosATL _dirt, [], 0, "CAN_COLLIDE"];
                 };
 
-                _miclic addForce [_miclic vectorModelToWorld [random [-1000, 0, 1000], -1000, -1500], [0, -1, 0]];
-
                 ropeDestroy _rope;
                 deleteVehicle _ropeAnchor;
                 deleteVehicle _rocket;
-
-                [_miclic, true] remoteExecCall ["ace_dragging_fnc_setCarryable", 0];
-
+                deleteVehicle _miclic;
             }, [_miclic, _dir, _rocket, _rope, _ropeAnchor], _chargeFuseDelay] call CBA_fnc_waitAndExecute;
         };
-    }, 0, [_miclic, _chargeFuseDelay, _launchAngle, _miclicPosATL, _dir, _t0, _v0, _rocket, _rope, _ropeAnchor]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_miclic, _chargeFuseDelay, _launchAngle, _rocketPos, _dir, _t0, _v0, _rocket, _rope, _ropeAnchor]] call CBA_fnc_addPerFrameHandler;
 }, [_miclic, _effectiveClearingDistance, _chargeFuseDelay, _launchAngle], _fuseDelay] call CBA_fnc_waitAndExecute;

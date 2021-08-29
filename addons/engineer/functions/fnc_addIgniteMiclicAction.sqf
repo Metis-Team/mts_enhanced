@@ -16,27 +16,30 @@
  *
  */
 
+#define ACTION_DURATION 3 // Seconds
+#define ACTION_RANGE 2 // Meters
+
 params ["_miclic"];
 
 CHECK(!hasInterface);
 
+private _iconPath = "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\destroy_ca.paa";
 [
     _miclic,
     LLSTRING(igniteMiclic),
-    "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\destroy_ca.paa",
-    "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\destroy_ca.paa",
-    "_this distance _target < 2",
-    "_caller distance _target < 2",
+    _iconPath,
+    _iconPath,
+    QUOTE(_this distance _target < ACTION_RANGE),
+    QUOTE(_caller distance _target < ACTION_RANGE),
     {},
     {},
     {
         params ["_miclic"];
-
         [_miclic] remoteExecCall [QFUNC(igniteMiclic), 2];
     },
     {},
     [],
-    3,
+    ACTION_DURATION,
     100,
     true,
     false
