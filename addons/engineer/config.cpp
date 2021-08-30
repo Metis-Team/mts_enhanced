@@ -3,15 +3,17 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {
+            QGVAR(miclic)
+        };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"mts_main"};
+        requiredAddons[] = {"mts_main", "ace_cargo", "ace_dragging"};
         author = "";
-        authors[] = {"Timi007"};
+        authors[] = {"Timi007", "Mishkar"};
         VERSION_CONFIG;
     };
 };
 
-#include "CfgWorlds.hpp"
+#include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
