@@ -16,7 +16,7 @@
 
 #include "\z\mts_enhanced\addons\main\script_macros.hpp"
 
-#define DEFAULT_FUSE_DELAY 30 // Seconds
+#define DEFAULT_FUSE_DELAY 45 // Seconds
 #define DEFAULT_CHARGE_FUSE_DELAY 5 // Seconds
 #define DEFAULT_CLEARING_DISTANCE 75 // Meters
 #define DEFAULT_LAUNCH_ANGLE 45 // Launch angle of rocket in degree
