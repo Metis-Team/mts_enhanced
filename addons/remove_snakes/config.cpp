@@ -14,3 +14,4 @@ class CfgPatches {
 };
 
 #include "CfgWorlds.hpp"
+#include "CfgVehicles.hpp"
