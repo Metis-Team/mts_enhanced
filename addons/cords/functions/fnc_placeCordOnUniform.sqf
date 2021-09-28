@@ -6,33 +6,37 @@
  *      Places the given cord type on the uniform of the player.
  *
  *  Parameter(s):
- *      0: string - cord type
+ *      0: OBJECT - Player unit to place cord type on.
+ *      1: STRING - Cord type.
  *
  *  Returns:
  *      Nothing
  *
  *  Example:
- *      ["inf"] call mts_cords_fnc_placeCordOnUniform
+ *      [player, "inf"] call mts_cords_fnc_placeCordOnUniform
  *
  */
 
-params[["_cordType","",[""]]];
-private["_path"];
+params [["_player", objNull, [objNull]], ["_cordType", "", [""]]];
 
-private _camo = (uniform player splitString "_") param [2,""];
+CHECK(![["PBW_German_Uniform", "PBW_German_Common"]] call EFUNC(common, areModsLoaded));
+CHECK(isNull _player);
+
+private _camo = (uniform _player splitString "_") param [2, ""];
 
 CHECK(_cordType isEqualTo "" || _camo isEqualTo "");
 
-(_cordType splitString "_") params["_unit",["_cadet",""]];
+(_cordType splitString "_") params ["_unit", ["_cadet", ""]];
 
-if ((_cadet isEqualTo "fa") || (_cadet isEqualTo "oa")) then {
-    _path = format[QPATHTOF(data\cords\%1\%2\mts_cords_%1_%2_%3_co.paa), _unit, _camo, _cadet];
+private _path = "";
+if (_cadet isEqualTo "fa" || _cadet isEqualTo "oa") then {
+    _path = format [QPATHTOF(data\cords\%1\%2\mts_cords_%1_%2_%3_co.paa), _unit, _camo, _cadet];
 } else {
     if (_unit isEqualTo "inf") then {
-        _path = format["\german_uniforms\tex\pbw_schulterklappen%1_co.paa", _camo];
+        _path = format ["\german_uniforms\tex\pbw_schulterklappen%1_co.paa", _camo];
     } else {
-        _path = format[QPATHTOF(data\cords\%1\%2\mts_cords_%1_%2_co.paa), _unit, _camo];
+        _path = format [QPATHTOF(data\cords\%1\%2\mts_cords_%1_%2_co.paa), _unit, _camo];
     };
 };
 
-player setObjectTextureGlobal [2, _path];
+_player setObjectTextureGlobal [2, _path];
