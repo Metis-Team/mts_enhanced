@@ -7,6 +7,7 @@ PREP(artyAirburst);
 PREP(drawACEUnconsciousIcon);
 PREP(initDrawIconEH);
 PREP(moduleUnflipVehicle);
+PREP(onZeusDisplayOpen);
 PREP(moduleTargetKnowledge);
 PREP(setAIStance);
 PREP(switchAIPathBehaviour);
