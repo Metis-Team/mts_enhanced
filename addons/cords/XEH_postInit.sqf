@@ -1,4 +1,8 @@
 #include "script_component.hpp"
 
-call FUNC(addCordsToAce);
-call FUNC(addMajorToAce);
+if (GVAR(PBWLoaded)) then {
+    INFO("PBW is loaded. Enabling ACE actions.");
+
+    call FUNC(addCordsToAce);
+    call FUNC(addMajorToAce);
+};
