@@ -19,8 +19,7 @@
 
 params [["_player", objNull, [objNull]], ["_cordType", "", [""]]];
 
-CHECK(!([[ARR_2("PBW_German_Uniform", "PBW_German_Common")]] call EFUNC(common,areModsLoaded)));
-CHECK(isNull _player);
+CHECK(!GVAR(PBWLoaded) || isNull _player);
 
 private _camo = (uniform _player splitString "_") param [2, ""];
 
