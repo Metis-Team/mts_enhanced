@@ -18,7 +18,7 @@
 
 #define DEFAULT_FUSE_DELAY 45 // Seconds
 #define DEFAULT_CHARGE_FUSE_DELAY 5 // Seconds
-#define DEFAULT_CLEARING_DISTANCE 75 // Meters
+#define DEFAULT_CLEARING_DISTANCE 70 // Meters
 #define DEFAULT_LAUNCH_ANGLE 45 // Launch angle of rocket in degree
 
 #define G 9.81 // Gravitational acceleration
