@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"mts_main","ace_interact_menu","ace_common","a3_ui_f"};
         author = "";
-        authors[] = {"Timi007"};
+        authors[] = {"PhILoX","Timi007"};
         VERSION_CONFIG;
     };
 };

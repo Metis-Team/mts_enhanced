@@ -18,6 +18,20 @@
             <Original>Disable</Original>
             <German>Deaktivieren</German>
         </Key>
+        <Key ID="str_mts_main_authors">
+            <Original>Metis-Team</Original>
+            <German>Metis-Team</German>
+            <Chinese>Metis-Team</Chinese>
+            <Chinesesimp>Metis-Team</Chinesesimp>
+            <Korean>Metis-Team</Korean>
+        </Key>
+        <Key ID="str_mts_main_URL">
+            <Original>https://github.com/Metis-Team</Original>
+            <German>https://github.com/Metis-Team</German>
+            <Chinese>https://github.com/Metis-Team</Chinese>
+            <Chinesesimp>https://github.com/Metis-Team</Chinesesimp>
+            <Korean>https://github.com/Metis-Team</Korean>
+        </Key>
     </Container>
 </Package>
 </Project>
