@@ -18,6 +18,6 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayCurator {
-        GVAR(curatorDisplayOpened) = QUOTE(CHECK(!GVAR(enableACEUnconsciousIcon)); call FUNC(initDrawIconEH));
+        GVAR(curatorDisplayOpened) = QUOTE(call FUNC(onZeusDisplayOpen));
     };
 };

@@ -6,9 +6,10 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"mts_main","PBW_German_Uniform","PBW_German_Common","ace_interact_menu"};
-        author = "";
+        requiredAddons[] = {"mts_main","mts_common","ace_interact_menu"};
+        author = ECSTRING(main,authors);
         authors[] = {"PhILoX","Timi007"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

@@ -34,7 +34,8 @@ private _infCordAction = [
     LLSTRING(inf),
     QPATHTOF(data\ui\mts_cords_ui_inf_co.paa),
     {
-        ["inf"] call FUNC(placeCordOnUniform);
+        params ["", "_player"];
+        [_player, "inf"] call FUNC(placeCordOnUniform);
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
@@ -45,7 +46,8 @@ private _faCordAction = [
     LLSTRING(fa),
     QPATHTOF(data\ui\mts_cords_ui_fa_co.paa),
     {
-        ["inf_fa"] call FUNC(placeCordOnUniform);
+        params ["", "_player"];
+        [_player, "inf_fa"] call FUNC(placeCordOnUniform);
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
@@ -56,7 +58,8 @@ private _oaCordAction = [
     LLSTRING(oa),
     QPATHTOF(data\ui\mts_cords_ui_oa_co.paa),
     {
-        ["inf_oa"] call FUNC(placeCordOnUniform);
+        params ["", "_player"];
+        [_player, "inf_oa"] call FUNC(placeCordOnUniform);
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
@@ -67,7 +70,8 @@ private _pzCordAction = [
     LLSTRING(pz),
     QPATHTOF(data\ui\mts_cords_ui_pz_co.paa),
     {
-        ["pz"] call FUNC(placeCordOnUniform);
+        params ["", "_player"];
+        [_player, "pz"] call FUNC(placeCordOnUniform);
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
@@ -78,7 +82,8 @@ private _pzFACordAction = [
     LLSTRING(fa),
     QPATHTOF(data\ui\mts_cords_ui_fa_co.paa),
     {
-        ["pz_fa"] call FUNC(placeCordOnUniform);
+        params ["", "_player"];
+        [_player, "pz_fa"] call FUNC(placeCordOnUniform);
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
@@ -89,7 +94,8 @@ private _pzOACordAction = [
     LLSTRING(oa),
     QPATHTOF(data\ui\mts_cords_ui_oa_co.paa),
     {
-        ["pz_oa"] call FUNC(placeCordOnUniform);
+        params ["", "_player"];
+        [_player, "pz_oa"] call FUNC(placeCordOnUniform);
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;

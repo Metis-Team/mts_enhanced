@@ -16,6 +16,6 @@
  *
  */
 
-CHECK(!isClass (configFile >> "CfgPatches" >> "PBW_German_Uniform") || !hasinterface);
+CHECK(!([["PBW_German_Uniform"]] call FUNC(areModsLoaded)) || !hasinterface);
 
 ["ace_arsenal_displayClosed", {execvm "german_common\scripts\ranks\getKlappen.sqf"}] call CBA_fnc_addEventhandler; //for gods sake execvm :(

@@ -7,8 +7,9 @@ class CfgPatches {
         weapons[] = {"MTS_Whistle"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"mts_main"};
-        author = "";
+        author = ECSTRING(main,authors);
         authors[] = {"Timi007"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

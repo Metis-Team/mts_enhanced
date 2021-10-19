@@ -40,7 +40,9 @@ All relevant information about the content can be found in our [Wiki](https://gi
  A: Yes
 
 ## Requirements
-At least [CBA A3](https://github.com/CBATeam/CBA_A3/releases/latest)  
+Minimal: [CBA A3](https://github.com/CBATeam/CBA_A3/releases/latest)  
+Generally [CBA A3](https://github.com/CBATeam/CBA_A3/releases/latest), [ACE3](https://github.com/acemod/ACE3/releases/latest) and [ZEN](https://github.com/zen-mod/ZEN/releases/latest) are needed. [PBW](https://steamcommunity.com/sharedfiles/filedetails/?id=835394852) and [extdb3](https://github.com/SteezCram/extDB3/releases/latest) (for server only) are optional.
+
 This mod is build in a modular fashion and can be used as such. Therefore it depends on what component you use. Please refer to the individual [Wiki](https://github.com/Metis-Team/mts_enhanced/wiki) page.
 
 ## Contributing
