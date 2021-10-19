@@ -19,8 +19,9 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"mts_main", "ace_interact_menu", "ace_common", "ace_interaction"};
-        author = "";
+        author = CSTRING(authors);
         authors[] = {"Timi007", "Dan"};
+        url = CSTRING(URL);
         VERSION_CONFIG;
     };
 };

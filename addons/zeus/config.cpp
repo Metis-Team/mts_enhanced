@@ -7,8 +7,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"mts_main", "zen_custom_modules", "zen_dialog", "zen_common", "ace_medical", "ace_zeus"};
-        author = "";
+        author = CSTRING(authors);
         authors[] = {"PhILoX", "Timi007"};
+        url = CSTRING(URL);
         VERSION_CONFIG;
     };
 };

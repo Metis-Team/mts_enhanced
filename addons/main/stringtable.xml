@@ -18,6 +18,8 @@
             <Original>Disable</Original>
             <German>Deaktivieren</German>
         </Key>
+    </Container>
+    <Container name="Misc">
         <Key ID="str_mts_main_authors">
             <Original>Metis-Team</Original>
             <German>Metis-Team</German>
