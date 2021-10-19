@@ -7,8 +7,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"mts_main", "ace_common"};
-        author = "";
+        author = ECSTRING(main,authors);
         authors[] = {"Bix", "PhILoX", "Timi007", "Toma"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
