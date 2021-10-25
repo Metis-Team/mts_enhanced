@@ -63,12 +63,10 @@ jobs:
       uses: actions/download-artifact@v2
     - name: Prepare Archives
       run: |
-        ls -al
         mv ${{ needs.build.outputs.MOD_NAME }}/* .
         echo "::group::Archive build"
-        zip -r Metis_Enhanced_${{ needs.build.outputs.VERSION_SHORT }}.zip @${{ needs.build.outputs.MOD_NAME }}
+        zip -r ${{ needs.build.outputs.MOD_NAME }}_${{ needs.build.outputs.VERSION_SHORT }}.zip @${{ needs.build.outputs.MOD_NAME }}
         echo "::endgroup::"
-        ls -al
     - name: Prepare GitHub
       id: release_drafter
       uses: release-drafter/release-drafter@v5
