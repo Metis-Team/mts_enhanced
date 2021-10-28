@@ -47,7 +47,7 @@ private _parentTargetKnowledgeAction = [
    {},
    {
        params ["", "_objects"];
-       !GVAR(moduleDestination_running) && count _objects > 0 && _objects findIf {_x isKindOf "man" && !isPlayer _x} >= 0
+       !GVAR(moduleDestination_running) && count _objects > 0
    }
 ] call zen_context_menu_fnc_createAction;
 private _parentAction = [_parentTargetKnowledgeAction, [], 0] call zen_context_menu_fnc_addAction;
@@ -73,7 +73,7 @@ private _targetKnowledgeAction = [
 [_targetKnowledgeAction, _parentAction, 0] call zen_context_menu_fnc_addAction;
 
 private _forgetTargetAction = [
-   QGVAR(revealTarget),
+   QGVAR(forgetTarget),
    LLSTRING(AI_forgetTarget),
    "\a3\ui_f\data\igui\cfg\simpletasks\types\unknown_ca.paa",
    {
