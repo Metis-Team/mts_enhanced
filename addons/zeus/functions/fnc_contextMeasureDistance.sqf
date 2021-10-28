@@ -23,7 +23,8 @@
     {
         params ["_position"];
 
-        [_position, {}, [], "", "\a3\ui_f\data\map\markerbrushes\cross_ca.paa", [0.1, 0.2, 1, 1], 0, true, true, {
+        private _color = [0.9, 0.9, 0, 1];
+        [_position, {}, [], "", "\a3\ui_f\data\map\markerbrushes\cross_ca.paa", _color, 0, true, true, {
             params ["_startPosAGL", "_mousePosAGL", "_text", "_icon", "_color", "_angle", "_is3d"];
 
             private _distance = _startPosAGL vectorDistance _mousePosAGL;
