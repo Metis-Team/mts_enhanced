@@ -7,8 +7,6 @@
     {
         _x reveal _target;
     } forEach _toUnits;
-
-    TRACE_1("revealTarget", _this);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(forgetTarget), {
@@ -17,8 +15,6 @@
     {
         _x forgetTarget _target;
     } forEach _toUnits;
-
-    TRACE_1("forgetTarget", _this);
 }] call CBA_fnc_addEventHandler;
 
 CHECK(!hasinterface);
