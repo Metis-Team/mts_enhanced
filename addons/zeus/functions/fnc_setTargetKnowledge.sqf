@@ -6,7 +6,10 @@
  *      Ask the zeus to select the target which should be revealed to or forgotten by the passed units.
  *
  *  Parameter(s):
- *      0: OBJECT - Unit to reveal or which should forget the target.
+ *      0: STRING - Action to do:
+ *          REVEAL: Reveal selected target to selected units.
+ *          FORGET: Let the selected units forget about the selected target.
+ *      1: ARRAY - The selected units. If vehicles is included, the crew is considered.
  *
  *  Returns:
  *      Nothing.
@@ -16,9 +19,16 @@
  *
  */
 
-params [["_type", "REVEAL", [""]], ["_units", [], [[]]]];
+params [["_type", "REVEAL", [""]], ["_selectedUnits", [], [[]]]];
 
-if (_units isEqualTo [] || isNull (_units select 0)) exitWith {
+TRACE_1("setTargetKnowledge called", _this);
+
+private _allUnits = flatten (_selectedUnits apply {crew _x});
+private _units = _allUnits arrayIntersect _allUnits; // Remove duplicate units
+
+TRACE_1("", _units);
+
+if (_units isEqualTo []) exitWith {
     [LLSTRING(AI_noAI)] call zen_common_fnc_showMessage;
 };
 
@@ -48,23 +58,11 @@ private _drawLine = (count _units) isEqualTo 1;
         [LLSTRING(AI_noTarget)] call zen_common_fnc_showMessage;
     };
 
-    // Check if all selected units are AI
-    if ((count _units) isNotEqualTo ({_x isKindOf "man" && !isPlayer _x} count _units)) exitWith {
-        [LLSTRING(AI_noAI)] call zen_common_fnc_showMessage;
-    };
-
-    {
-        if (_doReveal) then {
-            _x reveal _target;
-        } else {
-            _x forgetTarget _target;
-        };
-    } forEach _units;
-
-    // Give the curator feedback
     if (_doReveal) then {
+        [QGVAR(revealTarget), [_units, _target]] call CBA_fnc_globalEvent;
         [LLSTRING(AI_revealedInfo)] call zen_common_fnc_showMessage;
     } else {
+        [QGVAR(forgetTarget), [_units, _target]] call CBA_fnc_globalEvent;
         [LLSTRING(AI_forgotInfo)] call zen_common_fnc_showMessage;
     };
 }, [_doReveal, _units], _iconText, nil, nil, nil, _drawLine] call FUNC(getModuleDestination);
