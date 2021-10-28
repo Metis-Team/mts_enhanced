@@ -84,12 +84,12 @@ for "_i" from 0 to (_ammoAmount - 1) do {
         params ["_ammoType", "_randPosInArea", "_detonationHight"];
         private _projectile = createVehicle [_ammotype, _randPosInArea, [], 0, "NONE"];
         if (_ammoType isEqualTo QGVAR(artillery_ILLUM)) then {
-            _projectile setvelocity [0,0,-3];
+            _projectile setVelocity [0,0,-3];
         } else {
-            _projectile setvelocity [0,0,-150];
+            _projectile setVelocity [0,0,-150];
 
-            if !(_detonationHight isEqualTo 0) then {
-                [_projectile, _detonationHight] call FUNC(artyAirburst);
+            if (_detonationHight isNotEqualTo 0) then {
+                [_projectile, _detonationHight] remoteExecCall [QFUNC(artyAirburst), 2]; // exec on server
             };
         };
     }, [_ammoType, _randPosInArea, _detonationHight], _randDelay] call CBA_fnc_waitAndExecute;
