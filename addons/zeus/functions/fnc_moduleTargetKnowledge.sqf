@@ -47,7 +47,7 @@ private _parentTargetKnowledgeAction = [
    {},
    {
        params ["", "_objects"];
-       !GVAR(moduleDestination_running) && count _objects > 0
+       !GVAR(moduleDestination_running) && ({(count crew _x) > 0} count _objects) > 0
    }
 ] call zen_context_menu_fnc_createAction;
 private _parentAction = [_parentTargetKnowledgeAction, [], 0] call zen_context_menu_fnc_addAction;
