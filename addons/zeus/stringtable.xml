@@ -94,13 +94,9 @@
             <Original>Target location</Original>
             <German>Zielort</German>
         </Key>
-        <Key ID="STR_mts_zeus_artillery_centerPositionXPos">
-            <Original>X Coordinate (Target location only)</Original>
-            <German>X Koordinate (nur Zielort)</German>
-        </Key>
-        <Key ID="STR_mts_zeus_artillery_centerPositionYPos">
-            <Original>Y Coordinate (Target location only)</Original>
-            <German>Y Koordinate (nur Zielort)</German>
+        <Key ID="STR_mts_zeus_artillery_centerPosition">
+            <Original>Coordinate (Target location only)</Original>
+            <German>Koordinate (nur Zielort)</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_ammoAmount">
             <Original>Total amount of shells</Original>

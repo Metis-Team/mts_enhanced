@@ -31,7 +31,7 @@ params [
     LLSTRING(artillery_firemission_he),
     [
         ["EDIT", LLSTRING(artillery_ammoAmount), ["4"]],
-        ["COMBO", LLSTRING(artillery_airburst), [[0, 1, 2 , 3], [LLSTRING(artillery_airburst_no), LLSTRING(artillery_airburst_low), LLSTRING(artillery_airburst_med), LLSTRING(artillery_airburst_high)], 0]],
+        ["COMBO", LLSTRING(artillery_airburst), [[0, 1, 2, 3], [LLSTRING(artillery_airburst_no), LLSTRING(artillery_airburst_low), LLSTRING(artillery_airburst_med), LLSTRING(artillery_airburst_high)], 0]],
         ["COMBO", LLSTRING(artillery_delayType), [[0, 1, 2], [LLSTRING(artillery_delay), LLSTRING(artillery_durationWithAmmo), LLSTRING(artillery_durationWithDelay)], 0]],
         ["EDIT", LLSTRING(artillery_delay), ["1"]],
         ["EDIT", LLSTRING(artillery_duration), ["60"]]
