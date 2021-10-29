@@ -16,7 +16,7 @@
  *
  */
 
-["Metis", LLSTRING(artillery),
+[LLSTRING(categoryName), LLSTRING(artillery),
     {
         params [["_modulePosition", [0,0,0], [[]]]];
 
