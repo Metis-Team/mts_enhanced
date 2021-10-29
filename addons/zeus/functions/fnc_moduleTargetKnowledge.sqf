@@ -16,7 +16,7 @@
  *
  */
 
-["Metis", LLSTRING(AI_targetKnowledge),
+[LLSTRING(categoryName), LLSTRING(AI_targetKnowledge),
     {
         params ["", "_attachedObj"];
         [_attachedObj] call FUNC(getTargetKnowledge);
@@ -24,7 +24,7 @@
     "\a3\ui_f\data\igui\cfg\holdactions\holdaction_search_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-["Metis", LLSTRING(AI_forgetTarget),
+[LLSTRING(categoryName), LLSTRING(AI_forgetTarget),
     {
         params ["", "_attachedObj"];
         ["FORGET", [_attachedObj]] call FUNC(setTargetKnowledge);
@@ -32,7 +32,7 @@
     "\a3\ui_f\data\igui\cfg\simpletasks\types\unknown_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-["Metis", LLSTRING(AI_revealTarget),
+[LLSTRING(categoryName), LLSTRING(AI_revealTarget),
     {
         params ["", "_attachedObj"];
         ["REVEAL", [_attachedObj]] call FUNC(setTargetKnowledge);

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MTS">
     <Package name="zeus">
+    <Container name="misc">
+        <Key ID="STR_mts_zeus_categoryName">
+            <Original>Metis</Original>
+            <German>Metis</German>
+        </Key>
+    </Container>
     <Container name="CBA_Keybinding">
         <Key ID="STR_mts_zeus_cba_keybinding_categoryName">
             <Original>Metis Zeus</Original>
