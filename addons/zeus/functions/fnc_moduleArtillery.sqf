@@ -26,7 +26,8 @@
             [
                 ["COMBO", LLSTRING(artillery_ammoType), [[0, 1, 2, 3], ["HE (155mm)","HE (82mm)","SMOKE","ILLUM"], 0]],
                 ["COMBO", LLSTRING(artillery_centerPositionType), [[0, 1], [LLSTRING(artillery_modulePos), LLSTRING(artillery_customPos)], 0]],
-                ["VECTOR", LLSTRING(artillery_centerPosition), [[0, 0]]],
+                ["EDIT", LLSTRING(artillery_centerPositionXPos), ["0000"]],
+                ["EDIT", LLSTRING(artillery_centerPositionYPos), ["0000"]],
                 ["EDIT", LLSTRING(artillery_areaLenght), ["100"]],
                 ["EDIT", LLSTRING(artillery_areaWidth), ["100"]],
                 ["EDIT", LLSTRING(artillery_areaAngle), ["0000"]],
