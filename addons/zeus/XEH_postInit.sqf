@@ -17,6 +17,8 @@
     } forEach _toUnits;
 }] call CBA_fnc_addEventHandler;
 
+call FUNC(initAISuppression);
+
 CHECK(!hasinterface);
 
 GVAR(moduleDestination_running) = false;

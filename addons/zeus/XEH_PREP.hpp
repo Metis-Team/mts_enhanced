@@ -1,3 +1,4 @@
+PREP(addAISuppressionPFH);
 PREP(moduleArtillery);
 PREP(artyFireMissionHE);
 PREP(artyFireMissionSMOKE);
@@ -6,6 +7,7 @@ PREP(execArtyStrike);
 PREP(artyAirburst);
 PREP(drawACEUnconsciousIcon);
 PREP(initDrawIconEH);
+PREP(initAISuppression);
 PREP(moduleUnflipVehicle);
 PREP(onZeusDisplayOpen);
 PREP(moduleTargetKnowledge);
