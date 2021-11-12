@@ -30,4 +30,4 @@
             };
         };
     } count GVAR(suppressedLocalUnits);
-}, 0.5, []] call CBA_fnc_addPerFrameHandler;
+}, 1, []] call CBA_fnc_addPerFrameHandler;

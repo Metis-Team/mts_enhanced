@@ -25,7 +25,7 @@ GVAR(stanceMapping) = createHashMapFromArray [["PRONE", "DOWN"], ["CROUCH", "MID
     CHECK(isNull _unit || !local _unit || _unit getVariable [ARR_2(QGVAR(suppressionEnabled), false)]);
     CHECK(_suppressionThreshold < 0 || _suppressionThreshold > 1);
     _suppressedStance = toUpper _suppressedStance;
-    CHECK(!(_suppressedStance in ["DOWN", "MIDDLE", "UP"]));
+    CHECK(!(_suppressedStance in [ARR_3("DOWN", "MIDDLE", "UP")]));
 
     if (isNil QGVAR(suppressedLocalUnits)) then {
         GVAR(suppressedLocalUnits) = [];
@@ -48,6 +48,8 @@ GVAR(stanceMapping) = createHashMapFromArray [["PRONE", "DOWN"], ["CROUCH", "MID
     // Unit wasn't suppressed before
     CHECK(_index < 0);
     GVAR(suppressedLocalUnits) deleteAt _index;
+
+    _unit setVariable [QGVAR(suppressionEnabled), false, true];
 }] call CBA_fnc_addEventHandler;
 
 if (hasInterface) then {
@@ -62,7 +64,17 @@ if (hasInterface) then {
                 LLSTRING(suppression_enable),
                 [
                     ["SLIDER", [LLSTRING(suppression_threshold), LLSTRING(suppression_threshold_tooltip)], [0, 1, 0.5, 2]],
-                    ["COMBO", [LLSTRING(suppression_stance), LLSTRING(suppression_stance_tooltip)], [["DOWN", "MIDDLE", "UP"], [localize "str_3den_attributes_stance_down", localize "str_3den_attributes_stance_middle", localize "str_3den_attributes_stance_up"], 0]]
+                    ["COMBO", ["STR_A3_RscAttributeUnitPos_Title", LLSTRING(suppression_stance_tooltip)],
+                        [
+                            ["DOWN", "MIDDLE", "UP"],
+                            [
+                                ["STR_A3_RscAttributeUnitPos_Down_tooltip", "", "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_prone_ca.paa"],
+                                ["STR_A3_RscAttributeUnitPos_Crouch_tooltip", "", "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_crouch_ca.paa"],
+                                ["STR_A3_RscAttributeUnitPos_Up_tooltip", "", "\a3\Ui_f\data\IGUI\RscIngameUI\RscUnitInfo\SI_stand_ca.paa"]
+                            ],
+                            0
+                        ]
+                    ]
                 ],
                 {
                     (_this select 0) params ["_suppressionThreshold", "_suppressedStance"];
@@ -75,6 +87,8 @@ if (hasInterface) then {
 
                         [QGVAR(enableSuppression), [_x, _suppressionThreshold, _suppressedStance], _x] call CBA_fnc_targetEvent;
                     } forEach _objects;
+
+                    [LLSTRING(suppression_enabled)] call zen_common_fnc_showMessage;
                 },
                 {},
                 _this
