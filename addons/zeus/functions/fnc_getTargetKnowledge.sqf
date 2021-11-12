@@ -18,6 +18,8 @@
 
 params ["_unit"];
 
+TRACE_1("getTargetKnowledge called", _this);
+
 //Check if selected unit is an AI
 if ((isPlayer _unit) || {isnull _unit}) exitWith {
     [LLSTRING(AI_noAI)] call zen_common_fnc_showMessage;
