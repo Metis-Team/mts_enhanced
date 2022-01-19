@@ -3,16 +3,16 @@
  *  Author: Timi007
  *
  *  Description:
- *      [Description]
+ *      Returns true if unit has a map; otherwise false.
  *
  *  Parameter(s):
- *      0: [TYPE] - [argument name]
+ *      0: OBJECT - Unit to check.
  *
  *  Returns:
- *      [TYPE] - [return name]
+ *      BOOLEAN - Unit has a map.
  *
  *  Example:
- *      [[arguments]] call [function name]
+ *      [player] call mts_map_fnc_hasMap
  *
  */
 
