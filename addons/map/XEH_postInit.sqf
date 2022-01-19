@@ -2,7 +2,7 @@
 
 CHECK(!hasinterface);
 
-private _worldMap = format["Land_Map_%1_F", worldName];
+private _worldMap = format ["Land_Map_%1_F", worldName];
 if (!isNull (configFile >> "CfgVehicles" >> _worldMap)) then {
     GVAR(itemMapClassname) = _worldMap;
 } else {
@@ -14,20 +14,25 @@ if (!isNull (configFile >> "CfgVehicles" >> _worldMap)) then {
 
     if (player isEqualTo _unit && !_isMapShown && !isNull GVAR(map)) then {
         if (!GVAR(hasMap)) then {
-            player unlinkItem "ItemMap";
+            [_unit] call FUNC(removeMap);
         };
 
         GVAR(map) = objNull;
     };
 }] call CBA_fnc_addPlayerEventhandler;
 
-call FUNC(addPlaceMapAction);
-
 GVAR(map) = objNull;
-[QGVAR(removeMap),{
+[QGVAR(removeMap), {
     params ["_map"];
 
     if (visibleMap && {_map isEqualTo GVAR(map)}) then {
         openMap false;
     };
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(addMapActions), {
+    _this call FUNC(addOpenMapAction);
+    _this call FUNC(addPickupMapAction);
+}] call CBA_fnc_addEventHandler;
+
+call FUNC(addPlaceMapAction);
