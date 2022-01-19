@@ -7,8 +7,8 @@
  *
  *  Parameter(s):
  *      0: OBJECT - Object which should act like a MICLIC.
- *      1: NUMBER - Effective mine clearing distance in meters (optional, default: 75m).
- *      2: NUMBER - First fuse delay before launching the rocket-projected explosive line charge (optional, default: 30 seconds).
+ *      1: NUMBER - Effective mine clearing distance in meters (optional, default: 70 m).
+ *      2: NUMBER - First fuse delay before launching the rocket-projected explosive line charge (optional, default: 45 seconds).
  *      3: NUMBER - Second fuse delay before detonating the explosive line charge (optional, default: 5 seconds).
  *      4: NUMBER - Launch angle in degrees of the rocket attached to the explosive line charge (optional, default: 45°).
  *
