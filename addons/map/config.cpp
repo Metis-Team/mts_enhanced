@@ -6,13 +6,12 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"mts_main","ace_interact_menu","ace_common","a3_ui_f"};
+        requiredAddons[] = {"mts_main", "ace_interact_menu", "ace_common"};
         author = ECSTRING(main,authors);
-        authors[] = {"PhILoX","Timi007"};
+        authors[] = {"PhILoX", "Timi007"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgSounds.hpp"

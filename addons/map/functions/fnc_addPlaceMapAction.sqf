@@ -25,36 +25,37 @@ private _placeMapAction = [
     {
         params ["", "_player"];
 
-        if !((toLower (stance _player)) isEqualTo "crouch") then {
+        if ((stance _player) isNotEqualTo "CROUCH") then {
             _player playAction "crouch";
         };
 
-        [{(toLower (stance _this)) isEqualTo "crouch"}, {
+        [{(stance _this) isEqualTo "CROUCH"}, {
             params ["_player"];
 
             _player playAction "putdown";
-            private _sound = format [QGVAR(unfoldSound_%1), ((floor random 4) + 1)];
-            [_player, [_sound, 300]] remoteExecCall ["say3D"];
+            [_player, "unfold"] call FUNC(playMapSound);
         }, _player] call CBA_fnc_waitUntilAndExecute;
 
         [{((animationState _this) select [25,7]) isEqualTo "putdown"}, {
             params ["_player"];
 
             private _pos = _player getRelPos [1, 0];
-            _pos set [2, ((getposATL _player) select 2)];
+            _pos set [2, (getposATL _player) select 2];
 
-            private _map = GVAR(itemMapClassname) createVehicle [0,0,0];
+            private _map = GVAR(itemMapClassname) createVehicle [0, 0, 0];
             _map setDir ((getDir _player) + 90);
             _map setPosATL _pos;
 
-            [_map] remoteExecCall [QFUNC(mapActionMenu), 0, _map];
+            private _id = [QGVAR(addMapActions), [_map]] call CBA_fnc_globalEventJIP;
+            [_id, _map] call CBA_fnc_removeGlobalEventJIP; // Remove JIP when map is deleted
 
-            _player unlinkItem "ItemMap";
+            private _mapClass = [_player] call FUNC(removeMap);
+            _map setVariable [QGVAR(mapClass), _mapClass, true];
         }, _player] call CBA_fnc_waitUntilAndExecute;
     },
     {
         params ["", "_player"];
-        ("ItemMap" in (assignedItems _player)) && {[_player, objNull] call ace_common_fnc_canInteractWith}
+        ([_player] call FUNC(hasMap)) && {[_player, objNull] call ace_common_fnc_canInteractWith}
     }
 ] call ace_interact_menu_fnc_createAction;
 
