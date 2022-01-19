@@ -1,3 +1,9 @@
+PREP(addOpenMapAction);
+PREP(addPickupMapAction);
 PREP(addPlaceMapAction);
-PREP(mapActionMenu);
+PREP(hasMap);
+PREP(openMap);
+PREP(pickupMap);
 PREP(placeMapOnVehicle);
+PREP(playMapSound);
+PREP(removeMap);

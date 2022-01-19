@@ -38,8 +38,7 @@ private _placeMapOnVehAction = [
         _args params ["_offset", "_vectorDirAndUp"];
 
         _player playAction "putdown";
-        private _sound = format [QGVAR(unfoldSound_%1), ((floor random 4) + 1)];
-        [_player, [_sound, 300]] remoteExecCall ["say3D"];
+        [_player, "unfold"] call FUNC(playMapSound);
 
         [{((animationState (_this select 1)) select [25,7]) isEqualTo "putdown"}, {
             params ["_vehicle", "_player", "_offset", "_vectorDirAndUp"];
@@ -50,15 +49,17 @@ private _placeMapOnVehAction = [
 
             _vehicle setVariable [QGVAR(isMapOnVehicle), true, true];
 
-            [_map, _vehicle] remoteExecCall [QFUNC(mapActionMenu), 0, _map];
+            private _id = [QGVAR(addMapActions), [_map, _vehicle]] call CBA_fnc_globalEventJIP;
+            [_id, _map] call CBA_fnc_removeGlobalEventJIP; // Remove JIP when map is deleted
 
-            _player unlinkItem "ItemMap";
+            private _mapClass = [_player] call FUNC(removeMap);
+            _map setVariable [QGVAR(mapClass), _mapClass, true];
         }, [_vehicle, _player, _offset, _vectorDirAndUp]] call CBA_fnc_waitUntilAndExecute;
     },
     {
         params ["_vehicle", "_player"];
-        ("ItemMap" in (assignedItems _player)) &&
-        {[_player, objNull] call ace_common_fnc_canInteractWith} &&
+        ([_player] call FUNC(hasMap)) &&
+        {[_player, _vehicle, ["isNotInside"]] call ace_common_fnc_canInteractWith} &&
         {!(_vehicle getVariable [QGVAR(isMapOnVehicle), false])}
     },
     {},
