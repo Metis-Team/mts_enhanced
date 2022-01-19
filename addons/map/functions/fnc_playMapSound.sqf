@@ -32,9 +32,9 @@ private _soundFile = if (_type isEqualTo "unfold") then {
 
 // Check if sound source is inside of a house
 lineIntersectsSurfaces [
-	getPosWorld _soundSource,
-	getPosWorld _soundSource vectorAdd [0, 0, 50],
-	_soundSource, objNull, true, 1, "GEOM", "NONE"
+    getPosWorld _soundSource,
+    getPosWorld _soundSource vectorAdd [0, 0, 50],
+    _soundSource, objNull, true, 1, "GEOM", "NONE"
 ] select 0 params ["", "", "", "_house"];
 private _isInside = _house isKindOf "House";
 
