@@ -1,6 +1,9 @@
 #include "script_component.hpp"
 
-CHECK(!hasinterface);
+[QGVAR(addMapActions), {
+    _this call FUNC(addOpenMapAction);
+    _this call FUNC(addPickupMapAction);
+}] call CBA_fnc_addEventHandler;
 
 private _worldMap = format ["Land_Map_%1_F", worldName];
 if (!isNull (configFile >> "CfgVehicles" >> _worldMap)) then {
@@ -8,6 +11,8 @@ if (!isNull (configFile >> "CfgVehicles" >> _worldMap)) then {
 } else {
     GVAR(itemMapClassname) = "Land_Map_Altis_F";
 };
+
+CHECK(!hasinterface);
 
 ["visibleMap", {
     params ["_unit", "_isMapShown"];
@@ -28,11 +33,6 @@ GVAR(map) = objNull;
     if (visibleMap && {_map isEqualTo GVAR(map)}) then {
         openMap false;
     };
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(addMapActions), {
-    _this call FUNC(addOpenMapAction);
-    _this call FUNC(addPickupMapAction);
 }] call CBA_fnc_addEventHandler;
 
 call FUNC(addPlaceMapAction);
