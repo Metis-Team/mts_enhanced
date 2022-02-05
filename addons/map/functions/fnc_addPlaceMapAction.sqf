@@ -46,11 +46,15 @@ private _placeMapAction = [
             _map setDir ((getDir _player) + 90);
             _map setPosATL _pos;
 
-            private _id = [QGVAR(addMapActions), [_map]] call CBA_fnc_globalEventJIP;
-            [_id, _map] call CBA_fnc_removeGlobalEventJIP; // Remove JIP when map is deleted
+            [{
+                params ["_player", "_map"];
 
-            private _mapClass = [_player] call FUNC(removeMap);
-            _map setVariable [QGVAR(mapClass), _mapClass, true];
+                private _id = [QGVAR(addMapActions), [_map]] call CBA_fnc_globalEventJIP;
+                [_id, _map] call CBA_fnc_removeGlobalEventJIP; // Remove JIP when map is deleted
+
+                private _mapClass = [_player] call FUNC(removeMap);
+                _map setVariable [QGVAR(mapClass), _mapClass, true];
+            }, [_player, _map]] call CBA_fnc_execNextFrame;
         }, _player] call CBA_fnc_waitUntilAndExecute;
     },
     {
