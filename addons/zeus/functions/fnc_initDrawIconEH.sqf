@@ -43,7 +43,7 @@ CHECK(!isNil {(_curatorModule getVariable QGVAR(unconsciousPlayers))});
         drawIcon3D [
             "z\ace\addons\zeus\ui\Icon_Module_Zeus_Unconscious_ca.paa",
             [0.9, 0, 0, 1],
-            [_pos select 0, _pos select 1, 2],
+            [_pos select 0, _pos select 1, (_pos select 2) + 2],
             1.5, // Width
             1.5, // Height
             0, // Angle
