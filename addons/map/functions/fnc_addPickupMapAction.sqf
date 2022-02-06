@@ -19,8 +19,11 @@
  */
 
 params [["_map", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
+TRACE_2("call mts_map_fnc_addOpenMapAction", _map, _vehicle);
 
 CHECK(!hasinterface || isNull _map);
+
+TRACE_2("adding action", hasinterface, _map);
 
 private _pickupMap = [
     QGVAR(pickupMap),

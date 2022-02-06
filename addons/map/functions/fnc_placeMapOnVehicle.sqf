@@ -49,15 +49,11 @@ private _placeMapOnVehAction = [
 
             _vehicle setVariable [QGVAR(isMapOnVehicle), true, true];
 
-            [{
-                params ["_player", "_vehicle", "_map"];
+            private _id = [QGVAR(addMapActions), [_map, _vehicle]] call CBA_fnc_globalEventJIP;
+            [_id, _map] call CBA_fnc_removeGlobalEventJIP; // Remove JIP when map is deleted
 
-                private _id = [QGVAR(addMapActions), [_map, _vehicle]] call CBA_fnc_globalEventJIP;
-                [_id, _map] call CBA_fnc_removeGlobalEventJIP; // Remove JIP when map is deleted
-
-                private _mapClass = [_player] call FUNC(removeMap);
-                _map setVariable [QGVAR(mapClass), _mapClass, true];
-            }, [_player, _vehicle, _map]] call CBA_fnc_execNextFrame;
+            private _mapClass = [_player] call FUNC(removeMap);
+            _map setVariable [QGVAR(mapClass), _mapClass, true];
         }, [_vehicle, _player, _offset, _vectorDirAndUp]] call CBA_fnc_waitUntilAndExecute;
     },
     {

@@ -18,8 +18,11 @@
  */
 
 params [["_map", objNull, [objNull]]];
+TRACE_1("call mts_map_fnc_addOpenMapAction", _map);
 
 CHECK(!hasinterface || isNull _map);
+
+TRACE_2("adding action", hasinterface, _map);
 
 private _openMap = [
     QGVAR(openMap),
