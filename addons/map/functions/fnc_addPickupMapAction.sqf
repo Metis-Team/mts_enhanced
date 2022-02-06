@@ -8,7 +8,6 @@
  *
  *  Parameter(s):
  *      0: OBJECT - Placed map
- *      1: OBJECT - The vehicle which the map is placed on. (Optional, only needed if map was placed on vehicle)
  *
  *  Returns:
  *      Nothing.
@@ -18,7 +17,7 @@
  *
  */
 
-params [["_map", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
+params [["_map", objNull, [objNull]]];
 
 CHECK(!hasinterface || isNull _map);
 
@@ -27,16 +26,12 @@ private _pickupMap = [
     LLSTRING(pickupMap),
     "A3\Ui_f\data\IGUI\Cfg\Actions\take_ca.paa",
     {
-        params ["_map", "_player", "_args"];
-        _args params ["_vehicle"];
-
-        [_player, _map, _vehicle] call FUNC(pickupMap);
+        params ["_map", "_player"];
+        [_player, _map] call FUNC(pickupMap);
     },
     {
         params ["_map", "_player"];
         !([_player] call FUNC(hasMap)) && {[_player, _map] call ace_common_fnc_canInteractWith}
-    },
-    {},
-    [_vehicle]
+    }
 ] call ace_interact_menu_fnc_createAction;
 [_map, 0, ["ACE_MainActions"], _pickupMap] call ace_interact_menu_fnc_addActionToObject;

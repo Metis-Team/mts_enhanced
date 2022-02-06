@@ -49,7 +49,7 @@ private _placeMapOnVehAction = [
 
             _vehicle setVariable [QGVAR(isMapOnVehicle), true, true];
 
-            private _id = [QGVAR(addMapActions), [_map, _vehicle]] call CBA_fnc_globalEventJIP;
+            private _id = [QGVAR(addMapActions), [_map]] call CBA_fnc_globalEventJIP;
             [_id, _map] call CBA_fnc_removeGlobalEventJIP; // Remove JIP when map is deleted
 
             private _mapClass = [_player] call FUNC(removeMap);
