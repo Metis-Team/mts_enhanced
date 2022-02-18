@@ -38,7 +38,7 @@ CHECK(!isNil {(_curatorModule getVariable QGVAR(unconsciousPlayers))});
     private _unconsciousPlayers = _curatorModule getVariable [QGVAR(unconsciousPlayers), []];
 
     {
-        private _pos = getPos _x;
+        private _pos = ASLToAGL (getPosASLVisual _x);
 
         drawIcon3D [
             "z\ace\addons\zeus\ui\Icon_Module_Zeus_Unconscious_ca.paa",
