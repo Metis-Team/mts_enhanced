@@ -8,7 +8,6 @@
  *  Parameter(s):
  *      0: OBJECT - Player which takes the map from the ground.
  *      1: OBJECT - The map object to pickup.
- *      2: OBJECT - The vehicle the map object is attached to. (Optional, ignore if map object is not attached to anything)
  *
  *  Returns:
  *      Nothing.
@@ -18,7 +17,7 @@
  *
  */
 
-params [["_player", objNull, [objNull]], ["_map", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
+params [["_player", objNull, [objNull]], ["_map", objNull, [objNull]]];
 
 CHECK(isNull _player || isNull _map);
 
@@ -26,9 +25,11 @@ CHECK(isNull _player || isNull _map);
 _player playAction "PutDown";
 
 [{((animationState (_this select 0)) select [25,7]) isEqualTo "putdown"}, {
-    params ["_player", "_map", "_vehicle"];
+    params ["_player", "_map"];
 
     [QGVAR(removeMap), _map] call CBA_fnc_remoteEvent;
+
+    private _vehicle = attachedTo _map;
 
     private _mapClass = _map getVariable [QGVAR(mapClass), "ItemMap"];
 
