@@ -38,14 +38,21 @@ CHECK(!isNil {(_curatorModule getVariable QGVAR(unconsciousPlayers))});
     private _unconsciousPlayers = _curatorModule getVariable [QGVAR(unconsciousPlayers), []];
 
     {
-        private _pos = getPos _x;
+        private _pos = ASLToAGL (getPosASLVisual _x);
+        private _camPos = ASLToAGL (getPosASLVisual curatorCamera);
+        private _d = _pos distance _camPos;
+        private _scale = linearConversion [300, 730, _d, 1.5, 0, true]; // 300m => 1.5, 730m => 0
+
+        if (_scale < 0.01) then {
+            continue;
+        };
 
         drawIcon3D [
             "z\ace\addons\zeus\ui\Icon_Module_Zeus_Unconscious_ca.paa",
             [0.9, 0, 0, 1],
-            [_pos select 0, _pos select 1, 2],
-            1.5, // Width
-            1.5, // Height
+            [_pos select 0, _pos select 1, (_pos select 2) + 2],
+            _scale, // Width
+            _scale, // Height
             0, // Angle
             "", // Text
             1 // Shadow
