@@ -10,7 +10,13 @@
  *  Parameter(s):
  *      0: STRING - Classname of (typeOf) the vehicle.
  *      1: ARRAY - Offset of map to the vehicle.
- *      2. ARRAY - Dir and up vectors of the map.
+ *      2: ARRAY - Dir and up vectors of the map.
+ *      3: CODE - Addtional condition when to show action
+ *          Passed arguments:
+ *          0: OBJECT - Vehicle.
+ *          1: OBJECT - Player.
+ *          2: ARRAY - Custom args (see param 4)).
+ *      4: ARRAY - Custom arguments for the condition.
  *
  *  Returns:
  *      Nothing.
@@ -23,11 +29,12 @@
 params [
     ["_vehClass", "", [""]],
     ["_offset", [0,0,0], [[]]],
-    ["_vectorDirAndUp", [[0,1,0],[0,0,1]], [[]]]
+    ["_vectorDirAndUp", [[0,1,0],[0,0,1]], [[]]],
+    ["_condition", {true}, [{}]],
+    ["_conditionArgs", [], [[]]]
 ];
 
-CHECK(!hasinterface);
-CHECK(_vehClass isEqualTo "");
+CHECK(!hasinterface || _vehClass isEqualTo "");
 
 private _placeMapOnVehAction = [
     QGVAR(placeMapOnVehAction),
@@ -57,13 +64,16 @@ private _placeMapOnVehAction = [
         }, [_vehicle, _player, _offset, _vectorDirAndUp]] call CBA_fnc_waitUntilAndExecute;
     },
     {
-        params ["_vehicle", "_player"];
+        params ["_vehicle", "_player", "_args"];
+        _args params ["", "", "_condition", "_conditionArgs"];
+
         ([_player] call FUNC(hasMap)) &&
         {[_player, _vehicle, ["isNotInside"]] call ace_common_fnc_canInteractWith} &&
-        {!(_vehicle getVariable [QGVAR(isMapOnVehicle), false])}
+        {!(_vehicle getVariable [QGVAR(isMapOnVehicle), false])} &&
+        {[_vehicle, _player, _conditionArgs] call _condition}
     },
     {},
-    [_offset, _vectorDirAndUp],
+    [_offset, _vectorDirAndUp, _condition, _conditionArgs],
     _offset,
     2
 ] call ace_interact_menu_fnc_createAction;
