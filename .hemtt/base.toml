@@ -1,8 +1,0 @@
-name = "Metis Enhanced"
-prefix = "mts"
-author = "Bix, PhILoX, Timi007"
-template = "cba"
-mainprefix = "z"
-files = ["mod.cpp"]
-folder_optionals = true
-sig_version = 3
