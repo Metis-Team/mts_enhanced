@@ -18,6 +18,8 @@
 
 params ["_display"];
 
+TRACE_1("Zeus display opened", _display);
+
 CHECK(!GVAR(enableACEUnconsciousIcon));
 
 call FUNC(initDrawIconEH);
