@@ -22,6 +22,9 @@
     #undef PATHTOEF
     #define PATHTOEF(var1,var2) PATHTOF_SYS(PATH_PREFIX,var1,var2)
 
+    #undef COMPILE_SCRIPT
+    #define COMPILE_SCRIPT(var1) compileScript ['PATHTO_SYS(PATH_PREFIX,COMPONENT_F,var1)']
+
     #undef COMPILE_FILE
     #define COMPILE_FILE(var1) COMPILE_FILE_SYS(PATH_PREFIX,COMPONENT_F,var1)
     #undef COMPILE_FILE_CFG

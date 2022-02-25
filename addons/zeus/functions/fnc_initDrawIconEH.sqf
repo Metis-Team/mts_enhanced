@@ -20,6 +20,7 @@
 private _curatorModule = getAssignedCuratorLogic player;
 
 CHECK(!isNil {(_curatorModule getVariable QGVAR(unconsciousPlayers))});
+CHECK(!isNil QGVAR(ACEUnconsciousIconPFH));
 
 {
     if (_x getVariable ["ACE_isUnconscious", false]) then {
@@ -30,7 +31,9 @@ CHECK(!isNil {(_curatorModule getVariable QGVAR(unconsciousPlayers))});
 ["ace_unconscious", LINKFUNC(drawACEUnconsciousIcon)] call CBA_fnc_addEventHandler;
 [QGVAR(killed), LINKFUNC(drawACEUnconsciousIcon)] call CBA_fnc_addEventHandler;
 
-[{
+TRACE_1("Adding initDrawIcon PFH", _curatorModule);
+
+GVAR(ACEUnconsciousIconPFH) = [{
     (_this select 0) params ["_curatorModule"];
 
     CHECK(isNull (findDisplay ZEUS_DISPLAY));
