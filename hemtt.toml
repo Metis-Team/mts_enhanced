@@ -22,7 +22,7 @@ releasebuild = [
 ]
 
 [header_exts]
-version= "{{git \"id 8\"}}"
+version = "{{git \"id 8\"}}"
 
 # SQF Compilation
 [scripts.compile_sqf]
