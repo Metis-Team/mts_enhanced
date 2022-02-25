@@ -4,7 +4,7 @@
  *
  *  Description:
  *      Initializes AI suppression behaviour. This behaviour is handled on every machine on which local units exists.
- *      E.g. Server and zeus have placed AI units -> Units behaviour will behandled where unit is local, so all units of the server on the server, etc.
+ *      E.g. Server and zeus have placed AI units -> Units behaviour will be handled where unit is local, so all units of the server on the server, etc.
  *
  *  Parameter(s):
  *      None.
@@ -19,38 +19,24 @@
 
 GVAR(stanceMapping) = createHashMapFromArray [["PRONE", "DOWN"], ["CROUCH", "MIDDLE"], ["STAND", "UP"]];
 
-[QGVAR(enableSuppression), {
-    params ["_unit", "_suppressionThreshold", "_suppressedStance"];
+[QGVAR(enableSuppression), LINKFUNC(enableSuppression)] call CBA_fnc_addEventHandler;
+[QGVAR(disableSuppression), LINKFUNC(disableSuppression)] call CBA_fnc_addEventHandler;
 
-    CHECK(isNull _unit || !local _unit || _unit getVariable [ARR_2(QGVAR(suppressionEnabled), false)]);
-    CHECK(_suppressionThreshold < 0 || _suppressionThreshold > 1);
-    _suppressedStance = toUpper _suppressedStance;
-    CHECK(!(_suppressedStance in [ARR_3("DOWN", "MIDDLE", "UP")]));
+player addEventHandler ["Local", {
+    params ["_unit", "_isLocal"];
 
-    if (isNil QGVAR(suppressedLocalUnits)) then {
-        GVAR(suppressedLocalUnits) = [];
-        [] call FUNC(addAISuppressionPFH);
+    CHECK(isNull _unit);
+    CHECK(!(_unit getVariable [ARR_2(QGVAR(suppressionEnabled), false)]));
+
+    // transfer unit ownership
+    if (_isLocal) then {
+        // Add to new owner
+        [_unit] call FUNC(addSuppressedLocalUnit);
+    } else {
+        // Remove unit from old Owner
+        [_unit] call FUNC(removeSuppressedLocalUnit);
     };
-
-    private _originalStance = GVAR(stanceMapping) getOrDefault [stance _unit, "UP"];
-
-    GVAR(suppressedLocalUnits) pushBackUnique [_unit, _suppressionThreshold, _suppressedStance, _originalStance];
-
-    _unit setVariable [QGVAR(suppressionEnabled), true, true];
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(disableSuppression), {
-    params ["_unit"];
-
-    CHECK(isNull _unit || !local _unit || !(_unit getVariable [ARR_2(QGVAR(suppressionEnabled), false)]));
-
-    private _index = GVAR(suppressedLocalUnits) findIf {(_x select 0) isEqualTo _unit};
-    // Unit wasn't suppressed before
-    CHECK(_index < 0);
-    GVAR(suppressedLocalUnits) deleteAt _index;
-
-    _unit setVariable [QGVAR(suppressionEnabled), false, true];
-}] call CBA_fnc_addEventHandler;
+}];
 
 if (hasInterface) then {
     private _enableSuppressionAction = [
@@ -114,7 +100,7 @@ if (hasInterface) then {
                    continue;
                };
 
-               [QGVAR(disableSuppression), [_x], _x] call CBA_fnc_targetEvent;
+               _x setVariable [QGVAR(suppressionEnabled), false, true];
            } forEach _objects;
         },
         {

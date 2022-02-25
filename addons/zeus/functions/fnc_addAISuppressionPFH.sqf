@@ -17,17 +17,31 @@
  */
 
 [{
-    {
-        _x params ["_unit", "_suppressionThreshold", "_suppressedStance", "_originalStance"];
+    if (GVAR(suppressedLocalUnits) isEqualTo []) exitWith {
+        GVAR(suppressedLocalUnits) = nil;
+        (_this select 1) call CBA_fnc_removePerFrameHandler;
+    };
 
-        if (getSuppression _unit >= _suppressionThreshold) then {
-            if (unitPos _unit isNotEqualTo _suppressedStance) then {
-                _unit setUnitPos _suppressedStance;
+    {
+        if (!alive _x) then {
+            [QGVAR(disableSuppression), [_x]] call CBA_fnc_localEvent;
+            continue;
+        };
+
+        private _suppressionParams = _x getVariable [QGVAR(suppressionParameters), []];
+        if (_suppressedParams isEqualTo []) then {
+            continue;
+        };
+        _suppressionParams params ["_suppressionThreshold", "_suppressedStance", "_originalStance"];
+
+        if (getSuppression _x >= _suppressionThreshold) then {
+            if (unitPos _x isNotEqualTo _suppressedStance) then {
+                _x setUnitPos _suppressedStance;
             };
         } else {
-            if (unitPos _unit isNotEqualTo _originalStance) then {
-                _unit setUnitPos _originalStance;
+            if (unitPos _x isNotEqualTo _originalStance) then {
+                _x setUnitPos _originalStance;
             };
         };
-    } count GVAR(suppressedLocalUnits);
+    } forEach GVAR(suppressedLocalUnits);
 }, 1, []] call CBA_fnc_addPerFrameHandler;
