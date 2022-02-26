@@ -295,5 +295,35 @@
             <German>Feuereröffnung der Gruppe auf feuerfrei geschaltet</German>
         </Key>
     </Container>
+    <Container name="suppression">
+        <Key ID="STR_mts_zeus_suppression_enable">
+            <Original>Enable suppression</Original>
+            <German>Aktiviere Niederhaltung</German>
+        </Key>
+        <Key ID="STR_mts_zeus_suppression_enabled">
+            <Original>Suppression enabled</Original>
+            <German>Niederhaltung aktiviert</German>
+        </Key>
+        <Key ID="STR_mts_zeus_suppression_disable">
+            <Original>Disable suppression</Original>
+            <German>Deaktiviere Niederhaltung</German>
+        </Key>
+        <Key ID="STR_mts_zeus_suppression_threshold">
+            <Original>Threshold</Original>
+            <German>Schwellenwert</German>
+        </Key>
+        <Key ID="STR_mts_zeus_suppression_threshold_tooltip">
+            <Original>Units will change stance if suppression is higher than this value.</Original>
+            <German>Einheiten werden ihre Haltung ändern, sobald der Wert überschritten wird.</German>
+        </Key>
+        <Key ID="STR_mts_zeus_suppression_stance">
+            <Original>Stance</Original>
+            <German>Haltung</German>
+        </Key>
+        <Key ID="STR_mts_zeus_suppression_stance_tooltip">
+            <Original>The stance to take when suppressed.</Original>
+            <German>Die Haltung während der Niedergehaltung.</German>
+        </Key>
+    </Container>
     </Package>
 </Project>
