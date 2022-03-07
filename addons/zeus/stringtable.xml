@@ -185,8 +185,22 @@
     </Container>
     <Container name="ACEUnconsciousIcon">
         <Key ID="STR_mts_zeus_ACEUnconsciousIcon">
-            <Original>Zeus ACE unconscious icon</Original>
-            <German>Zeus ACE Bewusstlosigkeit Icon</German>
+            <Original>Zeus ACE unconscious icons</Original>
+            <German>Zeus ACE Bewusstlosigkeit Icons</German>
+        </Key>
+        <Key ID="STR_mts_zeus_ACEUnconsciousIconTooltip">
+            <Original>Show an icon in Zeus for unconscious players.</Original>
+            <German>Zeige ein Icon in Zeus für bewusstlose Spieler an.</German>
+        </Key>
+    </Container>
+    <Container name="3DENComments">
+        <Key ID="STR_mts_zeus_3DENComments">
+            <Original>Show 3DEN comments in Zeus</Original>
+            <German>Zeige 3DEN Kommentare in Zeus</German>
+        </Key>
+        <Key ID="STR_mts_zeus_3DENCommentsTooltip">
+            <Original>Show 3DEN comments in Zeus.</Original>
+            <German>Zeige 3DEN Kommentare in Zeus an.</German>
         </Key>
     </Container>
     <Container name="unflipVehicle">

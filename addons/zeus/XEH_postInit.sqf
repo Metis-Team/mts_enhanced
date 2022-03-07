@@ -20,6 +20,7 @@
 CHECK(!hasinterface);
 
 GVAR(moduleDestination_running) = false;
+GVAR(drawCommentEhAdded) = false;
 
 player addEventHandler ["killed", {
     params ["_unit"];
