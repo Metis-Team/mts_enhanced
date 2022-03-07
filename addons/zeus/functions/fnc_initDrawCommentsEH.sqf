@@ -16,6 +16,8 @@
  *
  */
 
+params ["_display"];
+
 CHECK(GVAR(drawCommentEhAdded));
 
 private _3denComments = getMissionConfigValue [QGVAR(3denComments), []];
@@ -64,14 +66,12 @@ TRACE_1("3DEN Comments", _3denComments);
     } count _3denComments;
 }, [_3denComments]] call CBA_fnc_addBISEventHandler;
 
-[((findDisplay ZEUS_DISPLAY) displayCtrl ZEUS_MAP_CTRL), "draw", {
+[_display displayCtrl ZEUS_MAP_CTRL, "draw", {
     params ["_mapCtrl"];
     _thisArgs params ["_3denComments"];
 
-    TRACE_1("test", _mapCtrl);
-
     if (!GVAR(enable3DENComments)) exitWith {
-        (ctrlParent _mapCtrl) ctrlRemoveEventHandler [_thisType, _thisId];
+        _mapCtrl ctrlRemoveEventHandler [_thisType, _thisId];
         GVAR(drawCommentEhAdded) = false;
     };
 

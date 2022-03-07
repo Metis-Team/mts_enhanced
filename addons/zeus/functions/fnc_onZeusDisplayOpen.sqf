@@ -25,5 +25,5 @@ if (GVAR(enableACEUnconsciousIcon)) then {
 };
 
 if (GVAR(enable3DENComments)) then {
-    call FUNC(initDrawCommentsEH);
+    [_display] call FUNC(initDrawCommentsEH);
 };
