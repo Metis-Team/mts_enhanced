@@ -6,6 +6,10 @@
                 <Original>Timi007</Original>
                 <German>Timi007</German>
             </Key>
+            <Key ID="STR_mts_whistle_subCategory">
+                <Original>Whistle</Original>
+                <German>Pfeife</German>
+            </Key>
             <Key ID="STR_mts_whistle_whistleDisplayName">
                 <Original>FOX 40 Whistle</Original>
                 <German>FOX 40 Pfeife</German>
@@ -16,10 +20,6 @@
             </Key>
     </Container>
     <Container name="cba_keybinding">
-            <Key ID="STR_mts_whistle_cba_keybinding_categoryName">
-                <Original>Metis Whistle</Original>
-                <German>Metis Pfeife</German>
-            </Key>
             <Key ID="STR_mts_whistle_cba_keybinding_blow_whistle">
                 <Original>Whistle</Original>
                 <German>Pfeifen</German>

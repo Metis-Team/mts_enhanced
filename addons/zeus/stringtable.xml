@@ -2,9 +2,9 @@
 <Project name="MTS">
     <Package name="zeus">
     <Container name="misc">
-        <Key ID="STR_mts_zeus_categoryName">
-            <Original>Metis</Original>
-            <German>Metis</German>
+        <Key ID="STR_mts_zeus_subCategory">
+            <Original>Zeus</Original>
+            <German>Zeus</German>
         </Key>
     </Container>
     <Container name="CBA_Keybinding">
@@ -185,12 +185,12 @@
     </Container>
     <Container name="ACEUnconsciousIcon">
         <Key ID="STR_mts_zeus_ACEUnconsciousIcon">
-            <Original>Zeus ACE unconscious icons</Original>
-            <German>Zeus ACE Bewusstlosigkeit Icons</German>
+            <Original>Show unconscious players in Zeus</Original>
+            <German>Zeige Bewusstlose Spieler im Zeus</German>
         </Key>
         <Key ID="STR_mts_zeus_ACEUnconsciousIconTooltip">
-            <Original>Show an icon in Zeus for unconscious players.</Original>
-            <German>Zeige ein Icon in Zeus für bewusstlose Spieler an.</German>
+            <Original>Show an icon in Zeus for unconscious players (ACE).</Original>
+            <German>Zeige ein Icon in Zeus für bewusstlose Spieler (ACE) an.</German>
         </Key>
     </Container>
     <Container name="3DENComments">

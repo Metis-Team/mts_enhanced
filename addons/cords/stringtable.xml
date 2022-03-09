@@ -5,9 +5,17 @@
     		<Original>Major rank</Original>
             <German>Major Dienstgrad</German>
     	</Key>
-        <Key ID="STR_mts_cords_cords">
+        <Key ID="STR_mts_cords_subCategory">
     		<Original>Cords</Original>
             <German>Litzen</German>
+    	</Key>
+        <Key ID="STR_mts_cords_cords">
+    		<Original>Add Cords</Original>
+            <German>Litzen hinzufügen</German>
+    	</Key>
+        <Key ID="STR_mts_cords_cords_tooltip">
+    		<Original>Adds Cords to ACE interactions menu.</Original>
+            <German>Fügt Litzen zu dem ACE Interaktionmenu hinzu.</German>
     	</Key>
         <Key ID="STR_mts_cords_inf">
     		<Original>Infantry</Original>
