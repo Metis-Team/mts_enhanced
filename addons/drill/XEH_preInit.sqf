@@ -9,8 +9,8 @@ PREP_RECOMPILE_END;
 [
     QGVAR(UIEnabled),
     "CHECKBOX",
-    [LLSTRING(UI_Setting), format [LELSTRING(main,settingCheckboxDescription), LLSTRING(UI_Setting)]],
-    LELSTRING(main,settingCategoryCommon),
+    [LLSTRING(showUI), LLSTRING(showUI_tooltip)],
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     true,
     0,
     {

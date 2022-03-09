@@ -1,5 +1,5 @@
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(AIStanceUp_Hotkey),
     LLSTRING(cba_keybinding_AIStanceUp),
     {
@@ -12,7 +12,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(AIStanceMiddle_Hotkey),
     LLSTRING(cba_keybinding_AIStanceMiddle),
     {
@@ -25,7 +25,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(AIStanceDown_Hotkey),
     LLSTRING(cba_keybinding_AIStanceDown),
     {
@@ -38,7 +38,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(AIBehaviourCareless_Hotkey),
     LLSTRING(cba_keybinding_AIBehaviourCareless),
     {
@@ -51,7 +51,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(AIBehaviourCombat_Hotkey),
     LLSTRING(cba_keybinding_AIBehaviourCombat),
     {
@@ -64,7 +64,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(AICombatModeBlue_Hotkey),
     LLSTRING(cba_keybinding_AICombatModeBlue),
     {
@@ -77,7 +77,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(AICombatModeYellow_Hotkey),
     LLSTRING(cba_keybinding_AICombatModeYellow),
     {
@@ -90,7 +90,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(disableAIPathBehaviourPath_Hotkey),
     LLSTRING(cba_keybinding_disableAIPathBehaviourPath),
     {
@@ -103,7 +103,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(enableAIPathBehaviourPath_Hotkey),
     LLSTRING(cba_keybinding_enableAIPathBehaviourPath),
     {
@@ -116,7 +116,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(disableAIPathBehaviourMove_Hotkey),
     LLSTRING(cba_keybinding_disableAIPathBehaviourMove),
     {
@@ -129,7 +129,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(enableAIPathBehaviourMove_Hotkey),
     LLSTRING(cba_keybinding_enableAIPathBehaviourMove),
     {

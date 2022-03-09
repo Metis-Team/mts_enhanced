@@ -2,10 +2,18 @@
 <Project name="mts">
     <Package name="common">
         <Container name="Grasscutter">
-            <Key ID="STR_mts_common_grasscutter">
-        		<Original>Grass cutter</Original>
+            <Key ID="STR_mts_common_subCategory">
+                <Original>Grass cutter</Original>
                 <German>Grasschneider</German>
+            </Key>
+            <Key ID="STR_mts_common_grasscutter">
+        		<Original>Add grass cutter</Original>
+                <German>Grasschneider hinzufügen</German>
         	</Key>
+            <Key ID="STR_mts_common_grasscutter_tooltip">
+                <Original>Adds the grass cutter to ACE interaction menu.</Original>
+                <German>Fügt den Grasschneider zu dem ACE Interaktionmenu hinzu.</German>
+            </Key>
             <Key ID="STR_mts_common_grasscutter_removeGrass">
                 <Original>Remove grass</Original>
                 <German>Gras entfernen</German>
@@ -15,8 +23,8 @@
                 <German>Grasschneidergröße</German>
             </Key>
             <Key ID="STR_mts_common_grasscutter_size_tooltip">
-                <Original>Changes the size of the grass cutter</Original>
-                <German>Ändert die Größe des Grasschneiders</German>
+                <Original>Changes the size of the grass cutter.</Original>
+                <German>Ändert die Größe des Grasschneiders.</German>
             </Key>
             <Key ID="STR_mts_common_grasscutter_size_large">
                 <Original>Large</Original>

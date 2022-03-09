@@ -14,8 +14,8 @@ INFO_1("Metis Enhanced version: %1.", _version);
 [
     QGVAR(grasscutter_enabled),
     "CHECKBOX",
-    [LLSTRING(grasscutter), format [LELSTRING(main,settingCheckboxDescription),LLSTRING(grasscutter)]],
-    LELSTRING(main,settingCategoryCommon),
+    [LLSTRING(grasscutter), LLSTRING(grasscutter_tooltip)],
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     true,
     0,
     {}
@@ -26,7 +26,7 @@ INFO_1("Metis Enhanced version: %1.", _version);
     QGVAR(grasscutter_size),
     "LIST",
     [LLSTRING(grasscutter_size), LLSTRING(grasscutter_size_tooltip)],
-    LELSTRING(main,settingCategoryCommon),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     [
         [0, 1],
         [LLSTRING(grasscutter_size_large), LLSTRING(grasscutter_size_medium)],

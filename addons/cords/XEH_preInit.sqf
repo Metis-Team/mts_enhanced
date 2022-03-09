@@ -11,8 +11,8 @@ GVAR(PBWLoaded) = [["PBW_German_Uniform", "PBW_German_Common"]] call EFUNC(commo
 [
     QGVAR(enabled),
     "CHECKBOX",
-    [LLSTRING(cords), format [LELSTRING(main,settingCheckboxDescription), LLSTRING(cords)]],
-    LELSTRING(main,settingCategoryCommon),
+    [LLSTRING(cords), LLSTRING(cords_tooltip)],
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     true,
     0,
     {}
@@ -22,7 +22,7 @@ GVAR(PBWLoaded) = [["PBW_German_Uniform", "PBW_German_Common"]] call EFUNC(commo
     QGVAR(playerIDs),
     "EDITBOX",
     [LLSTRING(playerIDs), LLSTRING(playerIDs_tooltip)],
-    LELSTRING(main,settingCategoryCommon),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     "[""""]",
     1,
     {}

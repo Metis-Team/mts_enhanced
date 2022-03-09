@@ -6,14 +6,12 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-[
-    QGVAR(enableACEUnconsciousIcon),
-    "CHECKBOX",
-    [LLSTRING(ACEUnconsciousIcon), format [LELSTRING(main,settingCheckboxDescription), LLSTRING(ACEUnconsciousIcon)]],
-    LELSTRING(main,settingCategoryCommon),
-    true,
-    0,
-    {}
-] call CBA_fnc_addSetting;
-
 ADDON = true;
+
+#include "initSettings.hpp"
+
+// For 3DEN comments in Zeus
+if (is3DEN) then {
+    add3DENEventHandler ["OnMissionSave", {[false] call FUNC(on3DENMissionSave)}];
+    add3DENEventHandler ["OnMissionAutosave", {[true] call FUNC(on3DENMissionSave)}];
+};
