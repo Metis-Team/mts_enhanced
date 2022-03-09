@@ -20,7 +20,12 @@
 CHECK(!hasinterface);
 
 GVAR(moduleDestination_running) = false;
-GVAR(drawCommentEhAdded) = false;
+
+GVAR(3DENComments_drawEHAdded) = false;
+GVAR(3DENComments_data) = getMissionConfigValue [QGVAR(3denComments), []];
+TRACE_1("3DEN Comments", GVAR(3DENComments_data));
+
+GVAR(ACEIcon_drawEHAdded) = false;
 
 player addEventHandler ["killed", {
     params ["_unit"];

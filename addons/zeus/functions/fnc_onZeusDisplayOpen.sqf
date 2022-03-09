@@ -21,9 +21,9 @@ params ["_display"];
 TRACE_1("Zeus display opened", _display);
 
 if (GVAR(enableACEUnconsciousIcon)) then {
-    call FUNC(initDrawIconEH);
+    [_display] call FUNC(addACEUnconsciousIconDrawEH);
 };
 
 if (GVAR(enable3DENComments)) then {
-    [_display] call FUNC(initDrawCommentsEH);
+    [_display] call FUNC(add3DENCommentsDrawEH);
 };

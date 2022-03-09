@@ -10,6 +10,7 @@ ADDON = true;
 
 #include "initSettings.hpp"
 
+// For 3DEN comments in Zeus
 if (is3DEN) then {
     add3DENEventHandler ["OnMissionSave", {[false] call FUNC(on3DENMissionSave)}];
     add3DENEventHandler ["OnMissionAutosave", {[true] call FUNC(on3DENMissionSave)}];
