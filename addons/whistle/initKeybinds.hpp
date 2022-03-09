@@ -1,5 +1,5 @@
 [
-    LLSTRING(cba_keybinding_categoryName),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(blowWhistle),
     LLSTRING(cba_keybinding_blow_whistle),
     {

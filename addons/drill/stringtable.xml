@@ -5,9 +5,9 @@
             <Original>Drill</Original>
             <German>Formaldienst</German>
         </Key>
-        <Key ID="STR_mts_Drill_CBA_Category">
-            <Original>Metis Drill</Original>
-            <German>Metis Formaldienst</German>
+        <Key ID="STR_mts_Drill_subCategory">
+            <Original>Drill</Original>
+            <German>Formaldienst</German>
         </Key>
 		<Key ID="STR_mts_Drill_StandStill">
             <Original>Stand still</Original>
@@ -21,9 +21,13 @@
             <Original>Give the Finger</Original>
             <German>Stinkefinger zeigen</German>
         </Key>
-        <Key ID="STR_mts_Drill_UI_Setting">
-            <Original>Drill UI</Original>
-            <German>Formaldienst UI</German>
+        <Key ID="STR_mts_Drill_showUI">
+            <Original>Show Drill Stance Indicator</Original>
+            <German>Zeige Formaldienst Haltungsindikator</German>
+        </Key>
+        <Key ID="STR_mts_Drill_showUI_tooltip">
+            <Original>Show Drill Stance Indicator at bottom right conner.</Original>
+            <German>Zeigt die Haltung für den Formaldienst unten rechts.</German>
         </Key>
 	</Package>
 </Project>

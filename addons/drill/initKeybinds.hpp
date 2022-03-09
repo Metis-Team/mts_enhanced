@@ -1,5 +1,5 @@
 [
-    LLSTRING(CBA_Category),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     "StandStill",
     LLSTRING(StandStill),
     {QGVAR(StandStill) call FUNC(playAnimation);},
@@ -9,7 +9,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(CBA_Category),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     "AtEase",
     LLSTRING(AtEase),
     {QGVAR(AtEase) call FUNC(playAnimation);},
@@ -19,7 +19,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-    LLSTRING(CBA_Category),
+    [LELSTRING(main,category), LLSTRING(subCategory)],
     "FY",
     LLSTRING(FY),
     {QGVAR(FY) call FUNC(playAnimation);},
