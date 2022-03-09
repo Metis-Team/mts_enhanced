@@ -44,6 +44,7 @@ if (!GVAR(ACEIcon_drawEHAdded)) then {
         _thisArgs params ["_curatorModule"];
 
         CHECK(isNull (findDisplay ZEUS_DISPLAY) || !isNull (findDisplay PAUSE_MENU_DISPLAY));
+        CHECK(ctrlShown (findDisplay ZEUS_DISPLAY displayCtrl ZEUS_WATERMARK_CTRL)); // HUD Hidden
 
         if (!GVAR(enableACEUnconsciousIcon)) exitWith {
             removeMissionEventHandler [_thisType, _thisId];
@@ -81,6 +82,8 @@ LOG("Adding ACEUnconsciousIcon map draw");
 [_display displayCtrl ZEUS_MAP_CTRL, "draw", {
     params ["_mapCtrl"];
     _thisArgs params ["_curatorModule"];
+
+    CHECK(ctrlShown ((ctrlParent _mapCtrl) displayCtrl ZEUS_WATERMARK_CTRL)); // HUD Hidden
 
     if (!GVAR(enableACEUnconsciousIcon)) exitWith {
         _mapCtrl ctrlRemoveEventHandler [_thisType, _thisId];

@@ -26,6 +26,7 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
         _thisArgs params ["_3denComments"];
 
         CHECK(isNull (findDisplay ZEUS_DISPLAY) || !isNull (findDisplay PAUSE_MENU_DISPLAY));
+        CHECK(ctrlShown (findDisplay ZEUS_DISPLAY displayCtrl ZEUS_WATERMARK_CTRL)); // HUD Hidden
 
         if (!GVAR(enable3DENComments)) exitWith {
             removeMissionEventHandler [_thisType, _thisId];
@@ -73,6 +74,8 @@ LOG("Adding 3DENComments map draw");
 [_display displayCtrl ZEUS_MAP_CTRL, "draw", {
     params ["_mapCtrl"];
     _thisArgs params ["_3denComments"];
+
+    CHECK(ctrlShown ((ctrlParent _mapCtrl) displayCtrl ZEUS_WATERMARK_CTRL)); // HUD Hidden
 
     if (!GVAR(enable3DENComments)) exitWith {
         _mapCtrl ctrlRemoveEventHandler [_thisType, _thisId];
