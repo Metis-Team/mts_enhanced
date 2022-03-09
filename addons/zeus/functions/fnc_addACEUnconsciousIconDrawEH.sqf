@@ -43,7 +43,7 @@ if (!GVAR(ACEIcon_drawEHAdded)) then {
     [missionNamespace, "draw3D", {
         _thisArgs params ["_curatorModule"];
 
-        CHECK(isNull (findDisplay ZEUS_DISPLAY));
+        CHECK(isNull (findDisplay ZEUS_DISPLAY) || !isNull (findDisplay PAUSE_MENU_DISPLAY));
 
         if (!GVAR(enableACEUnconsciousIcon)) exitWith {
             removeMissionEventHandler [_thisType, _thisId];

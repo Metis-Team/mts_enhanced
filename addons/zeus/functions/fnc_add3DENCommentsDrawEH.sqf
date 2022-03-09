@@ -25,7 +25,7 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
     [missionNamespace, "draw3D", {
         _thisArgs params ["_3denComments"];
 
-        CHECK(isNull (findDisplay ZEUS_DISPLAY));
+        CHECK(isNull (findDisplay ZEUS_DISPLAY) || !isNull (findDisplay PAUSE_MENU_DISPLAY));
 
         if (!GVAR(enable3DENComments)) exitWith {
             removeMissionEventHandler [_thisType, _thisId];
@@ -44,11 +44,12 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
             };
 
             private _color = [0.2,0.8,0.6,1];
+            private _posAGL = ASLToAGL _posASL;
 
             drawIcon3D [
                 "a3\3den\Data\Cfg3DEN\Comment\texture_ca.paa",
                 _color,
-                ASLToAGL _posASL,
+                _posAGL,
                 _scale, // Width
                 _scale, // Height
                 0, // Angle
@@ -56,11 +57,13 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
                 1 // Shadow
             ];
 
-            drawLine3D [
-                ASLToAGL _posASL,
-                [_posASL select 0, _posASL select 1, 0],
-                _color
-            ];
+            if ((_posAGL select 2) > 0.5) then {
+                drawLine3D [
+                    _posAGL,
+                    [_posAGL select 0, _posAGL select 1, 0],
+                    _color
+                ];
+            }
         } count _3denComments;
     }, [GVAR(3DENComments_data)]] call CBA_fnc_addBISEventHandler;
 };
