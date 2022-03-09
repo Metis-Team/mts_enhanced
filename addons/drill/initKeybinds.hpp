@@ -1,6 +1,6 @@
 [
     [LELSTRING(main,category), LLSTRING(subCategory)],
-    "StandStill",
+    QGVAR(StandStill_keybind),
     LLSTRING(StandStill),
     {QGVAR(StandStill) call FUNC(playAnimation);},
     {false},
@@ -10,7 +10,7 @@
 
 [
     [LELSTRING(main,category), LLSTRING(subCategory)],
-    "AtEase",
+    QGVAR(AtEase_keybind),
     LLSTRING(AtEase),
     {QGVAR(AtEase) call FUNC(playAnimation);},
     {false},
@@ -20,7 +20,7 @@
 
 [
     [LELSTRING(main,category), LLSTRING(subCategory)],
-    "FY",
+    QGVAR(FY_keybind),
     LLSTRING(FY),
     {QGVAR(FY) call FUNC(playAnimation);},
     {false},
