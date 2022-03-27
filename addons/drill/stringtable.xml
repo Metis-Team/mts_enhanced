@@ -26,7 +26,7 @@
             <German>Zeige Formaldienst Haltungsindikator</German>
         </Key>
         <Key ID="STR_mts_drill_showUI_tooltip">
-            <Original>Show Drill stance indicator at bottom right conner.</Original>
+            <Original>Show Drill stance indicator in bottom right corner.</Original>
             <German>Zeigt die Haltung für den Formaldienst unten rechts.</German>
         </Key>
 	</Package>
