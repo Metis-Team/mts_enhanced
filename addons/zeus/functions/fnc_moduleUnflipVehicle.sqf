@@ -16,7 +16,7 @@
  *
  */
 
-[LLSTRING(categoryName), LLSTRING(unflipVehicle),
+[LELSTRING(main,category), LLSTRING(unflipVehicle),
     {
         params["", ["_vehicle", objNull, [objNull]]];
 
