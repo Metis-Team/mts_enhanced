@@ -16,7 +16,7 @@
  *
  */
 
-[LLSTRING(categoryName), LLSTRING(artillery),
+[LELSTRING(main,category), LLSTRING(artillery),
     {
         params [["_modulePosition", [0,0,0], [[]]]];
 
