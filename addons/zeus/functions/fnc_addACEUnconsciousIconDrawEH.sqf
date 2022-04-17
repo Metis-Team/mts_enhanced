@@ -21,7 +21,7 @@ params ["_display"];
 
 CHECK(!GVAR(enableACEUnconsciousIcon));
 
-private _curatorModule = getAssignedCuratorLogic player;
+private _curatorModule = getAssignedCuratorLogic ACE_player;
 
 // Only do this if zeus display is opened for the first time
 if (isNil {(_curatorModule getVariable QGVAR(unconsciousPlayers))}) then {

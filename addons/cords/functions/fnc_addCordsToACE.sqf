@@ -18,7 +18,7 @@
 
 CHECK(!GVAR(enabled) || !hasinterface);
 
-private _cordCondition = {(uniform player) in ["PBW_Uniform1_fleck","PBW_Uniform1H_fleck","PBW_Uniform1_tropen","PBW_Uniform1H_tropen","PBW_Uniform2_fleck","PBW_Uniform2_tropen","PBW_Uniform3K_fleck","PBW_Uniform3K_tropen","PBW_Uniform3_fleck","PBW_Uniform3_tropen","PBW_Uniform4K_fleck","PBW_Uniform4K_tropen","PBW_Uniform4_fleck","PBW_Uniform4_tropen"]};
+private _cordCondition = {(uniform ACE_player) in ["PBW_Uniform1_fleck","PBW_Uniform1H_fleck","PBW_Uniform1_tropen","PBW_Uniform1H_tropen","PBW_Uniform2_fleck","PBW_Uniform2_tropen","PBW_Uniform3K_fleck","PBW_Uniform3K_tropen","PBW_Uniform3_fleck","PBW_Uniform3_tropen","PBW_Uniform4K_fleck","PBW_Uniform4K_tropen","PBW_Uniform4_fleck","PBW_Uniform4_tropen"]};
 
 private _cordAction = [
     QGVAR(cordAction),
@@ -27,7 +27,7 @@ private _cordAction = [
     {},
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions"], _cordAction] call ace_interact_menu_fnc_addActionToClass;
+[(typeOf ACE_player), 1, ["ACE_SelfActions"], _cordAction] call ace_interact_menu_fnc_addActionToClass;
 
 private _infCordAction = [
     QGVAR(infCordAction),
@@ -39,7 +39,7 @@ private _infCordAction = [
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", QGVAR(cordAction)], _infCordAction] call ace_interact_menu_fnc_addActionToClass;
+[(typeOf ACE_player), 1, ["ACE_SelfActions", QGVAR(cordAction)], _infCordAction] call ace_interact_menu_fnc_addActionToClass;
 
 private _faCordAction = [
     QGVAR(faCordAction),
@@ -51,7 +51,7 @@ private _faCordAction = [
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", QGVAR(cordAction), QGVAR(infCordAction)], _faCordAction] call ace_interact_menu_fnc_addActionToClass;
+[(typeOf ACE_player), 1, ["ACE_SelfActions", QGVAR(cordAction), QGVAR(infCordAction)], _faCordAction] call ace_interact_menu_fnc_addActionToClass;
 
 private _oaCordAction = [
     QGVAR(oaCordAction),
@@ -63,7 +63,7 @@ private _oaCordAction = [
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", QGVAR(cordAction), QGVAR(infCordAction)], _oaCordAction] call ace_interact_menu_fnc_addActionToClass;
+[(typeOf ACE_player), 1, ["ACE_SelfActions", QGVAR(cordAction), QGVAR(infCordAction)], _oaCordAction] call ace_interact_menu_fnc_addActionToClass;
 
 private _pzCordAction = [
     QGVAR(pzCordAction),
@@ -75,7 +75,7 @@ private _pzCordAction = [
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", QGVAR(cordAction)], _pzCordAction] call ace_interact_menu_fnc_addActionToClass;
+[(typeOf ACE_player), 1, ["ACE_SelfActions", QGVAR(cordAction)], _pzCordAction] call ace_interact_menu_fnc_addActionToClass;
 
 private _pzFACordAction = [
     QGVAR(pzFACordAction),
@@ -87,7 +87,7 @@ private _pzFACordAction = [
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", QGVAR(cordAction), QGVAR(pzCordAction)], _pzFACordAction] call ace_interact_menu_fnc_addActionToClass;
+[(typeOf ACE_player), 1, ["ACE_SelfActions", QGVAR(cordAction), QGVAR(pzCordAction)], _pzFACordAction] call ace_interact_menu_fnc_addActionToClass;
 
 private _pzOACordAction = [
     QGVAR(pzOACordAction),
@@ -99,4 +99,4 @@ private _pzOACordAction = [
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", QGVAR(cordAction), QGVAR(pzCordAction)], _pzOACordAction] call ace_interact_menu_fnc_addActionToClass;
+[(typeOf ACE_player), 1, ["ACE_SelfActions", QGVAR(cordAction), QGVAR(pzCordAction)], _pzOACordAction] call ace_interact_menu_fnc_addActionToClass;

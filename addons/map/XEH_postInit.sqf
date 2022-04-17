@@ -12,7 +12,7 @@ if (!isNull (configFile >> "CfgVehicles" >> _worldMap)) then {
 ["visibleMap", {
     params ["_unit", "_isMapShown"];
 
-    if (player isEqualTo _unit && !_isMapShown && !isNull GVAR(map)) then {
+    if (ACE_player isEqualTo _unit && !_isMapShown && !isNull GVAR(map)) then {
         if (!GVAR(hasMap)) then {
             [_unit] call FUNC(removeMap);
         };
