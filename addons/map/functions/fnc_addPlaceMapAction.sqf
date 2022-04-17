@@ -59,4 +59,4 @@ private _placeMapAction = [
     }
 ] call ace_interact_menu_fnc_createAction;
 
-[(typeOf player), 1, ["ACE_SelfActions", "ACE_Equipment"], _placeMapAction] call ace_interact_menu_fnc_addActionToClass;
+[(typeOf ACE_player), 1, ["ACE_SelfActions", "ACE_Equipment"], _placeMapAction] call ace_interact_menu_fnc_addActionToClass;

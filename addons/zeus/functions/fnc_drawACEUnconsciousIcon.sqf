@@ -21,7 +21,7 @@ params [["_unit", objnull, [objnull]], ["_isUnconscious", false, [false]]];
 
 CHECK(isNull _unit || !isPlayer _unit);
 
-private _curatorModule = getAssignedCuratorLogic player;
+private _curatorModule = getAssignedCuratorLogic ACE_player;
 private _unconsciousPlayers = _curatorModule getVariable [QGVAR(unconsciousPlayers), []];
 
 if (_isUnconscious) then {

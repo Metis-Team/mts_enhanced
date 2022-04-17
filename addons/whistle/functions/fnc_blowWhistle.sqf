@@ -12,14 +12,18 @@
  *      Nothing.
  *
  *  Example:
- *      call mts_whistle_fnc_blowWhistle
+ *      [player] call mts_whistle_fnc_blowWhistle
  *
  */
 
-if (QGVAR(FOX40) in ([player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems) && {!GVAR(soundIsPlaying)}) then {
+params [["_player", objNull, [objNull]]];
+
+CHECK(isNull _player);
+
+if (QGVAR(FOX40) in ([_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems) && {!GVAR(soundIsPlaying)}) then {
     GVAR(soundIsPlaying) = true;
 
-    [player, [QGVAR(FOX40Sound), 300]] remoteExecCall ["say3D"];
+    [_player, [QGVAR(FOX40Sound), 300]] remoteExecCall ["say3D"];
 
     [{
         GVAR(soundIsPlaying) = false;

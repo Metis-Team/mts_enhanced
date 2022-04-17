@@ -47,14 +47,14 @@ CHECK(_classname isEqualTo "");
 
 // Create local object
 private _obj = _classname createVehicleLocal [0, 0, 0];
-_obj disableCollisionWith player;
+_obj disableCollisionWith ACE_player;
 
 // Set object start height
 GVAR(objectHeight) = _startHeight;
 
 // Call custom code
 if !(isNil "_beforeCode") then {
-    [_obj, player, _args] call _beforeCode;
+    [_obj, ACE_player, _args] call _beforeCode;
 };
 
 GVAR(isPlacing) = PLACE_WAITING;
@@ -68,7 +68,7 @@ if (_objName isEqualTo "") then {
 private _placeItemText = format [LLSTRING(placeItem), _objName];
 [_placeItemText, LLSTRING(cancel), LLSTRING(adjustHeight)] call ace_interaction_fnc_showMouseHint;
 
-private _mouseClickID = [player, "DefaultAction", {GVAR(isPlacing) isEqualTo PLACE_WAITING}, {GVAR(isPlacing) = PLACE_APPROVE}] call ace_common_fnc_addActionEventHandler;
+private _mouseClickID = [ACE_player, "DefaultAction", {GVAR(isPlacing) isEqualTo PLACE_WAITING}, {GVAR(isPlacing) = PLACE_APPROVE}] call ace_common_fnc_addActionEventHandler;
 
 // Leave index 0 free for global object
 private _pickupArgs = [objNull, _objName, _pickupCode, _args, _pickupIcon, _pickupAcPos, _pickupAcRad];
@@ -77,22 +77,22 @@ private _pickupArgs = [objNull, _objName, _pickupCode, _args, _pickupIcon, _pick
     params ["_PFHArgs", "_PFHID"];
     _PFHArgs params ["_obj", "_classname", "_afterCode", "_mouseClickID", "_pickupArgs"];
 
-    if ((isNull _obj) || {!([player, _obj] call ace_common_fnc_canInteractWith)}) then {
+    if ((isNull _obj) || {!([ACE_player, _obj] call ace_common_fnc_canInteractWith)}) then {
         GVAR(isPlacing) = PLACE_CANCEL;
     };
 
     if !(GVAR(isPlacing) isEqualTo PLACE_WAITING) exitWith {
         [_PFHID] call CBA_fnc_removePerFrameHandler;
         call ace_interaction_fnc_hideMouseHint;
-        [player, "DefaultAction", _mouseClickID] call ace_common_removeActionEventHandler;
+        [ACE_player, "DefaultAction", _mouseClickID] call ace_common_removeActionEventHandler;
 
         if (GVAR(isPlacing) isEqualTo PLACE_APPROVE) then {
             GVAR(isPlacing) = PLACE_CANCEL;
 
             // End position of the object
-            player playAction "putdown";
+            ACE_player playAction "putdown";
 
-            [{(animationState player select [25, 7]) isEqualTo "putdown"}, {
+            [{(animationState ACE_player select [25, 7]) isEqualTo "putdown"}, {
                 params ["_obj", "_classname", "_afterCode", "_pickupArgs"];
 
                 // Save positon and direction
@@ -105,7 +105,7 @@ private _pickupArgs = [objNull, _objName, _pickupCode, _args, _pickupIcon, _pick
                 // Call custom code
                 if !(isNil "_afterCode") then {
                     private _args = _pickupArgs select 3;
-                    [_globalObj, player, _args] call _afterCode;
+                    [_globalObj, ACE_player, _args] call _afterCode;
                 };
 
                 // Apply same positon and direction as local object
@@ -123,10 +123,10 @@ private _pickupArgs = [objNull, _objName, _pickupCode, _args, _pickupIcon, _pick
     };
 
     // Alternativ to "player getRelPos [MAX_DISTANCE, 0]" because flag wasn't in the center of the view
-    private _pos = ((eyePos player) vectorAdd ((getCameraViewDirection player) vectorMultiply MAX_DISTANCE));
+    private _pos = ((eyePos ACE_player) vectorAdd ((getCameraViewDirection ACE_player) vectorMultiply MAX_DISTANCE));
     // Adjust height of flag with the scroll wheel
-    _pos set [2, ((getPosWorld player) select 2) + GVAR(objectHeight)];
+    _pos set [2, ((getPosWorld ACE_player) select 2) + GVAR(objectHeight)];
 
     _obj setPosWorld _pos;
-    _obj setDir (getDir player);
+    _obj setDir (getDir ACE_player);
 }, 0, [_obj, _classname, _afterCode, _mouseClickID, _pickupArgs]] call CBA_fnc_addPerFrameHandler;
