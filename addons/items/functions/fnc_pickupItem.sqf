@@ -53,14 +53,14 @@ private _pickupItem = [
         params ["_obj", "", "_ACEargs"];
         _ACEargs params ["_userCode", "_args"];
 
-        player playAction "PutDown";
+        ACE_player playAction "PutDown";
 
-        [{((animationState player) select [25,7]) isEqualTo "putdown"}, {
+        [{((animationState ACE_player) select [25,7]) isEqualTo "putdown"}, {
             params ["_obj", "_userCode", "_args"];
 
             // Call custom code
             if !(isNil "_userCode") then {
-                [_obj, player, _args] call _userCode;
+                [_obj, ACE_player, _args] call _userCode;
             };
 
             // Remove the object

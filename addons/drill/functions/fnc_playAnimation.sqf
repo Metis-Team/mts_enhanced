@@ -18,7 +18,7 @@
 
 params ["_animName"];
 
-private _currAnimState = animationState player;
+private _currAnimState = animationState ACE_player;
 private _doAnimation = "";
 private _doAnimationTwo = "";
 TRACE_2("",_animName,_currAnimState);
@@ -104,10 +104,10 @@ if (_animName isEqualTo QGVAR(Salute)) then {
 };
 
 
-if !(_doAnimation isEqualTo "") then {
-    [player,_doAnimation,2] call ace_common_fnc_doAnimation;
+if (_doAnimation isNotEqualTo "") then {
+    [ACE_player, _doAnimation, 2] call ace_common_fnc_doAnimation;
 };
 
-if !(_doAnimationTwo isEqualTo "") then {
-    [player,_doAnimationTwo,0] call ace_common_fnc_doAnimation;
+if (_doAnimationTwo isNotEqualTo "") then {
+    [ACE_player, _doAnimationTwo, 0] call ace_common_fnc_doAnimation;
 };

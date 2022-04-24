@@ -39,7 +39,7 @@ private _flagAction = [
         )
     }
 ] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", "ACE_Equipment"], _flagAction] call ace_interact_menu_fnc_addActionToClass;
+[(typeOf ACE_player), 1, ["ACE_SelfActions", "ACE_Equipment"], _flagAction] call ace_interact_menu_fnc_addActionToClass;
 
 private _furlFlagAction = [
     QGVAR(furlFlagAction),
@@ -54,7 +54,7 @@ private _furlFlagAction = [
         !((getForcedFlagTexture _player) isEqualTo "")
     }
 ] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", "ACE_Equipment", QGVAR(flagAction)], _furlFlagAction] call ace_interact_menu_fnc_addActionToClass;
+[(typeOf ACE_player), 1, ["ACE_SelfActions", "ACE_Equipment", QGVAR(flagAction)], _furlFlagAction] call ace_interact_menu_fnc_addActionToClass;
 
 {
     private _color = toLower _x;
@@ -78,7 +78,7 @@ private _furlFlagAction = [
         {},
         _color
     ] call ace_interact_menu_fnc_createAction;
-    [(typeOf player), 1, ["ACE_SelfActions", "ACE_Equipment", QGVAR(flagAction)], _carryFlagAction] call ace_interact_menu_fnc_addActionToClass;
+    [(typeOf ACE_player), 1, ["ACE_SelfActions", "ACE_Equipment", QGVAR(flagAction)], _carryFlagAction] call ace_interact_menu_fnc_addActionToClass;
 } forEach ["Red", "Blue", "Green", "Yellow"];
 
 {
@@ -137,5 +137,5 @@ private _furlFlagAction = [
         {},
         [_color, _displayName]
     ] call ace_interact_menu_fnc_createAction;
-    [(typeOf player), 1, ["ACE_SelfActions", "ACE_Equipment", QGVAR(flagAction)], _placeFlagAction] call ace_interact_menu_fnc_addActionToClass;
+    [(typeOf ACE_player), 1, ["ACE_SelfActions", "ACE_Equipment", QGVAR(flagAction)], _placeFlagAction] call ace_interact_menu_fnc_addActionToClass;
 } forEach ["Red", "Blue", "Green", "Yellow"];

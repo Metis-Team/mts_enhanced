@@ -24,7 +24,7 @@ private _playerIDs = parseSimpleArray GVAR(playerIDs);
 
 CHECKRET(!(_playerIDs isEqualType []), ERROR("Wrong data type in CBA Settings. Expected ARRAY of STRINGS with player IDs"));
 
-CHECK(!((getPlayerUID player) in _playerIDs));
+CHECK(!((getPlayerUID ACE_player) in _playerIDs));
 
 private _cordCondition = {
     params ["", "_player"];
@@ -41,4 +41,4 @@ private _majorRankAction = [
     },
     _cordCondition
 ] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", "ACE_Equipment"], _majorRankAction] call ace_interact_menu_fnc_addActionToClass;
+[(typeOf ACE_player), 1, ["ACE_SelfActions", "ACE_Equipment"], _majorRankAction] call ace_interact_menu_fnc_addActionToClass;
