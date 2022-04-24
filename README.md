@@ -9,6 +9,9 @@
     <a href="https://github.com/Metis-Team/mts_enhanced/releases/latest">
         <img src="https://img.shields.io/github/downloads/Metis-Team/mts_enhanced/total.svg?style=flat-square&label=Downloads" alt="Metis Enhanced Downloads">
     </a>
+    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2799167087">
+        <img src="https://img.shields.io/badge/Steam-Workshop-green.svg?style=flat-square" alt="Steam Workshop">
+    </a>
     <a href="https://github.com/Metis-Team/mts_enhanced/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-APL--ND-red.svg?style=flat-square" alt="APL-ND License">
     </a>
@@ -50,7 +53,7 @@ The mod has following dependencies, if you want to run the mod out of the box wi
 - [ACE3](https://github.com/acemod/ACE3/releases/latest)
 - [ZEN](https://github.com/zen-mod/ZEN/releases/latest)
 
-Some components need additional dependencies to work. To get the full feature set following dependencies are required additionally:
+Some components need additional dependencies to work. To get the full feature set, the following dependencies are required additionally:
 - [PBW](https://steamcommunity.com/sharedfiles/filedetails/?id=835394852) (required by [Cords](https://github.com/Metis-Team/mts_enhanced/wiki/Component:-Cords))
 - [extdb3](https://github.com/SteezCram/extDB3/releases/latest) (server only; required by [Armory](https://github.com/Metis-Team/mts_enhanced/wiki/Component:-Armory))
 
