@@ -7,6 +7,6 @@ logo = "mts_enhanced_logo_small.paa";
 logoOver = "mts_enhanced_logo_over_small.paa";
 tooltip = "Metis Enhanced";
 tooltipOwned = "Metis Enhanced Owned";
-overview = "Metis Enhanced";
+overview = "Metis Enhanced is a collection of useful items and features to enhance the MilSim gameplay experience for Arma 3.";
 overviewPicture = "mts_enhanced_picture.paa";
 author = "Bix, PhILoX, Timi007";
