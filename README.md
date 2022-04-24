@@ -1,6 +1,6 @@
-
-# Metis Enhanced
-A collection of useful components to enhance the MilSim gameplay experience for ArmA 3.
+<p align="center">
+    <img src="https://i.imgur.com/lFqEVib.png" width="1024">
+</p>
 
 <p align="center">
     <a href="https://github.com/Metis-Team/mts_enhanced/releases/latest">
@@ -24,22 +24,21 @@ A collection of useful components to enhance the MilSim gameplay experience for 
     </sup></strong>
 </p>
 
+**Metis Enhanced** is a collection of useful items and features to enhance the MilSim gameplay experience for Arma 3.
 
 ## Components:
-- Armory
-- Common
-- Cords
-- Database
-- Drill
-- Engineer
-- Items
-- Main
-- Map
-- Remove Snakes
-- Whistle
-- Zeus
+- **Armory**: Allows you to save and load loadouts from a database across all server and missions.
+- **Common**: Grass cutter ACE action and chat commands for logged in admins.
+- **Cords**: Cords for PBW uniforms (BW Kleiderkammer).
+- **Drill**: Animation and actions for exercise.
+- **Engineer**: Equipment for engineers like a Mine Clearing Line Charge (MICLIC).
+- **Items**: Flags in different colors and markers/signs which are carryable and placable.
+- **Map**: Actions for the player to place his current map on the ground and on vehicles for others to look into.
+- **Remove Snakes**: Removes snakes from all maps.
+- **Whistle**: Adds a FOX 40 whistle.
+- **Zeus**: Various useful modules and shortcuts for Zeus.
 
-All relevant information about the content of each component can be found in our [Wiki](https://github.com/Metis-Team/mts_enhanced/wiki).
+Further information about the content of each component can be found in our [Wiki](https://github.com/Metis-Team/mts_enhanced/wiki).
 
 ## FAQ
 - Q: Does the mod have to be run on the server?  
@@ -63,3 +62,29 @@ This mod is build in a modular fashion and can be used as such. It's your own di
 
 ## License
 Metis Enhanced is licensed under Arma Public License No Derivatives ([APL-ND](https://github.com/Metis-Team/mts_enhanced/blob/master/LICENSE)).
+
+## Images
+<p align="center">
+    <img src="https://i.imgur.com/fjsH1mo.jpg" width="1024">
+</p>
+<p align="center">
+    <img src="https://i.imgur.com/YvDLs7j.jpg" width="1024">
+</p>
+<p align="center">
+    <img src="https://i.imgur.com/Iljz0dA.jpg" width="1024">
+</p>
+<p align="center">
+    <img src="https://i.imgur.com/l7Akefb.jpg" width="1024">
+</p>
+<p align="center">
+    <img src="https://i.imgur.com/LoO29mq.jpg" width="1024">
+</p>
+<p align="center">
+    <img src="https://i.imgur.com/TIyLWuG.jpg" width="1024">
+</p>
+<p align="center">
+    <img src="https://i.imgur.com/DhSDMXb.jpg" width="1024">
+</p>
+<p align="center">
+    <img src="https://i.imgur.com/IE6MkcQ.jpg" width="1024">
+</p>
