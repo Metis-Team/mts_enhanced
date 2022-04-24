@@ -1,12 +1,12 @@
 name = "Metis Enhanced";
-picture = "mts_team_logo_small.paa";
+picture = "mts_enhanced_picture.paa";
 actionName = "Github";
 action = "https://github.com/Metis-Team";
 description = "This mod enhances the MilSim gameplay experience.";
-logo = "mts_team_logo_small.paa";
-logoOver = "mts_team_logo_small.paa";
+logo = "mts_enhanced_logo_small.paa";
+logoOver = "mts_enhanced_logo_over_small.paa";
 tooltip = "Metis Enhanced";
 tooltipOwned = "Metis Enhanced Owned";
 overview = "Metis Enhanced";
-overviewPicture = "mts_team_logo_small.paa";
+overviewPicture = "mts_enhanced_picture.paa";
 author = "Bix, PhILoX, Timi007";

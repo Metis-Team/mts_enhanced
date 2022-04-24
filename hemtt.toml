@@ -7,7 +7,9 @@ files = [
     "mod.cpp",
     "README.md",
     "LICENSE",
-    "mts_team_logo_small.paa",
+    "mts_enhanced_logo_over_small.paa",
+    "mts_enhanced_logo_small.paa",
+    "mts_enhanced_picture.paa",
     "meta.cpp"
 ]
 
