@@ -13,7 +13,7 @@
         <img src="https://img.shields.io/badge/Steam-Workshop-green.svg?style=flat-square" alt="Steam Workshop">
     </a>
     <a href="https://github.com/Metis-Team/mts_enhanced/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/License-APL--ND-red.svg?style=flat-square" alt="APL-ND License">
+        <img src="https://img.shields.io/badge/License-APL--SA-red.svg?style=flat-square" alt="APL-SA License">
     </a>
 </p>
 
@@ -64,7 +64,7 @@ This mod is build in a modular fashion and can be used as such. It's your own di
 - [Become a developer](https://github.com/Metis-Team/mts_enhanced/wiki/For-developers)
 
 ## License
-Metis Enhanced is licensed under Arma Public License No Derivatives ([APL-ND](https://github.com/Metis-Team/mts_enhanced/blob/master/LICENSE)).
+Metis Enhanced is licensed under Arma Public License Share Alike ([APL-SA](https://github.com/Metis-Team/mts_enhanced/blob/master/LICENSE)).
 
 ## Images
 <p align="center">
