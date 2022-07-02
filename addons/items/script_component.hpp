@@ -23,4 +23,4 @@
 #define MIN_HEIGHT -0.5
 #define MAX_HEIGHT 2
 
-#define MAX_DISTANCE 2
+#define MARKER_PLACING_DISTANCE 2

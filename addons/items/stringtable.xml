@@ -7,28 +7,6 @@
             <German>Timi007, Dan</German>
         </Key>
     </Container>
-    <Container name="flags">
-        <Key ID="STR_mts_items_flagRedDisplayName">
-            <Original>Flag (Red)</Original>
-            <German>Flagge (Rot)</German>
-        </Key>
-        <Key ID="STR_mts_items_flagBlueDisplayName">
-            <Original>Flag (Blue)</Original>
-            <German>Flagge (Blau)</German>
-        </Key>
-        <Key ID="STR_mts_items_flagGreenDisplayName">
-            <Original>Flag (Green)</Original>
-            <German>Flagge (Grün)</German>
-        </Key>
-        <Key ID="STR_mts_items_flagYellowDisplayName">
-            <Original>Flag (Yellow)</Original>
-            <German>Flagge (Gelb)</German>
-        </Key>
-        <Key ID="STR_mts_items_flagDescription">
-            <Original>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</Original>
-            <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten eingesetzt.</German>
-        </Key>
-    </Container>
     <Container name="markers">
         <Key ID="STR_mts_items_markerYellowDisplayName">
             <Original>Marker (Yellow)</Original>
@@ -44,23 +22,11 @@
         </Key>
     </Container>
     <Container name="actions">
-        <Key ID="STR_mts_items_flags">
-            <Original>Flags</Original>
-            <German>Flaggen</German>
-        </Key>
         <Key ID="STR_mts_items_marker">
             <Original>Markers</Original>
             <German>Markierungen</German>
         </Key>
-        <Key ID="STR_mts_items_carryItem">
-            <Original>Carry %1</Original>
-            <German>%1 tragen</German>
-        </Key>
-        <Key ID="STR_mts_items_furlFlag">
-            <Original>Furl Flag</Original>
-            <German>Flagge einrollen</German>
-        </Key>
-        <Key ID="STR_mts_items_placeItem">
+        <Key ID="STR_mts_items_placeMarker">
             <Original>Place %1</Original>
             <German>%1 platzieren</German>
         </Key>
@@ -72,7 +38,7 @@
             <Original>Adjust height</Original>
             <German>Höhe anpassen</German>
         </Key>
-        <Key ID="STR_mts_items_pickupItem">
+        <Key ID="STR_mts_items_pickupMarker">
             <Original>Pickup %1</Original>
             <German>%1 aufnehmen</German>
         </Key>
