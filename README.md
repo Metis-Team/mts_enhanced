@@ -88,8 +88,5 @@ Metis Enhanced is licensed under Arma Public License Share Alike ([APL-SA](https
     <img src="https://i.imgur.com/TIyLWuG.jpg" width="1024">
 </p>
 <p align="center">
-    <img src="https://i.imgur.com/DhSDMXb.jpg" width="1024">
-</p>
-<p align="center">
     <img src="https://i.imgur.com/IE6MkcQ.jpg" width="1024">
 </p>
