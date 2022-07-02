@@ -42,7 +42,7 @@ private _mouseClickID = [_player, "DefaultAction", {
     GVAR(isPlacing) isEqualTo PLACE_WAITING
 }, {
     GVAR(isPlacing) = PLACE_APPROVE
-}] call EFUNC(common,addActionEventHandler);
+}] call ace_common_fnc_addActionEventHandler;
 
 [{ // Start of PFH
     params ["_args", "_handle"];

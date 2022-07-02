@@ -20,7 +20,7 @@
 #define PLACE_CANCEL 0
 #define PLACE_APPROVE 1
 
-#define MIN_HEIGHT -0.5
-#define MAX_HEIGHT 2
+#define MIN_HEIGHT -0.4
+#define MAX_HEIGHT 0.6
 
 #define MARKER_PLACING_DISTANCE 2

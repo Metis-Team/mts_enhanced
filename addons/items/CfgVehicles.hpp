@@ -19,7 +19,7 @@ class CfgVehicles {
     };
 
     class Land_Sign_MinesTall_English_F;
-    class GVAR(marker_yellow): Land_Sign_MinesTall_English_F {
+    class GVAR(marker_mines): Land_Sign_MinesTall_English_F {
         author = CSTRING(authors);
         displayName = CSTRING(markerMinesDisplayName);
     };

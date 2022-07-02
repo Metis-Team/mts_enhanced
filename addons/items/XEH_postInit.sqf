@@ -17,7 +17,7 @@ private _weapons = (call (uiNamespace getVariable [QGVAR(markerItems), {[]}])) a
 
     private _action = [
         QGVAR(pickup),
-        LLSTRING(pickupMarker),
+        format [LLSTRING(pickupMarker), _displayName],
         QPATHTOF(data\ui\icons\mts_marker_pickup_icon.paa),
         {call FUNC(pickupMarker)},
         {[_player, _target, []] call ace_common_fnc_canInteractWith},
