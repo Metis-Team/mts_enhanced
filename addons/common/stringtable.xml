@@ -2,7 +2,7 @@
 <Project name="mts">
     <Package name="common">
         <Container name="Grasscutter">
-            <Key ID="STR_mts_common_subCategory">
+            <Key ID="STR_mts_common_grasscutter_subCategory">
                 <Original>Grass cutter</Original>
                 <German>Grasschneider</German>
             </Key>
@@ -34,6 +34,15 @@
                 <Original>Medium</Original>
                 <German>Mittel</German>
             </Key>
+            <Key ID="STR_mts_common_grasscutter_duration">
+                <Original>Duration</Original>
+                <German>Dauer</German>
+            </Key>
+            <Key ID="STR_mts_common_grasscutter_duration_tooltip">
+                <Original>Time it takes in seconds to remove grass.</Original>
+                <German>Zeit in Sekunden, um Gras zu enfernen.</German>
+            </Key>
+        </Container>
         </Container>
         <Container name="chatCommands">
             <Key ID="STR_mts_common_chatCommands_zeusCreated">
