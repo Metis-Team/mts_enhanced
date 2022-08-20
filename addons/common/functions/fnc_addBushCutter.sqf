@@ -25,7 +25,6 @@ private _action = [
     {
         params ["", "_player"];
 
-        // TODO: When Arma v2.12 releases, change to _bush setDamage [1, true, _player, _player]; (server execution)
         private _bush = [_player, BUSH_CUTTING_DISTANCE] call FUNC(seesBush);
 
         if (isNull _bush) exitWith {WARNING("No bush found. Cannot remove bush.")};
@@ -39,6 +38,7 @@ private _action = [
         [GVAR(bushcutter_duration), [_bush], {
             (_this select 0) params ["_bush"];
 
+            // TODO: When Arma v2.12 releases, change to _bush setDamage [1, true, _player, _player]; (server execution)
             _bush setDamage 1;
         }, {}, LLSTRING(bushcutter_removeBush)
         ] call ace_common_fnc_progressBar;
