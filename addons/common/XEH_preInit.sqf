@@ -10,30 +10,6 @@ PREP_RECOMPILE_END;
 private _version = getText (configFile >> "CfgPatches" >> "mts_main" >> "versionStr");
 INFO_1("Metis Enhanced version: %1.", _version);
 
-//grasscutter on/off
-[
-    QGVAR(grasscutter_enabled),
-    "CHECKBOX",
-    [LLSTRING(grasscutter), LLSTRING(grasscutter_tooltip)],
-    [LELSTRING(main,category), LLSTRING(subCategory)],
-    true,
-    0,
-    {}
-] call CBA_fnc_addSetting;
-
-//grasscutter size
-[
-    QGVAR(grasscutter_size),
-    "LIST",
-    [LLSTRING(grasscutter_size), LLSTRING(grasscutter_size_tooltip)],
-    [LELSTRING(main,category), LLSTRING(subCategory)],
-    [
-        [0, 1],
-        [LLSTRING(grasscutter_size_large), LLSTRING(grasscutter_size_medium)],
-        1
-    ],
-    0,
-    {}
-] call CBA_fnc_addSetting;
+#include "initSettings.hpp"
 
 ADDON = true;

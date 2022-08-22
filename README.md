@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/Metis-Team/mts_enhanced/releases/latest">
-        <img src="https://img.shields.io/badge/Version-1.4.3-blue.svg?style=flat-square" alt="Metis Enhanced Version">
+        <img src="https://img.shields.io/badge/Version-1.5.0-blue.svg?style=flat-square" alt="Metis Enhanced Version">
     </a>
     <a href="https://github.com/Metis-Team/mts_enhanced/releases/latest">
         <img src="https://img.shields.io/github/downloads/Metis-Team/mts_enhanced/total.svg?style=flat-square&label=Downloads" alt="Metis Enhanced Downloads">
@@ -31,7 +31,7 @@
 
 ## Components:
 - **Armory**: Allows you to save and load loadouts from a database across all server and missions.
-- **Common**: Grass cutter ACE action and chat commands for logged in admins.
+- **Common**: Grass and bush cutter ACE action and chat commands for logged in admins.
 - **Cords**: Cords for PBW uniforms (BW Kleiderkammer).
 - **Drill**: Animation and actions for exercise.
 - **Engineer**: Equipment for engineers like a Mine Clearing Line Charge (MICLIC).
