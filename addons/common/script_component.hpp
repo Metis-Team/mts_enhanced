@@ -15,3 +15,5 @@
 #endif
 
 #include "\z\mts_enhanced\addons\main\script_macros.hpp"
+
+#define BUSH_CUTTING_DISTANCE 2

@@ -1,5 +1,7 @@
+PREP(addBushCutter);
 PREP(addChatCommands);
 PREP(addGrassCutter);
 PREP(areModsLoaded);
 PREP(arsenalPBWFix);
-PREP(parseNameToPlayer)
+PREP(parseNameToPlayer);
+PREP(seesBush);
