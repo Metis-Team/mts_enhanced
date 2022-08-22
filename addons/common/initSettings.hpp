@@ -12,7 +12,9 @@
     [LLSTRING(grasscutter), LLSTRING(grasscutter_tooltip)],
     [LELSTRING(main,category), LLSTRING(grasscutter_subCategory)],
     true,
-    0
+    0,
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 // Grasscutter: Size
@@ -47,7 +49,9 @@
     [LLSTRING(bushcutter), LLSTRING(bushcutter_tooltip)],
     [LELSTRING(main,category), LLSTRING(bushcutter_subCategory)],
     true,
-    0
+    0,
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 // Bushcutter: Time it takes to cut down a bush
