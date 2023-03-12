@@ -39,12 +39,12 @@ private _action = [
             private _cutter = _cutterType createVehicle [0, 0, 0];
             _cutter setPosATL (getPosATL _player);
         }, {}, LLSTRING(grasscutter_removeGrass)
-        ] call ace_cutter_fnc_progressBar;
+        ] call ace_common_fnc_progressBar;
     },
     {
         params ["", "_player"];
         GVAR(grasscutter_enabled) &&
-        {[_player, objNull] call ace_cutter_fnc_canInteractWith}
+        {[_player, objNull] call ace_common_fnc_canInteractWith}
     }
 ] call ace_interact_menu_fnc_createAction;
 [(typeOf ACE_player), 1, ["ACE_SelfActions", "ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToClass;
