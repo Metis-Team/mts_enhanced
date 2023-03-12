@@ -12,7 +12,7 @@
  *      Nothing
  *
  *  Example:
- *      call mts_common_fnc_addBushCutter
+ *      call mts_cutter_fnc_addBushCutter
  *
  */
 
@@ -41,13 +41,13 @@ private _action = [
             // TODO: When Arma v2.12 releases, change to _bush setDamage [1, true, _player, _player]; (server execution)
             _bush setDamage 1;
         }, {}, LLSTRING(bushcutter_removeBush)
-        ] call ace_common_fnc_progressBar;
+        ] call ace_cutter_fnc_progressBar;
     },
     {
         params ["", "_player"];
         GVAR(bushcutter_enabled) &&
         {!isNull ([_player, BUSH_CUTTING_DISTANCE] call FUNC(seesBush))} &&
-        {[_player, objNull] call ace_common_fnc_canInteractWith}
+        {[_player, objNull] call ace_cutter_fnc_canInteractWith}
     }
 ] call ace_interact_menu_fnc_createAction;
 [(typeOf ACE_player), 1, ["ACE_SelfActions", "ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToClass;

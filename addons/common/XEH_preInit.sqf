@@ -10,6 +10,4 @@ PREP_RECOMPILE_END;
 private _version = getText (configFile >> "CfgPatches" >> "mts_main" >> "versionStr");
 INFO_1("Metis Enhanced version: %1.", _version);
 
-#include "initSettings.hpp"
-
 ADDON = true;
