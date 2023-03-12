@@ -14,16 +14,16 @@ class CfgWeapons {
 
     class GVAR(marker_yellow): GVAR(marker_base) {
         GVAR(vehicle) = QGVAR(marker_yellow);
-        GVAR(icon) = QPATHTOF(data\ui\icons\mts_marker_yellow_place_icon.paa);
+        GVAR(icon) = QPATHTOF(data\ui\icons\marker_yellow_place_icon.paa);
         scope = 2;
         displayName = CSTRING(markerYellowDisplayName);
-        picture = QPATHTOF(data\ui\pictures\mts_marker_yellow_item.paa);
+        picture = QPATHTOF(data\ui\pictures\marker_yellow_item.paa);
     };
     class GVAR(marker_mines): GVAR(marker_base) {
         GVAR(vehicle) = QGVAR(marker_mines);
-        GVAR(icon) = QPATHTOF(data\ui\icons\mts_marker_mines_place_icon.paa);
+        GVAR(icon) = QPATHTOF(data\ui\icons\marker_mines_place_icon.paa);
         scope = 2;
         displayName = CSTRING(markerMinesDisplayName);
-        picture = QPATHTOF(data\ui\pictures\mts_marker_mines_item.paa);
+        picture = QPATHTOF(data\ui\pictures\marker_mines_item.paa);
     };
 };

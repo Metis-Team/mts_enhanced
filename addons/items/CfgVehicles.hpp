@@ -6,7 +6,7 @@ class CfgVehicles {
                 class ADDON {
                     displayName = CSTRING(marker);
                     insertChildren = QUOTE(_this call FUNC(getActions));
-                    icon = QPATHTOF(data\ui\icons\mts_marker_white_icon.paa);
+                    icon = QPATHTOF(data\ui\icons\marker_white_icon.paa);
                 };
             };
         };
