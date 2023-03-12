@@ -2,38 +2,6 @@ class CfgWeapons {
     class CBA_MiscItem;
     class CBA_MiscItem_ItemInfo;
 
-    class GVAR(flag_base): CBA_MiscItem {
-        author = CSTRING(authors);
-        scope = 0;
-        descriptionShort = CSTRING(flagDescription);
-        descriptionUse = CSTRING(flagDescription);
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
-        };
-    };
-
-    class GVAR(flag_red): GVAR(flag_base) {
-        scope = 2;
-        displayName = CSTRING(flagRedDisplayName);
-        picture = QPATHTOF(data\ui\flags\mts_flag_red_item_icon.paa);
-    };
-    class GVAR(flag_blue): GVAR(flag_base) {
-        scope = 2;
-        displayName = CSTRING(flagBlueDisplayName);
-        picture = QPATHTOF(data\ui\flags\mts_flag_blue_item_icon.paa);
-    };
-    class GVAR(flag_green): GVAR(flag_base) {
-        scope = 2;
-        displayName = CSTRING(flagGreenDisplayName);
-        picture = QPATHTOF(data\ui\flags\mts_flag_green_item_icon.paa);
-    };
-    class GVAR(flag_yellow): GVAR(flag_base) {
-        scope = 2;
-        displayName = CSTRING(flagYellowDisplayName);
-        picture = QPATHTOF(data\ui\flags\mts_flag_yellow_item_icon.paa);
-    };
-
-
     class GVAR(marker_base): CBA_MiscItem {
         author = CSTRING(authors);
         scope = 0;
@@ -45,13 +13,17 @@ class CfgWeapons {
     };
 
     class GVAR(marker_yellow): GVAR(marker_base) {
+        GVAR(vehicle) = QGVAR(marker_yellow);
+        GVAR(icon) = QPATHTOF(data\ui\icons\mts_marker_yellow_place_icon.paa);
         scope = 2;
         displayName = CSTRING(markerYellowDisplayName);
-        picture = QPATHTOF(data\ui\markers\mts_marker_yellow_item_icon.paa);
+        picture = QPATHTOF(data\ui\pictures\mts_marker_yellow_item.paa);
     };
     class GVAR(marker_mines): GVAR(marker_base) {
+        GVAR(vehicle) = QGVAR(marker_mines);
+        GVAR(icon) = QPATHTOF(data\ui\icons\mts_marker_mines_place_icon.paa);
         scope = 2;
         displayName = CSTRING(markerMinesDisplayName);
-        picture = QPATHTOF(data\ui\markers\mts_marker_mines_item_icon.paa);
+        picture = QPATHTOF(data\ui\pictures\mts_marker_mines_item.paa);
     };
 };

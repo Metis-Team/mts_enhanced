@@ -35,7 +35,7 @@
 - **Cords**: Cords for PBW uniforms (BW Kleiderkammer).
 - **Drill**: Animation and actions for exercise.
 - **Engineer**: Equipment for engineers like a Mine Clearing Line Charge (MICLIC).
-- **Items**: Flags in different colors and markers/signs which are carryable and placable.
+- **Items**: Markers/signs which are placable.
 - **Map**: Actions for the player to place his current map on the ground and on vehicles for others to look into.
 - **Remove Snakes**: Removes snakes from all maps.
 - **Whistle**: Adds a FOX 40 whistle.
@@ -46,6 +46,8 @@ Further information about the content of each component can be found in our [Wik
 ## FAQ
 - Q: Does the mod have to be run on the server?  
 A: Yes
+- Q: Where did the flags go?
+A: Flags are now available in ACE3 and were therefore removed from Metis Enhanced.
 
 ## Requirements
 The mod has following dependencies, if you want to run the mod out of the box without removing any components/addons:
@@ -84,9 +86,6 @@ Metis Enhanced is licensed under Arma Public License Share Alike ([APL-SA](https
 </p>
 <p align="center">
     <img src="https://i.imgur.com/TIyLWuG.jpg" width="1024">
-</p>
-<p align="center">
-    <img src="https://i.imgur.com/DhSDMXb.jpg" width="1024">
 </p>
 <p align="center">
     <img src="https://i.imgur.com/IE6MkcQ.jpg" width="1024">
