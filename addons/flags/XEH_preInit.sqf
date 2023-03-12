@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-GVAR(markerCache) = createHashMap;
+#include "initSettings.hpp"
+
+GVAR(flagItemCache) = createHashMap;
 
 ADDON = true;

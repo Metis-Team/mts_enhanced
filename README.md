@@ -36,7 +36,8 @@
 - **Cutter**: Grass and bush cutter ACE actions allowing to remove grass and bushes.
 - **Drill**: Animation and actions for exercise.
 - **Engineer**: Equipment for engineers like a Mine Clearing Line Charge (MICLIC).
-- **Items**: Flags in different colors and markers/signs which are carryable and placable.
+- **Flags**: Flags with various colors which can be placed or carried by players.
+- **Items**: Markers/signs which are placable.
 - **Map**: Actions for the player to place his current map on the ground and on vehicles for others to look into.
 - **Remove Snakes**: Removes snakes from all maps.
 - **Whistle**: Adds a FOX 40 whistle.

@@ -3,24 +3,26 @@
  *  Author: Timi007
  *
  *  Description:
- *      Handles the object height.
+ *      Handles the flag object height.
  *
  *  Parameter(s):
  *      0: NUMBER - Scroll amount
  *
  *  Returns:
- *      BOOLEAN - Handled.
+ *       BOOLEAN - Handled
  *
  *  Example:
- *      [5] call mts_items_fnc_handleScrollWheel
+ *      [5] call mts_flags_fnc_handleScrollWheel
  *
  */
 
-params ["_scrollAmount"];
+params [["_scrollAmount", 0, [0]]];
 
-CHECKRET(GVAR(isPlacing) isNotEqualTo PLACE_WAITING, false);
+if (GVAR(isPlacing) isNotEqualTo PLACE_WAITING) exitWith {
+    false
+};
 
-//move object height 10cm per scroll
+// Move object height 10cm per scroll
 GVAR(objectHeight) = GVAR(objectHeight) + (_scrollAmount * 0.1);
 
 // Clamp height between MIN_HEIGHT and MAX_HEIGHT
