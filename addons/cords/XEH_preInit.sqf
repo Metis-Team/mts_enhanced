@@ -15,7 +15,8 @@ GVAR(PBWLoaded) = [["PBW_German_Uniform", "PBW_German_Common"]] call EFUNC(commo
     [LELSTRING(main,category), LLSTRING(subCategory)],
     true,
     0,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -25,7 +26,8 @@ GVAR(PBWLoaded) = [["PBW_German_Uniform", "PBW_German_Common"]] call EFUNC(commo
     [LELSTRING(main,category), LLSTRING(subCategory)],
     "[""""]",
     1,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 ADDON = true;

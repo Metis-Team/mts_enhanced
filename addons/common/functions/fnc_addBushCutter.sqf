@@ -16,7 +16,7 @@
  *
  */
 
-CHECK(!GVAR(bushcutter_enabled) || !hasinterface);
+CHECK(!hasinterface);
 
 private _action = [
     QGVAR(bushcutter),
@@ -45,8 +45,9 @@ private _action = [
     },
     {
         params ["", "_player"];
-        [_player, objNull] call ace_common_fnc_canInteractWith &&
-        {!isNull ([_player, BUSH_CUTTING_DISTANCE] call FUNC(seesBush))}
+        GVAR(bushcutter_enabled) &&
+        {!isNull ([_player, BUSH_CUTTING_DISTANCE] call FUNC(seesBush))} &&
+        {[_player, objNull] call ace_common_fnc_canInteractWith}
     }
 ] call ace_interact_menu_fnc_createAction;
 [(typeOf ACE_player), 1, ["ACE_SelfActions", "ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToClass;
