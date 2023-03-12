@@ -47,7 +47,7 @@ class CfgWeapons {
         displayName = CSTRING(Yellow);
         picture = QPATHTOF(data\pictures\yellow_item.paa);
 
-        GVAR(texture) = QPATHTOF(data\Flag_yellow_co.paa);
+        GVAR(texture) = QPATHTOF(data\flag_yellow_co.paa);
         GVAR(actionIconPlace) = QPATHTOF(data\icons\place\yellow_place_icon.paa);
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\yellow_carry_icon.paa);
     };
