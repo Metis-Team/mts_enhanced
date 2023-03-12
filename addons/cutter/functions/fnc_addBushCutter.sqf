@@ -12,7 +12,7 @@
  *      Nothing
  *
  *  Example:
- *      call mts_common_fnc_addBushCutter
+ *      call mts_cutter_fnc_addBushCutter
  *
  */
 

@@ -12,7 +12,7 @@
  *      Nothing
  *
  *  Example:
- *      call mts_common_fnc_addGrassCutter
+ *      call mts_cutter_fnc_addGrassCutter
  *
  */
 
