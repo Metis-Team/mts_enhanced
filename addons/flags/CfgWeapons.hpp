@@ -1,8 +1,8 @@
 class CfgWeapons {
-    class ACE_ItemCore;
+    class CBA_MiscItem;
     class CBA_MiscItem_ItemInfo;
 
-    class GVAR(white): ACE_ItemCore {
+    class GVAR(white): CBA_MiscItem {
         scope = 2;
         author = CSTRING(Authors);
         descriptionShort = CSTRING(Description);
