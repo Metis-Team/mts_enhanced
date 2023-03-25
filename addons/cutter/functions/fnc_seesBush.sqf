@@ -13,7 +13,7 @@
  *      OBJECT - Bush that the given unit sees or objNull if there is no bush.
  *
  *  Example:
- *      [player] call mts_common_fnc_seesBush;
+ *      [player] call mts_cutter_fnc_seesBush;
  *
  */
 

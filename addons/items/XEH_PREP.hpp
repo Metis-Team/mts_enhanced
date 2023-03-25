@@ -1,6 +1,5 @@
-PREP(addFlagACEActions);
-PREP(addMarkerACEActions);
-PREP(carryFlag);
+PREP(getActions);
+PREP(getMarkers);
 PREP(handleScrollWheel);
-PREP(pickupItem);
-PREP(placeItem);
+PREP(pickupMarker);
+PREP(placeMarker);

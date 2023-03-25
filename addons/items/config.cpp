@@ -4,18 +4,12 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-            QGVAR(item_base),
-            QGVAR(red_item),
-            QGVAR(blue_item),
-            QGVAR(green_item),
-            QGVAR(yellow_item)
+            QGVAR(marker_yellow_item),
+            QGVAR(marker_mines_item)
         };
         weapons[] = {
-            QGVAR(base),
-            QGVAR(red),
-            QGVAR(blue),
-            QGVAR(green),
-            QGVAR(yellow)
+            QGVAR(marker_yellow),
+            QGVAR(marker_mines)
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"mts_main", "ace_interact_menu", "ace_common", "ace_interaction"};

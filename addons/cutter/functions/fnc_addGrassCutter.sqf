@@ -12,16 +12,16 @@
  *      Nothing
  *
  *  Example:
- *      call mts_common_fnc_addGrassCutter
+ *      call mts_cutter_fnc_addGrassCutter
  *
  */
 
-CHECK(!GVAR(grasscutter_enabled) || !hasinterface);
+CHECK(!hasinterface);
 
 private _action = [
     QGVAR(grasscutter),
     LLSTRING(grasscutter_removeGrass),
-    QPATHTOF(ui\mts_grasscutter.paa),
+    QPATHTOF(data\icons\grasscutter_icon.paa),
     {
         params ["", "_player"];
 
@@ -43,7 +43,8 @@ private _action = [
     },
     {
         params ["", "_player"];
-        [_player, objNull] call ace_common_fnc_canInteractWith
+        GVAR(grasscutter_enabled) &&
+        {[_player, objNull] call ace_common_fnc_canInteractWith}
     }
 ] call ace_interact_menu_fnc_createAction;
 [(typeOf ACE_player), 1, ["ACE_SelfActions", "ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToClass;
