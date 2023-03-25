@@ -59,3 +59,13 @@
     [MIN_DURATION, MAX_DURATION, DEFAULT_BUSHCUTTER_DURATION, TRAILING_DECIMALS],
     1 // Server setting
 ] call CBA_fnc_addSetting;
+
+// Bushcutter: Require designated item to cut down a bush
+[
+    QGVAR(bushcutter_requireItem),
+    "CHECKBOX",
+    [LLSTRING(bushcutter_requireItem), LLSTRING(bushcutter_requireItem_tooltip)],
+    [LELSTRING(main,category), LLSTRING(bushcutter_subCategory)],
+    false,
+    1 // Server setting
+] call CBA_fnc_addSetting;

@@ -21,7 +21,7 @@ CHECK(!hasinterface);
 private _action = [
     QGVAR(grasscutter),
     LLSTRING(grasscutter_removeGrass),
-    QPATHTOF(ui\mts_grasscutter.paa),
+    QPATHTOF(data\icons\grasscutter_icon.paa),
     {
         params ["", "_player"];
 
