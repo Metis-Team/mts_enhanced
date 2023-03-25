@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="mts">
     <Package name="cutter">
+        <Container name="Misc">
+            <Key ID="STR_mts_cutter_authors">
+                <Original>Timi007</Original>
+                <German>Timi007</German>
+            </Key>
+        </Container>
         <Container name="Grasscutter">
             <Key ID="STR_mts_cutter_grasscutter_subCategory">
                 <Original>Grass cutter</Original>
                 <German>Grasschneider</German>
             </Key>
             <Key ID="STR_mts_cutter_grasscutter">
-        		<Original>Add grass cutter</Original>
+                <Original>Add grass cutter</Original>
                 <German>Grasschneider hinzufügen</German>
-        	</Key>
+            </Key>
             <Key ID="STR_mts_cutter_grasscutter_tooltip">
                 <Original>Adds the grass cutter to ACE interaction menu.</Original>
                 <German>Fügt den Grasschneider zu dem ACE Interaktionmenu hinzu.</German>
@@ -49,9 +55,9 @@
                 <German>Buschschere</German>
             </Key>
             <Key ID="STR_mts_cutter_bushcutter">
-        		<Original>Add bush cutter</Original>
+                <Original>Add bush cutter</Original>
                 <German>Buschschere hinzufügen</German>
-        	</Key>
+            </Key>
             <Key ID="STR_mts_cutter_bushcutter_tooltip">
                 <Original>Adds the bush cutter to ACE interaction menu.</Original>
                 <German>Fügt die Buschschere zu dem ACE Interaktionmenu hinzu.</German>
@@ -67,6 +73,24 @@
             <Key ID="STR_mts_cutter_bushcutter_duration_tooltip">
                 <Original>Time it takes in seconds to remove a bush.</Original>
                 <German>Zeit in Sekunden, um einen Busch zu enfernen.</German>
+            </Key>
+            <Key ID="STR_mts_cutter_bushcutter_requireItem">
+                <Original>Require item</Original>
+                <German>Benötigt Gegenstand</German>
+            </Key>
+            <Key ID="STR_mts_cutter_bushcutter_requireItem_tooltip">
+                <Original>Require a saw to remove bushes.</Original>
+                <German>Benötigt eine Säge, um Büsche zu entfernen.</German>
+            </Key>
+        </Container>
+        <Container name="Saw">
+            <Key ID="STR_mts_cutter_foldingSaw">
+                <Original>Folding Saw</Original>
+                <German>Klappsäge</German>
+            </Key>
+            <Key ID="STR_mts_cutter_foldingSawDescription">
+                <Original>Blade length 18 cm&lt;br /&gt;Can be used to prune and remove bushes.</Original>
+                <German>Sägelänge 18 cm&lt;br /&gt;Kann benutzt werden, um Äste und Büsche zu entfernen.</German>
             </Key>
         </Container>
     </Package>

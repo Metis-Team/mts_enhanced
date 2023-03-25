@@ -8,4 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.hpp"
 
+GVAR(bushCutterCache) = createHashMap;
+
 ADDON = true;
