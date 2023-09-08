@@ -47,7 +47,7 @@ _ctrlSave setVariable [QGVAR(oldName), _name];
 switch (_category) do {
     case (LOADOUT): {
         if (_delete) then {
-            _loadoutNamespace setVariable [_oldName, nil];
+            _loadoutNamespace setVariable [_oldName, nil, true];
             _name = "";
         } else {
             private _ace_medic = lbCurSel IDC_LISTBOX_MEDIC;
@@ -75,7 +75,7 @@ switch (_category) do {
     };
     case (BACKPACK): {
         if (_delete) then {
-            _backpackNamespace setVariable [_oldName, nil];
+            _backpackNamespace setVariable [_oldName, nil, true];
             _name = "";
         } else {
             private _class = backpack player;
