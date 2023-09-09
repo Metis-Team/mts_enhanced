@@ -29,7 +29,8 @@
 
 private _params = params [["_equipmentName", "", [""]], ["_name", "", [""]], ["_oldName", "", [""]]];
 
-CHECK(!GVAR(initialized) || !_params || !SERVER_CHECK);
+CHECK(!GVAR(initialized) || !_params);
+CHECK(!isDedicated && !GVAR(cba_settings_playerDBConnection));
 
 (GVAR(equipment) getVariable [_equipmentName, []]) params ["_loadoutNamespace", "", "", "_equipmentID"];
 _loadoutNamespace getVariable [_name, []] params ["", "_idc", "_loadout", "_ace_medic", "_ace_engineer"];

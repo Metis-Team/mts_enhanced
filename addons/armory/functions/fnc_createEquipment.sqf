@@ -26,7 +26,8 @@ if (_editors isEqualType "") then {
     _editors = parseSimpleArray _editors;
 };
 
-CHECK(!GVAR(initialized) || !_params || _equipmentName isEqualTo "" || ((_editors param [ARR_2(0,"")]) isEqualTo "") || !SERVER_CHECK);
+CHECK(!GVAR(initialized) || _equipmentName isEqualTo "" || ((_editors param [ARR_2(0,"")]) isEqualTo ""));
+CHECK(!isDedicated && !GVAR(cba_settings_playerDBConnection));
 
 [GVAR(sessionID), "insertEquipment", _equipmentName, _editors] call DB_SET;
 

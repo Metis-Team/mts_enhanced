@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="mts">
 	<Package name="Armory">
+        <Container name="misc">
+            <Key ID="STR_mts_Armory_subCategory">
+                <Original>Armory</Original>
+                <German>Armory</German>
+            </Key>
+        </Container>
         <Key ID="STR_mts_Armory_displayName">
     		<Original>Armory</Original>
             <German>Waffenkammer</German>
@@ -85,5 +91,15 @@
             <Original>Who is permitted to edit this equipment category? Format: ["PlayerUID", "PlayerUID", ...]</Original>
             <German>Wer darf diese Ausrüstungskategorie bearbeiten? Format: ["PlayerUID", "PlayerUID", ...]</German>
         </Key>
+        <Container name="CBA_Settings">
+            <Key ID="STR_mts_Armory_cba_settings_playerDBConnection">
+                <Original>DEBUG: Allow Player database connection</Original>
+                <German>DEBUG: Erlaube Spieler Datenbankverbindung</German>
+            </Key>
+            <Key ID="STR_mts_Armory_cba_settings_playerDBConnection_tooltip">
+                <Original>DEBUG: Allow the player to connect to the armory database. The mod ExtDB3 and a proper configurationen is needed!</Original>
+                <German>DEBUG: Erlaube dem Spieler, sich mit der Ausrüstungsdatenbank zu verbinden. Die Mod ExtDB3 und die entsprechende Konfigurationen wird benötigt!</German>
+            </Key>
+        </Container>
 	</Package>
 </Project>
