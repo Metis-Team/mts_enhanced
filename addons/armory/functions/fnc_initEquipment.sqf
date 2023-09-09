@@ -54,4 +54,5 @@ GVAR(equipment) setVariable [_equipmentName, [_loadoutNamespace, _backpackNamesp
 
 GVAR(equipmentInitialized) pushBackUnique _equipmentName;
 TRACE_1("",GVAR(equipmentInitialized));
+LOG_1("Equipment '%1' initialized",_equipmentName);
 true
