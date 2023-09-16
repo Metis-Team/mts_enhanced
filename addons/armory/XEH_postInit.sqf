@@ -55,7 +55,25 @@ if (hasinterface) then {
         params [["_equipmentName", "", [""]], ["_object", objNull, [objNull]]];
         CHECK(isNull _object || _equipmentName isEqualTo "");
 
-        _object addAction [_equipmentName, {[(_this select 3), (_this select 0)] call FUNC(openArmory)}, _equipmentName];
+        if (GVAR(cba_settings_actions) isEqualTo "ace_interaction" && isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
+            private _actionOpenArmory = [
+                QGVAR(ace_interact_openArmory),
+                _equipmentName,
+                "",
+                {
+                    params ["_object", "", "_params"];
+                    _params params ["_equipmentName"];
+
+                    [_equipmentName, _object] call FUNC(openArmory);
+                },
+                {true},
+                {},
+                [_equipmentName]
+            ] call ace_interact_menu_fnc_createAction;
+            [_object, 0, ["ACE_MainActions"], _actionOpenArmory] call ace_interact_menu_fnc_addActionToObject;
+        } else {
+            _object addAction [_equipmentName, {[(_this select 3), (_this select 0)] call FUNC(openArmory)}, _equipmentName];
+        };
     }] call CBA_fnc_addEventhandler;
 
     GVAR(IDCsToHide) = [
