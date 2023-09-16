@@ -14,7 +14,7 @@
  *      Nothing
  *
  *  Example:
- *      ["enhanced", ["00000000000000000"], true] call mts_armory_fnc_createEquipment
+ *      ["enhanced", ["00000000000000000"]] call mts_armory_fnc_createEquipment
  *
  */
 
