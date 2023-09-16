@@ -32,7 +32,7 @@ if (_equipmentNamespaces isEqualTo []) exitWith {
 _equipmentNamespaces params ["_loadoutNamespace"];
 
 private _loadout = _loadoutNamespace getVariable [_loadoutName, []];
-CHECKRET(_loadout isEqualTo [], WARNING_1(QUOTE(Loadout '%1' not available!), _loadoutName));
+CHECKRET(_loadout isEqualTo [], WARNING_1("Loadout '%1' not available!", _loadoutName));
 
 _loadout params ["", "", "_loadout", "_ace_medic", "_ace_engineer"];
 
