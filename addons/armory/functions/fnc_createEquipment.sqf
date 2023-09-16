@@ -30,7 +30,7 @@ CHECK(!isDedicated && !GVAR(cba_settings_playerDBConnection));
 
 [GVAR(sessionID), "insertEquipment", _equipmentName, _editors] call DB_SET;
 
-if !(isNull _object) then {
+if (!isNull _object) then {
     [{
         params ["_equipmentName", "_object"];
             [QGVAR(addAction), [_equipmentName, _object]] call CBA_fnc_globalEventJIP;
