@@ -55,7 +55,7 @@ if (hasinterface) then {
         params [["_equipmentName", "", [""]], ["_object", objNull, [objNull]]];
         CHECK(isNull _object || _equipmentName isEqualTo "");
 
-        if (GVAR(cba_settings_actions) isEqualTo "ace_interaction" && isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
+        if (GVAR(openUIActionMenu) isEqualTo "ace_interaction" && isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
             private _actionOpenArmory = [
                 QGVAR(ace_interact_openArmory),
                 _equipmentName,

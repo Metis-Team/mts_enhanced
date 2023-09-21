@@ -1,9 +1,9 @@
 [
-    QGVAR(cba_settings_actions),
+    QGVAR(openUIActionMenu),
     "LIST",
-    [LLSTRING(cba_settings_actions), LLSTRING(cba_settings_actions_tooltip)],
+    [LLSTRING(openUIActionMenu), LLSTRING(openUIActionMenu_tooltip)],
     [LELSTRING(main,category), LLSTRING(displayName)],
-    [["ace_interaction","scroll_menu"],[LLSTRING(cba_settings_actions_ace_interaction), LLSTRING(cba_settings_actions_scroll_menu)],0],
+    [["ace_interaction","scroll_menu"],[LLSTRING(openUIActionMenu_ace_interaction), LLSTRING(openUIActionMenu_scroll_menu)],0],
     1,
     {}
 ] call CBA_settings_fnc_init;

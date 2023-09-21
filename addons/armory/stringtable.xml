@@ -86,19 +86,19 @@
             <German>Wer darf diese Ausrüstungskategorie bearbeiten? Format: ["PlayerUID", "PlayerUID", ...]</German>
         </Key>
         <Container name="CBA_Settings">
-            <Key ID="str_mts_Armory_cba_settings_actions">
+            <Key ID="str_mts_Armory_openUIActionMenu">
                 <Original>Interaction menu</Original>
                 <German>Interaktionsmenü</German>
             </Key>
-            <Key ID="str_mts_Armory_cba_settings_actions_tooltip">
+            <Key ID="str_mts_Armory_openUIActionMenu_tooltip">
                 <Original>Sets the interaction menu, for newly created equipment categories, which should be used. If ACE is not present, it will fall back to Vanilla system.</Original>
                 <German>Setzt das Interaktionsmenü, bei neu erstellen Ausrüstungskategorien, welches benutzt werden soll. Wenn ACE nicht geladen ist, wird das Vanilla system verwendet.</German>
             </Key>
-            <Key ID="STR_mts_Armory_cba_settings_actions_ace_interaction">
+            <Key ID="STR_mts_Armory_openUIActionMenu_ace_interaction">
                 <Original>ACE Interaction</Original>
                 <German>ACE Interaktionsmenü</German>
             </Key>
-            <Key ID="STR_mts_Armory_cba_settings_actions_scroll_menu">
+            <Key ID="STR_mts_Armory_openUIActionMenu_scroll_menu">
                 <Original>Scroll menu (Vanilla)</Original>
                 <German>Scrollmenü (Vanilla)</German>
             </Key>
