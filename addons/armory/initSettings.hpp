@@ -9,9 +9,9 @@
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(cba_settings_playerDBConnection),
+    QGVAR(allowPlayerDBConnection),
     "CHECKBOX",
-    [LLSTRING(cba_settings_playerDBConnection), LLSTRING(cba_settings_playerDBConnection_tooltip)],
+    [LLSTRING(allowPlayerDBConnection), LLSTRING(allowPlayerDBConnection_tooltip)],
     [LELSTRING(main,category), LLSTRING(displayName)],
     false,
     0,

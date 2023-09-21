@@ -102,11 +102,11 @@
                 <Original>Scroll menu (Vanilla)</Original>
                 <German>Scrollmenü (Vanilla)</German>
             </Key>
-            <Key ID="STR_mts_Armory_cba_settings_playerDBConnection">
+            <Key ID="STR_mts_Armory_allowPlayerDBConnection">
                 <Original>DEBUG: Allow Player database connection</Original>
                 <German>DEBUG: Erlaube Spieler Datenbankverbindung</German>
             </Key>
-            <Key ID="STR_mts_Armory_cba_settings_playerDBConnection_tooltip">
+            <Key ID="STR_mts_Armory_allowPlayerDBConnection_tooltip">
                 <Original>DEBUG: Allow the player to connect to the armory database. The mod ExtDB3 and a proper configurationen is needed!</Original>
                 <German>DEBUG: Erlaube dem Spieler, sich mit der Ausrüstungsdatenbank zu verbinden. Die Mod ExtDB3 und die entsprechende Konfigurationen wird benötigt!</German>
             </Key>

@@ -35,7 +35,7 @@ private _checkEditors = false;
 } count _editors;
 
 CHECK(!GVAR(initialized) || !_params || _equipmentName isEqualTo "" || ((_editors param [ARR_2(0,"")]) isEqualTo "") || _checkEditors);
-CHECK(!isDedicated && !GVAR(cba_settings_playerDBConnection));
+CHECK(!isDedicated && !GVAR(allowPlayerDBConnection));
 
 private _equipmentArray = GVAR(equipment) getVariable [_equipmentName, []];
 private _equipmentID = _equipmentArray param [3, 0];
