@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="mts">
 	<Package name="Armory">
-        <Container name="misc">
-            <Key ID="STR_mts_Armory_subCategory">
-                <Original>Armory</Original>
-                <German>Armory</German>
-            </Key>
-        </Container>
         <Key ID="STR_mts_Armory_displayName">
     		<Original>Armory</Original>
             <German>Waffenkammer</German>
