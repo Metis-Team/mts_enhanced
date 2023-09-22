@@ -62,7 +62,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (180 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE(private _object = ((_this select 0) getVariable [ARR_2(QQGVAR(attachedObject),objNull)]);closeDialog 0;createDialog QQGVAR(newEquipment);((findDisplay IDD_NEW_EQUIPMENT) displayCtrl IDC_BUTTON_CREATE) setVariable [ARR_2(QQGVAR(attachedObject), _object)];);
+            onButtonClick = QUOTE([_this select 0] call LINKFUNC(buttonNewEquipment));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_NEW_EQUIPMENT) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_NEW_EQUIPMENT) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -1076,7 +1076,7 @@ class GVAR(newEquipment) {
             y = "SafeZoneY + (525 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE(if (cbChecked ((ctrlParent (_this select 0)) displayCtrl IDC_CHECKBOX_EQUIPMENT)) then {[ARR_2(QQGVAR(createEquipment), [ARR_3(ctrlText IDC_EDITBOX_EQUIPMENT, [(getPlayerUID player)], (_this select 0) getVariable [ARR_2(QQGVAR(attachedObject), objNull)])])] call CBA_fnc_serverEvent;} else {[ARR_2(QQGVAR(createEquipment), [ARR_2(ctrlText IDC_EDITBOX_EQUIPMENT, [(getPlayerUID player)])])] call CBA_fnc_serverEvent;};closeDialog 0;);
+            onButtonClick = QUOTE([_this select 0] call LINKFUNC(buttonCreateEquipment));
         };
     };
     class controlsBackground {
