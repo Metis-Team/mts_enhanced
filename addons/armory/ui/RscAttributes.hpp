@@ -62,7 +62,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (180 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([_this select 0] call LINKFUNC(buttonNewEquipment));
+            onButtonClick = QUOTE([_this select 0] call LINKFUNC(openNewEquipmentDialog));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_NEW_EQUIPMENT) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_NEW_EQUIPMENT) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
