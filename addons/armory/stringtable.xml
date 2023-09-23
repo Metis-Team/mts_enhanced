@@ -46,7 +46,7 @@
             <German>Erstellen</German>
         </Key>
         <Key ID="STR_mts_Armory_checkbox_initializeEquipmentCategory_tooltip">
-            <Original>If possible, adds interaction menu for the newly created equipment.\n(Depends on, if an object was passed to the openArmoy function)</Original>
+            <Original>If possible, adds interaction menu for the newly created equipment.\n(Depending on whether an object was passed to the openArmoy function)</Original>
             <German>Wenn möglich, fügt ein Interaktionsmenü für die neu erstellte Ausrüstungskategorie hinzu.\n(Abhängig davon, ob ein Objekt an die Funktion openArmoy übergeben wurde)</German>
         </Key>
         <Key ID="STR_mts_Armory_error_equipmentCategoryCreation">
