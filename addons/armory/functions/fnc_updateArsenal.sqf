@@ -17,8 +17,8 @@
  *
  */
 
-private _params = params [["_equipmentName", "", [""]], ["_status", false, [false]]];
-TRACE_3("", _equipmentName, _status, _params);
+private _argsSuccessfullyParsed = params [["_equipmentName", "", [""]], ["_status", false, [false]]];
+TRACE_3("", _equipmentName, _status, _argsSuccessfullyParsed);
 
 CHECK(!GVAR(initialized) || !_params);
 

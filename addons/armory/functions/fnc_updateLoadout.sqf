@@ -27,9 +27,9 @@
  *
  */
 
-private _params = params [["_equipmentName", "", [""]], ["_name", "", [""]], ["_oldName", "", [""]]];
+private _argsSuccessfullyParsed = params [["_equipmentName", "", [""]], ["_name", "", [""]], ["_oldName", "", [""]]];
 
-CHECK(!GVAR(initialized) || !_params);
+CHECK(!GVAR(initialized) || !_argsSuccessfullyParsed);
 CHECK(!isDedicated && !GVAR(allowPlayerDBConnection));
 
 (GVAR(equipment) getVariable [_equipmentName, []]) params ["_loadoutNamespace", "", "", "_equipmentID"];

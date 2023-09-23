@@ -17,10 +17,10 @@
  *
  */
 
-private _params = params [["_equipmentName", "", [""]], ["_loadoutName", "", [""]]];
-TRACE_3("",_equipmentName,_loadoutName,_params);
+private _argsSuccessfullyParsed = params [["_equipmentName", "", [""]], ["_loadoutName", "", [""]]];
+TRACE_3("",_equipmentName,_loadoutName,_argsSuccessfullyParsed);
 
-CHECK(!GVAR(initialized) || !_params);
+CHECK(!GVAR(initialized) || !_argsSuccessfullyParsed);
 
 private _equipmentNamespaces = GVAR(equipment) getVariable [_equipmentName, []];
 
