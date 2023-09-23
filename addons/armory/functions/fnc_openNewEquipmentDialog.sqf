@@ -17,6 +17,7 @@
  */
 
 params [["_buttonCtrl", controlNull, [controlNull]]];
+CHECK(isNull _buttonCtrl);
 
 private _attachToObject = _buttonCtrl getVariable [QGVAR(attachedObject), objNull];
 closeDialog 0;

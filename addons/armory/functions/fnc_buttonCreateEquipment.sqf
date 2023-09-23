@@ -17,9 +17,10 @@
  */
 
 params [["_buttonCtrl", controlNull, [controlNull]]];
+CHECK(isNull _buttonCtrl);
 
 private _attachToObject = _buttonCtrl getVariable [QGVAR(attachedObject), objNull];
-private _addActionChecked = (ctrlParent _buttonCtrl) displayCtrl IDC_CHECKBOX_EQUIPMENT;
+private _addActionChecked = cbChecked ((ctrlParent _buttonCtrl) displayCtrl IDC_CHECKBOX_EQUIPMENT);
 private _equipmentName = ctrlText IDC_EDITBOX_EQUIPMENT;
 private _playerUID = getPlayerUID player;
 
