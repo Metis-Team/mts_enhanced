@@ -47,7 +47,7 @@ _ctrlSave setVariable [QGVAR(oldName), _name];
 switch (_category) do {
     case (LOADOUT): {
         if (_delete) then {
-            _loadoutNamespace setVariable [_oldName, nil];
+            _loadoutNamespace setVariable [_oldName, [], true];
             _name = "";
         } else {
             private _ace_medic = lbCurSel IDC_LISTBOX_MEDIC;
@@ -66,7 +66,7 @@ switch (_category) do {
                 };
             };
             if !(_name isEqualTo _oldName) then {
-                _loadoutNamespace setVariable [_oldName, nil];
+                _loadoutNamespace setVariable [_oldName, [], true];
             };
 
             _loadoutNamespace setVariable [_name, [_name, _idc, _loadout, _ace_medic, _ace_engineer], true];
@@ -75,7 +75,7 @@ switch (_category) do {
     };
     case (BACKPACK): {
         if (_delete) then {
-            _backpackNamespace setVariable [_oldName, nil];
+            _backpackNamespace setVariable [_oldName, [], true];
             _name = "";
         } else {
             private _class = backpack player;
@@ -89,7 +89,7 @@ switch (_category) do {
                 } forEach _items;
             };
             if !(_name isEqualTo _oldName) then {
-                _backpackNamespace setVariable [_oldName, nil];
+                _backpackNamespace setVariable [_oldName, [], true];
             };
 
             _backpackNamespace setVariable [_name, [_name, _idc, _class, _items], true];

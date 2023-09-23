@@ -17,21 +17,24 @@
  *
  */
 
-private _params = params [["_equipmentName", "", [""]], ["_backpackName", "", [""]]];
-TRACE_3("",_equipmentName,_backpackName,_params);
+private _argsSuccessfullyParsed = params [["_equipmentName", "", [""]], ["_backpackName", "", [""]]];
+TRACE_3("",_equipmentName,_backpackName,_argsSuccessfullyParsed);
 
-CHECK(!GVAR(initialized) || !_params);
+CHECK(!GVAR(initialized) || !_argsSuccessfullyParsed);
 
 private _equipmentNamespaces = GVAR(equipment) getVariable [_equipmentName, []];
 
 if (_equipmentNamespaces isEqualTo []) exitWith {
-    LOG("Equipment not in Namespace");
+    LOG_1("Equipment '%1' not in namespace. Will be initialized.",_equipmentName);
     [QGVAR(initEquipment), [player, QGVAR(equipBackpack), [_equipmentName, _backpackName]]] call CBA_fnc_serverEvent;
 };
 
 _equipmentNamespaces params ["", "_backpackNamespace"];
 
-(_backpackNamespace getVariable [_backpackName, []]) params ["", "", "_class", "_items"];
+private _backpack = _backpackNamespace getVariable [_backpackName, []];
+CHECKRET(_backpack isEqualTo [], WARNING_1("Backpack '%1' not available!", _backpackName));
+
+_backpack params ["", "", "_class", "_items"];
 
 removeBackpack player;
 player addBackpack _class;

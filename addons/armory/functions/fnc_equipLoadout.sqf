@@ -17,21 +17,24 @@
  *
  */
 
-private _params = params [["_equipmentName", "", [""]], ["_loadoutName", "", [""]]];
-TRACE_3("",_equipmentName,_loadoutName,_params);
+private _argsSuccessfullyParsed = params [["_equipmentName", "", [""]], ["_loadoutName", "", [""]]];
+TRACE_3("",_equipmentName,_loadoutName,_argsSuccessfullyParsed);
 
-CHECK(!GVAR(initialized) || !_params);
+CHECK(!GVAR(initialized) || !_argsSuccessfullyParsed);
 
 private _equipmentNamespaces = GVAR(equipment) getVariable [_equipmentName, []];
 
 if (_equipmentNamespaces isEqualTo []) exitWith {
-    LOG("Equipment not in Namespace");
+    LOG_1("Equipment '%1' not in namespace. Will be initialized.",_equipmentName);
     [QGVAR(initEquipment), [player, QGVAR(equipLoadout), [_equipmentName, _loadoutName]]] call CBA_fnc_serverEvent;
 };
 
 _equipmentNamespaces params ["_loadoutNamespace"];
 
-(_loadoutNamespace getVariable [_loadoutName, []]) params ["", "", "_loadout", "_ace_medic", "_ace_engineer"];
+private _loadout = _loadoutNamespace getVariable [_loadoutName, []];
+CHECKRET(_loadout isEqualTo [], WARNING_1("Loadout '%1' not available!", _loadoutName));
+
+_loadout params ["", "", "_loadout", "_ace_medic", "_ace_engineer"];
 
 player setUnitLoadout [_loadout, true];
 player setVariable ["ace_medical_medicclass", _ace_medic, true];

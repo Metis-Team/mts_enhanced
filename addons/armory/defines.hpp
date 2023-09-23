@@ -1,11 +1,6 @@
 #define LOADOUT 1
 #define BACKPACK 2
 #define IDD_ACE_ARSENAL 1127001
-#ifdef DEBUG_CLIENT_SERVER
-    #define SERVER_CHECK isServer
-#else
-    #define SERVER_CHECK isDedicated
-#endif
 
 // Equipment dialog
 #define IDD_EQUIPMENT 520600
