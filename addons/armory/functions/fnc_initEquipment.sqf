@@ -19,7 +19,8 @@
 params [["_equipmentName", "", [""]]];
 TRACE_1("", _equipmentName);
 
-CHECKRET(!GVAR(initialized) || _equipmentName isEqualTo "" || !SERVER_CHECK,false);
+CHECKRET(!GVAR(initialized) || _equipmentName isEqualTo "",false);
+CHECKRET(!isDedicated && !GVAR(allowPlayerDBConnection),false);
 CHECKRET(_equipmentName in GVAR(equipmentInitialized),true);
 
 private _equipmentInfo = [GVAR(sessionID), "getEquipmentInfo", _equipmentName] call DB_GET;
@@ -54,4 +55,5 @@ GVAR(equipment) setVariable [_equipmentName, [_loadoutNamespace, _backpackNamesp
 
 GVAR(equipmentInitialized) pushBackUnique _equipmentName;
 TRACE_1("",GVAR(equipmentInitialized));
+LOG_1("Equipment '%1' initialized",_equipmentName);
 true

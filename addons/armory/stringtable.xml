@@ -46,8 +46,8 @@
             <German>Erstellen</German>
         </Key>
         <Key ID="STR_mts_Armory_checkbox_initializeEquipmentCategory_tooltip">
-            <Original>Initializes equipment category after creation and if possible adds action for everyone</Original>
-            <German>Initialisiert die Ausrüstungskategorie und fügt, falls möglich, eine Aktion für jeden hinzu</German>
+            <Original>If possible, adds interaction menu for the newly created equipment.\n(Depending on whether an object was passed to the openArmoy function)</Original>
+            <German>Wenn möglich, fügt ein Interaktionsmenü für die neu erstellte Ausrüstungskategorie hinzu.\n(Abhängig davon, ob ein Objekt an die Funktion openArmoy übergeben wurde)</German>
         </Key>
         <Key ID="STR_mts_Armory_error_equipmentCategoryCreation">
             <Original>Equipment category '%1' couldn't be created!</Original>
@@ -85,5 +85,31 @@
             <Original>Who is permitted to edit this equipment category? Format: ["PlayerUID", "PlayerUID", ...]</Original>
             <German>Wer darf diese Ausrüstungskategorie bearbeiten? Format: ["PlayerUID", "PlayerUID", ...]</German>
         </Key>
+        <Container name="CBA_Settings">
+            <Key ID="str_mts_Armory_openUIActionMenu">
+                <Original>Interaction menu</Original>
+                <German>Interaktionsmenü</German>
+            </Key>
+            <Key ID="str_mts_Armory_openUIActionMenu_tooltip">
+                <Original>Sets the interaction menu, for newly created equipment categories, which should be used. If ACE is not present, it will fall back to Vanilla system.</Original>
+                <German>Setzt das Interaktionsmenü, bei neu erstellen Ausrüstungskategorien, welches benutzt werden soll. Wenn ACE nicht geladen ist, wird das Vanilla system verwendet.</German>
+            </Key>
+            <Key ID="STR_mts_Armory_openUIActionMenu_ace_interaction">
+                <Original>ACE Interaction</Original>
+                <German>ACE Interaktionsmenü</German>
+            </Key>
+            <Key ID="STR_mts_Armory_openUIActionMenu_scroll_menu">
+                <Original>Scroll menu (Vanilla)</Original>
+                <German>Scrollmenü (Vanilla)</German>
+            </Key>
+            <Key ID="STR_mts_Armory_allowPlayerDBConnection">
+                <Original>DEBUG: Allow Player database connection</Original>
+                <German>DEBUG: Erlaube Spieler Datenbankverbindung</German>
+            </Key>
+            <Key ID="STR_mts_Armory_allowPlayerDBConnection_tooltip">
+                <Original>DEBUG: Allow the player to connect to the armory database. The mod ExtDB3 and a proper configurationen is needed!</Original>
+                <German>DEBUG: Erlaube dem Spieler, sich mit der Ausrüstungsdatenbank zu verbinden. Die Mod ExtDB3 und die entsprechende Konfigurationen wird benötigt!</German>
+            </Key>
+        </Container>
 	</Package>
 </Project>

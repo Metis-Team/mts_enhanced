@@ -17,12 +17,12 @@
  *
  */
 
-private _params = params [["_idc", -1, [0]], ["_category", -1, [0]]];
+private _argsSuccessfullyParsed = params [["_idc", -1, [0]], ["_category", -1, [0]]];
 
 private _display = findDisplay IDD_EQUIPMENT;
 private _ctrlSave = _display displayCtrl IDC_BUTTON_SAVE_EQUIPMENT;
 TRACE_4("",_idc,_category,_display,_ctrlSave);
-CHECK(!GVAR(initialized) || isNull _display || !_params || !(_idc > 0) || !(_category > 0));
+CHECK(!GVAR(initialized) || isNull _display || !_argsSuccessfullyParsed || !(_idc > 0) || !(_category > 0));
 
 
 private _name = ctrlText _idc;
