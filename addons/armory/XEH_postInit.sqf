@@ -58,7 +58,7 @@ if (hasinterface) then {
         if (GVAR(openUIActionMenu) isEqualTo "ace_interaction" && isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
             private _actionOpenArmory = [
                 QGVAR(ace_interact_openArmory),
-                _equipmentName,
+                format["%1: %2", LLSTRING(displayName), _equipmentName],
                 "",
                 {
                     params ["_object", "", "_params"];
@@ -72,7 +72,7 @@ if (hasinterface) then {
             ] call ace_interact_menu_fnc_createAction;
             [_object, 0, ["ACE_MainActions"], _actionOpenArmory] call ace_interact_menu_fnc_addActionToObject;
         } else {
-            _object addAction [_equipmentName, {[(_this select 3), (_this select 0)] call FUNC(openArmory)}, _equipmentName];
+            _object addAction [format["%1: %2", LLSTRING(displayName), _equipmentName], {[(_this select 3), (_this select 0)] call FUNC(openArmory)}, _equipmentName];
         };
     }] call CBA_fnc_addEventhandler;
 
