@@ -1,6 +1,5 @@
 #include "script_component.hpp"
 
-GVAR(initialized) =  false;
 [QGVAR(updateArsenal), FUNC(updateArsenal)] call CBA_fnc_addEventHandler;
 
 TRACE_2("", isDedicated, GVAR(allowPlayerDBConnection));
