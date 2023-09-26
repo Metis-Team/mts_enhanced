@@ -22,7 +22,7 @@ TRACE_3("", _equipmentName, _status, _argsSuccessfullyParsed);
 
 CHECK(!GVAR(initialized) || !_params);
 
-if (isDedicated || GVAR(allowPlayerDBConnection)) then {
+if (isDedicated || (isServer && GVAR(allowPlayerDBConnection))) then {
     private _equipmentArray = GVAR(equipment) getVariable [_equipmentName, []];
     private _equipmentID = _equipmentArray param [2, 0];
 

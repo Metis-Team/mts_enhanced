@@ -30,7 +30,7 @@
 private _params = params [["_equipmentName", "", [""]], ["_name", "", [""]], ["_oldName", "", [""]]];
 
 CHECK(!GVAR(initialized) || !_params);
-CHECK(!isDedicated && !GVAR(allowPlayerDBConnection));
+CHECK(!isDedicated && !(isServer && GVAR(allowPlayerDBConnection)));
 
 (GVAR(equipment) getVariable [_equipmentName, []]) params ["", "_backpackNamespace", "", "_equipmentID"];
 _backpackNamespace getVariable [_name, []] params ["", "_idc", "_class", "_items"];

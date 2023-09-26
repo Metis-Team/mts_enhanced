@@ -26,7 +26,7 @@ if (_editors isEqualType "") then {
 };
 
 CHECK(!GVAR(initialized) || _equipmentName isEqualTo "" || ((_editors param [ARR_2(0,"")]) isEqualTo ""));
-CHECK(!isDedicated && !GVAR(allowPlayerDBConnection));
+CHECK(!isDedicated && !(isServer && GVAR(allowPlayerDBConnection)));
 
 [GVAR(sessionID), "insertEquipment", _equipmentName, _editors] call DB_SET;
 
