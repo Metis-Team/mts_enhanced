@@ -20,7 +20,7 @@ params [["_equipmentName", "", [""]]];
 TRACE_1("", _equipmentName);
 
 CHECKRET(!GVAR(initialized) || _equipmentName isEqualTo "",false);
-CHECKRET(!isDedicated && !GVAR(allowPlayerDBConnection),false);
+CHECKRET(!isDedicated && !(isServer && GVAR(allowPlayerDBConnection)),false);
 CHECKRET(_equipmentName in GVAR(equipmentInitialized),true);
 
 private _equipmentInfo = [GVAR(sessionID), "getEquipmentInfo", _equipmentName] call DB_GET;

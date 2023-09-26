@@ -1,11 +1,10 @@
 #include "script_component.hpp"
 
-GVAR(initialized) =  false;
 [QGVAR(updateArsenal), FUNC(updateArsenal)] call CBA_fnc_addEventHandler;
 
 TRACE_2("", isDedicated, GVAR(allowPlayerDBConnection));
 
-if (isDedicated || GVAR(allowPlayerDBConnection)) then {
+if (isDedicated || (isServer && GVAR(allowPlayerDBConnection))) then {
 
     private _dbConnected = ["armory", "armory.ini"] call DB_CONNECT;
     if (isNil "_dbConnected" || !(_dbConnected select 0)) exitWith {
@@ -34,6 +33,7 @@ if (isDedicated || GVAR(allowPlayerDBConnection)) then {
         };
     }] call CBA_fnc_addEventhandler;
 
+    LOG("Armory initialized");
     GVAR(initialized) =  true;
     publicVariable QGVAR(initialized);
 };
