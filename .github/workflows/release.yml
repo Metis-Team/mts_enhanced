@@ -35,12 +35,11 @@ jobs:
         New-Item "HKCU:\\Software\\Bohemia Interactive\\binarize" -Force | New-ItemProperty -Name path -Value "${{ github.workspace }}\ci\binarize"
         echo "::endgroup::"
         echo "Set env variables"
-        echo "NAME=$(.\\ci\\hemtt.exe var name)" >> $env:GITHUB_ENV
-        echo "MOD_NAME=$(.\\ci\\hemtt.exe var modname)" >> $env:GITHUB_ENV
-        echo "MOD_NAME_LOWER=$((.\\ci\\hemtt.exe var modname).toLower())" >> $env:GITHUB_ENV
-        echo "MAIN_PREFIX=$(.\\ci\\hemtt.exe var mainprefix)" >> $env:GITHUB_ENV
-        echo "VERSION=$(.\\ci\\hemtt.exe var version)" >> $env:GITHUB_ENV
-        echo "VERSION_SHORT=$(($(.\\ci\\hemtt.exe var version) | Select-String -Pattern '^\d+\.\d+\.\d+').Matches.Value)" >> $env:GITHUB_ENV
+        echo "MOD_NAME=Metis_Enhanced" >> $env:GITHUB_ENV
+        $version = Select-String -Path "addons\\main\\script_version.hpp" -Pattern '#define (MAJOR|MINOR|PATCHLVL|BUILD) (\d+)' | ForEach-Object { $_.Matches.Groups[2].Value } | Join-String -Separator "."
+        $version_short = (Select-String -InputObject $version -Pattern '^\d+\.\d+\.\d+').Matches.Value
+        echo "VERSION=$version" >> $env:GITHUB_ENV
+        echo "VERSION_SHORT=$version_short" >> $env:GITHUB_ENV
         echo "SHA_SHORT=$(git rev-parse --short HEAD)" >> $env:GITHUB_ENV
 
     - name: Test Binarize
