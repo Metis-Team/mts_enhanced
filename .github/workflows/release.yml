@@ -91,8 +91,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Upload to GitHub
-      uses: actions/upload-release-asset@v1
+    - name: Upload mod archive to GitHub Release
+      uses: shogo82148/actions-upload-release-asset@v1.7.2
       with:
         upload_url: ${{ steps.release_drafter.outputs.upload_url }}
         asset_path: ./${{ needs.build.outputs.MOD_NAME }}_${{ needs.build.outputs.VERSION_SHORT }}.zip
