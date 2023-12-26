@@ -142,7 +142,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEU
     (_this select 0) params ["_startPosASL", "_code", "_text", "_icon", "_color", "_angle", "_drawLine", "_drawIconAtStart", "_beforeDrawingCode"];
 
     if (isNull findDisplay ZEUS_DISPLAY || {!isNull findDisplay PAUSE_MENU_DISPLAY}) then {
-        TRACE_3("null-exit",isNull findDisplay ZEUS_DISPLAY,isNull findDisplay PAUSE_MENU_DISPLAY);
+        TRACE_2("null-exit",(isNull findDisplay ZEUS_DISPLAY),(isNull findDisplay PAUSE_MENU_DISPLAY));
         GVAR(moduleDestination_running) = false;
         [false, _startPosASL, [0,0,0], false, false, false, _args] call _code;
     };

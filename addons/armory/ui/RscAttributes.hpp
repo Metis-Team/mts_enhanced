@@ -46,7 +46,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (180 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onCheckedChanged = QUOTE([ARR_2(QQGVAR(updateArsenal), [ARR_2(ctrlText IDC_TEXT_TITLE, (cbChecked (_this select 0)))])] call CBA_fnc_globalEvent);
+            onCheckedChanged = QUOTE([ARR_2(QQGVAR(updateArsenal),[ARR_2(ctrlText IDC_TEXT_TITLE,(cbChecked (_this select 0)))])] call CBA_fnc_globalEvent);
         };
         class Text_Title : Text {
             idc = IDC_TEXT_TITLE;
@@ -112,7 +112,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (310 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         class Button_Loadout_2 : Button {
             idc = IDC_LOADOUT_2;
@@ -120,7 +120,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (350 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         class Button_Loadout_3 : Button {
             idc = IDC_LOADOUT_3;
@@ -128,7 +128,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (390 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         class Button_Loadout_4 : Button {
             idc = IDC_LOADOUT_4;
@@ -136,7 +136,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (430 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         class Button_Loadout_5 : Button {
             idc = IDC_LOADOUT_5;
@@ -144,7 +144,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (470 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         class Button_Loadout_6 : Button {
             idc = IDC_LOADOUT_6;
@@ -152,7 +152,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (510 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         class Button_Loadout_7 : Button {
             idc = IDC_LOADOUT_7;
@@ -160,7 +160,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (550 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         class Button_Loadout_8 : Button {
             idc = IDC_LOADOUT_8;
@@ -168,7 +168,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (590 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         class Button_Loadout_9 : Button {
             idc = IDC_LOADOUT_9;
@@ -176,7 +176,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (630 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         class Button_Loadout_10 : Button {
             idc = IDC_LOADOUT_10;
@@ -184,7 +184,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (670 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         class Button_Loadout_11 : Button {
             idc = IDC_LOADOUT_11;
@@ -192,7 +192,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (710 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         class Button_Loadout_12 : Button {
             idc = IDC_LOADOUT_12;
@@ -200,7 +200,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (750 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipLoadout));
         };
         // Body loadout configure buttons ----------------------------------------
         class Button_Loadout_Edit_1 : Button_Image {
@@ -209,7 +209,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (310 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_1, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_1,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_1) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_1) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -219,7 +219,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (350 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_2, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_2,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_2) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_2) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -229,7 +229,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (390 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_3, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_3,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_3) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_3) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -239,7 +239,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (430 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_4, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_4,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_4) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_4) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -249,7 +249,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (470 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_5, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_5,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_5) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_5) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -259,7 +259,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (510 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_6, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_6,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_6) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_6) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -269,7 +269,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (550 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_7, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_7,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_7) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_7) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -279,7 +279,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (590 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_8, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_8,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_8) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_8) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -289,7 +289,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (630 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_9, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_9,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_9) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_9) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -299,7 +299,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (670 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_10, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_10,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_10) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_10) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -309,7 +309,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (710 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_11, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_11,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_11) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_11) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -319,7 +319,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (750 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_12, LOADOUT)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_LOADOUT_12,LOADOUT)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_12) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_LOADOUT_12) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -330,7 +330,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (310 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         class Button_Backpack_2 : Button {
             idc = IDC_BACKPACK_2;
@@ -338,7 +338,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (350 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         class Button_Backpack_3 : Button {
             idc = IDC_BACKPACK_3;
@@ -346,7 +346,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (390 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         class Button_Backpack_4 : Button {
             idc = IDC_BACKPACK_4;
@@ -354,7 +354,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (430 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         class Button_Backpack_5 : Button {
             idc = IDC_BACKPACK_5;
@@ -362,7 +362,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (470 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         class Button_Backpack_6 : Button {
             idc = IDC_BACKPACK_6;
@@ -370,7 +370,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (510 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         class Button_Backpack_7 : Button {
             idc = IDC_BACKPACK_7;
@@ -378,7 +378,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (550 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         class Button_Backpack_8 : Button {
             idc = IDC_BACKPACK_8;
@@ -386,7 +386,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (590 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         class Button_Backpack_9 : Button {
             idc = IDC_BACKPACK_9;
@@ -394,7 +394,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (630 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         class Button_Backpack_10 : Button {
             idc = IDC_BACKPACK_10;
@@ -402,7 +402,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (670 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         class Button_Backpack_11 : Button {
             idc = IDC_BACKPACK_11;
@@ -410,7 +410,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (710 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         class Button_Backpack_12 : Button {
             idc = IDC_BACKPACK_12;
@@ -418,7 +418,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (750 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
+            onButtonClick = QUOTE([ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText (_this select 0))] call LINKFUNC(equipBackpack));
         };
         // Body backpacks configure buttons ----------------------------------------
         class Button_Backpack_Edit_1 : Button_Image {
@@ -427,7 +427,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (310 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_1, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_1,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_1) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_1) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -437,7 +437,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (350 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_2, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_2,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_2) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_2) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -447,7 +447,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (390 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_3, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_3,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_3) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_3) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -457,7 +457,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (430 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_4, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_4,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_4) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_4) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -467,7 +467,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (470 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_5, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_5,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_5) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_5) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -477,7 +477,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (510 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_6, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_6,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_6) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_6) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -487,7 +487,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (550 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_7, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_7,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_7) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_7) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -497,7 +497,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (590 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_8, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_8,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_8) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_8) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -507,7 +507,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (630 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_9, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_9,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_9) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_9) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -517,7 +517,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (670 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_10, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_10,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_10) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_10) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -527,7 +527,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (710 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_11, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_11,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_11) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_11) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -537,7 +537,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (750 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_12, BACKPACK)] call LINKFUNC(setEditArea));
+            onButtonClick = QUOTE([ARR_2(IDC_BACKPACK_12,BACKPACK)] call LINKFUNC(setEditArea));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_12) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_EDIT_BACKPACK_12) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -566,7 +566,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (800 / 1080) * SafeZoneH";
             w = "(30 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(((ctrlParent (_this select 0)) displayCtrl IDC_BUTTON_SAVE_EQUIPMENT), true)] call LINKFUNC(saveEquipment));
+            onButtonClick = QUOTE([ARR_2(((ctrlParent (_this select 0)) displayCtrl IDC_BUTTON_SAVE_EQUIPMENT),true)] call LINKFUNC(saveEquipment));
             onMouseEnter = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_DELETE_EQUIPMENT) ctrlSetBackgroundColor [ARR_4(0,0,0,1)]);
             onMouseExit = QUOTE(((ctrlParent (_this select 0)) displayCtrl IDC_BACKGROUND_DELETE_EQUIPMENT) ctrlSetBackgroundColor [ARR_4(0,0,0,0.5)]);
         };
@@ -599,7 +599,7 @@ class GVAR(dialog) {
             y = "SafeZoneY + (965 / 1080) * SafeZoneH";
             w = "(150 / 1920) * SafeZoneW";
             h = "(30 / 1080) * SafeZoneH";
-            onButtonClick = QUOTE([ARR_2(QQGVAR(updateEditors),[ARR_2(ctrlText IDC_TEXT_TITLE, ctrlText IDC_EDITBOX_EDITORS)])] call CBA_fnc_serverEvent);
+            onButtonClick = QUOTE([ARR_2(QQGVAR(updateEditors),[ARR_2(ctrlText IDC_TEXT_TITLE,ctrlText IDC_EDITBOX_EDITORS)])] call CBA_fnc_serverEvent);
         };
     };
     class controlsBackground {
