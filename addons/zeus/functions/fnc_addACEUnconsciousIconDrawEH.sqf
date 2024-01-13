@@ -55,24 +55,33 @@ if (!GVAR(ACEIcon_drawEHAdded)) then {
         private _unconsciousPlayers = _curatorModule getVariable [QGVAR(unconsciousPlayers), []];
 
         {
-            private _pos = ASLToAGL (getPosASLVisual _x);
-            private _camPos = ASLToAGL (getPosASLVisual curatorCamera);
-            private _d = _pos distance _camPos;
+            private _unitPosAGL = _x modelToWorldVisual (_x selectionPosition "pelvis"); // Model center position
+            private _camPosAGL = ASLToAGL (getPosASLVisual curatorCamera);
+            private _d = _unitPosAGL distance _camPosAGL;
             private _scale = linearConversion [300, 730, _d, 1.5, 0, true]; // 300m => 1.5, 730m => 0
 
             if (_scale < 0.01) then {
                 continue;
             };
 
+            private _color = [0.9, 0, 0, 1];
+            private _iconPosAGL = [_unitPosAGL select 0, _unitPosAGL select 1, (_unitPosAGL select 2) + 2];
+
             drawIcon3D [
                 "z\ace\addons\zeus\ui\Icon_Module_Zeus_Unconscious_ca.paa",
-                [0.9, 0, 0, 1],
-                [_pos select 0, _pos select 1, (_pos select 2) + 2],
+                _color,
+                _iconPosAGL,
                 _scale, // Width
                 _scale, // Height
                 0, // Angle
                 "", // Text
                 1 // Shadow
+            ];
+
+            drawLine3D [
+                [_iconPosAGL select 0, _iconPosAGL select 1, (_iconPosAGL select 2) - 0.02], // Hide line start behind icon
+                _unitPosAGL,
+                _color
             ];
         } count _unconsciousPlayers;
     }, [_curatorModule]] call CBA_fnc_addBISEventHandler;

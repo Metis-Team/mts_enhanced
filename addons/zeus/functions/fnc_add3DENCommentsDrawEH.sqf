@@ -64,7 +64,7 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
                     [_posAGL select 0, _posAGL select 1, 0],
                     _color
                 ];
-            }
+            };
         } count _3denComments;
     }, [GVAR(3DENComments_data)]] call CBA_fnc_addBISEventHandler;
 };
