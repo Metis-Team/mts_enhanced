@@ -21,7 +21,8 @@ params ["_display"];
 
 CHECK(!GVAR(enableACEUnconsciousIcon));
 
-private _curatorModule = getAssignedCuratorLogic ACE_player;
+// This needs to be player because we want the zeus unit not a unit that zeus currently controls (ace_player).
+private _curatorModule = getAssignedCuratorLogic player;
 
 // Only do this if zeus display is opened for the first time
 if (isNil {(_curatorModule getVariable QGVAR(unconsciousPlayers))}) then {
