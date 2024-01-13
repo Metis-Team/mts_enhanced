@@ -27,7 +27,7 @@ TRACE_1("3DEN Comments", GVAR(3DENComments_data));
 
 GVAR(ACEIcon_drawEHAdded) = false;
 
-ACE_player addEventHandler ["killed", {
+player addEventHandler ["killed", {
     params ["_unit"];
     [QGVAR(killed), [_unit, false]] call CBA_fnc_globalEvent;
 }];
