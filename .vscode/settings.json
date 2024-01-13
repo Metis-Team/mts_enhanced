@@ -19,6 +19,16 @@
         "*.rpt": "log",
         "init*.hpp": "sqf",
     },
+    "search.exclude": {
+        ".hemttout/dev": true,
+        ".hemttout/build": true,
+        ".hemttout/release": true,
+    },
+    "explorer.autoRevealExclude": {
+        ".hemttout/dev": true,
+        ".hemttout/build": true,
+        ".hemttout/release": true,
+    },
     "sqf.enableACE3": true,
     "sqf.enableCBA": true,
 }

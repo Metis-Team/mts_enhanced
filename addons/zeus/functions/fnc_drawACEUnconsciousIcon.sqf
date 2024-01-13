@@ -18,11 +18,14 @@
  */
 
 params [["_unit", objnull, [objnull]], ["_isUnconscious", false, [false]]];
+TRACE_1("params",_this);
 
 CHECK(isNull _unit || !isPlayer _unit);
 
-private _curatorModule = getAssignedCuratorLogic ACE_player;
+// This needs to be player because we want the zeus unit not a unit that zeus currently controls (ace_player).
+private _curatorModule = getAssignedCuratorLogic player;
 private _unconsciousPlayers = _curatorModule getVariable [QGVAR(unconsciousPlayers), []];
+TRACE_3("Unconscious players",player,_curatorModule,_unconsciousPlayers);
 
 if (_isUnconscious) then {
     _unconsciousPlayers pushbackUnique _unit;
