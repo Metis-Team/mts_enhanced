@@ -20,14 +20,6 @@ authority = "mts_enhanced"
 [version]
 git_hash = 0
 
-[asc]
-enabled = true
-exclude = [
-    "/initsettings.sqf",
-    "/initkeybinds.sqf",
-    "/xeh_prep.sqf",
-]
-
 [hemtt.config]
 preset = "Hemtt"
 
