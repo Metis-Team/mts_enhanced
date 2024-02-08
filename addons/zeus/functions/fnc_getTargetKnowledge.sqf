@@ -18,7 +18,7 @@
 
 params ["_unit"];
 
-TRACE_1("getTargetKnowledge called", _this);
+TRACE_1("getTargetKnowledge called",_this);
 
 //Check if selected unit is an AI
 if ((isPlayer _unit) || {isnull _unit}) exitWith {

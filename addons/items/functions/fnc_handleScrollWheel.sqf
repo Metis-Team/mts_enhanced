@@ -18,7 +18,7 @@
 
 params ["_scrollAmount"];
 
-CHECKRET(GVAR(isPlacing) isNotEqualTo PLACE_WAITING, false);
+CHECKRET(GVAR(isPlacing) isNotEqualTo PLACE_WAITING,false);
 
 //move object height 10cm per scroll
 GVAR(objectHeight) = GVAR(objectHeight) + (_scrollAmount * 0.1);

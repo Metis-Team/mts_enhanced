@@ -18,7 +18,7 @@
  */
 
 private _argsSuccessfullyParsed = params [["_equipmentName", "", [""]], ["_status", false, [false]]];
-TRACE_3("", _equipmentName, _status, _argsSuccessfullyParsed);
+TRACE_3("",_equipmentName,_status,_argsSuccessfullyParsed);
 
 CHECK(!GVAR(initialized) || !_params);
 
@@ -33,7 +33,7 @@ if (isDedicated || (isServer && GVAR(allowPlayerDBConnection))) then {
 } else {
     private _armoryDisplay = findDisplay IDD_EQUIPMENT;
     private _arsenalDisplay = findDisplay IDD_ACE_ARSENAL;
-    TRACE_2("", _armoryDisplay, _arsenalDisplay);
+    TRACE_2("",_armoryDisplay,_arsenalDisplay);
 
     if !(isNull _armoryDisplay) exitWith {
         private _title = ctrlText IDC_TEXT_TITLE;

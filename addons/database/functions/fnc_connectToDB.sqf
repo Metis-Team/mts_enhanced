@@ -60,7 +60,7 @@ private _sessionID = round(random(999999));
 while {_sessionID in GVAR(sessionIDs)} do {
     _sessionID = round(random(999999));
 };
-TRACE_1("Current session ID", _sessionID);
+TRACE_1("Current session ID",_sessionID);
 
 _result = parseSimpleArray ("extdb3" callExtension (format["9:ADD_DATABASE_PROTOCOL:%1:SQL_CUSTOM:%2:%3", _database, _sessionID, _protocol]));
 
@@ -72,6 +72,6 @@ INFO(format [ARR_2("Protocol '%1' loaded", _protocol)]);
 
 GVAR(connections) pushBackUnique [toLower _database, toLower _protocol];
 GVAR(sessionIDs) pushBackUnique _sessionID;
-TRACE_2("", GVAR(connections), GVAR(sessionIDs));
+TRACE_2("",GVAR(connections),GVAR(sessionIDs));
 GVAR(initialized) = true;
 [true, _sessionID];

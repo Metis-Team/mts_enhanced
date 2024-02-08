@@ -21,12 +21,12 @@
 
 params [["_type", "REVEAL", [""]], ["_selectedUnits", [], [[]]]];
 
-TRACE_1("setTargetKnowledge called", _this);
+TRACE_1("setTargetKnowledge called",_this);
 
 private _allUnits = flatten (_selectedUnits apply {crew _x});
 private _units = _allUnits arrayIntersect _allUnits; // Remove duplicate units
 
-TRACE_1("", _units);
+TRACE_1("",_units);
 
 if (_units isEqualTo []) exitWith {
     [LLSTRING(AI_noAI)] call zen_common_fnc_showMessage;

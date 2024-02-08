@@ -2,7 +2,7 @@
 
 [QGVAR(updateArsenal), FUNC(updateArsenal)] call CBA_fnc_addEventHandler;
 
-TRACE_2("", isDedicated, GVAR(allowPlayerDBConnection));
+TRACE_2("",isDedicated,GVAR(allowPlayerDBConnection));
 
 if (isDedicated || (isServer && GVAR(allowPlayerDBConnection))) then {
 
