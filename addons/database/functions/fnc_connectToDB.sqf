@@ -37,7 +37,7 @@ if (!GVAR(initialized)) then {
 };
 
 if ([toLower _database, toLower _protocol] in GVAR(connections)) exitWith {
-    ERROR(format [ARR_3("The database '%1' and protocol '%2' are already initialized", _database, _protocol)]);
+    ERROR_2("The database '%1' and protocol '%2' are already initialized",_database,_protocol);
     [false];
 };
 
@@ -49,11 +49,11 @@ If ((_result select 0) == 1) exitWith {
 
 _result = parseSimpleArray ("extdb3" callExtension format ["9:ADD_DATABASE:%1", _database]);
 If ((_result select 0) isEqualTo 0) exitWith {
-    ERROR(format [ARR_2("Cannot connect to database '%1'", _database)]);
+    ERROR_1("Cannot connect to database '%1'",_database);
     [false];
 };
 
-INFO(format [ARR_2("Connected to database '%1'", _database)]);
+INFO_1("Connected to database '%1'",_database);
 
 // Security
 private _sessionID = round(random(999999));
@@ -64,11 +64,11 @@ TRACE_1("Current session ID",_sessionID);
 
 _result = parseSimpleArray ("extdb3" callExtension (format["9:ADD_DATABASE_PROTOCOL:%1:SQL_CUSTOM:%2:%3", _database, _sessionID, _protocol]));
 
-If !((_result select 0) isEqualTo 1) exitWith {
-    ERROR(format [ARR_2("Protocol '%1' not loaded", _protocol)]);
+If ((_result select 0) isNotEqualTo 1) exitWith {
+    ERROR_1("Protocol '%1' not loaded",_protocol);
     [false];
 };
-INFO(format [ARR_2("Protocol '%1' loaded", _protocol)]);
+INFO_1("Protocol '%1' loaded",_protocol);
 
 GVAR(connections) pushBackUnique [toLower _database, toLower _protocol];
 GVAR(sessionIDs) pushBackUnique _sessionID;

@@ -45,7 +45,7 @@ if (hasinterface) then {
 
     [QGVAR(error), {
         params ["_unit", "_callBackEvent", "_args"];
-        ERROR(format [ARR_4("Something went wrong: Unit: %1 | CallBackEvent: %2 | Args: %3", _unit, _callBackEvent, _args)]);
+        ERROR_3("Something went wrong: Unit: %1 | CallBackEvent: %2 | Args: %3",_unit,_callBackEvent,_args);
         if (hasinterface) then {
             hint "MTS Armory:\nSomething went wrong, please take a look into your logfiles.";
         };
