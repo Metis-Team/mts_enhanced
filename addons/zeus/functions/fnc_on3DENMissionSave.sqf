@@ -21,7 +21,7 @@ params ["_isAutosave"];
 
 CHECK(!is3DEN);
 
-TRACE_1("3DEN Mission saved", _isAutosave);
+TRACE_1("3DEN Mission saved",_isAutosave);
 
 private _3denComments = [];
 {
@@ -36,6 +36,6 @@ private _3denComments = [];
     _3denComments pushBack [_x, _name, _description, _positionASL];
 } forEach (all3DENEntities param [7, []]);
 
-TRACE_1("Saving comments", _3denComments);
+TRACE_1("Saving comments",_3denComments);
 
 set3DENMissionAttributes [["Scenario", QGVAR(3denComments), _3denComments]];

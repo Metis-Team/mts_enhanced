@@ -24,7 +24,7 @@ if (canSuspend) exitWith {
 };
 
 params [["_equipmentName", "", [""]], ["_object", objNull, [objNull]], ["_idc", -1, [0]], ["_category", -1, [0]]];
-TRACE_4("",_equipmentName, _object, _idc, _category);
+TRACE_4("",_equipmentName,_object,_idc,_category);
 
 CHECK(!GVAR(initialized) || _equipmentName isEqualTo "");
 

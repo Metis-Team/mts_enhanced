@@ -18,7 +18,7 @@
 
 params ["_display"];
 
-TRACE_1("Zeus display opened", _display);
+TRACE_1("Zeus display opened",_display);
 
 if (GVAR(enableACEUnconsciousIcon)) then {
     [_display] call FUNC(addACEUnconsciousIconDrawEH);

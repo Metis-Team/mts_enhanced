@@ -19,6 +19,6 @@
 
 params [["_mods", [], [[]]]];
 
-CHECKRET(_mods isEqualTo [], false);
+CHECKRET(_mods isEqualTo [],false);
 
 (_mods findIf {!isClass (configFile >> "CfgPatches" >> _x)}) isEqualTo -1

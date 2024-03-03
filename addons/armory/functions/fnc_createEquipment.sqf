@@ -19,7 +19,7 @@
  */
 
 private _argsSuccessfullyParsed = params [["_equipmentName", "", [""]], ["_editors", [], [[],""]], ["_object", objNull, [objNull]]];
-TRACE_4("",_equipmentName,_editors,_object, _argsSuccessfullyParsed);
+TRACE_4("",_equipmentName,_editors,_object,_argsSuccessfullyParsed);
 
 if (_editors isEqualType "") then {
     _editors = parseSimpleArray _editors;

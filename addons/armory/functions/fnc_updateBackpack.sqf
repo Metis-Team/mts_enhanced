@@ -34,7 +34,7 @@ CHECK(!isDedicated && !(isServer && GVAR(allowPlayerDBConnection)));
 
 (GVAR(equipment) getVariable [_equipmentName, []]) params ["", "_backpackNamespace", "", "_equipmentID"];
 _backpackNamespace getVariable [_name, []] params ["", "_idc", "_class", "_items"];
-TRACE_7("updateBackpack",_equipmentName, _equipmentID,_name,_oldName,_idc,_class,_items);
+TRACE_7("updateBackpack",_equipmentName,_equipmentID,_name,_oldName,_idc,_class,_items);
 
 
 if (_oldName isEqualTo "") exitWith {

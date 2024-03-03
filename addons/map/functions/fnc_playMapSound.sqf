@@ -38,7 +38,7 @@ lineIntersectsSurfaces [
 ] select 0 params ["", "", "", "_house"];
 private _isInside = _house isKindOf "House";
 
-TRACE_3("play sound", _soundFile, _soundSource, _isInside);
+TRACE_3("play sound",_soundFile,_soundSource,_isInside);
 playSound3D [_soundFile, _soundSource, _isInside, getPosASL _soundSource, 5, 1, 30];
 
 _soundFile

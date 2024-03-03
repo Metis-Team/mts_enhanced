@@ -180,7 +180,7 @@ CHECK(!hasinterface);
     params ["_names"];
     private _units = [];
 
-    CHECKRET(_names isEqualTo "", systemchat LLSTRING(chatCommands_falseArgument));
+    CHECKRET(_names isEqualTo "",systemchat LLSTRING(chatCommands_falseArgument));
 
     _names = _names splitString "~";
     private _count = {

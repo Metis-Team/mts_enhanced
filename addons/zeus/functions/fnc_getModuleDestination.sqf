@@ -53,7 +53,7 @@ params [
     ["_beforeDrawingCode", {}, [{}]]
 ];
 
-TRACE_1("called", GVAR(moduleDestination_running));
+TRACE_1("called",GVAR(moduleDestination_running));
 
 if (GVAR(moduleDestination_running)) exitWith {
     [false, _startPosASL, [0,0,0], false, false, false, _args] call _code;

@@ -21,7 +21,7 @@ params ["_player"];
 private _map = (assignedItems _player) param [0, ""];
 private _isMap = getText (configFile >> "CfgWeapons" >> _map >> "simulation") == "ItemMap";
 
-CHECKRET(!_isMap, "");
+CHECKRET(!_isMap,"");
 
 _player unlinkItem _map;
 

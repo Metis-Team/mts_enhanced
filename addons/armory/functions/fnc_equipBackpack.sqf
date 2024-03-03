@@ -32,7 +32,7 @@ if (_equipmentNamespaces isEqualTo []) exitWith {
 _equipmentNamespaces params ["", "_backpackNamespace"];
 
 private _backpack = _backpackNamespace getVariable [_backpackName, []];
-CHECKRET(_backpack isEqualTo [], WARNING_1("Backpack '%1' not available!", _backpackName));
+CHECKRET(_backpack isEqualTo [],WARNING_1("Backpack '%1' not available!",_backpackName));
 
 _backpack params ["", "", "_class", "_items"];
 
