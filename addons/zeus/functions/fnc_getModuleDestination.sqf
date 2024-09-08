@@ -117,7 +117,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEU
 
     private _pos2d = (((findDisplay ZEUS_DISPLAY) displayCtrl ZEUS_MAP_CTRL) ctrlMapScreenToWorld getMousePosition);
 
-    private _drawingInfo = [ASLtoAGL _startPosASL, _pos2d, _text, _icon, _color, _angle, false] call _beforeDrawingCode;
+    private _drawingInfo = [ASLToAGL _startPosASL, _pos2d, _text, _icon, _color, _angle, false] call _beforeDrawingCode;
 
     if (isNil "_drawingInfo") then {
         _drawingInfo = [];
@@ -125,7 +125,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEU
 
     _drawingInfo params [["_iconInfo", [], [[]]], ["_lineInfo", [], [[]]]];
     _iconInfo params [["_newPos", _pos2d, [[], objNull]], ["_newText", _text, [""]], ["_newIcon", _icon, [""]], ["_newIconColor", _color, [[]]], ["_newAngle", _angle, [0]]];
-    _lineInfo params [["_startLinePos", ASLtoAGL _startPosASL, [[], objNull]], ["_endLinePos", _pos2d, [[], objNull]], ["_newLineColor", _color, [[]]]];
+    _lineInfo params [["_startLinePos", ASLToAGL _startPosASL, [[], objNull]], ["_endLinePos", _pos2d, [[], objNull]], ["_newLineColor", _color, [[]]]];
 
     _mapCtrl drawIcon [_newIcon, _newIconColor, _newPos, 24, 24, _newAngle, _newText, 1, 0.03, "TahomaB", "right"];
     if (_drawIconAtStart) then {
@@ -150,7 +150,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEU
         // Draw the 3d icon and line
         private _mousePosAGL = screenToWorld getMousePosition;
 
-        private _drawingInfo = [ASLtoAGL _startPosASL, _mousePosAGL, _text, _icon, _color, _angle, true] call _beforeDrawingCode;
+        private _drawingInfo = [ASLToAGL _startPosASL, _mousePosAGL, _text, _icon, _color, _angle, true] call _beforeDrawingCode;
 
         if (isNil "_drawingInfo") then {
             _drawingInfo = [];
@@ -158,7 +158,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEU
 
         _drawingInfo params [["_iconInfo", [], [[]]], ["_lineInfo", [], [[]]]];
         _iconInfo params [["_newPos", _mousePosAGL, [[], objNull]], ["_newText", _text, [""]], ["_newIcon", _icon, [""]], ["_newIconColor", _color, [[]]], ["_newAngle", _angle, [0]]];
-        _lineInfo params [["_startLinePos", ASLtoAGL _startPosASL, [[], objNull]], ["_endLinePos", _mousePosAGL, [[], objNull]], ["_newLineColor", _color, [[]]]];
+        _lineInfo params [["_startLinePos", ASLToAGL _startPosASL, [[], objNull]], ["_endLinePos", _mousePosAGL, [[], objNull]], ["_newLineColor", _color, [[]]]];
 
         drawIcon3D [_newIcon, _newIconColor, _newPos, 1.5, 1.5, _newAngle, _newText];
         if (_drawIconAtStart) then {

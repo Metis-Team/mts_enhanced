@@ -17,7 +17,7 @@
     } forEach _toUnits;
 }] call CBA_fnc_addEventHandler;
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 GVAR(moduleDestination_running) = false;
 

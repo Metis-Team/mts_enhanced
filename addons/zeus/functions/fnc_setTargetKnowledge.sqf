@@ -54,7 +54,7 @@ private _drawLine = (count _units) isEqualTo 1;
     curatorMouseOver params ["_typeName", "_target"];
 
     // Make sure target is an AI or a player
-    if (!(_typeName isEqualTo "OBJECT") || {(count (crew _target)) isEqualTo 0} || {isnull _target}) exitWith {
+    if (!(_typeName isEqualTo "OBJECT") || {(count (crew _target)) isEqualTo 0} || {isNull _target}) exitWith {
         [LLSTRING(AI_noTarget)] call zen_common_fnc_showMessage;
     };
 

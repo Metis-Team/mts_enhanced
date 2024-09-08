@@ -24,6 +24,6 @@ curatorSelected params ["_objects"];
 
 //set stance for each selected unit
 {
-    CHECK((isPlayer _x) || {(count (crew _x)) isEqualTo 0} || {isnull _x});
+    CHECK((isPlayer _x) || {(count (crew _x)) isEqualTo 0} || {isNull _x});
     [_x, _stance] remoteExecCall ["setUnitPos", _x];
 } forEach _objects;

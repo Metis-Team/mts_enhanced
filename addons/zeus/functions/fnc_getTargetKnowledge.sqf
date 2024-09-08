@@ -21,7 +21,7 @@ params ["_unit"];
 TRACE_1("getTargetKnowledge called",_this);
 
 //Check if selected unit is an AI
-if ((isPlayer _unit) || {isnull _unit}) exitWith {
+if ((isPlayer _unit) || {isNull _unit}) exitWith {
     [LLSTRING(AI_noAI)] call zen_common_fnc_showMessage;
 };
 
@@ -36,7 +36,7 @@ if ((isPlayer _unit) || {isnull _unit}) exitWith {
     curatorMouseOver params ["_typeName", "_target"];
 
     //make sure cursor object is an AI or a player
-    if (!(_typeName isEqualTo "OBJECT") || {(count (crew _target)) isEqualTo 0} || {isnull _target}) exitWith {
+    if (!(_typeName isEqualTo "OBJECT") || {(count (crew _target)) isEqualTo 0} || {isNull _target}) exitWith {
         [LLSTRING(AI_noTarget)] call zen_common_fnc_showMessage;
     };
 

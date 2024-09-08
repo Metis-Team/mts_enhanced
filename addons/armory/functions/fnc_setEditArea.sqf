@@ -36,11 +36,11 @@ if (_category isEqualTo LOADOUT) then {
         (GVAR(equipment) getVariable [ctrlText IDC_TEXT_TITLE, []]) params ["_loadoutNamespace"];
 
         (_loadoutNamespace getVariable [_name, []]) params ["", "", "", "_ace_medic", "_ace_engineer"];
-        lbsetCurSel [IDC_LISTBOX_MEDIC, _ace_medic];
-        lbsetCurSel [IDC_LISTBOX_ENGINEER, _ace_engineer];
+        lbSetCurSel [IDC_LISTBOX_MEDIC, _ace_medic];
+        lbSetCurSel [IDC_LISTBOX_ENGINEER, _ace_engineer];
     } else {
-        lbsetCurSel [IDC_LISTBOX_MEDIC, 0];
-        lbsetCurSel [IDC_LISTBOX_ENGINEER, 0];
+        lbSetCurSel [IDC_LISTBOX_MEDIC, 0];
+        lbSetCurSel [IDC_LISTBOX_ENGINEER, 0];
     };
     ctrlShow [IDC_LISTBOX_MEDIC, true];
     ctrlShow [IDC_LISTBOX_ENGINEER, true];

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 GVAR(isPlacing) = PLACE_CANCEL;
 ["ace_interactMenuOpened", {GVAR(isPlacing) = PLACE_CANCEL;}] call CBA_fnc_addEventHandler;

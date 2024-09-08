@@ -34,7 +34,7 @@ params [
     ["_conditionArgs", [], [[]]]
 ];
 
-CHECK(!hasinterface || _vehClass isEqualTo "");
+CHECK(!hasInterface || _vehClass isEqualTo "");
 
 private _placeMapOnVehAction = [
     QGVAR(placeMapOnVehAction),

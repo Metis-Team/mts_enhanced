@@ -18,7 +18,7 @@
  *
  */
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 private _playerIDs = parseSimpleArray GVAR(playerIDs);
 

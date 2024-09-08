@@ -19,12 +19,12 @@
  *
  */
 
-params [["_vehicle", objnull, [objNull]], ["_mapObj", objnull, [objNull]]];
+params [["_vehicle", objNull, [objNull]], ["_mapObj", objNull, [objNull]]];
 
 CHECK(isNull _vehicle || isNull _mapObj);
 
 private _class = typeOf _vehicle;
-private _offset = _vehicle worldToModelVisual (ASLtoAGL (getPosASLVisual _mapObj));
+private _offset = _vehicle worldToModelVisual (ASLToAGL (getPosASLVisual _mapObj));
 private _vectorDir = vectorDir _mapObj;
 private _vectorUp = vectorUp _mapObj;
 

@@ -19,8 +19,8 @@
 
 params ["_player", ["_maxDistance", 5, [0]]];
 
-if (!GVAR(bushcutter_enabled)) exitwith {false};
-if (!([_player, objNull] call ace_common_fnc_canInteractWith)) exitwith {false};
+if (!GVAR(bushcutter_enabled)) exitWith {false};
+if (!([_player, objNull] call ace_common_fnc_canInteractWith)) exitWith {false};
 
 private _hasItem = if (GVAR(bushcutter_requireItem)) then {
     count (([_player] call ace_common_fnc_uniqueItems) arrayIntersect keys GVAR(bushCutterCache)) > 0

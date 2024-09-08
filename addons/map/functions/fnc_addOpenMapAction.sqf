@@ -19,7 +19,7 @@
 
 params [["_map", objNull, [objNull]]];
 
-CHECK(!hasinterface || isNull _map);
+CHECK(!hasInterface || isNull _map);
 
 private _openMap = [
     QGVAR(openMap),

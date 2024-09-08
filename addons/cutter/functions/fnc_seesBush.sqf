@@ -20,7 +20,7 @@
 params ["_player", ["_maxDistance", 5, [0]]];
 
 private _startPosASL = eyePos _player;
-private _endPosASL = _startPosASL vectoradd (getCameraViewDirection _player vectorMultiply _maxDistance);
+private _endPosASL = _startPosASL vectorAdd (getCameraViewDirection _player vectorMultiply _maxDistance);
 
 private _intersections = lineIntersectsSurfaces [_startPosASL, _endPosASL, _player, objNull, true, 1, "VIEW"];
 
