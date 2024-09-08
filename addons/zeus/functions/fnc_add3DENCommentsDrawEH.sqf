@@ -71,7 +71,7 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
 
 // MapDraw EH needs to be readded every time the zeus display is opened.
 LOG("Adding 3DENComments map draw");
-[_display displayCtrl ZEUS_MAP_CTRL, "draw", {
+[_display displayCtrl ZEUS_MAP_CTRL, "Draw", {
     params ["_mapCtrl"];
     _thisArgs params ["_3denComments"];
 
