@@ -16,7 +16,7 @@
  *
  */
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 private _action = [
     QGVAR(grasscutter),

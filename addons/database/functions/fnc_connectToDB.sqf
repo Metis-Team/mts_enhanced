@@ -25,7 +25,7 @@ params [
 CHECKRET(!isServer,[false]);
 
 private _result = "extdb3" callExtension "9:VERSION";
-If (_result isEqualTo "") exitWith {
+if (_result isEqualTo "") exitWith {
     ERROR("No extDB3 extension loaded");
     [false];
 };
@@ -42,13 +42,13 @@ if ([toLower _database, toLower _protocol] in GVAR(connections)) exitWith {
 };
 
 _result = parseSimpleArray ("extdb3" callExtension "9:LOCK_STATUS");
-If ((_result select 0) == 1) exitWith {
+if ((_result select 0) == 1) exitWith {
     ERROR("Communication to database is locked");
     [false];
 };
 
 _result = parseSimpleArray ("extdb3" callExtension format ["9:ADD_DATABASE:%1", _database]);
-If ((_result select 0) isEqualTo 0) exitWith {
+if ((_result select 0) isEqualTo 0) exitWith {
     ERROR_1("Cannot connect to database '%1'",_database);
     [false];
 };
@@ -64,7 +64,7 @@ TRACE_1("Current session ID",_sessionID);
 
 _result = parseSimpleArray ("extdb3" callExtension (format["9:ADD_DATABASE_PROTOCOL:%1:SQL_CUSTOM:%2:%3", _database, _sessionID, _protocol]));
 
-If ((_result select 0) isNotEqualTo 1) exitWith {
+if ((_result select 0) isNotEqualTo 1) exitWith {
     ERROR_1("Protocol '%1' not loaded",_protocol);
     [false];
 };

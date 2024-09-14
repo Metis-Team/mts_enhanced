@@ -16,7 +16,7 @@
  *
  */
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 private _placeMapAction = [
     QGVAR(placeMapAction),
@@ -40,7 +40,7 @@ private _placeMapAction = [
             params ["_player"];
 
             private _pos = _player getRelPos [1, 0];
-            _pos set [2, (getposATL _player) select 2];
+            _pos set [2, (getPosATL _player) select 2];
 
             private _map = GVAR(itemMapClassname) createVehicle [0, 0, 0];
             _map setDir ((getDir _player) + 90);

@@ -17,7 +17,7 @@
  *
  */
 
-params [["_unit", objnull, [objnull]], ["_isUnconscious", false, [false]]];
+params [["_unit", objNull, [objNull]], ["_isUnconscious", false, [false]]];
 TRACE_1("params",_this);
 
 CHECK(isNull _unit || !isPlayer _unit);
@@ -28,7 +28,7 @@ private _unconsciousPlayers = _curatorModule getVariable [QGVAR(unconsciousPlaye
 TRACE_3("Unconscious players",player,_curatorModule,_unconsciousPlayers);
 
 if (_isUnconscious) then {
-    _unconsciousPlayers pushbackUnique _unit;
+    _unconsciousPlayers pushBackUnique _unit;
 } else {
     private _unitIndex = _unconsciousPlayers findIf {_x isEqualTo _unit};
     // Unit wasn't unconscious before. Unit respawned manually -> do nothing

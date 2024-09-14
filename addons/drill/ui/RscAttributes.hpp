@@ -10,9 +10,9 @@ class RscTitles {
                 idc = -1;
                 text = QPATHTOF(ui\mts_StandStill.paa);
                 x = "SafeZoneX + (1792 / 1920) * SafeZoneW";
-                y = "SafeZoneY + (952 / 1080) * SafeZoneH";
+                y = "SafeZoneY + (952 / 1080) * safeZoneH";
                 w = "(128 / 1920) * SafeZoneW";
-                h = "(128 / 1080) * SafeZoneH";
+                h = "(128 / 1080) * safeZoneH";
             };
         };
         class controlsBackground {
@@ -20,9 +20,9 @@ class RscTitles {
                 idc = -1;
                 colorBackground[] = {0, 0, 0, 0.3};
                 x = "SafeZoneX + (1792 / 1920) * SafeZoneW";
-                y = "SafeZoneY + (952 / 1080) * SafeZoneH";
+                y = "SafeZoneY + (952 / 1080) * safeZoneH";
                 w = "(128 / 1920) * SafeZoneW";
-                h = "(128 / 1080) * SafeZoneH";
+                h = "(128 / 1080) * safeZoneH";
             };
         };
     };
@@ -35,9 +35,9 @@ class RscTitles {
                 idc = -1;
                 text = QPATHTOF(ui\mts_AtEase.paa);
                 x = "SafeZoneX + (1792 / 1920) * SafeZoneW";
-                y = "SafeZoneY + (952 / 1080) * SafeZoneH";
+                y = "SafeZoneY + (952 / 1080) * safeZoneH";
                 w = "(128 / 1920) * SafeZoneW";
-                h = "(128 / 1080) * SafeZoneH";
+                h = "(128 / 1080) * safeZoneH";
             };
         };
         class controlsBackground {
@@ -45,9 +45,9 @@ class RscTitles {
                 idc = -1;
                 colorBackground[] = {0, 0, 0, 0.3};
                 x = "SafeZoneX + (1792 / 1920) * SafeZoneW";
-                y = "SafeZoneY + (952 / 1080) * SafeZoneH";
+                y = "SafeZoneY + (952 / 1080) * safeZoneH";
                 w = "(128 / 1920) * SafeZoneW";
-                h = "(128 / 1080) * SafeZoneH";
+                h = "(128 / 1080) * safeZoneH";
             };
         };
     };

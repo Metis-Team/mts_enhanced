@@ -89,7 +89,7 @@ if (!GVAR(ACEIcon_drawEHAdded)) then {
 
 // MapDraw EH needs to be readded every time the zeus display is opened.
 LOG("Adding ACEUnconsciousIcon map draw");
-[_display displayCtrl ZEUS_MAP_CTRL, "draw", {
+[_display displayCtrl ZEUS_MAP_CTRL, "Draw", {
     params ["_mapCtrl"];
     _thisArgs params ["_curatorModule"];
 

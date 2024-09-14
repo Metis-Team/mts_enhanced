@@ -20,7 +20,7 @@
     {
         params["", ["_vehicle", objNull, [objNull]]];
 
-        if (!(_vehicle isKindOf "LandVehicle") || {isnull _vehicle}) exitWith {
+        if (!(_vehicle isKindOf "LandVehicle") || {isNull _vehicle}) exitWith {
             [LLSTRING(unflipVehicle_noVeh)] call zen_common_fnc_showMessage;
         };
 

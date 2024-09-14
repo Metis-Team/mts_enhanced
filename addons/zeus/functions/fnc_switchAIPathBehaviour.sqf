@@ -26,7 +26,7 @@ curatorSelected params ["_objects"];
 
 //enable/disable movement for each selected unit
 {
-    CHECK((isPlayer _x) || {(count (crew _x)) isEqualTo 0} || {isnull _x});
+    CHECK((isPlayer _x) || {(count (crew _x)) isEqualTo 0} || {isNull _x});
     if (_enableAI) then {
         [_x, _section] remoteExecCall ["enableAI", _x];
     } else {
