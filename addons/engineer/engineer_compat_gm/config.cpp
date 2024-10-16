@@ -6,7 +6,9 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"gm_core"};
+        requiredAddons[] = {
+            "gm_vehicles_land_tracked_bpz2"
+        };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(main,authors);
         authors[] = {"Timi007"};
