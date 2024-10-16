@@ -17,5 +17,23 @@
             <German>Minenräumleiter zünden</German>
         </Key>
     </Container>
+    <Container name="mine_clearing">
+        <Key ID="STR_mts_engineer_mineClearingDisplayName">
+            <Original>Enable mine clearing</Original>
+            <German>Erlaube Räumfahrten</German>
+        </Key>
+        <Key ID="STR_mts_engineer_mineClearingTooltip">
+            <Original>Adds actions to clear mines using the plow of the the vehicle.</Original>
+            <German>Fügt Aktionen hinzu, um Minen zu räumen.</German>
+        </Key>
+        <Key ID="STR_mts_engineer_startMineClearing">
+            <Original>Start mine clearing</Original>
+            <German>Räumfahrt beginnen</German>
+        </Key>
+        <Key ID="STR_mts_engineer_stopMineClearing">
+            <Original>Stop mine clearing</Original>
+            <German>Räumfahrt beenden</German>
+        </Key>
+    </Container>
     </Package>
 </Project>
