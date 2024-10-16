@@ -3,7 +3,7 @@
  *  Author: Timi007
  *
  *  Description:
- *      Description
+ *      Spawn and move the particles during mine clearing.
  *
  *  Parameter(s):
  *      0: OBJECT - Mine clearing vehicle (ABV/MiRPz)
