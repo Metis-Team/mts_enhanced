@@ -1,3 +1,5 @@
+CHECK(!hasInterface);
+
 [
     [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(StandStill_keybind),

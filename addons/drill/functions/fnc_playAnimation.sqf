@@ -6,7 +6,7 @@
  *      Executes given animation.
  *
  *  Parameter(s):
- *      0: STRING - Animation name
+ *      0: STRING - Animation name. ("mts_drill_StandStill", "mts_drill_AtEase", "mts_drill_Salute", or "mts_drill_FY")
  *
  *  Returns:
  *      Nothing
@@ -16,98 +16,104 @@
  *
  */
 
-params ["_animName"];
+params [["_animName", "", [""]]];
 
-private _currAnimState = animationState ACE_player;
-private _doAnimation = "";
-private _doAnimationTwo = "";
+private _player = call CBA_fnc_currentUnit;
+private _currAnimState = animationState _player;
+private _animationSequence = [];
+
 TRACE_2("",_animName,_currAnimState);
 
 if (_animName isEqualTo QGVAR(StandStill)) then {
     if (_currAnimState == "AmovPercMstpSnonWnonDnon") then {
-        _doAnimation = QGVAR(AmovPercMstpSnonWnonDnon_StandStill);
+        _animationSequence = [QGVAR(AmovPercMstpSnonWnonDnon_StandStill), QGVAR(StandStill)];
+
         if (GVAR(UIEnabled)) then {
-             cutRsc [QGVAR(StandStill),"PLAIN"];
+            cutRsc [QGVAR(StandStill), "PLAIN"];
         };
-     };
+    };
     if (_currAnimState == QGVAR(StandStill)) then {
-        _doAnimation = QGVAR(StandStill_AmovPercMstpSnonWnonDnon);
+        _animationSequence = [QGVAR(StandStill_AmovPercMstpSnonWnonDnon)];
+
         if (GVAR(UIEnabled)) then {
             cutText ["", "PLAIN"];
         };
     };
     if (_currAnimState == QGVAR(AtEase)) then {
-        _doAnimation = QGVAR(AtEase_StandStill);
+        _animationSequence = [QGVAR(AtEase_StandStill), QGVAR(StandStill)];
+
         if (GVAR(UIEnabled)) then {
             cutText ["", "PLAIN"];
-            cutRsc [QGVAR(StandStill),"PLAIN"];
+            cutRsc [QGVAR(StandStill), "PLAIN"];
         };
     };
     if (_currAnimState == "AmovPercMstpSnonWnonDnon_Salute") then {
-        _doAnimation = "AmovPercMstpSnonWnonDnon_SaluteOut";
-        _doAnimationTwo = QGVAR(AmovPercMstpSnonWnonDnon_StandStill);
+        _animationSequence = ["AmovPercMstpSnonWnonDnon_SaluteOut", QGVAR(AmovPercMstpSnonWnonDnon_StandStill), QGVAR(StandStill)];
+
         if (GVAR(UIEnabled)) then {
-            cutRsc [QGVAR(StandStill),"PLAIN"];
+            cutRsc [QGVAR(StandStill), "PLAIN"];
         };
     };
 };
 
 if (_animName isEqualTo QGVAR(AtEase)) then {
     if (_currAnimState == "AmovPercMstpSnonWnonDnon") then {
-        _doAnimation = QGVAR(AmovPercMstpSnonWnonDnon_AtEase);
+        _animationSequence = [QGVAR(AmovPercMstpSnonWnonDnon_AtEase), QGVAR(AtEase)];
+
         if (GVAR(UIEnabled)) then {
-            cutRsc [QGVAR(AtEase),"PLAIN"];
+            cutRsc [QGVAR(AtEase), "PLAIN"];
         };
     };
     if (_currAnimState == QGVAR(AtEase)) then {
-        _doAnimation = QGVAR(AtEase_AmovPercMstpSnonWnonDnon);
+        _animationSequence = [QGVAR(AtEase_AmovPercMstpSnonWnonDnon)];
+
         if (GVAR(UIEnabled)) then {
             cutText ["", "PLAIN"];
         };
     };
     if (_currAnimState == QGVAR(StandStill)) then {
-        _doAnimation = QGVAR(StandStill_AtEase);
+        _animationSequence = [QGVAR(StandStill_AtEase), QGVAR(AtEase)];
+
         if (GVAR(UIEnabled)) then {
             cutText ["", "PLAIN"];
-            cutRsc [QGVAR(AtEase),"PLAIN"];
+            cutRsc [QGVAR(AtEase), "PLAIN"];
         };
     };
     if (_currAnimState == "AmovPercMstpSnonWnonDnon_Salute") then {
-        _doAnimation = "AmovPercMstpSnonWnonDnon_SaluteOut";
-        _doAnimationTwo = QGVAR(AmovPercMstpSnonWnonDnon_AtEase);
+        _animationSequence = ["AmovPercMstpSnonWnonDnon_SaluteOut", QGVAR(AmovPercMstpSnonWnonDnon_AtEase), QGVAR(AtEase)];
+
         if (GVAR(UIEnabled)) then {
-            cutRsc [QGVAR(AtEase),"PLAIN"];
+            cutRsc [QGVAR(AtEase), "PLAIN"];
         };
     };
 };
 
 if (_animName isEqualTo QGVAR(FY)) then {
     if (_currAnimState == "AmovPercMstpSnonWnonDnon") then {
-        _doAnimation = QGVAR(FY)};
+        _animationSequence = [QGVAR(FY)];
+    };
 };
 
 if (_animName isEqualTo QGVAR(Salute)) then {
     if (_currAnimState == QGVAR(StandStill)) then {
-        _doAnimation = QGVAR(StandStill_AmovPercMstpSnonWnonDnon);
-        _doAnimationTwo = "AmovPercMstpSnonWnonDnon_SaluteIn";
+        _animationSequence = [QGVAR(StandStill_AmovPercMstpSnonWnonDnon), "AmovPercMstpSnonWnonDnon_SaluteIn"];
+
         if (GVAR(UIEnabled)) then {
             cutText ["", "PLAIN"];
         };
     };
     if (_currAnimState == QGVAR(AtEase)) then {
-        _doAnimation = QGVAR(StandStill_AmovPercMstpSnonWnonDnon);
-        _doAnimationTwo = "AmovPercMstpSnonWnonDnon_SaluteIn";
+        _animationSequence = [QGVAR(AtEase_AmovPercMstpSnonWnonDnon), "AmovPercMstpSnonWnonDnon_SaluteIn"];
+
         if (GVAR(UIEnabled)) then {
             cutText ["", "PLAIN"];
         };
     };
 };
 
+TRACE_1("Animation Sequence",_animationSequence);
 
-if (_doAnimation isNotEqualTo "") then {
-    [ACE_player, _doAnimation, 2] call ace_common_fnc_doAnimation;
-};
-
-if (_doAnimationTwo isNotEqualTo "") then {
-    [ACE_player, _doAnimationTwo, 0] call ace_common_fnc_doAnimation;
-};
+{
+    // First entry is played with switchmove, other with playmove
+    [_player, _x, [0, 2] select (_forEachIndex isEqualTo 0)] call ace_common_fnc_doAnimation;
+} forEach _animationSequence;
