@@ -23,7 +23,7 @@ CHECKRET(!local _vehicle,ERROR_1("Called on non-local vehicle '%1'",_vehicle));
 
 _vehicle setVariable [QGVAR(mineClearingActive), true, true];
 
-// _vehicle allowDamage false;
+_vehicle allowDamage false;
 
 _vehicle setCruiseControl [MAX_MINE_CLEARING_SPEED, false];
 
@@ -37,29 +37,6 @@ if (_vehicle isKindOf "gm_BPz2a0_base") then {
 };
 
 _vehicle animateSource _animationSource;
-
-private _ehHandle = _vehicle addEventHandler ["HandleDamage", {
-    params ["_vehicle", "_selection", "_damage", "_source", "_projectile"];
-
-    TRACE_1("HandleDamage",_this);
-
-    if (_projectile isEqualTo "") exitWith {nil};
-    if (_damage < 0.01) exitWith {nil};
-
-    if (
-        (_projectile isKindOf "TimeBombCore") ||
-        {_projectile isKindOf "DirectionalBombBase"} ||
-        {_projectile isKindOf "BoundingMineBase"} ||
-        {_projectile isKindOf "MineBase"} ||
-        {_projectile isKindOf "PipeBombBase"}
-    ) exitWith {
-        TRACE_1("HandleDamage No damage",_projectile);
-        0
-    };
-
-    nil
-}];
-_vehicle setVariable [QGVAR(mineClearingEHHandle), _ehHandle, true];
 
 [{
     params ["_vehicle", "_animationSource"];
@@ -81,7 +58,7 @@ _vehicle setVariable [QGVAR(mineClearingEHHandle), _ehHandle, true];
             [_PFHID] call CBA_fnc_removePerFrameHandler;
         };
 
-        if ((isNull GVAR(lastDirtPatch)) || (_vehicle distance GVAR(lastDirtPatch) > 2.5)) then {
+        if ((isNull GVAR(lastDirtPatch)) || (_vehicle distance GVAR(lastDirtPatch) > DIRT_PATCH_DISTANCE)) then {
             private _dirtPatch = createVehicle ["Land_DirtPatch_01_6x8_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
             private _dirtPatchPosASL = AGLToASL (_vehicle modelToWorldVisual [0, 2, 0]);
             _dirtPatch setPosASL _dirtPatchPosASL;

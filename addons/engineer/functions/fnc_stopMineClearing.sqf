@@ -21,11 +21,6 @@ params [["_vehicle", objNull, [objNull]]];
 CHECK(isNull _vehicle);
 CHECKRET(!local _vehicle,ERROR_1("Called on non-local vehicle '%1'",_vehicle));
 
-private _ehHandle = _vehicle getVariable QGVAR(mineClearingEHHandle);
-if (!isNil "_ehHandle") then {
-    _vehicle removeEventHandler ["HandleDamage", _ehHandle];
-};
-
 if (_vehicle isKindOf "B_APC_Tracked_01_CRV_F") then {
     _vehicle animateSource ["moveplow", 0]; // for vanilla
 };
