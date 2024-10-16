@@ -47,3 +47,14 @@ _vehicle addAction [
     "", // shortcut
     QUOTE([ARR_2(_target,_this)] call FUNC(canStopMineClearing))
 ];
+
+// If driver leaves vehicle during mine clearing, speed limiter is reset
+_vehicle addEventHandler ["GetIn", {
+    params ["_vehicle", "_role"];
+
+    if !(_vehicle getVariable [QGVAR(mineClearingActive), false]) exitWith {};
+    if (_role isNotEqualTo "driver") exitWith {};
+
+    // Set speed limiter again
+    _vehicle setCruiseControl [MAX_MINE_CLEARING_SPEED, false];
+}];
