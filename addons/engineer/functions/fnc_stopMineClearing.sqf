@@ -30,6 +30,9 @@ if (_vehicle isKindOf "gm_BPz2a0_base") then {
 
 _vehicle setCruiseControl [0, false];
 
-_vehicle allowDamage true;
+if (_vehicle getVariable [QGVAR(originalIsDamageAllowed), true]) then {
+    _vehicle allowDamage true;
+};
+
 
 _vehicle setVariable [QGVAR(mineClearingActive), false, true];

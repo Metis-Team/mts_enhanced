@@ -22,6 +22,7 @@ CHECK(isNull _vehicle);
 CHECKRET(!local _vehicle,ERROR_1("Called on non-local vehicle '%1'",_vehicle));
 
 _vehicle setVariable [QGVAR(mineClearingActive), true, true];
+_vehicle setVariable [QGVAR(originalIsDamageAllowed), isDamageAllowed _vehicle, true];
 
 _vehicle allowDamage false;
 

@@ -52,10 +52,17 @@ _vehicle addAction [
 _vehicle addEventHandler ["Local", {
     params ["_vehicle", "_isLocal"];
 
-    if (!_isLocal || {!(_vehicle getVariable [QGVAR(mineClearingActive), false])}) exitWith {};
     TRACE_1("Locality changed during mine clearing",_this);
 
-    // Set speed limiter again
-    _vehicle setCruiseControl [MAX_MINE_CLEARING_SPEED, false];
-    _vehicle allowDamage false;
+    if (_vehicle getVariable [QGVAR(mineClearingActive), false]) then {
+        // Set speed limiter and damage again
+        _vehicle setCruiseControl [MAX_MINE_CLEARING_SPEED, false];
+        _vehicle allowDamage false;
+    } else {
+        // Set speed limiter and damage again
+        _vehicle setCruiseControl [0, false];
+        if (_vehicle getVariable [QGVAR(originalIsDamageAllowed), true]) then {
+            _vehicle allowDamage true;
+        };
+    };
 }];
