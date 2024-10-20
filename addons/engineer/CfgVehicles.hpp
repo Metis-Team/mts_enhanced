@@ -56,4 +56,22 @@ class CfgVehicles {
         ace_dragging_canDrag = 1;
         ace_dragging_dragPosition[] = {0, 1.2, 0};
     };
+
+    // Assault Breacher Vehicle / MiRPz
+    class APC_Tracked_01_base_F;
+    class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
+        class Attributes;
+    };
+    class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
+        class Attributes: Attributes {
+            class GVAR(mineClearing) {
+                displayName = CSTRING(mineClearingDisplayName);
+                property = QGVAR(enableMineClearing);
+                control = "Checkbox";
+                defaultValue = "true";
+                typeName = "BOOL";
+                expression = QUOTE(_this setVariable [ARR_3(QQGVAR(enableMineClearing),_value,true)];); // Only run on server
+            };
+        };
+    };
 };

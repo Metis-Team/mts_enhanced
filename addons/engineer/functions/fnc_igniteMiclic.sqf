@@ -16,7 +16,7 @@
  *      Nothing.
  *
  *  Example:
- *      [this] call mts_items_fnc_igniteMiclic
+ *      [this] call mts_engineer_fnc_igniteMiclic
  *
  */
 
