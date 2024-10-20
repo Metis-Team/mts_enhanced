@@ -30,11 +30,11 @@ if (ctrlVisible IDC_BUTTON_SAVE_EQUIPMENT) then {
 
     private _display = ctrlParent _ctrlArsenal;
 
-    private _object = (_display displayCtrl IDC_BUTTON_NEW_EQUIPMENT) getVariable [ARR_2(QGVAR(attachedObject), objNull)];
+    private _object = (_display displayCtrl IDC_BUTTON_NEW_EQUIPMENT) getVariable [QGVAR(attachedObject), objNull];
 
     private _ctrlSave = (_display displayCtrl IDC_BUTTON_SAVE_EQUIPMENT);
-    private _idc = _ctrlSave getVariable [ARR_2(QGVAR(idc), -1)];
-    private _category =  _ctrlSave getVariable [ARR_2(QGVAR(category), -1)];
+    private _idc = _ctrlSave getVariable [QGVAR(idc), -1];
+    private _category =  _ctrlSave getVariable [QGVAR(category), -1];
 
     GVAR(arsenalEditorReopeningVars) = [ctrlText IDC_TEXT_TITLE, _object, _idc, _category, _eventID];
     TRACE_1("",GVAR(arsenalEditorReopeningVars));

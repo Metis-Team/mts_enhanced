@@ -17,7 +17,7 @@
  */
 
 params [["_equipmentName", "", [""]]];
-TRACE_1("", _equipmentName);
+TRACE_1("",_equipmentName);
 
 CHECKRET(!GVAR(initialized) || _equipmentName isEqualTo "",false);
 CHECKRET(!isDedicated && !(isServer && GVAR(allowPlayerDBConnection)),false);
@@ -31,7 +31,7 @@ if (_equipmentInfo isEqualTo []) exitWith {
 };
 
 (_equipmentInfo select 0) params ["_equipmentID", "_editors", "_arsenal"];
-TRACE_3("EquipmentInfo", _equipmentID, _editors, _arsenal);
+TRACE_3("EquipmentInfo",_equipmentID,_editors,_arsenal);
 
 private _loadoutNamespace = [true] call CBA_fnc_createNamespace;
 private _backpackNamespace = [true] call CBA_fnc_createNamespace;

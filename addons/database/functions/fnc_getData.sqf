@@ -27,7 +27,7 @@ _query = _query joinString ":";
 private _return = parseSimpleArray ("extdb3" callExtension _query);
 
 switch (_return select 0) do {
-    case 0 : {ERROR(format[ARR_2("Database Error: %1",(_return select 1))]);};
+    case 0 : {ERROR_1("Database Error: %1",(_return select 1));};
     case 2 : {_return = (_return select 1) call FUNC(multiMsg);};
 };
 (_return select 1);

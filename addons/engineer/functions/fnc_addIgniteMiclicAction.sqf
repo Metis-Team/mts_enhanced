@@ -16,8 +16,10 @@
  *
  */
 
-#define ACTION_DURATION 3 // Seconds
-#define ACTION_RANGE 2 // Meters
+// Duration in Seconds
+#define ACTION_DURATION 3
+// Range in Meters
+#define ACTION_RANGE 2
 
 params ["_miclic"];
 

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 private _worldMap = format ["Land_Map_%1_F", worldName];
 if (!isNull (configFile >> "CfgVehicles" >> _worldMap)) then {

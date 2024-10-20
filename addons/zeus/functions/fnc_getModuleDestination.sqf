@@ -53,7 +53,7 @@ params [
     ["_beforeDrawingCode", {}, [{}]]
 ];
 
-TRACE_1("called", GVAR(moduleDestination_running));
+TRACE_1("called",GVAR(moduleDestination_running));
 
 if (GVAR(moduleDestination_running)) exitWith {
     [false, _startPosASL, [0,0,0], false, false, false, _args] call _code;
@@ -63,7 +63,7 @@ if (GVAR(moduleDestination_running)) exitWith {
 GVAR(moduleDestination_running) = true;
 
 // Add mouse button eh for the zeus display (triggered from 2d or 3d)
-GVAR(moduleDestination_displayEHMouse) = [findDisplay ZEUS_DISPLAY, "mouseButtonDown", {
+GVAR(moduleDestination_displayEHMouse) = [findDisplay ZEUS_DISPLAY, "MouseButtonDown", {
     params ["", "_mouseButton", "", "", "_shift", "_ctrl", "_alt"];
 
     if (_mouseButton != 0) exitWith {}; // Only watch for LMB
@@ -110,14 +110,14 @@ GVAR(moduleDestination_displayEHKeyboard) = [findDisplay ZEUS_DISPLAY, "KeyDown"
 }, [_startPosASL, _code, _args]] call CBA_fnc_addBISEventHandler;
 
 // Add draw EH for the zeus map - draws the 2D icon and line
-GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEUS_MAP_CTRL), "draw", {
+GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEUS_MAP_CTRL), "Draw", {
     params ["_mapCtrl"];
 
     _thisArgs params ["_startPosASL", "_text", "_icon", "_color", "_angle", "_drawLine", "_drawIconAtStart", "_beforeDrawingCode"];
 
     private _pos2d = (((findDisplay ZEUS_DISPLAY) displayCtrl ZEUS_MAP_CTRL) ctrlMapScreenToWorld getMousePosition);
 
-    private _drawingInfo = [ASLtoAGL _startPosASL, _pos2d, _text, _icon, _color, _angle, false] call _beforeDrawingCode;
+    private _drawingInfo = [ASLToAGL _startPosASL, _pos2d, _text, _icon, _color, _angle, false] call _beforeDrawingCode;
 
     if (isNil "_drawingInfo") then {
         _drawingInfo = [];
@@ -125,7 +125,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEU
 
     _drawingInfo params [["_iconInfo", [], [[]]], ["_lineInfo", [], [[]]]];
     _iconInfo params [["_newPos", _pos2d, [[], objNull]], ["_newText", _text, [""]], ["_newIcon", _icon, [""]], ["_newIconColor", _color, [[]]], ["_newAngle", _angle, [0]]];
-    _lineInfo params [["_startLinePos", ASLtoAGL _startPosASL, [[], objNull]], ["_endLinePos", _pos2d, [[], objNull]], ["_newLineColor", _color, [[]]]];
+    _lineInfo params [["_startLinePos", ASLToAGL _startPosASL, [[], objNull]], ["_endLinePos", _pos2d, [[], objNull]], ["_newLineColor", _color, [[]]]];
 
     _mapCtrl drawIcon [_newIcon, _newIconColor, _newPos, 24, 24, _newAngle, _newText, 1, 0.03, "TahomaB", "right"];
     if (_drawIconAtStart) then {
@@ -150,7 +150,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEU
         // Draw the 3d icon and line
         private _mousePosAGL = screenToWorld getMousePosition;
 
-        private _drawingInfo = [ASLtoAGL _startPosASL, _mousePosAGL, _text, _icon, _color, _angle, true] call _beforeDrawingCode;
+        private _drawingInfo = [ASLToAGL _startPosASL, _mousePosAGL, _text, _icon, _color, _angle, true] call _beforeDrawingCode;
 
         if (isNil "_drawingInfo") then {
             _drawingInfo = [];
@@ -158,7 +158,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEU
 
         _drawingInfo params [["_iconInfo", [], [[]]], ["_lineInfo", [], [[]]]];
         _iconInfo params [["_newPos", _mousePosAGL, [[], objNull]], ["_newText", _text, [""]], ["_newIcon", _icon, [""]], ["_newIconColor", _color, [[]]], ["_newAngle", _angle, [0]]];
-        _lineInfo params [["_startLinePos", ASLtoAGL _startPosASL, [[], objNull]], ["_endLinePos", _mousePosAGL, [[], objNull]], ["_newLineColor", _color, [[]]]];
+        _lineInfo params [["_startLinePos", ASLToAGL _startPosASL, [[], objNull]], ["_endLinePos", _mousePosAGL, [[], objNull]], ["_newLineColor", _color, [[]]]];
 
         drawIcon3D [_newIcon, _newIconColor, _newPos, 1.5, 1.5, _newAngle, _newText];
         if (_drawIconAtStart) then {
@@ -172,9 +172,9 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEU
         TRACE_4("cleaning up",_this select 1,GVAR(moduleDestination_displayEHMouse),GVAR(moduleDestination_displayEHKeyboard),GVAR(moduleDestination_mapDrawEH));
 
         (_this select 1) call CBA_fnc_removePerFrameHandler;
-        (findDisplay ZEUS_DISPLAY) displayRemoveEventHandler ["mouseButtonDown", GVAR(moduleDestination_displayEHMouse)];
+        (findDisplay ZEUS_DISPLAY) displayRemoveEventHandler ["MouseButtonDown", GVAR(moduleDestination_displayEHMouse)];
         (findDisplay ZEUS_DISPLAY) displayRemoveEventHandler ["KeyDown", GVAR(moduleDestination_displayEHKeyboard)];
-        ((findDisplay ZEUS_DISPLAY) displayCtrl ZEUS_MAP_CTRL) ctrlRemoveEventHandler ["draw", GVAR(moduleDestination_mapDrawEH)];
+        ((findDisplay ZEUS_DISPLAY) displayCtrl ZEUS_MAP_CTRL) ctrlRemoveEventHandler ["Draw", GVAR(moduleDestination_mapDrawEH)];
         GVAR(moduleDestination_displayEHMouse) = nil;
         GVAR(moduleDestination_displayEHKeyboard) = nil;
         GVAR(moduleDestination_mapDrawEH) = nil;

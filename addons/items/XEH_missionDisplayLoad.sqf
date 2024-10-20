@@ -11,7 +11,7 @@ _display displayAddEventHandler ["MouseZChanged", {
 
 _display displayAddEventHandler ["MouseButtonDown", {
     params ["", "_button"];
-    CHECKRET(GVAR(isPlacing) isNotEqualTo PLACE_WAITING, false);
-    CHECKRET(_button isNotEqualTo 1, false); //1 = Left mouse button
+    CHECKRET(GVAR(isPlacing) isNotEqualTo PLACE_WAITING,false);
+    CHECKRET(_button isNotEqualTo 1,false); //1 = Left mouse button
     GVAR(isPlacing) = PLACE_CANCEL;
 }];

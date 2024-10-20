@@ -19,7 +19,7 @@
  */
 
 params [["_player", objNull, [objNull]], ["_item", "", [""]]];
-TRACE_2("Placing marker", _player, _item);
+TRACE_2("Placing marker",_player,_item);
 
 CHECK(_item isEqualTo "");
 
@@ -27,7 +27,7 @@ CHECK(_item isEqualTo "");
 
 private _marker = _vehicleClass createVehicle [0, 0, 0];
 
-TRACE_1("Created marker", _marker);
+TRACE_1("Created marker",_marker);
 
 // Set marker start height
 GVAR(objectHeight) = MAX_HEIGHT;

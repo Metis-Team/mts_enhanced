@@ -30,7 +30,7 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 };
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 ["zeus", {
     params ["_name"];
@@ -180,7 +180,7 @@ CHECK(!hasinterface);
     params ["_names"];
     private _units = [];
 
-    CHECKRET(_names isEqualTo "", systemchat LLSTRING(chatCommands_falseArgument));
+    CHECKRET(_names isEqualTo "",systemChat LLSTRING(chatCommands_falseArgument));
 
     _names = _names splitString "~";
     private _count = {
@@ -189,7 +189,7 @@ CHECK(!hasinterface);
     } count _names;
 
     if (objNull in _units) exitWith {
-        systemchat LLSTRING(chatCommands_falseArgument);
+        systemChat LLSTRING(chatCommands_falseArgument);
     };
 
     if (_count isEqualTo 1) then {
@@ -200,7 +200,7 @@ CHECK(!hasinterface);
     private _vehicle = objectParent _unitA;
 
     if (!isNull _vehicle && {speed _vehicle > 1} && {((getPos _vehicle) select 2) > 2}) exitWith {
-        systemchat LLSTRING(chatCommands_teleportError);
+        systemChat LLSTRING(chatCommands_teleportError);
     };
     if (!isNull _vehicle) then {
         [_unitA, ["Eject", _vehicle]] remoteExecCall ["action", _unitA];
@@ -215,7 +215,7 @@ CHECK(!hasinterface);
             _unitA setPos (_unitB getRelPos [-1, 0]);
         } else {
             private _moveInAnyResult = _unitA moveInAny _vehicle;
-            if (!_moveInAnyResult) exitWith {systemchat LLSTRING(chatCommands_teleportError);};
+            if (!_moveInAnyResult) exitWith {systemChat LLSTRING(chatCommands_teleportError);};
         };
     }, _units, 0.5] call CBA_fnc_waitAndExecute;
 }, "adminLogged"] call CBA_fnc_registerChatCommand;

@@ -16,7 +16,7 @@
  *
  */
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 #define SOUND_DISTANCE 30
 #define SOUND_VOLUME 5

@@ -34,7 +34,7 @@ CHECK(!isDedicated && !(isServer && GVAR(allowPlayerDBConnection)));
 
 (GVAR(equipment) getVariable [_equipmentName, []]) params ["_loadoutNamespace", "", "", "_equipmentID"];
 _loadoutNamespace getVariable [_name, []] params ["", "_idc", "_loadout", "_ace_medic", "_ace_engineer"];
-TRACE_8("updateLoadout",_equipmentName, _equipmentID,_name,_oldName,_idc,_ace_medic,_ace_engineer,_loadout);
+TRACE_8("updateLoadout",_equipmentName,_equipmentID,_name,_oldName,_idc,_ace_medic,_ace_engineer,_loadout);
 
 if (_oldName isEqualTo "") exitWith {
     [GVAR(sessionID), "insertLoadout", _name, _idc, _loadout, _ace_medic, _ace_engineer, _equipmentID] call DB_SET;

@@ -25,7 +25,7 @@ private _return = "";
 private "_pipe";
 while {true} do {
     _pipe = "extdb3" callExtension format["5:%1",_key];
-    If (_pipe isEqualTo "") exitWith {};
+    if (_pipe isEqualTo "") exitWith {};
     _return = _return + _pipe;
 };
 parseSimpleArray _return;

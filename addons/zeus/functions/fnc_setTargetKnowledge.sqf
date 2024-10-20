@@ -21,12 +21,12 @@
 
 params [["_type", "REVEAL", [""]], ["_selectedUnits", [], [[]]]];
 
-TRACE_1("setTargetKnowledge called", _this);
+TRACE_1("setTargetKnowledge called",_this);
 
 private _allUnits = flatten (_selectedUnits apply {crew _x});
 private _units = _allUnits arrayIntersect _allUnits; // Remove duplicate units
 
-TRACE_1("", _units);
+TRACE_1("",_units);
 
 if (_units isEqualTo []) exitWith {
     [LLSTRING(AI_noAI)] call zen_common_fnc_showMessage;
@@ -54,7 +54,7 @@ private _drawLine = (count _units) isEqualTo 1;
     curatorMouseOver params ["_typeName", "_target"];
 
     // Make sure target is an AI or a player
-    if (!(_typeName isEqualTo "OBJECT") || {(count (crew _target)) isEqualTo 0} || {isnull _target}) exitWith {
+    if (!(_typeName isEqualTo "OBJECT") || {(count (crew _target)) isEqualTo 0} || {isNull _target}) exitWith {
         [LLSTRING(AI_noTarget)] call zen_common_fnc_showMessage;
     };
 

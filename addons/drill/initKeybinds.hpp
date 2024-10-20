@@ -1,3 +1,5 @@
+CHECK(!hasInterface);
+
 [
     [LELSTRING(main,category), LLSTRING(subCategory)],
     QGVAR(StandStill_keybind),
@@ -32,7 +34,7 @@
 private _actionKeys = [];
 {
     if (((str _x) find ".") isEqualTo -1) then {
-        _actionKeys pushback _x;
+        _actionKeys pushBack _x;
     };
 } forEach actionKeys "Salute";
 TRACE_1("Salute Keys",_actionKeys);

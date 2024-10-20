@@ -17,17 +17,17 @@
     } forEach _toUnits;
 }] call CBA_fnc_addEventHandler;
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 GVAR(moduleDestination_running) = false;
 
 GVAR(3DENComments_drawEHAdded) = false;
 GVAR(3DENComments_data) = getMissionConfigValue [QGVAR(3denComments), []];
-TRACE_1("3DEN Comments", GVAR(3DENComments_data));
+TRACE_1("3DEN Comments",GVAR(3DENComments_data));
 
 GVAR(ACEIcon_drawEHAdded) = false;
 
-player addEventHandler ["killed", {
+player addEventHandler ["Killed", {
     params ["_unit"];
     [QGVAR(killed), [_unit, false]] call CBA_fnc_globalEvent;
 }];

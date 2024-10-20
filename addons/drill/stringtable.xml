@@ -18,15 +18,15 @@
             <German>Rührt euch</German>
         </Key>
 		<Key ID="STR_mts_drill_FY">
-            <Original>Give the Finger</Original>
+            <Original>Give the finger</Original>
             <German>Stinkefinger zeigen</German>
         </Key>
         <Key ID="STR_mts_drill_showUI">
-            <Original>Show Drill stance indicator</Original>
+            <Original>Show drill stance indicator</Original>
             <German>Zeige Formaldienst Haltungsindikator</German>
         </Key>
         <Key ID="STR_mts_drill_showUI_tooltip">
-            <Original>Show Drill stance indicator in bottom right corner.</Original>
+            <Original>Show drill stance indicator in bottom right corner.</Original>
             <German>Zeigt die Haltung für den Formaldienst unten rechts.</German>
         </Key>
 	</Package>

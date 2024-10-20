@@ -33,7 +33,7 @@ params [
 CHECK(!isServer);
 
 // Param checks
-CHECKRET(isNull _miclic, ERROR("Given miclic object does not exist."));
+CHECKRET(isNull _miclic,ERROR("Given miclic object does not exist."));
 if (_effectiveClearingDistance <= 0) then {
     WARNING("Effective clearing distance must be greater 0. Using default value.");
     _effectiveClearingDistance = DEFAULT_CLEARING_DISTANCE;

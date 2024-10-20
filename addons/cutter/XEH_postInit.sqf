@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _itemsAbleToCutBushes = (call (uiNamespace getVariable [QGVAR(itemsAbleToCutBushes), {[]}])) apply {_cfgWeapons >> _x};

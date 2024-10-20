@@ -2,7 +2,7 @@
 
 [QGVAR(updateArsenal), FUNC(updateArsenal)] call CBA_fnc_addEventHandler;
 
-TRACE_2("", isDedicated, GVAR(allowPlayerDBConnection));
+TRACE_2("",isDedicated,GVAR(allowPlayerDBConnection));
 
 if (isDedicated || (isServer && GVAR(allowPlayerDBConnection))) then {
 
@@ -38,15 +38,15 @@ if (isDedicated || (isServer && GVAR(allowPlayerDBConnection))) then {
     publicVariable QGVAR(initialized);
 };
 
-if (hasinterface) then {
+if (hasInterface) then {
     [QGVAR(openArmory), FUNC(openArmory)] call CBA_fnc_addEventhandler;
     [QGVAR(equipBackpack), FUNC(equipBackpack)] call CBA_fnc_addEventhandler;
     [QGVAR(equipLoadout), FUNC(equipLoadout)] call CBA_fnc_addEventhandler;
 
     [QGVAR(error), {
         params ["_unit", "_callBackEvent", "_args"];
-        ERROR(format [ARR_4("Something went wrong: Unit: %1 | CallBackEvent: %2 | Args: %3", _unit, _callBackEvent, _args)]);
-        if (hasinterface) then {
+        ERROR_3("Something went wrong: Unit: %1 | CallBackEvent: %2 | Args: %3",_unit,_callBackEvent,_args);
+        if (hasInterface) then {
             hint "MTS Armory:\nSomething went wrong, please take a look into your logfiles.";
         };
     }] call CBA_fnc_addEventhandler;

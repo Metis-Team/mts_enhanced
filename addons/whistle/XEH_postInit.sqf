@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-CHECK(!hasinterface);
+CHECK(!hasInterface);
 
 #include "initKeybinds.hpp"
 
