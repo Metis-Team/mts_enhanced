@@ -7,6 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
+            QUOTE(ADDON),
             "gm_vehicles_land_tracked_bpz2"
         };
         skipWhenMissingDependencies = 1;
