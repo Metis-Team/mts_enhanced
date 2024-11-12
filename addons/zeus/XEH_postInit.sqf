@@ -37,6 +37,7 @@ call FUNC(moduleUnflipVehicle);
 call FUNC(moduleForgetTarget);
 call FUNC(moduleRevealTarget);
 call FUNC(moduleTargetKnowledge);
+call FUNC(moduleSuicideDrone);
 
 call FUNC(contextMeasureDistance);
 
