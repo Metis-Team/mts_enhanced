@@ -309,5 +309,31 @@
             <German>Feuereröffnung der Gruppe auf feuerfrei geschaltet</German>
         </Key>
     </Container>
+    <Container name="suicideDrone">
+        <Key ID="STR_mts_zeus_suicideDrone">
+            <Original>Suicide drone</Original>
+            <German>Kamikaze-Drohne</German>
+        </Key>
+        <Key ID="STR_mts_zeus_suicideDrone_charge">
+            <Original>Charge</Original>
+            <German>Ladung</German>
+        </Key>
+        <Key ID="STR_mts_zeus_suicideDrone_noObject">
+            <Original>Place the module on a drone!</Original>
+            <German>Platziere das Modul auf eine Drohne!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_suicideDrone_notADrone">
+            <Original>Unit is not an active drone!</Original>
+            <German>Einheit ist keine aktive Drohne!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_suicideDrone_isAlreadySuicideDrone">
+            <Original>Drone is already a suicide drone!</Original>
+            <German>Drohne ist bereits eine Kamikaze-Drohne!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_suicideDrone_success">
+            <Original>Converted drone into suicide drone.</Original>
+            <German>Drohne in Kamikaze-Drohne umgewandelt.</German>
+        </Key>
+    </Container>
     </Package>
 </Project>
