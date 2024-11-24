@@ -23,3 +23,8 @@
 
 #define G 9.81 // Gravitational acceleration
 #define SPAWN_HEIGHT_OFFSET 0.5 // Spawn height of rocket relative to the miclic ATL position
+
+#define MAX_MINE_CLEARING_SPEED 5 // km/h
+#define DIRT_PATCH_UPDATE_INTERVAL 0.5 // Sec
+#define DIRT_SFX_UPDATE_INTERVAL 2 // Sec
+#define DIRT_PATCH_DISTANCE 2.5 // m
