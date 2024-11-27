@@ -58,12 +58,9 @@ class CfgVehicles {
     };
 
     // Assault Breacher Vehicle / MiRPz
-    class APC_Tracked_01_base_F;
-    class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
-        class Attributes;
-    };
+    class B_APC_Tracked_01_base_F;
     class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
-        class Attributes: Attributes {
+        class Attributes {
             class GVAR(mineClearing) {
                 displayName = CSTRING(mineClearingDisplayName);
                 property = QGVAR(enableMineClearing);

@@ -1,9 +1,9 @@
 class CfgVehicles {
-    class gm_Leopard1_base;
-    class gm_BPz2_base: gm_Leopard1_base {
+    class gm_tracked_Tank_base;
+    class gm_Leopard1_base: gm_tracked_Tank_base {
         class Attributes;
     };
-    class gm_BPz2a0_base: gm_BPz2_base {
+    class gm_BPz2_base: gm_Leopard1_base {
         class Attributes: Attributes {
             class GVAR(mineClearing) {
                 displayName = CSTRING(mineClearingDisplayName);
