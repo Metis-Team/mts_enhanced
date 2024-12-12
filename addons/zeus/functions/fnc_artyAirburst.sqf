@@ -29,12 +29,15 @@ TRACE_2("params",_projectile,_detonationHight);
 
     private _projectilePos = getPosATLVisual _projectile;
     if ((_projectilePos select 2) < _detonationHight) exitWith {
-        TRACE_2("burst",_projectilePos,typeOf _projectile);
+        private _projectilePosASL = getPosASLVisual _projectile;
+        private _projectileType = typeOf _projectile;
+        TRACE_2("burst",_projectilePosASL,_projectileType);
+
         deleteVehicle _projectile;
         "HelicopterExploSmall" createVehicle _projectilePos;
 
         // give projectile shrapnels
-        [getPosASLVisual _projectile, typeOf _projectile] call ace_frag_fnc_frago;
+        [_projectilePosASL, _projectileType] call ace_frag_fnc_frago;
 
         [_PFHID] call CBA_fnc_removePerFrameHandler;
     };
