@@ -66,17 +66,17 @@
                     _position set [2, 0];
                 };
 
-                call {
-                    if (_ammoType isEqualTo 0) exitWith {
+                switch (_ammoType) do {
+                    case 0: {
                         [FUNC(artyFireMissionHE), [_position, "Sh_155mm_AMOS", [_areaLenght, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
                     };
-                    if (_ammoType isEqualTo 1) exitWith {
+                    case 1: {
                         [FUNC(artyFireMissionHE), [_position, "Sh_82mm_AMOS", [_areaLenght, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
                     };
-                    if (_ammoType isEqualTo 2) exitWith {
+                    case 2: {
                         [FUNC(artyFireMissionSMOKE), [_position, [_areaLenght, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
                     };
-                    if (_ammoType isEqualTo 3) exitWith {
+                    case 3: {
                         [FUNC(artyFireMissionILLUM), [_position, [_areaLenght, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
                     };
                 };

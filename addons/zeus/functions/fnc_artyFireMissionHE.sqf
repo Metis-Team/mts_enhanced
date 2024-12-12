@@ -54,15 +54,17 @@ params [
         //select airburst hight
         private _detonationHight = [0, 15, 20, 30] select _airburstType;
 
-        if (_delayType isEqualTo 0) then {
-            [_position, _ammoType, _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
-        };
-        if (_delayType isEqualTo 1) then {
-            [_position, _ammoType, _ammoAmount, true, _duration, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
-        };
-        if (_delayType isEqualTo 2) then {
-            _ammoAmount = ceil (_duration / _delay);
-            [_position, _ammoType, _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+        switch (_delayType) do {
+            case 0: {
+                [_position, _ammoType, _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+            };
+            case 1: {
+                [_position, _ammoType, _ammoAmount, true, _duration, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+            };
+            case 2: {
+                _ammoAmount = ceil (_duration / _delay);
+                [_position, _ammoType, _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+            };
         };
     },
     {},
