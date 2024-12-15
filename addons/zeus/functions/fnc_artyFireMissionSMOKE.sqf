@@ -47,15 +47,17 @@ params [
             [LLSTRING(artillery_errorAmount)] call zen_common_fnc_showMessage;
         };
 
-        if (_delayType isEqualTo 0) then {
-            [_position, "Smoke_120mm_AMOS_White", _ammoAmount, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
-        };
-        if (_delayType isEqualTo 1) then {
-            [_position, "Smoke_120mm_AMOS_White", _ammoAmount, true, _duration, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
-        };
-        if (_delayType isEqualTo 2) then {
-            _ammoAmount = ceil (_duration / _delay);
-            [_position, "Smoke_120mm_AMOS_White", _ammoAmount, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+        switch (_delayType) do {
+            case 0: {
+                [_position, "Smoke_120mm_AMOS_White", _ammoAmount, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+            };
+            case 1: {
+                [_position, "Smoke_120mm_AMOS_White", _ammoAmount, true, _duration, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+            };
+            case 2: {
+                _ammoAmount = ceil (_duration / _delay);
+                [_position, "Smoke_120mm_AMOS_White", _ammoAmount, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+            };
         };
     },
     {},
