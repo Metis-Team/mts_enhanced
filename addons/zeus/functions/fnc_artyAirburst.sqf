@@ -21,18 +21,23 @@ params ["_projectile", "_detonationHight"];
 
 CHECK(!isServer);
 
+TRACE_2("params",_projectile,_detonationHight);
+
 [{
     params ["_argsArray", "_PFHID"];
     _argsArray params ["_projectile", "_detonationHight"];
 
-    private _projectilePos = getPosATL _projectile;
+    private _projectilePos = getPosATLVisual _projectile;
     if ((_projectilePos select 2) < _detonationHight) exitWith {
-        // give projectile shrapnels
-        [_projectilePos, velocity _projectile, "Sh_155mm_AMOS"] call ace_frag_fnc_frago;
+        private _projectilePosASL = getPosASLVisual _projectile;
+        private _projectileType = typeOf _projectile;
+        TRACE_2("burst",_projectilePosASL,_projectileType);
 
-        _projectile setVelocity [0,0,0];
-        "HelicopterExploSmall" createVehicle _projectilePos;
         deleteVehicle _projectile;
+        "HelicopterExploSmall" createVehicle _projectilePos;
+
+        // give projectile shrapnels
+        [_projectilePosASL, _projectileType] call ace_frag_fnc_frago;
 
         [_PFHID] call CBA_fnc_removePerFrameHandler;
     };

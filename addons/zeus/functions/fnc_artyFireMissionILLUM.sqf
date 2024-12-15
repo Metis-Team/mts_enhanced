@@ -37,28 +37,30 @@ params [
         (_this select 0) params ["_ammoAmount", "_detonationHight", "_delayType", "_delay", "_duration"];
         (_this select 1) params ["_position", "_impactArea", "_timeOnTarget"];
 
-       _ammoAmount = parseNumber _ammoAmount;
-       _detonationHight = parseNumber _detonationHight;
-       _delay = parseNumber _delay;
-       _duration = parseNumber _duration;
+        _ammoAmount = parseNumber _ammoAmount;
+        _detonationHight = parseNumber _detonationHight;
+        _delay = parseNumber _delay;
+        _duration = parseNumber _duration;
 
-       if (_delay < 0 || _detonationHight < 150 || _duration < 0) exitWith {
-           [LLSTRING(artillery_errorDelayOrHight)] call zen_common_fnc_showMessage;
-       };
-       if (_ammoAmount <= 0) exitWith {
-           [LLSTRING(artillery_errorAmount)] call zen_common_fnc_showMessage;
-       };
+        if (_delay < 0 || _detonationHight < 150 || _duration < 0) exitWith {
+            [LLSTRING(artillery_errorDelayOrHight)] call zen_common_fnc_showMessage;
+        };
+        if (_ammoAmount <= 0) exitWith {
+            [LLSTRING(artillery_errorAmount)] call zen_common_fnc_showMessage;
+        };
 
-       if (_delayType isEqualTo 0) then {
-           [_position, QGVAR(artillery_ILLUM), _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
-       };
-       if (_delayType isEqualTo 1) then {
-           [_position, QGVAR(artillery_ILLUM), _ammoAmount, true, _duration, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
-       };
-       if (_delayType isEqualTo 2) then {
-           _ammoAmount = ceil (_duration / _delay);
-           [_position, QGVAR(artillery_ILLUM), _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
-       };
+        switch (_delayType) do {
+            case 0: {
+                [_position, QGVAR(artillery_ILLUM), _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+            };
+            case 1: {
+                [_position, QGVAR(artillery_ILLUM), _ammoAmount, true, _duration, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+            };
+            case 2: {
+                _ammoAmount = ceil (_duration / _delay);
+                [_position, QGVAR(artillery_ILLUM), _ammoAmount, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+            };
+        };
     },
     {},
     [_position, _impactArea, _timeOnTarget]
