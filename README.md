@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/Metis-Team/mts_enhanced/releases/latest">
-        <img src="https://img.shields.io/badge/Version-1.7.1-blue.svg?style=flat-square" alt="Metis Enhanced Version">
+        <img src="https://img.shields.io/badge/Version-1.7.2-blue.svg?style=flat-square" alt="Metis Enhanced Version">
     </a>
     <a href="https://github.com/Metis-Team/mts_enhanced/releases/latest">
         <img src="https://img.shields.io/github/downloads/Metis-Team/mts_enhanced/total.svg?style=flat-square&label=Downloads" alt="Metis Enhanced Downloads">
