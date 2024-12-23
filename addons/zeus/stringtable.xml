@@ -185,12 +185,20 @@
     </Container>
     <Container name="ACEUnconsciousIcon">
         <Key ID="STR_mts_zeus_ACEUnconsciousIcon">
-            <Original>Show unconscious players in Zeus</Original>
-            <German>Zeige Bewusstlose Spieler im Zeus</German>
+            <Original>Highlight unconscious players in Zeus</Original>
+            <German>Bewusstlose Spieler im Zeus hervorheben</German>
         </Key>
         <Key ID="STR_mts_zeus_ACEUnconsciousIconTooltip">
             <Original>Show an icon in Zeus for unconscious players (ACE).</Original>
-            <German>Zeige ein Icon in Zeus für bewusstlose Spieler (ACE) an.</German>
+            <German>Zeige ein Icon im Zeus für bewusstlose Spieler (ACE) an.</German>
+        </Key>
+        <Key ID="STR_mts_zeus_ACEUnconsciousIconColor">
+            <Original>Icon color for unconscious players</Original>
+            <German>Iconfarbe für bewusstlose Spieler</German>
+        </Key>
+        <Key ID="STR_mts_zeus_ACEUnconsciousIconColorTooltip">
+            <Original>Color of the icon that is shown in Zeus for unconscious players (ACE).</Original>
+            <German>Farbe des Icons, was im Zeus für bewusstlose Spieler (ACE) angezeigt wird.</German>
         </Key>
     </Container>
     <Container name="3DENComments">
