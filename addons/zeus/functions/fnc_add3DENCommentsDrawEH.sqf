@@ -21,35 +21,34 @@ params ["_display"];
 CHECK(!GVAR(enable3DENComments));
 
 if (!GVAR(3DENComments_drawEHAdded)) then {
-    LOG("Adding 3DENComments draw3D");
-    [missionNamespace, "draw3D", {
-        _thisArgs params ["_3denComments"];
-
-        CHECK(isNull (findDisplay ZEUS_DISPLAY) || !isNull (findDisplay PAUSE_MENU_DISPLAY));
-        CHECK(ctrlShown (findDisplay ZEUS_DISPLAY displayCtrl ZEUS_WATERMARK_CTRL)); // HUD Hidden
-
+    LOG("Adding 3DENComments Draw3D");
+    addMissionEventHandler ["Draw3D", {
         if (!GVAR(enable3DENComments)) exitWith {
-            removeMissionEventHandler [_thisType, _thisId];
+            removeMissionEventHandler [_thisEvent, _thisEventHandler];
             GVAR(3DENComments_drawEHAdded) = false;
+            LOG("Removed 3DENComments Draw3D");
         };
+
+        private _zeusDisplay = findDisplay ZEUS_DISPLAY;
+        CHECK(isNull _zeusDisplay || !isNull (findDisplay PAUSE_MENU_DISPLAY));
+        CHECK(ctrlShown (_zeusDisplay displayCtrl ZEUS_WATERMARK_CTRL)); // HUD Hidden
+
+        private _camPosASL = getPosASLVisual curatorCamera;
 
         {
             _x params ["_id", "_name", "_description", "_posASL"];
 
-            private _camPosASL = getPosASLVisual curatorCamera;
             private _d = _posASL distance _camPosASL;
             private _scale = linearConversion [300, 750, _d, 0.8, 0, true]; // 300m => 0.8, 750m => 0
+            private _posAGL = ASLToAGL _posASL;
 
-            if (_scale < 0.01) then {
+            if (_scale < 0.01 || {(curatorCamera worldToScreen _posAGL) isEqualTo []}) then {
                 continue;
             };
 
-            private _color = [0, 1, 0.75, 1];
-            private _posAGL = ASLToAGL _posASL;
-
             drawIcon3D [
                 "a3\3den\Data\Cfg3DEN\Comment\texture_ca.paa",
-                _color,
+                GVAR(3DENCommentsColor),
                 _posAGL,
                 _scale, // Width
                 _scale, // Height
@@ -64,33 +63,31 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
                 drawLine3D [
                     _posAGL,
                     [_posAGL select 0, _posAGL select 1, 0],
-                    _color
+                    GVAR(3DENCommentsColor)
                 ];
             };
-        } count _3denComments;
-    }, [GVAR(3DENComments_data)]] call CBA_fnc_addBISEventHandler;
+        } count GVAR(3DENComments_data);
+    }];
 };
 
 // MapDraw EH needs to be readded every time the zeus display is opened.
 LOG("Adding 3DENComments map draw");
-[_display displayCtrl ZEUS_MAP_CTRL, "Draw", {
+(_display displayCtrl ZEUS_MAP_CTRL) ctrlAddEventHandler ["Draw", {
     params ["_mapCtrl"];
-    _thisArgs params ["_3denComments"];
-
-    CHECK(ctrlShown ((ctrlParent _mapCtrl) displayCtrl ZEUS_WATERMARK_CTRL)); // HUD Hidden
 
     if (!GVAR(enable3DENComments)) exitWith {
-        _mapCtrl ctrlRemoveEventHandler [_thisType, _thisId];
+        _mapCtrl ctrlRemoveEventHandler [_thisEvent, _thisEventHandler];
+        LOG("Removed 3DENComments map draw");
     };
+
+    CHECK(ctrlShown ((ctrlParent _mapCtrl) displayCtrl ZEUS_WATERMARK_CTRL)); // HUD Hidden
 
     {
         _x params ["_id", "_name", "_description", "_posASL"];
 
-        private _color = [0, 1, 0.75, 1];
-
         _mapCtrl drawIcon [
             "a3\3den\Data\Cfg3DEN\Comment\texture_ca.paa",
-            _color,
+            GVAR(3DENCommentsColor),
             _posASL,
             24,
             24,
@@ -100,7 +97,7 @@ LOG("Adding 3DENComments map draw");
             -1,
             "RobotoCondensed"
         ];
-    } count _3denComments;
-}, [GVAR(3DENComments_data)]] call CBA_fnc_addBISEventHandler;
+    } count GVAR(3DENComments_data);
+}];
 
 GVAR(3DENComments_drawEHAdded) = true;
