@@ -15,7 +15,7 @@
     	</Key>
         <Key ID="STR_mts_cords_cords_tooltip">
     		<Original>Adds Cords to ACE interactions menu.</Original>
-            <German>Fügt Litzen zu dem ACE Interaktionmenu hinzu.</German>
+            <German>Fügt Litzen zu dem ACE-Interaktionsmenü hinzu.</German>
     	</Key>
         <Key ID="STR_mts_cords_inf">
     		<Original>Infantry</Original>
@@ -39,7 +39,7 @@
     	</Key>
         <Key ID="STR_mts_cords_playerIDs_tooltip">
     		<Original>List of player IDs who are allowed to use the major rank. Format: ["01234","56789"] (No Spaces between commas!)</Original>
-            <German>Liste von Spieler IDs, die zugelassen sind, den Major Dienstgrad zu tragen.  Format: ["012345","56789"] (Keine Leerzeichen zwischen Kommata!)</German>
+            <German>Liste von Spieler IDs, die zugelassen sind, den Dienstgrad Major zu tragen. Format: ["012345","56789"] (Keine Leerzeichen zwischen Kommata!)</German>
     	</Key>
 	</Package>
 </Project>

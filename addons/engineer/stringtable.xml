@@ -24,7 +24,7 @@
         </Key>
         <Key ID="STR_mts_engineer_mineClearingTooltip">
             <Original>Adds actions to clear mines using the plow of the the vehicle.</Original>
-            <German>Fügt Aktionen hinzu, um Minen zu räumen.</German>
+            <German>Fügt Aktionen hinzu, um Minen mit der Räumschaufel zu räumen.</German>
         </Key>
         <Key ID="STR_mts_engineer_startMineClearing">
             <Original>Start mine clearing</Original>

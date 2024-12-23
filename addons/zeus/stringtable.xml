@@ -8,10 +8,6 @@
         </Key>
     </Container>
     <Container name="CBA_Keybinding">
-        <Key ID="STR_mts_zeus_cba_keybinding_categoryName">
-            <Original>Metis Zeus</Original>
-            <German>Metis Zeus</German>
-        </Key>
         <Key ID="STR_mts_zeus_cba_keybinding_AIStanceUp">
             <Original>Switch unit's stance to standing</Original>
             <German>Haltung der Einheit auf aufrecht umschalten</German>
@@ -25,20 +21,20 @@
             <German>Haltung der Einheit auf liegend umschalten</German>
         </Key>
         <Key ID="STR_mts_zeus_cba_keybinding_AIBehaviourCareless">
-            <Original>Switch group's behaviour to careless</Original>
-            <German>Verhalten der Gruppe auf achtlos umschalten</German>
+            <Original>Switch group's behavior to careless</Original>
+            <German>Verhalten der Gruppe auf Achtlos umschalten</German>
         </Key>
         <Key ID="STR_mts_zeus_cba_keybinding_AIBehaviourCombat">
-            <Original>Switch group's behaviour to combat</Original>
-            <German>Verhalten der Gruppe auf angriff umschalten</German>
+            <Original>Switch group's behavior to combat</Original>
+            <German>Verhalten der Gruppe auf Angriff umschalten</German>
         </Key>
         <Key ID="STR_mts_zeus_cba_keybinding_AICombatModeBlue">
             <Original>Switch group's combat mode to never fire</Original>
-            <German>Feuereröffnung der Gruppe auf feuerverbot umschalten</German>
+            <German>Feuereröffnung der Gruppe auf Feuerverbot umschalten</German>
         </Key>
         <Key ID="STR_mts_zeus_cba_keybinding_AICombatModeYellow">
             <Original>Switch group's combat mode to fire at will</Original>
-            <German>Feuereröffnung der Gruppe auf feuerfrei umschalten</German>
+            <German>Feuereröffnung der Gruppe auf Feuerfrei umschalten</German>
         </Key>
         <Key ID="STR_mts_zeus_cba_keybinding_disableAIPathBehaviourPath">
             <Original>Disable unit's movement</Original>
@@ -67,16 +63,16 @@
             <German>Artillerieschlag (Position)</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_firemission_he">
-            <Original>Artillery strike (Firemission for HE)</Original>
-            <German>Artillerieschlag (Feuerbefehl für HE)</German>
+            <Original>Artillery strike (fire mission for HE)</Original>
+            <German>Artillerieschlag (Feuerkommando für HE)</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_firemission_smoke">
-            <Original>Artillery strike (Firemission for SMOKE)</Original>
-            <German>Artillerieschlag (Feuerbefehl für SMOKE)</German>
+            <Original>Artillery strike (fire mission for SMOKE)</Original>
+            <German>Artillerieschlag (Feuerkommando für NEBEL)</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_firemission_illum">
-            <Original>Artillery strike (Firemission for ILLUM)</Original>
-            <German>Artillerieschlag (Feuerbefehl für ILLUM)</German>
+            <Original>Artillery strike (fire mission for ILLUM)</Original>
+            <German>Artillerieschlag (Feuerkommando für ILLUM)</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_ammoType">
             <Original>Ammo type</Original>
@@ -139,19 +135,19 @@
             <German>Aufschlag</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_airburst_low">
-            <Original>Low ignition altidude (15m)</Original>
-            <German>Niedrige Zündhöhe (15m)</German>
+            <Original>Low ignition altitude (15 m)</Original>
+            <German>Niedrige Zündhöhe (15 m)</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_airburst_med">
-            <Original>Medium ignition altidude (20m)</Original>
-            <German>Mittlere Zündhöhe (20m)</German>
+            <Original>Medium ignition altitude (20 m)</Original>
+            <German>Mittlere Zündhöhe (20  m)</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_airburst_high">
-            <Original>High ignition altidude (30m)</Original>
-            <German>Hohe Zündhöhe (30m)</German>
+            <Original>High ignition altitude (30 m)</Original>
+            <German>Hohe Zündhöhe (30 m)</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_areaLenght">
-            <Original>Target lenght [m]</Original>
+            <Original>Target length [m]</Original>
             <German>Zielbreite [m]</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_areaWidth">
@@ -179,7 +175,7 @@
             <German>Die Verzögerung oder die Zündhöhe haben ungültige Werte!</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_errorAmount">
-            <Original>The total amount of shells can't be less than 0!</Original>
+            <Original>The total amount of shells cannot be less than 0!</Original>
             <German>Die Gesamtanzahl der Geschosse kann nicht kleiner als 0 sein!</German>
         </Key>
     </Container>
@@ -224,7 +220,7 @@
     <Container name="misc">
         <Key ID="STR_mts_zeus_measureDistance">
             <Original>Measure distance</Original>
-            <German>Entfernungsmessung</German>
+            <German>Entfernung messen</German>
         </Key>
     </Container>
     <Container name="AI">
@@ -258,11 +254,11 @@
         </Key>
         <Key ID="STR_mts_zeus_AI_revealedInfo">
             <Original>Target revealed to AI unit</Original>
-            <German>Zieleinheit wurde der KI Einheit aufgedeckt</German>
+            <German>Zieleinheit wurde der KI-Einheit aufgedeckt</German>
         </Key>
         <Key ID="STR_mts_zeus_AI_forgotInfo">
-            <Original>AI unit's knowledge about the target was resetted</Original>
-            <German>Wissen der KI Einheit über die Zieleinheit wurde zurückgesetzt</German>
+            <Original>AI unit's knowledge about the target was reset</Original>
+            <German>Wissen der KI-Einheit über die Zieleinheit wurde zurückgesetzt</German>
         </Key>
         <Key ID="STR_mts_zeus_AI_addedInfo">
             <Original>Read information</Original>
@@ -274,7 +270,7 @@
         </Key>
         <Key ID="STR_mts_zeus_AI_knownByUnit">
             <Original>Target known by AI unit</Original>
-            <German>Zieleinheit der KI Einheit bekannt</German>
+            <German>Zieleinheit der KI-Einheit bekannt</German>
         </Key>
         <Key ID="STR_mts_zeus_AI_true">
             <Original>Yes</Original>
@@ -301,20 +297,20 @@
             <German>Bewegung und Zielsuche der Einheit deaktiviert</German>
         </Key>
         <Key ID="STR_mts_zeus_AI_behaviour_careless">
-            <Original>Groups's behaviour set to careless</Original>
-            <German>Verhalten der Gruppe auf achtlos geschalten</German>
+            <Original>Groups's behavior set to careless</Original>
+            <German>Verhalten der Gruppe auf Achtlos gesetzt</German>
         </Key>
         <Key ID="STR_mts_zeus_AI_behaviour_combat">
-            <Original>Groups's behaviour set to combat</Original>
-            <German>Verhalten der Gruppe auf angriff geschalten</German>
+            <Original>Groups's behavior set to combat</Original>
+            <German>Verhalten der Gruppe auf Angriff gesetzt</German>
         </Key>
         <Key ID="STR_mts_zeus_AI_combatMode_blue">
             <Original>Group's combat mode set to never fire</Original>
-            <German>Feuereröffnung der Gruppe auf feuerverbot geschaltet</German>
+            <German>Feuereröffnung der Gruppe auf Feuerverbot gesetzt</German>
         </Key>
         <Key ID="STR_mts_zeus_AI_combatMode_yellow">
             <Original>Group's combat mode set to fire at will</Original>
-            <German>Feuereröffnung der Gruppe auf feuerfrei geschaltet</German>
+            <German>Feuereröffnung der Gruppe auf Feuerfrei gesetzt</German>
         </Key>
     </Container>
     <Container name="suicideDrone">
