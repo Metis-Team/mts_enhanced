@@ -5,7 +5,6 @@ PREP(artyFireMissionHE);
 PREP(artyFireMissionSMOKE);
 PREP(artyFireMissionILLUM);
 PREP(contextMeasureDistance);
-PREP(drawACEUnconsciousIcon);
 PREP(execArtyStrike);
 PREP(getModuleDestination);
 PREP(getTargetKnowledge);
