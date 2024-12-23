@@ -11,7 +11,7 @@
         </Key>
         <Key ID="STR_mts_Armory_button_createEquipmentCategory_tooltip">
             <Original>Create new equipment category</Original>
-            <German>Neue Ausrüstungkategorie erstellen</German>
+            <German>Neue Ausrüstungskategorie erstellen</German>
         </Key>
         <Key ID="STR_mts_Armory_button_toggleSettings_tooltip">
             <Original>Show/hide settings</Original>
@@ -46,8 +46,8 @@
             <German>Erstellen</German>
         </Key>
         <Key ID="STR_mts_Armory_checkbox_initializeEquipmentCategory_tooltip">
-            <Original>If possible, adds interaction menu for the newly created equipment.\n(Depending on whether an object was passed to the openArmoy function)</Original>
-            <German>Wenn möglich, fügt ein Interaktionsmenü für die neu erstellte Ausrüstungskategorie hinzu.\n(Abhängig davon, ob ein Objekt an die Funktion openArmoy übergeben wurde)</German>
+            <Original>If possible, adds interaction menu for the newly created equipment.\n(Depending on whether an object was passed to the openArmory function)</Original>
+            <German>Wenn möglich, fügt ein Interaktionsmenü für die neu erstellte Ausrüstungskategorie hinzu.\n(Abhängig davon, ob ein Objekt an die Funktion openArmory übergeben wurde)</German>
         </Key>
         <Key ID="STR_mts_Armory_error_equipmentCategoryCreation">
             <Original>Equipment category '%1' couldn't be created!</Original>
@@ -96,7 +96,7 @@
             </Key>
             <Key ID="STR_mts_Armory_openUIActionMenu_ace_interaction">
                 <Original>ACE Interaction</Original>
-                <German>ACE Interaktionsmenü</German>
+                <German>ACE-Interaktionsmenü</German>
             </Key>
             <Key ID="STR_mts_Armory_openUIActionMenu_scroll_menu">
                 <Original>Scroll menu (Vanilla)</Original>
@@ -107,7 +107,7 @@
                 <German>DEBUG: Erlaube Spieler Datenbankverbindung</German>
             </Key>
             <Key ID="STR_mts_Armory_allowPlayerDBConnection_tooltip">
-                <Original>DEBUG: Allow the player to connect to the armory database. The mod ExtDB3 and a proper configurationen is needed!</Original>
+                <Original>DEBUG: Allow the player to connect to the armory database. The mod ExtDB3 and a proper configuration is needed!</Original>
                 <German>DEBUG: Erlaube dem Spieler, sich mit der Ausrüstungsdatenbank zu verbinden. Die Mod ExtDB3 und die entsprechende Konfigurationen wird benötigt!</German>
             </Key>
         </Container>
