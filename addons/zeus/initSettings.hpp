@@ -23,5 +23,5 @@
     [LLSTRING(3DENCommentsColor), LLSTRING(3DENCommentsColorTooltip)],
     [LELSTRING(main,category), LLSTRING(subCategory)],
     [0, 1, 0.75, 1],
-    0,
+    0
 ] call CBA_fnc_addSetting;
