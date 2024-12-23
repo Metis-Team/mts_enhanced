@@ -38,13 +38,13 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
 
             private _camPosASL = getPosASLVisual curatorCamera;
             private _d = _posASL distance _camPosASL;
-            private _scale = linearConversion [300, 750, _d, 0.8, 0, true]; // 300m => 1.5, 730m => 0
+            private _scale = linearConversion [300, 750, _d, 0.8, 0, true]; // 300m => 0.8, 750m => 0
 
             if (_scale < 0.01) then {
                 continue;
             };
 
-            private _color = [0.2,0.8,0.6,1];
+            private _color = [0, 1, 0.75, 1];
             private _posAGL = ASLToAGL _posASL;
 
             drawIcon3D [
@@ -55,7 +55,9 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
                 _scale, // Height
                 0, // Angle
                 _name, // Text
-                1 // Shadow
+                1, // Shadow
+                -1, // Text Size
+                "RobotoCondensed" // Font
             ];
 
             if ((_posAGL select 2) > 0.5) then {
@@ -84,7 +86,7 @@ LOG("Adding 3DENComments map draw");
     {
         _x params ["_id", "_name", "_description", "_posASL"];
 
-        private _color = [0.2,0.8,0.6,1];
+        private _color = [0, 1, 0.75, 1];
 
         _mapCtrl drawIcon [
             "a3\3den\Data\Cfg3DEN\Comment\texture_ca.paa",
@@ -94,7 +96,9 @@ LOG("Adding 3DENComments map draw");
             24,
             0,
             _name,
-            1
+            1,
+            -1,
+            "RobotoCondensed"
         ];
     } count _3denComments;
 }, [GVAR(3DENComments_data)]] call CBA_fnc_addBISEventHandler;
