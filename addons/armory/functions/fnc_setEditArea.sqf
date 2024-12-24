@@ -22,7 +22,7 @@ private _argsSuccessfullyParsed = params [["_idc", -1, [0]], ["_category", -1, [
 private _display = findDisplay IDD_EQUIPMENT;
 private _ctrlSave = _display displayCtrl IDC_BUTTON_SAVE_EQUIPMENT;
 TRACE_4("",_idc,_category,_display,_ctrlSave);
-CHECK(!GVAR(initialized) || isNull _display || !_argsSuccessfullyParsed || !(_idc > 0) || !(_category > 0));
+CHECK(!GVAR(initialized) || {isNull _display} || {!_argsSuccessfullyParsed} || {_idc <= 0} || {_category <= 0});
 
 
 private _name = ctrlText _idc;
@@ -32,7 +32,7 @@ _ctrlSave setVariable [QGVAR(category), _category];
 _ctrlSave setVariable [QGVAR(idc), _idc];
 
 if (_category isEqualTo LOADOUT) then {
-    if  !(_name isEqualTo "") then {
+    if (_name isNotEqualTo "") then {
         (GVAR(equipment) getVariable [ctrlText IDC_TEXT_TITLE, []]) params ["_loadoutNamespace"];
 
         (_loadoutNamespace getVariable [_name, []]) params ["", "", "", "_ace_medic", "_ace_engineer"];
