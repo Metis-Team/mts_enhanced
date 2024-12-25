@@ -3,7 +3,7 @@
  *  Author: Timi007
  *
  *  Description:
- *      Adds zeus module for a custom artillery script.
+ *      Adds Zeus module for a custom artillery script.
  *
  *  Parameter(s):
  *      None
@@ -28,7 +28,7 @@
                 ["COMBO", LLSTRING(artillery_centerPositionType), [[0, 1], [LLSTRING(artillery_modulePos), LLSTRING(artillery_customPos)], 0]],
                 ["EDIT", LLSTRING(artillery_centerPositionXPos), ["0000"]],
                 ["EDIT", LLSTRING(artillery_centerPositionYPos), ["0000"]],
-                ["EDIT", LLSTRING(artillery_areaLenght), ["100"]],
+                ["EDIT", LLSTRING(artillery_areaLength), ["100"]],
                 ["EDIT", LLSTRING(artillery_areaWidth), ["100"]],
                 ["EDIT", LLSTRING(artillery_areaAngle), ["0000"]],
                 ["EDIT", LLSTRING(artillery_timeOnTarget), ["5"]]
@@ -36,9 +36,9 @@
             {
                 private "_position";
                 params ["_dialogData", "_modulePosition"];
-                _dialogData params ["_ammoType", "_positionType", "_positionX", "_positionY", "_areaLenght", "_areaWidth", "_areaAngle", "_timeOnTarget"];
+                _dialogData params ["_ammoType", "_positionType", "_positionX", "_positionY", "_areaLength", "_areaWidth", "_areaAngle", "_timeOnTarget"];
 
-                _areaLenght = (parseNumber _areaLenght) / 2;
+                _areaLength = (parseNumber _areaLength) / 2;
                 _areaWidth = (parseNumber _areaWidth) / 2;
                 _areaAngle = parseNumber _areaAngle;
 
@@ -55,29 +55,26 @@
                     [LLSTRING(artillery_errorNoPos)] call zen_common_fnc_showMessage;
                 };
 
-                if (_positionType isEqualTo 0) then {
+                private _position = if (_positionType isEqualTo 0) then {
                     //use module position
-                    _position = _modulePosition;
+                    _modulePosition
                 } else {
                     //use custom position
-                    _positionX = parseNumber _positionX;
-                    _positionY = parseNumber _positionY;
-                    _position = [_positionX, _positionY] call CBA_fnc_mapGridToPos;
-                    _position set [2, 0];
+                    [_positionX, _positionY] call CBA_fnc_mapGridToPos
                 };
 
                 switch (_ammoType) do {
                     case 0: {
-                        [FUNC(artyFireMissionHE), [_position, "Sh_155mm_AMOS", [_areaLenght, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
+                        [FUNC(artyFireMissionHE), [_position, "Sh_155mm_AMOS", [_areaLength, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
                     };
                     case 1: {
-                        [FUNC(artyFireMissionHE), [_position, "Sh_82mm_AMOS", [_areaLenght, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
+                        [FUNC(artyFireMissionHE), [_position, "Sh_82mm_AMOS", [_areaLength, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
                     };
                     case 2: {
-                        [FUNC(artyFireMissionSMOKE), [_position, [_areaLenght, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
+                        [FUNC(artyFireMissionSMOKE), [_position, [_areaLength, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
                     };
                     case 3: {
-                        [FUNC(artyFireMissionILLUM), [_position, [_areaLenght, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
+                        [FUNC(artyFireMissionILLUM), [_position, [_areaLength, _areaWidth, _areaAngle], _timeOnTarget]] call CBA_fnc_execNextFrame;
                     };
                 };
             },

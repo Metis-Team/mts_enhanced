@@ -98,9 +98,13 @@
             <Original>Y Coordinate (Target location only)</Original>
             <German>Y Koordinate (nur Zielort)</German>
         </Key>
-        <Key ID="STR_mts_zeus_artillery_ammoAmount">
-            <Original>Total amount of shells</Original>
-            <German>Gesamtanzahl der Geschosse</German>
+        <Key ID="STR_mts_zeus_artillery_numberOfUnits">
+            <Original>Number of units</Original>
+            <German>Anzahl Rohre</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_shotsPerUnit">
+            <Original>Number of shots per unit</Original>
+            <German>Anzahl Schüsse pro Rohr</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_delayType">
             <Original>Delay types</Original>
@@ -146,7 +150,7 @@
             <Original>High ignition altitude (30 m)</Original>
             <German>Hohe Zündhöhe (30 m)</German>
         </Key>
-        <Key ID="STR_mts_zeus_artillery_areaLenght">
+        <Key ID="STR_mts_zeus_artillery_areaLength">
             <Original>Target length [m]</Original>
             <German>Zielbreite [m]</German>
         </Key>
@@ -174,9 +178,9 @@
             <Original>The delay or the detonation hight have invalid values!</Original>
             <German>Die Verzögerung oder die Zündhöhe haben ungültige Werte!</German>
         </Key>
-        <Key ID="STR_mts_zeus_artillery_errorAmount">
-            <Original>The total amount of shells cannot be less than 0!</Original>
-            <German>Die Gesamtanzahl der Geschosse kann nicht kleiner als 0 sein!</German>
+        <Key ID="STR_mts_zeus_artillery_errorAmmo">
+            <Original>The number of units firing and the amount of shots per unit must be greater 0!</Original>
+            <German>Die Anzahl an Rohre und Schüsse pro Rohr müssen größer 0 sein!</German>
         </Key>
     </Container>
     <Container name="ACEUnconsciousIcon">

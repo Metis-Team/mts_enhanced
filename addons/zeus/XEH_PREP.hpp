@@ -1,9 +1,9 @@
 PREP(add3DENCommentsDrawEH);
 PREP(addACEUnconsciousIconDrawEH);
-PREP(artyAirburst);
 PREP(artyFireMissionHE);
 PREP(artyFireMissionSMOKE);
 PREP(artyFireMissionILLUM);
+PREP(calcArtyShellQueue);
 PREP(contextMeasureDistance);
 PREP(drawACEUnconsciousIcon);
 PREP(execArtyStrike);
@@ -21,3 +21,4 @@ PREP(setAICombatMode);
 PREP(setAIStance);
 PREP(setTargetKnowledge);
 PREP(switchAIPathBehaviour);
+PREP(waitAndExecAirburst);

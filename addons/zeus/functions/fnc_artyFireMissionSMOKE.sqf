@@ -27,36 +27,38 @@ params [
 [
     LLSTRING(artillery_firemission_smoke),
     [
-        ["EDIT", LLSTRING(artillery_ammoAmount), ["1"]],
+        ["EDIT", LLSTRING(artillery_numberOfUnits), ["4"]],
+        ["EDIT", LLSTRING(artillery_shotsPerUnit), ["1"]],
         ["COMBO", LLSTRING(artillery_delayType), [[0, 1, 2], [LLSTRING(artillery_delay), LLSTRING(artillery_durationWithAmmo), LLSTRING(artillery_durationWithDelay)], 0]],
         ["EDIT", LLSTRING(artillery_delay), ["15"]],
         ["EDIT", LLSTRING(artillery_duration), ["60"]]
     ],
     {
-        (_this select 0) params ["_ammoAmount", "_delayType", "_delay", "_duration"];
+        (_this select 0) params ["_numberOfUnits", "_shotsPerUnit", "_delayType", "_delay", "_duration"];
         (_this select 1) params ["_position", "_impactArea", "_timeOnTarget"];
 
-        _ammoAmount = parseNumber _ammoAmount;
+        _numberOfUnits = parseNumber _numberOfUnits;
+        _shotsPerUnit = parseNumber _shotsPerUnit;
         _delay = parseNumber _delay;
         _duration = parseNumber _duration;
 
         if (_delay < 0 || _duration < 0) exitWith {
             [LLSTRING(artillery_errorDelayOrHight)] call zen_common_fnc_showMessage;
         };
-        if (_ammoAmount <= 0) exitWith {
-            [LLSTRING(artillery_errorAmount)] call zen_common_fnc_showMessage;
+        if (_shotsPerUnit <= 0) exitWith {
+            [LLSTRING(artillery_errorAmmo)] call zen_common_fnc_showMessage;
         };
 
         switch (_delayType) do {
             case 0: {
-                [_position, "Smoke_120mm_AMOS_White", _ammoAmount, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+                [_position, "Smoke_120mm_AMOS_White", _numberOfUnits, _shotsPerUnit, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
             };
             case 1: {
-                [_position, "Smoke_120mm_AMOS_White", _ammoAmount, true, _duration, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+                [_position, "Smoke_120mm_AMOS_White", _numberOfUnits, _shotsPerUnit, true, _duration, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
             };
             case 2: {
-                _ammoAmount = ceil (_duration / _delay);
-                [_position, "Smoke_120mm_AMOS_White", _ammoAmount, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+                _shotsPerUnit = ceil ((_duration / _delay) / _numberOfUnits);
+                [_position, "Smoke_120mm_AMOS_White", _numberOfUnits, _shotsPerUnit, false, _delay, 0, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
             };
         };
     },

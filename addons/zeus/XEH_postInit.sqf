@@ -17,6 +17,10 @@
     } forEach _toUnits;
 }] call CBA_fnc_addEventHandler;
 
+if (isServer) then {
+    [QGVAR(frago), {_this call ace_frag_fnc_frago}] call CBA_fnc_addEventHandler;
+};
+
 CHECK(!hasInterface);
 
 GVAR(moduleDestination_running) = false;
