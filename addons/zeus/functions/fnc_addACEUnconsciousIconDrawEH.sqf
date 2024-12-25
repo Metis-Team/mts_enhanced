@@ -35,6 +35,7 @@ if (!GVAR(ACEIcon_drawEHAdded)) then {
 
         private _unconsciousPlayers = allPlayers select {alive _x && {_x getVariable ["ACE_isUnconscious", false]}};
         private _camPosAGL = ASLToAGL (getPosASLVisual curatorCamera);
+        private _color = GVAR(ACEUnconsciousIconColor);
 
         {
             private _unitPosAGL = _x modelToWorldVisual (_x selectionPosition "pelvis"); // Model center position
@@ -49,7 +50,7 @@ if (!GVAR(ACEIcon_drawEHAdded)) then {
             private _iconPosAGL = _unitPosAGL vectorAdd [0, 0, 2];
             drawIcon3D [
                 "z\ace\addons\zeus\ui\Icon_Module_Zeus_Unconscious_ca.paa",
-                GVAR(ACEUnconsciousIconColor),
+                _color,
                 _iconPosAGL,
                 _scale, // Width
                 _scale, // Height
@@ -61,7 +62,7 @@ if (!GVAR(ACEIcon_drawEHAdded)) then {
             drawLine3D [
                 _iconPosAGL vectorAdd [0, 0, -0.02], // Hide line start behind icon
                 _unitPosAGL,
-                GVAR(ACEUnconsciousIconColor)
+                _color
             ];
         } count _unconsciousPlayers;
     }];
@@ -80,11 +81,12 @@ LOG("Adding ACEUnconsciousIcon map draw");
     CHECK(ctrlShown ((ctrlParent _mapCtrl) displayCtrl ZEUS_WATERMARK_CTRL)); // HUD Hidden
 
     private _unconsciousPlayers = allPlayers select {alive _x && {_x getVariable ["ACE_isUnconscious", false]}};
+    private _color = GVAR(ACEUnconsciousIconColor);
 
     {
         _mapCtrl drawIcon [
             "z\ace\addons\zeus\ui\Icon_Module_Zeus_Unconscious_ca.paa",
-            GVAR(ACEUnconsciousIconColor),
+            _color,
             getPosASLVisual _x,
             30,
             30,
