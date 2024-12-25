@@ -200,11 +200,19 @@
     <Container name="3DENComments">
         <Key ID="STR_mts_zeus_3DENComments">
             <Original>Show 3DEN comments in Zeus</Original>
-            <German>Zeige 3DEN Kommentare in Zeus</German>
+            <German>Zeige 3DEN Kommentare im Zeus</German>
         </Key>
         <Key ID="STR_mts_zeus_3DENCommentsTooltip">
             <Original>Show 3DEN comments in Zeus.</Original>
-            <German>Zeige 3DEN Kommentare in Zeus an.</German>
+            <German>Zeige 3DEN Kommentare im Zeus an.</German>
+        </Key>
+        <Key ID="STR_mts_zeus_3DENCommentsColor">
+            <Original>3DEN comments color</Original>
+            <German>Farbe der 3DEN Kommentare</German>
+        </Key>
+        <Key ID="STR_mts_zeus_3DENCommentsColorTooltip">
+            <Original>Color of 3DEN Kommentare in Zeus.</Original>
+            <German>Farbe der 3DEN Kommentare im Zeus.</German>
         </Key>
     </Container>
     <Container name="unflipVehicle">
