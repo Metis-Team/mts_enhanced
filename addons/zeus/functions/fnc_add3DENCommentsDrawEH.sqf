@@ -34,6 +34,7 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
         CHECK(ctrlShown (_zeusDisplay displayCtrl ZEUS_WATERMARK_CTRL)); // HUD Hidden
 
         private _camPosASL = getPosASLVisual curatorCamera;
+        private _color = GVAR(3DENCommentsColor);
 
         {
             _x params ["_id", "_name", "_description", "_posASL"];
@@ -48,7 +49,7 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
 
             drawIcon3D [
                 "a3\3den\Data\Cfg3DEN\Comment\texture_ca.paa",
-                GVAR(3DENCommentsColor),
+                _color,
                 _posAGL,
                 _scale, // Width
                 _scale, // Height
@@ -63,7 +64,7 @@ if (!GVAR(3DENComments_drawEHAdded)) then {
                 drawLine3D [
                     _posAGL,
                     [_posAGL select 0, _posAGL select 1, 0],
-                    GVAR(3DENCommentsColor)
+                    _color
                 ];
             };
         } count GVAR(3DENComments_data);
@@ -82,12 +83,14 @@ LOG("Adding 3DENComments map draw");
 
     CHECK(ctrlShown ((ctrlParent _mapCtrl) displayCtrl ZEUS_WATERMARK_CTRL)); // HUD Hidden
 
+    private _color = GVAR(3DENCommentsColor);
+
     {
         _x params ["_id", "_name", "_description", "_posASL"];
 
         _mapCtrl drawIcon [
             "a3\3den\Data\Cfg3DEN\Comment\texture_ca.paa",
-            GVAR(3DENCommentsColor),
+            _color,
             _posASL,
             24,
             24,
