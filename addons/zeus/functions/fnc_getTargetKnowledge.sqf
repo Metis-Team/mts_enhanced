@@ -36,7 +36,7 @@ if ((isPlayer _unit) || {isNull _unit}) exitWith {
     curatorMouseOver params ["_typeName", "_target"];
 
     //make sure cursor object is an AI or a player
-    if (!(_typeName isEqualTo "OBJECT") || {(count (crew _target)) isEqualTo 0} || {isNull _target}) exitWith {
+    if ((_typeName isNotEqualTo "OBJECT") || {(count (crew _target)) isEqualTo 0} || {isNull _target}) exitWith {
         [LLSTRING(AI_noTarget)] call zen_common_fnc_showMessage;
     };
 

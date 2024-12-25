@@ -65,8 +65,10 @@ if (_arsenal) then {
 
 if ((getPlayerUID player) in _editors) then {
     ctrlSetText [IDC_EDITBOX_EDITORS, str _editors];
-    if (!(_idc isEqualTo -1) && !(_category isEqualTo -1)) then {
+
+    if ((_idc isNotEqualTo -1) && (_category isNotEqualTo -1)) then {
         [true] call FUNC(toggleSettings);
+
         [{
             params ["_idc", "_category"];
             [_idc, _category] call FUNC(setEditArea);
