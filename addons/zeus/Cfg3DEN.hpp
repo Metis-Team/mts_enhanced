@@ -29,4 +29,12 @@ class Cfg3DEN {
             };
         };
     };
+
+    class EventHandlers {
+        class ADDON {
+            // Arguments are for debugging
+            onMissionSave = QUOTE([false] call FUNC(on3DENMissionSave));
+            onMissionAutosave = QUOTE([true] call FUNC(on3DENMissionSave));
+        };
+    };
 };
