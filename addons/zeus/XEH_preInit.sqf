@@ -24,9 +24,3 @@ _displayNames = [
     getText (_cfgVehicles >> "SatchelCharge_F" >> "displayName")
 ] + _displayNames;
 GVAR(chargeCache) = [_configNames, _displayNames];
-
-// For 3DEN comments in Zeus
-if (is3DEN) then {
-    add3DENEventHandler ["OnMissionSave", {[false] call FUNC(on3DENMissionSave)}];
-    add3DENEventHandler ["OnMissionAutosave", {[true] call FUNC(on3DENMissionSave)}];
-};
