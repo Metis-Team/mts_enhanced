@@ -26,15 +26,3 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "Cfg3DEN.hpp"
-
-class RscPicture;
-class RscDisplayCurator {
-    class Controls {
-        class Watermark: RscPicture {
-            text = "";
-            colorText[] = {1,1,1,0};
-            w = 0;
-            h = 0;
-        };
-    };
-};
