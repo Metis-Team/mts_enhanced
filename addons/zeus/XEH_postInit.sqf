@@ -3,41 +3,52 @@
 
 [QGVAR(revealTarget), {
     params ["_toUnits", "_target"];
-
-    {
-        _x reveal _target;
-    } forEach _toUnits;
+    {_x reveal _target} forEach _toUnits;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(forgetTarget), {
     params ["_toUnits", "_target"];
-
-    {
-        _x forgetTarget _target;
-    } forEach _toUnits;
+    {_x forgetTarget _target} forEach _toUnits;
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    [QGVAR(frago), {_this call ace_frag_fnc_frago}] call CBA_fnc_addEventHandler;
+    [QGVAR(execArtyStrike), LINKFUNC(execArtyStrike)] call CBA_fnc_addEventHandler;
+    [QGVAR(waitAndExecAirburst), LINKFUNC(waitAndExecAirburst)] call CBA_fnc_addEventHandler;
 };
 
-CHECK(!hasInterface);
+if (hasInterface) then {
+    [QGVAR(visualizeArtyTargetArea), LINKFUNC(visualizeArtyTargetArea)] call CBA_fnc_addEventHandler;
 
-GVAR(moduleDestination_running) = false;
+    [QGVAR(fireMissionBegin), {
+        if (isNull curatorCamera) exitWith {};
+        [LLSTRING(artillery_fireMissionBegin)] call zen_common_fnc_showMessage;
+    }] call CBA_fnc_addEventHandler;
 
-GVAR(3DENComments_drawEHAdded) = false;
-GVAR(3DENComments_data) = getMissionConfigValue [QGVAR(3denComments), []];
-TRACE_1("3DEN Comments",GVAR(3DENComments_data));
+    [QGVAR(fireMissionImpact), {
+        if (isNull curatorCamera) exitWith {};
+        [LLSTRING(artillery_fireMissionImpact)] call zen_common_fnc_showMessage;
+    }] call CBA_fnc_addEventHandler;
 
-GVAR(ACEIcon_drawEHAdded) = false;
+    [QGVAR(fireMissionComplete), {
+        if (isNull curatorCamera) exitWith {};
+        [LLSTRING(artillery_fireMissionComplete)] call zen_common_fnc_showMessage;
+    }] call CBA_fnc_addEventHandler;
 
-call FUNC(moduleArtillery);
-call FUNC(moduleUnflipVehicle);
-call FUNC(moduleForgetTarget);
-call FUNC(moduleRevealTarget);
-call FUNC(moduleTargetKnowledge);
-call FUNC(moduleSuicideDrone);
+    GVAR(moduleDestination_running) = false;
 
-call FUNC(contextMeasureDistance);
+    GVAR(3DENComments_drawEHAdded) = false;
+    GVAR(3DENComments_data) = getMissionConfigValue [QGVAR(3denComments), []];
+    TRACE_1("3DEN Comments",GVAR(3DENComments_data));
 
-#include "initKeybinds.hpp"
+    GVAR(ACEIcon_drawEHAdded) = false;
+
+    call FUNC(moduleArtillery);
+    call FUNC(moduleUnflipVehicle);
+    call FUNC(moduleForgetTarget);
+    call FUNC(moduleRevealTarget);
+    call FUNC(moduleTargetKnowledge);
+    call FUNC(moduleSuicideDrone);
+
+    call FUNC(contextMeasureDistance);
+};
+

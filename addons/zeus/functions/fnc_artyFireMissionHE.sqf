@@ -9,7 +9,6 @@
  *      0: ARRAY - Center position of the impact area (2D or 3D; z makes no difference)
  *      1: STRING - Class of artillery shell
  *      2: ARRAY - Area where the shells should land. Format: [length [m] <NUMBER>, width [m] <NUMBER>, angle [°] <NUMBER>] (optional, default: parameter 0)
- *      3: NUMBER - Time on target in seconds. (optional, default: immediately)
  *
  *  Returns:
  *      Nothing
@@ -19,38 +18,30 @@
  *
  */
 
-params [
-    ["_position", [0,0,0], [[]]],
-    ["_ammoType", "", [""]],
-    ["_impactArea", [0,0,0], [[]]],
-    ["_timeOnTarget", 0, [0]]
-];
-
-//open UI
 [
-    LLSTRING(artillery_firemission_he),
+    LLSTRING(artillery_fireMission_he),
     [
-        ["EDIT", LLSTRING(artillery_numberOfUnits), ["4"]],
-        ["EDIT", LLSTRING(artillery_shotsPerUnit), ["1"]],
+        ["EDIT", LLSTRING(artillery_numberOfUnits), ["4", FUNC(positiveInteger)]],
+        ["EDIT", LLSTRING(artillery_shotsPerUnit), ["1", FUNC(positiveInteger)]],
         ["COMBO", LLSTRING(artillery_airburst), [[0, 1, 2, 3], [LLSTRING(artillery_airburst_no), LLSTRING(artillery_airburst_low), LLSTRING(artillery_airburst_med), LLSTRING(artillery_airburst_high)], 0]],
         ["COMBO", LLSTRING(artillery_delayType), [[0, 1, 2], [LLSTRING(artillery_delay), LLSTRING(artillery_durationWithAmmo), LLSTRING(artillery_durationWithDelay)], 0]],
-        ["EDIT", LLSTRING(artillery_delay), ["1"]],
-        ["EDIT", LLSTRING(artillery_duration), ["60"]]
+        ["EDIT", LLSTRING(artillery_delay), ["1", FUNC(positiveNumber)]],
+        ["EDIT", LLSTRING(artillery_duration), [DEFAULT_DURATION, FUNC(positiveNumber)]],
+        ["EDIT", LLSTRING(artillery_timeOnTarget), [DEFAULT_TOT, FUNC(positiveNumber)]]
     ],
     {
-        (_this select 0) params ["_numberOfUnits", "_shotsPerUnit", "_airburstType", "_delayType", "_delay", "_duration"];
-        (_this select 1) params ["_position", "_ammoType", "_impactArea", "_timeOnTarget"];
+        TRACE_1("params",_this);
+        (_this select 0) params ["_numberOfUnits", "_shotsPerUnit", "_airburstType", "_delayType", "_delay", "_duration", "_timeOnTarget"];
+        (_this select 1) params ["_targetArea", "_ammoType"];
 
         _numberOfUnits = parseNumber _numberOfUnits;
         _shotsPerUnit = parseNumber _shotsPerUnit;
         _delay = parseNumber _delay;
         _duration = parseNumber _duration;
+        _timeOnTarget = parseNumber _timeOnTarget;
 
         if (_delay < 0 || _duration < 0) exitWith {
             [LLSTRING(artillery_errorDelayOrHight)] call zen_common_fnc_showMessage;
-        };
-        if (_shotsPerUnit <= 0) exitWith {
-            [LLSTRING(artillery_errorAmmo)] call zen_common_fnc_showMessage;
         };
 
         //select airburst hight
@@ -58,17 +49,22 @@ params [
 
         switch (_delayType) do {
             case 0: {
-                [_position, _ammoType, _numberOfUnits, _shotsPerUnit, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+                [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, false, _delay, _timeOnTarget] call FUNC(execArtyStrike);
             };
             case 1: {
-                [_position, _ammoType, _numberOfUnits, _shotsPerUnit, true, _duration, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+                [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, true, _duration, _timeOnTarget] call FUNC(execArtyStrike);
             };
             case 2: {
                 _shotsPerUnit = ceil ((_duration / _delay) / _numberOfUnits);
-                [_position, _ammoType, _numberOfUnits, _shotsPerUnit, false, _delay, _detonationHight, _impactArea, _timeOnTarget] call FUNC(execArtyStrike);
+                [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, false, _delay, _timeOnTarget] call FUNC(execArtyStrike);
             };
         };
     },
-    {},
-    [_position, _ammoType, _impactArea, _timeOnTarget]
+    {
+        (_this select 1) params ["_targetArea"];
+        _targetArea params ["_logic"];
+
+        deleteVehicle _logic;
+    },
+    _this
 ] call zen_dialog_fnc_create;

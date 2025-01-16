@@ -62,15 +62,15 @@
             <Original>Artillery strike (Position)</Original>
             <German>Artillerieschlag (Position)</German>
         </Key>
-        <Key ID="STR_mts_zeus_artillery_firemission_he">
+        <Key ID="STR_mts_zeus_artillery_fireMission_he">
             <Original>Artillery strike (fire mission for HE)</Original>
             <German>Artillerieschlag (Feuerkommando für HE)</German>
         </Key>
-        <Key ID="STR_mts_zeus_artillery_firemission_smoke">
+        <Key ID="STR_mts_zeus_artillery_fireMission_smoke">
             <Original>Artillery strike (fire mission for SMOKE)</Original>
             <German>Artillerieschlag (Feuerkommando für NEBEL)</German>
         </Key>
-        <Key ID="STR_mts_zeus_artillery_firemission_illum">
+        <Key ID="STR_mts_zeus_artillery_fireMission_illum">
             <Original>Artillery strike (fire mission for ILLUM)</Original>
             <German>Artillerieschlag (Feuerkommando für ILLUM)</German>
         </Key>
@@ -90,13 +90,9 @@
             <Original>Target location</Original>
             <German>Zielort</German>
         </Key>
-        <Key ID="STR_mts_zeus_artillery_centerPositionXPos">
-            <Original>X Coordinate (Target location only)</Original>
-            <German>X Koordinate (nur Zielort)</German>
-        </Key>
-        <Key ID="STR_mts_zeus_artillery_centerPositionYPos">
-            <Original>Y Coordinate (Target location only)</Original>
-            <German>Y Koordinate (nur Zielort)</German>
+        <Key ID="STR_mts_zeus_artillery_centerPositionPos">
+            <Original>Coordinate (Target location only)</Original>
+            <German>Koordinate (nur Zielort)</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_numberOfUnits">
             <Original>Number of units</Original>
@@ -150,13 +146,9 @@
             <Original>High ignition altitude (30 m)</Original>
             <German>Hohe Zündhöhe (30 m)</German>
         </Key>
-        <Key ID="STR_mts_zeus_artillery_areaLength">
-            <Original>Target length [m]</Original>
-            <German>Zielbreite [m]</German>
-        </Key>
-        <Key ID="STR_mts_zeus_artillery_areaWidth">
-            <Original>Target width [m]</Original>
-            <German>Zieltiefe [m]</German>
+        <Key ID="STR_mts_zeus_artillery_area">
+            <Original>Target width and depth [m]</Original>
+            <German>Zielbreite und -tiefe [m]</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_areaAngle">
             <Original>Target attitude [mils]</Original>
@@ -181,6 +173,22 @@
         <Key ID="STR_mts_zeus_artillery_errorAmmo">
             <Original>The number of units firing and the amount of shots per unit must be greater 0!</Original>
             <German>Die Anzahl an Rohre und Schüsse pro Rohr müssen größer 0 sein!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_fireMission">
+            <Original>Fire mission</Original>
+            <German>Feuerkommando</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_fireMissionBegin">
+            <Original>Beginning fire mission</Original>
+            <German>Beginne Feuerkommando</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_fireMissionImpact">
+            <Original>Splash!</Original>
+            <German>Achtung Aufschlag!</German>
+        </Key>
+        <Key ID="STR_mts_zeus_artillery_fireMissionComplete">
+            <Original>End of fire mission</Original>
+            <German>Feuerkommando beendet</German>
         </Key>
     </Container>
     <Container name="ACEUnconsciousIcon">

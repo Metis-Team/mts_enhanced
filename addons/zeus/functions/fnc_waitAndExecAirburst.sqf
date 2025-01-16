@@ -17,6 +17,9 @@
  *
  */
 
+if (!isServer) exitWith {
+    [QGVAR(waitAndExecAirburst), _this] call CBA_fnc_serverEvent;
+};
 TRACE_1("params",_this);
 
 [{
@@ -34,7 +37,5 @@ TRACE_1("params",_this);
     createVehicle ["HelicopterExploSmall", ASLToATL _projectilePosASL, [], 0, "CAN_COLLIDE"];
 
     // Wait a frame to make sure it doesn't target the dead
-    [{
-        [QGVAR(frago), _this] call CBA_fnc_serverEvent;
-    }, [_projectilePosASL, _projectileType]] call CBA_fnc_execNextFrame;
+    [ace_frag_fnc_frago, [_projectilePosASL, _projectileType]] call CBA_fnc_execNextFrame;
 }, _this] call CBA_fnc_waitUntilAndExecute;
