@@ -12,7 +12,10 @@
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    [QGVAR(execArtyStrike), LINKFUNC(execArtyStrike)] call CBA_fnc_addEventHandler;
+    GVAR(nextTargetID) = 1;
+
+    [QGVAR(initFireMission), LINKFUNC(initFireMission)] call CBA_fnc_addEventHandler;
+    [QGVAR(execFireMission), LINKFUNC(execFireMission)] call CBA_fnc_addEventHandler;
     [QGVAR(waitAndExecAirburst), LINKFUNC(waitAndExecAirburst)] call CBA_fnc_addEventHandler;
 };
 
@@ -21,17 +24,26 @@ if (hasInterface) then {
 
     [QGVAR(fireMissionBegin), {
         if (isNull curatorCamera) exitWith {};
-        [LLSTRING(artillery_fireMissionBegin)] call zen_common_fnc_showMessage;
+        private _id = ((_this select 0) select 0) getVariable [QGVAR(targetID), 0];
+        [LLSTRING(artillery_fireMissionBegin), _id] call zen_common_fnc_showMessage;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(fireMissionImpact), {
         if (isNull curatorCamera) exitWith {};
-        [LLSTRING(artillery_fireMissionImpact)] call zen_common_fnc_showMessage;
+        private _id = (_this select 0) getVariable [QGVAR(targetID), 0];
+        [LLSTRING(artillery_fireMissionImpact), _id] call zen_common_fnc_showMessage;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(fireMissionComplete), {
         if (isNull curatorCamera) exitWith {};
-        [LLSTRING(artillery_fireMissionComplete)] call zen_common_fnc_showMessage;
+        params ["_targetLogic", "_canceled"];
+
+        private _id = _targetLogic getVariable [QGVAR(targetID), 0];
+        if (_canceled) then {
+            [LLSTRING(artillery_fireMissionCanceled), _id] call zen_common_fnc_showMessage;
+        } else {
+            [LLSTRING(artillery_fireMissionComplete), _id] call zen_common_fnc_showMessage;
+        };
     }] call CBA_fnc_addEventHandler;
 
     GVAR(moduleDestination_running) = false;

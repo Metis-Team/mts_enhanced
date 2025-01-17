@@ -12,7 +12,7 @@
  *      STRING - Sanitized edit box value.
  *
  *  Example:
- *      ["0.6"] call mts_zeus_fnc_positiveInteger
+ *      ["0.6"] call mts_zeus_fnc_positiveNumber
  *
  */
 

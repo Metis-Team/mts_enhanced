@@ -18,6 +18,8 @@
  *
  */
 
+if (!hasInterface) exitWith {};
+
 addMissionEventHandler ["Draw3D", {
     _thisArgs params ["_logic", "_width", "_depth"];
 
@@ -31,7 +33,7 @@ addMissionEventHandler ["Draw3D", {
 
     private _position = _logic modelToWorldVisual [0, 0, TARGET_AREA_HEIGHT];
     private _camPosition = ASLToAGL getPosASLVisual curatorCamera;
-    if (((_position distance _camPosition) > TARGET_AREA_MAX_DISTANCE) || {(curatorCamera worldToScreen _position) isEqualTo []}) exitWith {};
+    if ((_position distance _camPosition) > TARGET_AREA_MAX_DISTANCE) exitWith {};
 
     // Copied and modified from zen_common_fnc_spawnLargeObject
     private _direction = vectorDirVisual _logic;

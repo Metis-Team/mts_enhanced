@@ -24,7 +24,12 @@
         ["EDIT", LLSTRING(artillery_numberOfUnits), ["4", FUNC(positiveInteger)]],
         ["EDIT", LLSTRING(artillery_shotsPerUnit), ["1", FUNC(positiveInteger)]],
         ["COMBO", LLSTRING(artillery_airburst), [[0, 1, 2, 3], [LLSTRING(artillery_airburst_no), LLSTRING(artillery_airburst_low), LLSTRING(artillery_airburst_med), LLSTRING(artillery_airburst_high)], 0]],
-        ["COMBO", LLSTRING(artillery_delayType), [[0, 1, 2], [LLSTRING(artillery_delay), LLSTRING(artillery_durationWithAmmo), LLSTRING(artillery_durationWithDelay)], 0]],
+        ["COMBO", LLSTRING(artillery_delayType), [[0, 1, 2],
+            [
+                [LLSTRING(artillery_delayBetweenRounds), LLSTRING(artillery_delayBetweenRounds_tooltip)],
+                [LLSTRING(artillery_durationWithAmmo), LLSTRING(artillery_durationWithAmmo_tooltip)],
+                [LLSTRING(artillery_durationWithDelay), LLSTRING(artillery_durationWithDelay_tooltip)]
+            ], 0]],
         ["EDIT", LLSTRING(artillery_delay), ["1", FUNC(positiveNumber)]],
         ["EDIT", LLSTRING(artillery_duration), [DEFAULT_DURATION, FUNC(positiveNumber)]],
         ["EDIT", LLSTRING(artillery_timeOnTarget), [DEFAULT_TOT, FUNC(positiveNumber)]]
@@ -40,25 +45,23 @@
         _duration = parseNumber _duration;
         _timeOnTarget = parseNumber _timeOnTarget;
 
-        if (_delay < 0 || _duration < 0) exitWith {
-            [LLSTRING(artillery_errorDelayOrHight)] call zen_common_fnc_showMessage;
-        };
-
         //select airburst hight
         private _detonationHight = [0, 15, 20, 30] select _airburstType;
 
-        switch (_delayType) do {
+        private _args = switch (_delayType) do {
             case 0: {
-                [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, false, _delay, _timeOnTarget] call FUNC(execArtyStrike);
+                [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, false, _delay, _timeOnTarget]
             };
             case 1: {
-                [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, true, _duration, _timeOnTarget] call FUNC(execArtyStrike);
+                [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, true, _duration, _timeOnTarget]
             };
             case 2: {
                 _shotsPerUnit = ceil ((_duration / _delay) / _numberOfUnits);
-                [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, false, _delay, _timeOnTarget] call FUNC(execArtyStrike);
+                [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, false, _delay, _timeOnTarget]
             };
         };
+
+        [QGVAR(initFireMission), _args] call CBA_fnc_serverEvent;
     },
     {
         (_this select 1) params ["_targetArea"];

@@ -19,26 +19,30 @@
  *      Nothing
  *
  *  Example:
- *      [[_logic, 200, 100], "Sh_155mm_AMOS", 0, 3, 2, false, 5, 60] call mts_zeus_fnc_execArtyStrike
+ *      [[_logic, 200, 100], "Sh_155mm_AMOS", 0, 3, 2, false, 5, 60] call mts_zeus_fnc_execFireMission
  *
  */
 
 if (!isServer) exitWith {
-    [QGVAR(execArtyStrike), _this] call CBA_fnc_serverEvent;
+    [QGVAR(execFireMission), _this] call CBA_fnc_serverEvent;
 };
 
-TRACE_1("params",_this);
 (_this select 0) params [
     ["_targetLogic", objNull, [objNull]],
     ["_areaWidth", 0, [0]],
     ["_areaDepth", 0, [0]]
 ];
 
+// Simulate artillery shell queue
 private _args = +_this;
 _args set [0, [_areaWidth, _areaDepth]];
 private _shellReverseQueue = _args call FUNC(calcArtyShellQueue);
-if (_shellReverseQueue isEqualTo []) exitWith {ERROR("Empty artillery shell spawn queue.")};
+if (_shellReverseQueue isEqualTo []) exitWith {
+    ERROR("Empty artillery shell spawn queue.");
+    deleteVehicle _targetLogic;
+};
 
+// Begin fire mission
 private _t0 = CBA_missionTime;
 [QGVAR(fireMissionBegin), _this] call CBA_fnc_globalEvent;
 TRACE_2("Begin fire mission",_t0,count _shellReverseQueue);
@@ -62,11 +66,13 @@ if (_firstImpactDelay > 5) then {
     _args params ["_targetLogic", "_t0", "_shellReverseQueue"];
 
     if (_shellReverseQueue isEqualTo [] || isNull _targetLogic) exitWith {
-        LOG("Fire mission complete.");
+        LOG("Fire mission completed normally.");
         [_handle] call CBA_fnc_removePerFrameHandler;
 
-        [QGVAR(fireMissionComplete), [_targetLogic]] call CBA_fnc_globalEvent;
-        deleteVehicle _targetLogic;
+        if (!isNull _targetLogic) then {
+            [QGVAR(fireMissionComplete), [_targetLogic, false]] call CBA_fnc_globalEvent;
+            deleteVehicle _targetLogic;
+        };
     };
 
     private _targetLogicPosATL = getPosATL _targetLogic;
