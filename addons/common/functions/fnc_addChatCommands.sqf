@@ -47,7 +47,7 @@ if (isServer) then {
         _curator addCuratorEditableObjects [(allMissionObjects "" - entities [["Logic"], []]), true];
         _unit assignCurator _curator;
 
-        [LLSTRING(chatCommands_zeusCreated)] remoteExecCall ["hint", _unit];
+        [QGVAR(hint), [LSTRING(chatCommands_zeusCreated)], _unit] call CBA_fnc_targetEvent;
     }] call CBA_fnc_addEventHandler;
 };
 
@@ -71,7 +71,7 @@ CHECK(!hasInterface);
             _unit = _name call FUNC(parseNameToPlayer);
         };
     };
-    if (isNull _unit) exitWith {};
+    if (isNull _unit || {!isNull getAssignedCuratorLogic _unit}) exitWith {};
 
     [QGVAR(createZeus), [_unit]] call CBA_fnc_serverEvent;
 }, "adminLogged"] call CBA_fnc_registerChatCommand;
