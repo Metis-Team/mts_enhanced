@@ -30,7 +30,10 @@ if (isServer) then {
                 private _curator = missionNamespace getVariable _curatorVar;
 
                 if (!isNil "_curator") then {
-                    if (!isNull _curator) then {deleteVehicle _curator};
+                    if (!isNull _curator) then {
+                        unassignCurator _curator;
+                        deleteVehicle _curator;
+                    };
                     missionNamespace setVariable [_curatorVar, nil];
                 };
             }];
