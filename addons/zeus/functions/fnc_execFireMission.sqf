@@ -37,10 +37,7 @@ if (!isServer) exitWith {
 private _args = +_this;
 _args set [0, [_areaWidth, _areaDepth]];
 private _shellReverseQueue = _args call FUNC(calcArtyShellQueue);
-if (_shellReverseQueue isEqualTo []) exitWith {
-    ERROR("Empty artillery shell spawn queue.");
-    deleteVehicle _targetLogic;
-};
+if (_shellReverseQueue isEqualTo []) exitWith {ERROR("Empty artillery shell spawn queue.")};
 
 // Begin fire mission
 private _t0 = CBA_missionTime;
