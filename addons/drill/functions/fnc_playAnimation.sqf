@@ -29,29 +29,29 @@ if (_animName isEqualTo QGVAR(StandStill)) then {
         _animationSequence = [QGVAR(AmovPercMstpSnonWnonDnon_StandStill), QGVAR(StandStill)];
 
         if (GVAR(UIEnabled)) then {
-            cutRsc [QGVAR(StandStill), "PLAIN"];
+            QGVAR(UILayer) cutRsc [QGVAR(StandStill), "PLAIN"];
         };
     };
     if (_currAnimState == QGVAR(StandStill)) then {
         _animationSequence = [QGVAR(StandStill_AmovPercMstpSnonWnonDnon)];
 
         if (GVAR(UIEnabled)) then {
-            cutText ["", "PLAIN"];
+            QGVAR(UILayer) cutText ["", "PLAIN"];
         };
     };
     if (_currAnimState == QGVAR(AtEase)) then {
         _animationSequence = [QGVAR(AtEase_StandStill), QGVAR(StandStill)];
 
         if (GVAR(UIEnabled)) then {
-            cutText ["", "PLAIN"];
-            cutRsc [QGVAR(StandStill), "PLAIN"];
+            QGVAR(UILayer) cutText ["", "PLAIN"];
+            QGVAR(UILayer) cutRsc [QGVAR(StandStill), "PLAIN"];
         };
     };
     if (_currAnimState == "AmovPercMstpSnonWnonDnon_Salute") then {
         _animationSequence = ["AmovPercMstpSnonWnonDnon_SaluteOut", QGVAR(AmovPercMstpSnonWnonDnon_StandStill), QGVAR(StandStill)];
 
         if (GVAR(UIEnabled)) then {
-            cutRsc [QGVAR(StandStill), "PLAIN"];
+            QGVAR(UILayer) cutRsc [QGVAR(StandStill), "PLAIN"];
         };
     };
 };
@@ -61,29 +61,29 @@ if (_animName isEqualTo QGVAR(AtEase)) then {
         _animationSequence = [QGVAR(AmovPercMstpSnonWnonDnon_AtEase), QGVAR(AtEase)];
 
         if (GVAR(UIEnabled)) then {
-            cutRsc [QGVAR(AtEase), "PLAIN"];
+            QGVAR(UILayer) cutRsc [QGVAR(AtEase), "PLAIN"];
         };
     };
     if (_currAnimState == QGVAR(AtEase)) then {
         _animationSequence = [QGVAR(AtEase_AmovPercMstpSnonWnonDnon)];
 
         if (GVAR(UIEnabled)) then {
-            cutText ["", "PLAIN"];
+            QGVAR(UILayer) cutText ["", "PLAIN"];
         };
     };
     if (_currAnimState == QGVAR(StandStill)) then {
         _animationSequence = [QGVAR(StandStill_AtEase), QGVAR(AtEase)];
 
         if (GVAR(UIEnabled)) then {
-            cutText ["", "PLAIN"];
-            cutRsc [QGVAR(AtEase), "PLAIN"];
+            QGVAR(UILayer) cutText ["", "PLAIN"];
+            QGVAR(UILayer) cutRsc [QGVAR(AtEase), "PLAIN"];
         };
     };
     if (_currAnimState == "AmovPercMstpSnonWnonDnon_Salute") then {
         _animationSequence = ["AmovPercMstpSnonWnonDnon_SaluteOut", QGVAR(AmovPercMstpSnonWnonDnon_AtEase), QGVAR(AtEase)];
 
         if (GVAR(UIEnabled)) then {
-            cutRsc [QGVAR(AtEase), "PLAIN"];
+            QGVAR(UILayer) cutRsc [QGVAR(AtEase), "PLAIN"];
         };
     };
 };
@@ -99,14 +99,14 @@ if (_animName isEqualTo QGVAR(Salute)) then {
         _animationSequence = [QGVAR(StandStill_AmovPercMstpSnonWnonDnon), "AmovPercMstpSnonWnonDnon_SaluteIn"];
 
         if (GVAR(UIEnabled)) then {
-            cutText ["", "PLAIN"];
+            QGVAR(UILayer) cutText ["", "PLAIN"];
         };
     };
     if (_currAnimState == QGVAR(AtEase)) then {
         _animationSequence = [QGVAR(AtEase_AmovPercMstpSnonWnonDnon), "AmovPercMstpSnonWnonDnon_SaluteIn"];
 
         if (GVAR(UIEnabled)) then {
-            cutText ["", "PLAIN"];
+            QGVAR(UILayer) cutText ["", "PLAIN"];
         };
     };
 };
