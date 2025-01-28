@@ -12,9 +12,6 @@
         "**/release": true,
     },
     "files.associations": {
-        "**/*.hpp": "ext",
-        // "**/*.hpp": "cpp",
-        "**/*.cpp": "ext",
         "**/XEH_PREP.hpp": "sqf",
         "*.rpt": "log",
         "init*.hpp": "sqf",
@@ -29,6 +26,4 @@
         ".hemttout/build": true,
         ".hemttout/release": true,
     },
-    "sqf.enableACE3": true,
-    "sqf.enableCBA": true,
 }
