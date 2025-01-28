@@ -14,7 +14,7 @@ PREP_RECOMPILE_END;
     true,
     0,
     {
-        cutText ["", "PLAIN"];
+        QGVAR(UILayer) cutText ["", "PLAIN"];
     }
 ] call CBA_fnc_addSetting;
 

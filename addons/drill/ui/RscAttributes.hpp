@@ -6,7 +6,7 @@ class RscTitles {
         idd = 800520;
         duration = 999999;
         class controls {
-            class GVAR(StandStill_Picture) : RscPicture {
+            class GVAR(StandStill_Picture): RscPicture {
                 idc = -1;
                 text = QPATHTOF(ui\mts_StandStill.paa);
                 x = "SafeZoneX + (1792 / 1920) * SafeZoneW";
@@ -31,7 +31,7 @@ class RscTitles {
         idd = 800521;
         duration = 999999;
         class controls {
-            class GVAR(AtEase_Picture) : RscPicture {
+            class GVAR(AtEase_Picture): RscPicture {
                 idc = -1;
                 text = QPATHTOF(ui\mts_AtEase.paa);
                 x = "SafeZoneX + (1792 / 1920) * SafeZoneW";
