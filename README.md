@@ -4,13 +4,13 @@
 
 <p align="center">
     <a href="https://github.com/Metis-Team/mts_enhanced/releases/latest">
-        <img src="https://img.shields.io/badge/Version-1.7.2-blue.svg?style=flat-square" alt="Metis Enhanced Version">
+        <img src="https://img.shields.io/github/v/release/Metis-Team/mts_enhanced?label=Version&style=flat-square" alt="Metis Enhanced Version">
     </a>
     <a href="https://github.com/Metis-Team/mts_enhanced/releases/latest">
-        <img src="https://img.shields.io/github/downloads/Metis-Team/mts_enhanced/total.svg?style=flat-square&label=Downloads" alt="Metis Enhanced Downloads">
+        <img src="https://img.shields.io/github/downloads/Metis-Team/mts_enhanced/total.svg?label=Downloads&logo=Github&style=flat-square" alt="Metis Enhanced Downloads">
     </a>
     <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2799167087">
-        <img src="https://img.shields.io/badge/Steam-Workshop-green.svg?style=flat-square" alt="Steam Workshop">
+        <img src="https://img.shields.io/badge/Steam-Workshop-green.svg?logo=Steam&style=flat-square" alt="Steam Workshop">
     </a>
     <a href="https://github.com/Metis-Team/mts_enhanced/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-APL--SA-red.svg?style=flat-square" alt="APL-SA License">
@@ -36,7 +36,6 @@
 - **Cutter**: Grass and bush cutter ACE actions allowing to remove grass and bushes.
 - **Drill**: Animation and actions for exercise.
 - **Engineer**: Equipment for engineers like a Mine Clearing Line Charge (MICLIC).
-- **Flags**: Flags with various colors which can be placed or carried by players.
 - **Items**: Markers/signs which are placable.
 - **Map**: Actions for the player to place his current map on the ground and on vehicles for others to look into.
 - **Remove Snakes**: Removes snakes from all maps.
