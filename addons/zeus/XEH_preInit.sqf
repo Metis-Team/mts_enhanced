@@ -9,6 +9,7 @@ PREP_RECOMPILE_END;
 ADDON = true;
 
 #include "initSettings.hpp"
+#include "initKeybinds.hpp"
 
 // Cache charges for suicide drone
 private _chargeCache = +(uiNamespace getVariable "zen_modules_minesCache");
