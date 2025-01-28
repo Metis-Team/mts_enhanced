@@ -1,78 +1,99 @@
 class CfgWeapons {
-    class CBA_MiscItem;
     class CBA_MiscItem_ItemInfo;
 
-    class GVAR(white): CBA_MiscItem {
-        scope = 2;
-        author = CSTRING(Authors);
-        descriptionShort = CSTRING(Description);
-        descriptionUse = CSTRING(Description);
-
-        displayName = CSTRING(White);
-        picture = QPATHTOF(data\pictures\white_item.paa);
-
-        GVAR(texture) = "\a3\data_f\flags\flag_white_co.paa";
-        GVAR(actionIconPlace) = QPATHTOF(data\icons\place\white_place_icon.paa);
-        GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\white_carry_icon.paa);
+    class ace_flags_white;
+    class GVAR(white): ace_flags_white {
+        scope = 1;
+        scopeCurator = 0;
+        scopeArsenal = 0;
+        author = ECSTRING(main,authors);
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
-    class GVAR(red): GVAR(white) {
-        displayName = CSTRING(Red);
-        picture = QPATHTOF(data\pictures\red_item.paa);
 
-        GVAR(texture) = "\a3\data_f\flags\flag_red_co.paa";
-        GVAR(actionIconPlace) = QPATHTOF(data\icons\place\red_place_icon.paa);
-        GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\red_carry_icon.paa);
+    class ace_flags_red;
+    class GVAR(red): ace_flags_red {
+        scope = 1;
+        scopeCurator = 0;
+        scopeArsenal = 0;
+        author = ECSTRING(main,authors);
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 3;
+        };
     };
-    class GVAR(blue): GVAR(white) {
-        displayName = CSTRING(Blue);
-        picture = QPATHTOF(data\pictures\blue_item.paa);
 
-        GVAR(texture) = "\a3\data_f\flags\Flag_blue_co.paa";
-        GVAR(actionIconPlace) = QPATHTOF(data\icons\place\blue_place_icon.paa);
-        GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\blue_carry_icon.paa);
+    class ace_flags_blue;
+    class GVAR(blue): ace_flags_blue {
+        scope = 1;
+        scopeCurator = 0;
+        scopeArsenal = 0;
+        author = ECSTRING(main,authors);
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 3;
+        };
     };
-    class GVAR(green): GVAR(white) {
-        displayName = CSTRING(Green);
-        picture = QPATHTOF(data\pictures\green_item.paa);
 
-        GVAR(texture) = "\a3\data_f\flags\flag_green_co.paa";
-        GVAR(actionIconPlace) = QPATHTOF(data\icons\place\green_place_icon.paa);
-        GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\green_carry_icon.paa);
+    class ace_flags_green;
+    class GVAR(green): ace_flags_green {
+        scope = 1;
+        scopeCurator = 0;
+        scopeArsenal = 0;
+        author = ECSTRING(main,authors);
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 3;
+        };
     };
-    class GVAR(yellow): GVAR(white) {
-        displayName = CSTRING(Yellow);
-        picture = QPATHTOF(data\pictures\yellow_item.paa);
 
-        GVAR(texture) = QPATHTOF(data\flag_yellow_co.paa);
-        GVAR(actionIconPlace) = QPATHTOF(data\icons\place\yellow_place_icon.paa);
-        GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\yellow_carry_icon.paa);
+    class ace_flags_yellow;
+    class GVAR(yellow): ace_flags_yellow {
+        scope = 1;
+        scopeCurator = 0;
+        scopeArsenal = 0;
+        author = ECSTRING(main,authors);
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 3;
+        };
     };
-    class GVAR(orange): GVAR(white) {
-        displayName = CSTRING(Orange);
-        picture = QPATHTOF(data\pictures\orange_item.paa);
 
-        GVAR(texture) = QPATHTOF(data\flag_orange_co.paa);
-        GVAR(actionIconPlace) = QPATHTOF(data\icons\place\orange_place_icon.paa);
-        GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\orange_carry_icon.paa);
+    class ace_flags_orange;
+    class GVAR(orange): ace_flags_orange {
+        scope = 1;
+        scopeCurator = 0;
+        scopeArsenal = 0;
+        author = ECSTRING(main,authors);
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 3;
+        };
     };
-    class GVAR(purple): GVAR(white) {
-        displayName = CSTRING(Purple);
-        picture = QPATHTOF(data\pictures\purple_item.paa);
 
-        GVAR(texture) = QPATHTOF(data\flag_purple_co.paa);
-        GVAR(actionIconPlace) = QPATHTOF(data\icons\place\purple_place_icon.paa);
-        GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\purple_carry_icon.paa);
+    class ace_flags_purple;
+    class GVAR(purple): ace_flags_purple {
+        scope = 1;
+        scopeCurator = 0;
+        scopeArsenal = 0;
+        author = ECSTRING(main,authors);
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 3;
+        };
     };
-    class GVAR(black): GVAR(white) {
-        displayName = CSTRING(Black);
-        picture = QPATHTOF(data\pictures\black_item.paa);
 
-        GVAR(texture) = QPATHTOF(data\flag_black_co.paa);
-        GVAR(actionIconPlace) = QPATHTOF(data\icons\place\black_place_icon.paa);
-        GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\black_carry_icon.paa);
+    class ace_flags_black;
+    class GVAR(black): ace_flags_black {
+        scope = 1;
+        scopeCurator = 0;
+        scopeArsenal = 0;
+        author = ECSTRING(main,authors);
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 3;
+        };
     };
 };

@@ -15,12 +15,3 @@
 #endif
 
 #include "\z\mts_enhanced\addons\main\script_macros.hpp"
-
-#define PLACE_WAITING -1
-#define PLACE_CANCEL 0
-#define PLACE_APPROVE 1
-
-#define MIN_HEIGHT -0.5
-#define MAX_HEIGHT 2
-
-#define FLAG_PLACING_DISTANCE 2
