@@ -15,7 +15,7 @@ class CfgPatches {
             QGVAR(black)
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common", "ace_interact_menu", "ace_interaction"};
+        requiredAddons[] = {"mts_main", "ace_flags"};
         author = ECSTRING(main,authors);
         authors[] = {"Timi007"};
         url = ECSTRING(main,URL);
@@ -23,6 +23,4 @@ class CfgPatches {
     };
 };
 
-#include "CfgEventHandlers.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

@@ -25,16 +25,14 @@ TRACE_1("3DEN Mission saved",_isAutosave);
 
 private _3denComments = [];
 {
-    if (_x isEqualTo -999) then {
-        continue;
-    };
+    if (_x isEqualTo -999) then {continue};
 
     private _name = (_x get3DENAttribute "name") select 0;
     private _description = (_x get3DENAttribute "description") select 0;
     private _positionASL = (_x get3DENAttribute "position") select 0;
 
     _3denComments pushBack [_x, _name, _description, _positionASL];
-} forEach (all3DENEntities param [7, []]);
+} forEach (all3DENEntities select 7);
 
 TRACE_1("Saving comments",_3denComments);
 

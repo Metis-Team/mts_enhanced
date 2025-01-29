@@ -11,7 +11,7 @@
                 <German>Ein oder mehrere Argumente sind falsch!</German>
             </Key>
             <Key ID="STR_mts_common_chatCommands_teleportError">
-                <Original>Can't teleport!</Original>
+                <Original>Cannot teleport!</Original>
                 <German>Teleport nicht möglich!</German>
             </Key>
         </Container>

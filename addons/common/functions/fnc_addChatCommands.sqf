@@ -19,14 +19,38 @@
 if (isServer) then {
     [QGVAR(createZeus), {
         params [["_unit", objNull, [objNull]]];
-        CHECK(isNull _unit);
+        if (isNull _unit || {!isNull getAssignedCuratorLogic _unit}) exitWith {};
 
-        private _curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+        // Cleanup on disconnect
+        if (isNil QGVAR(createZeusDC)) then {
+            GVAR(createZeusDC) = addMissionEventHandler ["HandleDisconnect", {
+                params ["", "", "_owner"];
+
+                private _curatorVar = format [QGVAR(zeus_%1), _owner];
+                private _curator = missionNamespace getVariable _curatorVar;
+
+                if (!isNil "_curator") then {
+                    if (!isNull _curator) then {
+                        unassignCurator _curator;
+                        deleteVehicle _curator;
+                    };
+                    missionNamespace setVariable [_curatorVar, nil];
+                };
+            }];
+        };
+
+        private _owner = ["#adminLogged", getPlayerUID _player] select isMultiplayer;
+        private _group = createGroup [sideLogic, true];
+        private _curator = _group createUnit ["ModuleCurator_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+        missionNamespace setVariable [format [QGVAR(zeus_%1), _owner], _curator];
+
         _curator setVariable ["Addons", 3, true];
+        _curator setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
+
         _curator addCuratorEditableObjects [(allMissionObjects "" - entities [["Logic"], []]), true];
         _unit assignCurator _curator;
 
-        [LLSTRING(chatCommands_zeusCreated)] remoteExecCall ["hint", _unit];
+        [QGVAR(hint), [LSTRING(chatCommands_zeusCreated)], _unit] call CBA_fnc_targetEvent;
     }] call CBA_fnc_addEventHandler;
 };
 
@@ -42,7 +66,7 @@ CHECK(!hasInterface);
         };
         case ("getname"): {
             private _cursorObject = cursorObject;
-            if (_cursorObject isKindOf "Man") then {
+            if (_cursorObject isKindOf "CAManBase" && {isPlayer _cursorObject}) then {
                 _unit = _cursorObject;
             };
         };
@@ -50,9 +74,9 @@ CHECK(!hasInterface);
             _unit = _name call FUNC(parseNameToPlayer);
         };
     };
-    CHECK(isNull _unit);
+    if (isNull _unit || {!isNull getAssignedCuratorLogic _unit}) exitWith {};
 
-    [QGVAR(createZeus), _unit] call CBA_fnc_serverEvent;
+    [QGVAR(createZeus), [_unit]] call CBA_fnc_serverEvent;
 }, "adminLogged"] call CBA_fnc_registerChatCommand;
 
 ["medic", {

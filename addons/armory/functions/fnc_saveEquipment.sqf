@@ -55,17 +55,17 @@ switch (_category) do {
             private _loadout = getUnitLoadout player;
 
             if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
-                if !((_loadout select 3) isEqualTo []) then {
+                if ((_loadout select 3) isNotEqualTo []) then {
                     {_x call _replaceRadioAcre} forEach ((_loadout select 3) select 1); // Uniform items
                 };
-                if !((_loadout select 4) isEqualTo []) then {
+                if ((_loadout select 4) isNotEqualTo []) then {
                     {_x call _replaceRadioAcre} forEach ((_loadout select 4) select 1); // Vest items
                 };
-                if !((_loadout select 5) isEqualTo []) then {
+                if ((_loadout select 5) isNotEqualTo []) then {
                     {_x call _replaceRadioAcre} forEach ((_loadout select 5) select 1); // Backpack items
                 };
             };
-            if !(_name isEqualTo _oldName) then {
+            if (_name isNotEqualTo _oldName) then {
                 _loadoutNamespace setVariable [_oldName, [], true];
             };
 
@@ -88,7 +88,7 @@ switch (_category) do {
                     };
                 } forEach _items;
             };
-            if !(_name isEqualTo _oldName) then {
+            if (_name isNotEqualTo _oldName) then {
                 _backpackNamespace setVariable [_oldName, [], true];
             };
 
@@ -105,7 +105,7 @@ if (_delete) then {
 
     _ctrlSave setVariable [QGVAR(oldName), ""];
 } else {
-    if !(_name isEqualTo _oldName) then {
+    if (_name isNotEqualTo _oldName) then {
         ctrlSetText [_idc, _name];
     };
 };

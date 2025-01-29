@@ -9,6 +9,7 @@ PREP_RECOMPILE_END;
 ADDON = true;
 
 #include "initSettings.hpp"
+#include "initKeybinds.hpp"
 
 // Cache charges for suicide drone
 private _chargeCache = +(uiNamespace getVariable "zen_modules_minesCache");
@@ -24,9 +25,3 @@ _displayNames = [
     getText (_cfgVehicles >> "SatchelCharge_F" >> "displayName")
 ] + _displayNames;
 GVAR(chargeCache) = [_configNames, _displayNames];
-
-// For 3DEN comments in Zeus
-if (is3DEN) then {
-    add3DENEventHandler ["OnMissionSave", {[false] call FUNC(on3DENMissionSave)}];
-    add3DENEventHandler ["OnMissionAutosave", {[true] call FUNC(on3DENMissionSave)}];
-};

@@ -18,7 +18,7 @@
             </Key>
             <Key ID="STR_mts_cutter_grasscutter_tooltip">
                 <Original>Adds the grass cutter to ACE interaction menu.</Original>
-                <German>Fügt den Grasschneider zu dem ACE Interaktionmenu hinzu.</German>
+                <German>Fügt den Grasschneider zu dem ACE-Interaktionsmenü hinzu.</German>
             </Key>
             <Key ID="STR_mts_cutter_grasscutter_removeGrass">
                 <Original>Remove grass</Original>
@@ -46,7 +46,7 @@
             </Key>
             <Key ID="STR_mts_cutter_grasscutter_duration_tooltip">
                 <Original>Time it takes in seconds to remove grass.</Original>
-                <German>Zeit in Sekunden, um Gras zu enfernen.</German>
+                <German>Zeit in Sekunden, die es braucht, um Gras zu entfernen.</German>
             </Key>
         </Container>
         <Container name="Bushcutter">
@@ -60,7 +60,7 @@
             </Key>
             <Key ID="STR_mts_cutter_bushcutter_tooltip">
                 <Original>Adds the bush cutter to ACE interaction menu.</Original>
-                <German>Fügt die Buschschere zu dem ACE Interaktionmenu hinzu.</German>
+                <German>Fügt die Buschschere zu dem ACE-Interaktionsmenü hinzu.</German>
             </Key>
             <Key ID="STR_mts_cutter_bushcutter_removeBush">
                 <Original>Remove bush</Original>
@@ -72,7 +72,7 @@
             </Key>
             <Key ID="STR_mts_cutter_bushcutter_duration_tooltip">
                 <Original>Time it takes in seconds to remove a bush.</Original>
-                <German>Zeit in Sekunden, um einen Busch zu enfernen.</German>
+                <German>Zeit in Sekunden, die es braucht, um einen Busch zu entfernen.</German>
             </Key>
             <Key ID="STR_mts_cutter_bushcutter_requireItem">
                 <Original>Require item</Original>
