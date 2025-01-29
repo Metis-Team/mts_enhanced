@@ -18,6 +18,9 @@ changelog:
     - title: '**CHANGED:**'
       labels:
         - 'cleanup'
+    - title: '**REMOVED:**'
+      labels:
+        - 'obsolete'
     - title: '**TRANSLATIONS:**'
       labels:
         - 'localization'
