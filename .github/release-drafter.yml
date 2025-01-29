@@ -18,6 +18,9 @@ categories:
   - title: '**CHANGED:**'
     labels:
       - 'cleanup'
+  - title: '**REMOVED:**'
+    labels:
+      - 'obsolete'
   - title: '**TRANSLATIONS:**'
     labels:
       - 'localization'
@@ -35,5 +38,5 @@ template: |
 
 replacers:
   # Category titles
-  - search: '/\#\# (\*\*(ADDED|FIXED|IMPROVED|CHANGED|TRANSLATIONS):\*\*)/g'
+  - search: '/\#\# (\*\*(ADDED|FIXED|IMPROVED|CHANGED|REMOVED|TRANSLATIONS):\*\*)/g'
     replace: '$1'
