@@ -49,7 +49,11 @@ private _jipID = [QGVAR(visualizeArtyTargetArea), _targetArea] call CBA_fnc_glob
 // Handle canceling fire mission
 _targetLogic addEventHandler ["Deleted", {
     params ["_targetLogic"];
-    [QGVAR(fireMissionComplete), [_targetLogic, true]] call CBA_fnc_globalEvent;
+
+    private _targetID = _targetLogic getVariable [QGVAR(targetID), -1];
+    private _complete = _targetLogic getVariable [QGVAR(fireMissionComplete), false];
+
+    [QGVAR(fireMissionComplete), [_targetID, !_complete]] call CBA_fnc_globalEvent;
 }];
 
 // Begin fire mission

@@ -36,9 +36,11 @@ if (hasInterface) then {
 
     [QGVAR(fireMissionComplete), {
         if (isNull curatorCamera) exitWith {};
-        params ["_targetLogic", "_canceled"];
+        params ["_id", "_canceled"];
+        TRACE_2("fireMissionComplete EH",_id,_canceled);
 
-        private _id = _targetLogic getVariable [QGVAR(targetID), 0];
+        if (_id <= 0) exitWith {};
+
         if (_canceled) then {
             [LLSTRING(artillery_fireMissionCanceled), _id] call zen_common_fnc_showMessage;
         } else {
