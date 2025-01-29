@@ -63,12 +63,12 @@ if (_firstImpactDelay > 5) then {
     _args params ["_targetLogic", "_t0", "_shellReverseQueue"];
 
     if (_shellReverseQueue isEqualTo [] || isNull _targetLogic) exitWith {
-        LOG("Fire mission completed normally.");
         [_handle] call CBA_fnc_removePerFrameHandler;
 
         if (!isNull _targetLogic) then {
-            [QGVAR(fireMissionComplete), [_targetLogic, false]] call CBA_fnc_globalEvent;
-            deleteVehicle _targetLogic;
+            LOG("Fire mission completed normally.");
+            _targetLogic setVariable [QGVAR(fireMissionComplete), true, true];
+            deleteVehicle _targetLogic; // Will trigger deleted EH and broadcast complete event
         };
     };
 
