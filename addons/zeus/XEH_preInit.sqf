@@ -25,3 +25,9 @@ _displayNames = [
     getText (_cfgVehicles >> "SatchelCharge_F" >> "displayName")
 ] + _displayNames;
 GVAR(chargeCache) = [_configNames, _displayNames];
+
+GVAR(howitzerShellsCache) = +(uiNamespace getVariable [QGVAR(howitzerShellsCache), []]);
+GVAR(mortarShellsCache) = +(uiNamespace getVariable [QGVAR(mortarShellsCache), []]);
+
+GVAR(artilleryShellsNameCache) = (GVAR(howitzerShellsCache) apply {_x select 1}) + (GVAR(mortarShellsCache) apply {_x select 1});
+GVAR(artilleryShellsAmmoCache) = (GVAR(howitzerShellsCache) apply {_x select 2}) + (GVAR(mortarShellsCache) apply {_x select 2});
