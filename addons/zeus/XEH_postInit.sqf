@@ -62,7 +62,5 @@ if (hasInterface) then {
     call FUNC(moduleRevealTarget);
     call FUNC(moduleTargetKnowledge);
     call FUNC(moduleSuicideDrone);
-
-    call FUNC(contextMeasureDistance);
 };
 
