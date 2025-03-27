@@ -1,4 +1,3 @@
-PREP(add3DENCommentsDrawEH);
 PREP(addACEUnconsciousIconDrawEH);
 PREP(artyFireMissionHE);
 PREP(artyFireMissionSMOKE);
@@ -14,7 +13,6 @@ PREP(moduleArtillery);
 PREP(moduleSuicideDrone);
 PREP(moduleTargetKnowledge);
 PREP(moduleUnflipVehicle);
-PREP(on3DENMissionSave);
 PREP(onZeusDisplayOpen);
 PREP(positiveInteger);
 PREP(positiveNumber);

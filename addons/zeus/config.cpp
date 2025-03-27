@@ -25,5 +25,4 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgAmmo.hpp"
-#include "Cfg3DEN.hpp"
 #include "CfgVehicles.hpp"
