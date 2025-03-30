@@ -1,18 +1,18 @@
 #include "script_component.hpp"
 /**
- *  Author: Author
+ *  Author: Timi007
  *
  *  Description:
- *      Description
+ *      Finds all HE howitzer and mortar shells and caches them in uiNamespace.
  *
  *  Parameter(s):
- *      0: TYPE - Parameter description
+ *      None
  *
  *  Returns:
- *      TYPE - Description
+ *      Nothing
  *
  *  Example:
- *      _this call mts_zeus_fnc_compileArtilleryShells
+ *      call mts_zeus_fnc_compileArtilleryShells
  *
  */
 

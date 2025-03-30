@@ -6,15 +6,16 @@
  *      Opens Dialog where more information for a HE strike is transmitted.
  *
  *  Parameter(s):
- *      0: ARRAY - Center position of the impact area (2D or 3D; z makes no difference)
- *      1: STRING - Class of artillery shell
- *      2: ARRAY - Area where the shells should land. Format: [length [m] <NUMBER>, width [m] <NUMBER>, angle [°] <NUMBER>] (optional, default: parameter 0)
+ *      0: ARRAY - Target area where the shells should land.
+ *          0: OBJECT - Target logic indicating center pos and angle of area.
+ *          1: NUMBER - Width of target area.
+ *          2: NUMBER - Depth of target area.
  *
  *  Returns:
  *      Nothing
  *
  *  Example:
- *      [[400,300], "Sh_155mm_AMOS", [100,100,0], 5] call mts_zeus_fnc_artyFireMissionHE
+ *      [[_logic, 100, 50]] call mts_zeus_fnc_artyFireMissionHE
  *
  */
 
