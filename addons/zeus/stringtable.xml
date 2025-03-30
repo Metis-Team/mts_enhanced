@@ -78,13 +78,9 @@
             <Original>Ammo type</Original>
             <German>Munitionsart</German>
         </Key>
-        <Key ID="STR_mts_zeus_artillery_ammoType_he155mm">
-            <Original>HE (155 mm)</Original>
-            <German>HE (155 mm)</German>
-        </Key>
-        <Key ID="STR_mts_zeus_artillery_ammoType_he80mm">
-            <Original>HE (80 mm)</Original>
-            <German>HE (80 mm)</German>
+        <Key ID="STR_mts_zeus_artillery_ammoType_he">
+            <Original>HE</Original>
+            <German>HE</German>
         </Key>
         <Key ID="STR_mts_zeus_artillery_ammoType_smoke">
             <Original>SMOKE</Original>

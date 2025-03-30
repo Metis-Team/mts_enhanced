@@ -24,13 +24,15 @@
         [
             LLSTRING(artillery_pos),
             [
-                ["COMBO", LLSTRING(artillery_ammoType), [[0, 1, 2, 3],
+                [
+                    "COMBO",
+                    LLSTRING(artillery_ammoType),
                     [
-                        LLSTRING(artillery_ammoType_he155mm),
-                        LLSTRING(artillery_ammoType_he80mm),
-                        LLSTRING(artillery_ammoType_smoke),
-                        LLSTRING(artillery_ammoType_illum)
-                    ], 0]],
+                        [0, 1, 2],
+                        [LLSTRING(artillery_ammoType_he), LLSTRING(artillery_ammoType_smoke), LLSTRING(artillery_ammoType_illum)],
+                        0
+                    ]
+                ],
                 ["COMBO", LLSTRING(artillery_centerPositionType), [[0, 1], [LLSTRING(artillery_modulePos), LLSTRING(artillery_customPos)], 0]],
                 ["EDIT", [LLSTRING(artillery_centerPositionPosX), LLSTRING(artillery_centerPositionPos_tooltip)], ["", FUNC(positiveNumber)]],
                 ["EDIT", [LLSTRING(artillery_centerPositionPosY), LLSTRING(artillery_centerPositionPos_tooltip)], ["", FUNC(positiveNumber)]],
@@ -62,15 +64,12 @@
                 private _targetArea = [_targetLogic, _area select 0, _area select 1];
                 switch (_ammoType) do {
                     case 0: {
-                        [FUNC(artyFireMissionHE), [_targetArea, "Sh_155mm_AMOS"]] call CBA_fnc_execNextFrame;
+                        [FUNC(artyFireMissionHE), [_targetArea]] call CBA_fnc_execNextFrame;
                     };
                     case 1: {
-                        [FUNC(artyFireMissionHE), [_targetArea, "Sh_82mm_AMOS"]] call CBA_fnc_execNextFrame;
-                    };
-                    case 2: {
                         [FUNC(artyFireMissionSMOKE), [_targetArea]] call CBA_fnc_execNextFrame;
                     };
-                    case 3: {
+                    case 2: {
                         [FUNC(artyFireMissionILLUM), [_targetArea]] call CBA_fnc_execNextFrame;
                     };
                 };

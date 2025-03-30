@@ -21,6 +21,11 @@
 [
     LLSTRING(artillery_fireMission_he),
     [
+        [
+            "COMBO",
+            LLSTRING(artillery_ammoType),
+            [GVAR(artilleryShellsAmmoCache), GVAR(artilleryShellsNameCache), 0]
+        ],
         ["EDIT", LLSTRING(artillery_numberOfUnits), ["4", FUNC(positiveInteger)]],
         ["EDIT", LLSTRING(artillery_shotsPerUnit), ["1", FUNC(positiveInteger)]],
         ["COMBO", LLSTRING(artillery_airburst), [[0, 1, 2, 3], [LLSTRING(artillery_airburst_no), LLSTRING(artillery_airburst_low), LLSTRING(artillery_airburst_med), LLSTRING(artillery_airburst_high)], 0]],
@@ -36,8 +41,8 @@
     ],
     {
         TRACE_1("params",_this);
-        (_this select 0) params ["_numberOfUnits", "_shotsPerUnit", "_airburstType", "_delayType", "_delay", "_duration", "_timeOnTarget"];
-        (_this select 1) params ["_targetArea", "_ammoType"];
+        (_this select 0) params ["_ammoType", "_numberOfUnits", "_shotsPerUnit", "_airburstType", "_delayType", "_delay", "_duration", "_timeOnTarget"];
+        (_this select 1) params ["_targetArea"];
 
         _numberOfUnits = parseNumber _numberOfUnits;
         _shotsPerUnit = parseNumber _shotsPerUnit;
