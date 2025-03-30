@@ -4,6 +4,7 @@ PREP(artyFireMissionHE);
 PREP(artyFireMissionSMOKE);
 PREP(artyFireMissionILLUM);
 PREP(calcArtyShellQueue);
+PREP(compileArtilleryShells);
 PREP(contextMeasureDistance);
 PREP(execFireMission);
 PREP(getModuleDestination);
