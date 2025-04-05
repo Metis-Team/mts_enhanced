@@ -25,8 +25,6 @@ if (!GVAR(soundIsPlaying) && {QGVAR(FOX40) in ([_player, false, true, true, true
 
     [_player, QGVAR(FOX40Sound), 300, true] call CBA_fnc_globalSay3D;
 
-    [_player, [QGVAR(FOX40Sound), 300]] remoteExecCall ["say3D"];
-
     [{
         GVAR(soundIsPlaying) = false;
     }, [], 1] call CBA_fnc_waitAndExecute;
