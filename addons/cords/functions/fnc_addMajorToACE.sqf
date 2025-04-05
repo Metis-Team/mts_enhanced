@@ -18,8 +18,6 @@
  *
  */
 
-CHECK(!hasInterface);
-
 private _playerIDs = parseSimpleArray GVAR(playerIDs);
 
 CHECKRET(!(_playerIDs isEqualType []),ERROR("Wrong data type in CBA Settings. Expected ARRAY of STRINGS with player IDs"));
