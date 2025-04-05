@@ -20,8 +20,10 @@ params [["_player", objNull, [objNull]]];
 
 CHECK(isNull _player);
 
-if (QGVAR(FOX40) in ([_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems) && {!GVAR(soundIsPlaying)}) then {
+if (!GVAR(soundIsPlaying) && {QGVAR(FOX40) in ([_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems)}) then {
     GVAR(soundIsPlaying) = true;
+
+    [_player, QGVAR(FOX40Sound), 300, true] call CBA_fnc_globalSay3D;
 
     [_player, [QGVAR(FOX40Sound), 300]] remoteExecCall ["say3D"];
 
