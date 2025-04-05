@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="mts">
     <Package name="drill">
-        <Key ID="STR_mts_drill">
-            <Original>Drill</Original>
-            <German>Formaldienst</German>
-        </Key>
         <Key ID="STR_mts_drill_subCategory">
             <Original>Drill</Original>
             <German>Formaldienst</German>

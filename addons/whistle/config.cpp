@@ -3,8 +3,12 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {"MTS_ItemWhistle"};
-        weapons[] = {"MTS_Whistle"};
+        units[] = {
+            QGVAR(FOX40_Item)
+        };
+        weapons[] = {
+            QGVAR(FOX40)
+        };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"mts_main"};
         author = ECSTRING(main,authors);
