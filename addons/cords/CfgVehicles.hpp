@@ -7,7 +7,7 @@ class CfgVehicles {
                     displayName = CSTRING(cords);
                     icon = QPATHTOF(data\ui\mts_cords_ui_co.paa);
                     statement = "";
-                    condition = QUOTE(GVAR(enabled) && GVAR(PBWLoaded) && {[_player] call FUNC(hasPBWUniform)});
+                    condition = QUOTE(GVAR(PBWLoaded) && {GVAR(enabled)} && {[_player] call FUNC(hasPBWUniform)});
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
 
                     class GVAR(cordsInf) {
