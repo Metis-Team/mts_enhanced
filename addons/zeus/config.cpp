@@ -13,7 +13,6 @@ class CfgPatches {
             "zen_common",
             "zen_context_menu",
             "zen_modules",
-            "ace_medical",
             "ace_zeus"
         };
         author = ECSTRING(main,authors);

@@ -3,7 +3,7 @@
     QGVAR(blowWhistle),
     LLSTRING(cba_keybinding_blow_whistle),
     {
-        private _player = missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", player];
+        private _player = call CBA_fnc_currentUnit;
         [_player] call FUNC(blowWhistle);
     },
     "",

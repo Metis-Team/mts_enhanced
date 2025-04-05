@@ -63,6 +63,7 @@ class CfgVehicles {
         class Attributes {
             class GVAR(mineClearing) {
                 displayName = CSTRING(mineClearingDisplayName);
+                tooltip = CSTRING(mineClearingTooltip);
                 property = QGVAR(enableMineClearing);
                 control = "Checkbox";
                 defaultValue = "true";

@@ -49,10 +49,6 @@
             <Original>If possible, adds interaction menu for the newly created equipment.\n(Depending on whether an object was passed to the openArmory function)</Original>
             <German>Wenn möglich, fügt ein Interaktionsmenü für die neu erstellte Ausrüstungskategorie hinzu.\n(Abhängig davon, ob ein Objekt an die Funktion openArmory übergeben wurde)</German>
         </Key>
-        <Key ID="STR_mts_Armory_error_equipmentCategoryCreation">
-            <Original>Equipment category '%1' couldn't be created!</Original>
-            <German>Ausrüstungskategorie '%1' konnte nicht erstellt werden!</German>
-        </Key>
         <Key ID="STR_mts_Armory_error_EquipmentCategoryNotExists">
             <Original>Equipment category '%1' doesn't exist!</Original>
             <German>Ausrüstungskategorie '%1' existiert nicht!</German>
