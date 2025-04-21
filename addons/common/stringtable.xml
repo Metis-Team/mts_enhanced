@@ -3,7 +3,7 @@
     <Package name="common">
         <Container name="chatCommands">
             <Key ID="STR_mts_common_chatCommands_zeusCreated">
-                <Original>You can now use zeus.</Original>
+                <Original>You can now use Zeus.</Original>
                 <German>Du kannst jetzt Zeus benutzen.</German>
             </Key>
             <Key ID="STR_mts_common_chatCommands_falseArgument">
@@ -13,6 +13,30 @@
             <Key ID="STR_mts_common_chatCommands_teleportError">
                 <Original>Cannot teleport!</Original>
                 <German>Teleport nicht möglich!</German>
+            </Key>
+            <Key ID="STR_mts_common_chatCommands_invalidMarkerCommand">
+                <Original>Invalid command! Valid commands: %1</Original>
+                <German>Ungültiger Befehl! Gültige Befehle: %1</German>
+            </Key>
+            <Key ID="STR_mts_common_chatCommands_noMarkersSaved">
+                <Original>No markers saved (%1)</Original>
+                <German>Keine Marker gespeichert (%1)</German>
+            </Key>
+            <Key ID="STR_mts_common_chatCommands_wrongWorld">
+                <Original>Wrong map. Markers were saved on '%1'.</Original>
+                <German>Falsche Karte. Marker wurden auf '%1' gespeichert.</German>
+            </Key>
+            <Key ID="STR_mts_common_chatCommands_deletedSavedMarkers">
+                <Original>Deleted saved markers (%1)</Original>
+                <German>Gespeicherte Marker gelöscht (%1)</German>
+            </Key>
+            <Key ID="STR_mts_common_chatCommands_savedMarkers">
+                <Original>Saved markers (%1)</Original>
+                <German>Marker gespeichert (%1)</German>
+            </Key>
+            <Key ID="STR_mts_common_chatCommands_loadedMarkers">
+                <Original>Loaded markers (%1)</Original>
+                <German>Marker geladen (%1)</German>
             </Key>
         </Container>
     </Package>
