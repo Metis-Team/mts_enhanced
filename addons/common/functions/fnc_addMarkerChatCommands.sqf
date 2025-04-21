@@ -62,7 +62,7 @@ if (!hasInterface) exitWith {};
         };
         default {
             WARNING_1("Invalid command: '%1'",_operation);
-            [{systemChat _this}, format [LLSTRING(chatCommands_invalidMarkerCommand), "save, load, deletesave"]] call CBA_fnc_execNextFrame;
+            [{systemChat _this}, format [LLSTRING(chatCommands_invalidMarkerCommand), "#markers save / load / deletesave"]] call CBA_fnc_execNextFrame;
         };
     };
 }, "adminLogged"] call CBA_fnc_registerChatCommand;
