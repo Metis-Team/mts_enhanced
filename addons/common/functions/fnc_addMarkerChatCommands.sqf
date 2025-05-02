@@ -18,6 +18,9 @@
 
 if (!hasInterface) exitWith {};
 
+// Last created markers
+GVAR(createdMarkers) = [];
+
 ["markers", {
     TRACE_1("Chat command marker",_this);
     params ["_command"];
@@ -34,11 +37,19 @@ if (!hasInterface) exitWith {};
         };
     };
 
+    private _saveNamespace = false;
+
     switch (toLower _operation) do {
         case "save": {
-            [_namespace] call FUNC(saveMarkers);
+            private _markers = [] call FUNC(getMarkers);
+
+            _namespace setVariable [QGVAR(savedMarkersWorldName), worldName];
+            _namespace setVariable [QGVAR(savedMarkers), _markers];
+            _saveNamespace = true;
+
             [{systemChat _this}, format [LLSTRING(chatCommands_savedMarkers), _namespaceName]] call CBA_fnc_execNextFrame; // Next frame so the message is shown after command line
         };
+
         case "load": {
             private _worldName = _namespace getVariable [QGVAR(savedMarkersWorldName), ""];
 
@@ -50,19 +61,42 @@ if (!hasInterface) exitWith {};
                 [{systemChat _this}, format [LLSTRING(chatCommands_wrongWorld), _worldName]] call CBA_fnc_execNextFrame;
             };
 
-            [_namespace] call FUNC(loadMarkers);
+            private _markers = _namespace getVariable [QGVAR(savedMarkers), []];
+            GVAR(createdMarkers) = [_markers] call FUNC(createMarkers);
+
             [{systemChat _this}, format [LLSTRING(chatCommands_loadedMarkers), _namespaceName]] call CBA_fnc_execNextFrame;
         };
+
+        case "undo": {
+            if (GVAR(createdMarkers) isEqualTo []) exitWith {
+                [{systemChat _this}, LLSTRING(chatCommands_noMarkersToUndo)] call CBA_fnc_execNextFrame;
+            };
+
+            {
+                deleteMarker _x;
+            } forEach GVAR(createdMarkers);
+
+            GVAR(createdMarkers) = [];
+
+            [{systemChat _this}, LLSTRING(chatCommands_undoMarkers)] call CBA_fnc_execNextFrame;
+        };
+
         case "deletesave": {
             _namespace setVariable [QGVAR(savedMarkersWorldName), nil];
             _namespace setVariable [QGVAR(savedMarkers), nil];
+            _saveNamespace = true;
 
-            if (_namespace isEqualTo profileNamespace) then {saveProfileNamespace};
             [{systemChat _this}, format [LLSTRING(chatCommands_deletedSavedMarkers), _namespaceName]] call CBA_fnc_execNextFrame;
         };
+
         default {
             WARNING_1("Invalid command: '%1'",_operation);
-            [{systemChat _this}, format [LLSTRING(chatCommands_invalidMarkerCommand), "#markers save / load / deletesave"]] call CBA_fnc_execNextFrame;
+            [{systemChat _this}, format [LLSTRING(chatCommands_invalidMarkerCommand), "#markers save / load / undo / deletesave"]] call CBA_fnc_execNextFrame;
         };
+    };
+
+    if (_saveNamespace) then {
+        if (_namespace isEqualTo profileNamespace) then {saveProfileNamespace};
+        if (_namespace isEqualTo missionProfileNamespace) then {saveMissionProfileNamespace};
     };
 }, "adminLogged"] call CBA_fnc_registerChatCommand;

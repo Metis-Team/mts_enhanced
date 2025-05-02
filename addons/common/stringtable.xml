@@ -23,8 +23,8 @@
                 <German>Keine Marker gespeichert (%1)</German>
             </Key>
             <Key ID="STR_mts_common_chatCommands_wrongWorld">
-                <Original>Wrong map. Markers were saved on '%1'.</Original>
-                <German>Falsche Karte. Marker wurden auf '%1' gespeichert.</German>
+                <Original>Wrong map. Markers were saved on '%1'</Original>
+                <German>Falsche Karte. Marker wurden auf '%1' gespeichert</German>
             </Key>
             <Key ID="STR_mts_common_chatCommands_deletedSavedMarkers">
                 <Original>Deleted saved markers (%1)</Original>
@@ -37,6 +37,14 @@
             <Key ID="STR_mts_common_chatCommands_loadedMarkers">
                 <Original>Loaded markers (%1)</Original>
                 <German>Marker geladen (%1)</German>
+            </Key>
+            <Key ID="STR_mts_common_chatCommands_undoMarkers">
+                <Original>Undid last loaded markers</Original>
+                <German>Letzte geladenen Marker zurückgesetzt</German>
+            </Key>
+            <Key ID="STR_mts_common_chatCommands_noMarkersToUndo">
+                <Original>No markers loaded to undo</Original>
+                <German>Keine Marker geladen zum Zurücksetzen</German>
             </Key>
         </Container>
     </Package>

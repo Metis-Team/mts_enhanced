@@ -1,6 +1,6 @@
 PREP(addChatCommands);
 PREP(addMarkerChatCommands);
 PREP(arsenalPBWFix);
-PREP(loadMarkers);
+PREP(createMarkers);
+PREP(getMarkers);
 PREP(parseNameToPlayer);
-PREP(saveMarkers);
