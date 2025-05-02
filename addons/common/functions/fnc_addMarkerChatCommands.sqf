@@ -18,7 +18,7 @@
 
 if (!hasInterface) exitWith {};
 
-// Last created markers
+// Last created markers for undo action
 GVAR(createdMarkers) = [];
 
 ["markers", {
