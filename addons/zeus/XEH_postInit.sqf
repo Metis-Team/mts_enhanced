@@ -54,8 +54,6 @@ if (hasInterface) then {
 
     call FUNC(moduleArtillery);
     call FUNC(moduleUnflipVehicle);
-    call FUNC(moduleForgetTarget);
-    call FUNC(moduleRevealTarget);
     call FUNC(moduleTargetKnowledge);
     call FUNC(moduleSuicideDrone);
 

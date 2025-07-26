@@ -1,7 +1,6 @@
 class CfgMovesBasic {
     class Actions {
         class NoActions;
-        class CivilStandActions;
 
         class GVAR(StandStillActions): NoActions {
             turnL = "";
@@ -40,8 +39,6 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             aimingBody = "aimingNo"; \
             forceAim = 1; \
             static = 1;
-
-        class CutSceneAnimationBase;
 
         class GVAR(Normal): AmovPercMstpSnonWnonDnon  {
             file = QPATHTOF(data\mts_Normal.rtm);
