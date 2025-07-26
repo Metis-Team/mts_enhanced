@@ -261,12 +261,6 @@
             <German>Kein Fahrzeug ausgewählt!</German>
         </Key>
     </Container>
-    <Container name="misc">
-        <Key ID="STR_mts_zeus_measureDistance">
-            <Original>Measure distance</Original>
-            <German>Entfernung messen</German>
-        </Key>
-    </Container>
     <Container name="AI">
         <Key ID="STR_mts_zeus_AI_knowledgeCategory">
             <Original>Knowledge</Original>
