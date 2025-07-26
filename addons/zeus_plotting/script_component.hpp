@@ -1,23 +1,26 @@
-#define COMPONENT plotting
-#define COMPONENT_BEAUTIFIED Plotting
+#define COMPONENT zeus_plotting
+#define COMPONENT_BEAUTIFIED Zeus Plotting
 #include "\z\mts_enhanced\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
-#ifdef DEBUG_ENABLED_PLOTTING
+#ifdef DEBUG_ENABLED_ZEUS_PLOTTING
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_PLOTTING
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_PLOTTING
+#ifdef DEBUG_SETTINGS_ZEUS_PLOTTING
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_ZEUS_PLOTTING
 #endif
 
 #include "\z\mts_enhanced\addons\main\script_macros.hpp"
 
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 #include "defineResinclDesign.inc"
+
+#define GETVAR_SYS(var1,var2) getVariable [ARR_2(QUOTE(var1),var2)]
+#define GETMVAR(var1,var2) (missionNamespace GETVAR_SYS(var1,var2))
 
 #define ICON "\a3\ui_f\data\map\markerbrushes\cross_ca.paa"
 #define ICON_ANGLE 0
