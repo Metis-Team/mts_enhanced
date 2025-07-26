@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"mts_main", "zen_dialog"};
-        author = ECSTRING(main,Author);
+        author = ECSTRING(main,authors);
         authors[] = {"Timi007"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;

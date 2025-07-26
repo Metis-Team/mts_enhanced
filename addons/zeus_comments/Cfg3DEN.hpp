@@ -41,7 +41,7 @@ class Cfg3DEN {
     class Comment {
         class AttributeCategories {
             class ADDON {
-                displayName = ECSTRING(main,DisplayName);
+                displayName = ECSTRING(main,category);
                 collapsed = 0;
 
                 class Attributes {

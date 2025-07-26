@@ -1,4 +1,4 @@
-private _category = [ELSTRING(main,DisplayName), localize STR_DISPLAY_NAME];
+private _category = [LELSTRING(main,category), localize STR_DISPLAY_NAME];
 
 [
     QGVAR(enabled),
