@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="mts">
+    <Package name="zeus_plotting">
+        <Key ID="STR_mts_zeus_plotting_DisplayName">
+            <English>Plotting</English>
+            <German>Plotten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_MeasureDistance">
+            <English>Measure distance</English>
+            <German>Entfernung messen</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_MeasureDistanceFromCamera">
+            <English>Measure distance from camera</English>
+            <German>Entfernung von Kamera messen</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_MeasureRadius">
+            <English>Measure radius</English>
+            <German>Radius messen</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_MeasureOffset">
+            <English>Measure offset</English>
+            <German>Versatz messen</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_ClearPlots">
+            <English>Clear plots</English>
+            <German>Plots entfernen</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_ToggleDistanceFormat">
+            <English>Switch Distance Unit</English>
+            <German>Distanzeinheit durchschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_ToggleDistanceFormat_Description">
+            <English>Switches to the next unit for distances.</English>
+            <German>Wechselt zur nächsten Einheit für Entfernungen.</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_ToggleSpeed">
+            <English>Switch Speed for Travel Time</English>
+            <German>Geschwindigkeit für Fahrzeit durchschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_ToggleSpeed_Description">
+            <English>Switches to the next speed which determines travel time.</English>
+            <German>Wechselt zur nächsten Geschwindigkeit, die die Fahrzeit bestimmt.</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_ToggleSpeedFormat">
+            <English>Switch Speed Unit</English>
+            <German>Geschwindigkeitseinheit durchschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_ToggleSpeedFormat_Description">
+            <English>Switches to the next unit for speeds.</English>
+            <German>Wechselt zur nächsten Einheit für Geschwindigkeiten.</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_ToggleAzimuthFormat">
+            <English>Switch Azimuth Unit</English>
+            <German>Richtungseinheit durchschalten</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_ToggleAzimuthFormat_Description">
+            <English>Switches to the next unit for directions.</English>
+            <German>Wechselt zur nächsten Einheit für Richtungen.</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_DeleteLastPlot">
+            <English>Delete Last Plot</English>
+            <German>Letzten Plot entfernen</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_DeleteLastPlot_Description">
+            <English>Deletes the last plot created.</English>
+            <German>Entfernt den zuletzt erstellten Plot.</German>
+        </Key>
+        <Key ID="STR_mts_zeus_plotting_ErrorCannotAttachPlot">
+            <English>Cannot attach more than one plot endpoint to a unit</English>
+            <German>Einer Einheit kann nicht mehr als ein Plot-Endpunkt angehängt werden</German>
+        </Key>
+    </Package>
+</Project>

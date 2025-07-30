@@ -1,7 +1,6 @@
 {
     "recommendations": [
         "editorconfig.editorconfig",
-        "bux578.vscode-openlastrpt",
         "brettmayson.hemtt"
     ]
 }

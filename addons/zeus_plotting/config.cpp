@@ -6,22 +6,14 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "mts_main",
-            "zen_custom_modules",
-            "zen_dialog",
-            "zen_common",
-            "zen_context_menu",
-            "zen_modules",
-            "ace_zeus"
-        };
+        requiredAddons[] = {"mts_main", "zen_common", "zen_context_menu"};
         author = ECSTRING(main,authors);
-        authors[] = {"PhILoX", "Timi007"};
+        authors[] = {"Timi007"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgAmmo.hpp"
-#include "CfgVehicles.hpp"
+#include "CfgContext.hpp"
+#include "CfgFormatters.hpp"
