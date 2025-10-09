@@ -16,7 +16,7 @@
  *
  */
 
-if (!hasInterface || {!("PBW_German_Uniform" call ace_common_fnc_isModLoaded)}) exitWith {};
+if (!hasInterface || {!(["PBW_German_Uniform"] call FUNC(isModLoaded))}) exitWith {};
 
 INFO("Applying patch to place PBW ranks back on uniform after leaving ACE arsenal.");
 
