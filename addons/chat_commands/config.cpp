@@ -6,11 +6,12 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"mts_main"};
+        requiredAddons[] = {"mts_main", "mts_common"};
         author = ECSTRING(main,authors);
-        authors[] = {""};
+        authors[] = {"Timi007"};
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgChatCommands.hpp"

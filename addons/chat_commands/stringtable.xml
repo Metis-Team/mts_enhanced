@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="mts">
+    <Package name="common">
+        <Container name="chat_commands">
+            <Key ID="STR_mts_chat_commands_noUnit">
+                <Original>No unit found! Leave blank to apply command to yourself, or use player name, or 'getname' / '-' / 'cursor' for cursor target.</Original>
+                <German>Keine Einheit gefunden! Leer lassen, um Befehl auf sich selbst anzuwenden, oder Spielernamen übergeben. 'getname' / '-' / 'cursor' um Einheit hinter Mauszeiger auszuwählen.</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_zeusCreated">
+                <Original>You can now use Zeus.</Original>
+                <German>Du kannst jetzt Zeus benutzen.</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_falseArgument">
+                <Original>One or more arguments are false!</Original>
+                <German>Ein oder mehrere Argumente sind falsch!</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_teleportError">
+                <Original>Cannot teleport!</Original>
+                <German>Teleport nicht möglich!</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_invalidMarkerCommand">
+                <Original>Invalid command! Valid commands: %1</Original>
+                <German>Ungültiger Befehl! Gültige Befehle: %1</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_noMarkersSaved">
+                <Original>No markers saved (%1)</Original>
+                <German>Keine Marker gespeichert (%1)</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_wrongWorld">
+                <Original>Wrong map. Markers were saved on '%1'</Original>
+                <German>Falsche Karte. Marker wurden auf '%1' gespeichert</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_deletedSavedMarkers">
+                <Original>Deleted saved markers (%1)</Original>
+                <German>Gespeicherte Marker gelöscht (%1)</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_savedMarkers">
+                <Original>Saved markers (%1)</Original>
+                <German>Marker gespeichert (%1)</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_loadedMarkers">
+                <Original>Loaded markers (%1)</Original>
+                <German>Marker geladen (%1)</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_undoMarkers">
+                <Original>Undid last loaded markers</Original>
+                <German>Letzte geladenen Marker zurückgesetzt</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_noMarkersToUndo">
+                <Original>No markers loaded to undo</Original>
+                <German>Keine Marker geladen zum Zurücksetzen</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_category">
+                <Original>Chat Commands</Original>
+                <German>Chatbefehle</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_availableFor">
+                <Original>Enables this chat commands for a group of players.</Original>
+                <German>Aktiviert diesen Chatbefehl für eine Spielergruppe.</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_disabled">
+                <Original>Disabled</Original>
+                <German>Deaktiviert</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_all">
+                <Original>All</Original>
+                <German>Alle</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_admin">
+                <Original>Admins</Original>
+                <German>Admins</German>
+            </Key>
+            <Key ID="STR_mts_chat_commands_adminLogged">
+                <Original>Logged in admins</Original>
+                <German>Eingeloggte Admins</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>
