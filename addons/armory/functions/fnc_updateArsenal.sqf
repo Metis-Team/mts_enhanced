@@ -20,7 +20,7 @@
 private _argsSuccessfullyParsed = params [["_equipmentName", "", [""]], ["_status", false, [false]]];
 TRACE_3("",_equipmentName,_status,_argsSuccessfullyParsed);
 
-CHECK(!GVAR(initialized) || !_params);
+CHECK(!GVAR(initialized) || !_argsSuccessfullyParsed);
 
 if (isDedicated || (isServer && GVAR(allowPlayerDBConnection))) then {
     private _equipmentArray = GVAR(equipment) getVariable [_equipmentName, []];
