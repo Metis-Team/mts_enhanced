@@ -4,7 +4,7 @@
  *
  *  Description:
  *      Wrapper for ACE isModLoaded function.
- *      If ACE function is not available out own implementation is use.
+ *      If ACE function is not available our own implementation is used.
  *      ACE function is preferred because of higher cache hit rate.
  *
  *  Parameter(s):
