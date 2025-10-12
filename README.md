@@ -29,9 +29,10 @@
 
 **Metis Enhanced** is a collection of useful items and features to enhance the MilSim gameplay experience for Arma 3.
 
-## Components:
+## Components
+
 - **Armory**: Allows you to save and load loadouts from a database across all server and missions.
-- **Common**: Chat commands for logged in admins.
+- **Chat Commands**: Chat commands for logged in admins.
 - **Cords**: Cords for PBW uniforms (BW Kleiderkammer).
 - **Cutter**: Grass and bush cutter ACE actions allowing to remove grass and bushes.
 - **Drill**: Animation and actions for exercise.
