@@ -1,0 +1,13 @@
+PREP(addChatCommands);
+PREP(compileCommands);
+PREP(createZeus);
+PREP(getTarget);
+PREP(heal);
+PREP(healAll);
+PREP(markers);
+PREP(parseNameToPlayer);
+PREP(promoteToEng);
+PREP(promoteToMedic);
+PREP(promoteToZeus);
+PREP(repair);
+PREP(teleport);

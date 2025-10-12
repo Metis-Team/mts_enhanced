@@ -9,5 +9,3 @@ if (hasInterface) then {
 };
 
 call FUNC(arsenalPBWFix);
-call FUNC(addChatCommands);
-call FUNC(addMarkerChatCommands);
