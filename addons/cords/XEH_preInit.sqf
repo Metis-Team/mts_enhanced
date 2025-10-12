@@ -25,7 +25,7 @@ GVAR(uniforms) = [
 
 GVAR(PBWLoaded) = false;
 
-if ("PBW_German_Uniform" call ace_common_fnc_isModLoaded) then {
+if (["PBW_German_Uniform"] call EFUNC(common,isModLoaded)) then {
     GVAR(PBWLoaded) = true;
     #include "initSettings.hpp"
 };

@@ -139,7 +139,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEU
 
 // Add draw EH for 3D camera view - draws the 3D icon and line
 [{
-    (_this select 0) params ["_startPosASL", "_code", "_text", "_icon", "_color", "_angle", "_drawLine", "_drawIconAtStart", "_beforeDrawingCode"];
+    (_this select 0) params ["_startPosASL", "_code", "_text", "_icon", "_color", "_angle", "_drawLine", "_drawIconAtStart", "_beforeDrawingCode", "_args"];
 
     if (isNull findDisplay ZEUS_DISPLAY || {!isNull findDisplay PAUSE_MENU_DISPLAY}) then {
         TRACE_2("null-exit",(isNull findDisplay ZEUS_DISPLAY),(isNull findDisplay PAUSE_MENU_DISPLAY));
@@ -179,4 +179,4 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay ZEUS_DISPLAY) displayCtrl ZEU
         GVAR(moduleDestination_displayEHKeyboard) = nil;
         GVAR(moduleDestination_mapDrawEH) = nil;
     };
-}, 0, [_startPosASL, _code, _text, _icon, _color, _angle, _drawLine, _drawIconAtStart, _beforeDrawingCode]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_startPosASL, _code, _text, _icon, _color, _angle, _drawLine, _drawIconAtStart, _beforeDrawingCode, _args]] call CBA_fnc_addPerFrameHandler;

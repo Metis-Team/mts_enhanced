@@ -23,7 +23,7 @@ if (!GVAR(bushcutter_enabled)) exitWith {false};
 if (!([_player, objNull] call ace_common_fnc_canInteractWith)) exitWith {false};
 
 private _hasItem = if (GVAR(bushcutter_requireItem)) then {
-    count (([_player] call ace_common_fnc_uniqueItems) arrayIntersect keys GVAR(bushCutterCache)) > 0
+    (([_player] call ace_common_fnc_uniqueItems) arrayIntersect keys GVAR(bushCutterCache)) isNotEqualTo []
 } else {
     true
 };
