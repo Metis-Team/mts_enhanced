@@ -26,4 +26,10 @@
         ".hemttout/build": true,
         ".hemttout/release": true,
     },
+    "git.branchProtection": [
+        "master",
+        "release"
+    ],
+    "sqf.enableACE3": true,
+    "sqf.enableCBA": true,
 }
