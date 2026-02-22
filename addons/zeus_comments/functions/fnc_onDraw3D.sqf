@@ -16,6 +16,7 @@
  */
 
 if (!GVAR(enabled) && !GVAR(enabled3DEN)) exitWith {
+    #pragma hemtt ignore_variables ["_thisEvent", "_thisEventHandler"];
     removeMissionEventHandler [_thisEvent, _thisEventHandler];
 
     {ctrlDelete _y} forEach GVAR(icons);

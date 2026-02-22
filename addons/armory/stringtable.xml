@@ -1,61 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="mts">
-	<Package name="Armory">
-        <Key ID="STR_mts_Armory_displayName">
-    		<Original>Armory</Original>
-            <German>Waffenkammer</German>
-    	</Key>
-        <Key ID="STR_mts_Armory_checkbox_arsenalToggle_tooltip">
-            <Original>Enable/disable Arsenal for everyone</Original>
-            <German>Arsenal für jeden freigeben/entziehen</German>
+    <Package name="Armory">
+        <Key ID="STR_mts_Armory_button_createEquipmentCategory_displayName">
+            <Original>Create</Original>
+            <German>Erstellen</German>
         </Key>
         <Key ID="STR_mts_Armory_button_createEquipmentCategory_tooltip">
             <Original>Create new equipment category</Original>
             <German>Neue Ausrüstungskategorie erstellen</German>
         </Key>
-        <Key ID="STR_mts_Armory_button_toggleSettings_tooltip">
-            <Original>Show/hide settings</Original>
-            <German>Einstellungen anzeigen/verbergen</German>
+        <Key ID="STR_mts_Armory_button_deleteEquipment_tooltip">
+            <Original>Delete equipment</Original>
+            <German>Ausrüstung löschen</German>
         </Key>
         <Key ID="STR_mts_Armory_button_exitDialog_tooltip">
             <Original>Close window</Original>
             <German>Fenster schließen</German>
         </Key>
-        <Key ID="STR_mts_Armory_text_loadout_title">
-            <Original>Loadouts</Original>
-            <German>Ausrüstung</German>
-        </Key>
-        <Key ID="STR_mts_Armory_text_backpack_title">
-            <Original>Backpacks</Original>
-            <German>Rucksäcke</German>
-        </Key>
-        <Key ID="STR_mts_Armory_editbox_equipmentName_tooltip">
-            <Original>Equipment name</Original>
-            <German>Ausrüstungsname</German>
-        </Key>
         <Key ID="STR_mts_Armory_button_save_displayName">
             <Original>Save</Original>
             <German>Speichern</German>
         </Key>
-        <Key ID="STR_mts_Armory_button_deleteEquipment_tooltip">
-            <Original>Delete equipment</Original>
-            <German>Ausrüstung löschen</German>
+        <Key ID="STR_mts_Armory_button_toggleSettings_tooltip">
+            <Original>Show/hide settings</Original>
+            <German>Einstellungen anzeigen/verbergen</German>
         </Key>
-        <Key ID="STR_mts_Armory_button_createEquipmentCategory_displayName">
-            <Original>Create</Original>
-            <German>Erstellen</German>
+        <Key ID="STR_mts_Armory_checkbox_arsenalToggle_tooltip">
+            <Original>Enable/disable Arsenal for everyone</Original>
+            <German>Arsenal für jeden freigeben/entziehen</German>
         </Key>
         <Key ID="STR_mts_Armory_checkbox_initializeEquipmentCategory_tooltip">
             <Original>If possible, adds interaction menu for the newly created equipment.\n(Depending on whether an object was passed to the openArmory function)</Original>
             <German>Wenn möglich, fügt ein Interaktionsmenü für die neu erstellte Ausrüstungskategorie hinzu.\n(Abhängig davon, ob ein Objekt an die Funktion openArmory übergeben wurde)</German>
         </Key>
+        <Key ID="STR_mts_Armory_displayName">
+            <Original>Armory</Original>
+            <German>Waffenkammer</German>
+        </Key>
+        <Key ID="STR_mts_Armory_editbox_editors">
+            <Original>Who is permitted to edit this equipment category? Format: ["PlayerUID", "PlayerUID", ...]</Original>
+            <German>Wer darf diese Ausrüstungskategorie bearbeiten? Format: ["PlayerUID", "PlayerUID", ...]</German>
+        </Key>
+        <Key ID="STR_mts_Armory_editbox_equipmentName_tooltip">
+            <Original>Equipment name</Original>
+            <German>Ausrüstungsname</German>
+        </Key>
         <Key ID="STR_mts_Armory_error_EquipmentCategoryNotExists">
             <Original>Equipment category '%1' doesn't exist!</Original>
             <German>Ausrüstungskategorie '%1' existiert nicht!</German>
         </Key>
-        <Key ID="STR_mts_Armory_text_medic">
-            <Original>Medic</Original>
-            <German>Sanitäter</German>
+        <Key ID="STR_mts_Armory_error_nameNotEmpty">
+            <Original>The equipment name must have at least one character!</Original>
+            <German>Der Ausrüstungsname muss mindestens ein Zeichen besitzen!</German>
+        </Key>
+        <Key ID="STR_mts_Armory_text_AdvEngineer">
+            <Original>Adv. Engineer</Original>
+            <German>Instandsetzer</German>
+        </Key>
+        <Key ID="STR_mts_Armory_text_backpack_title">
+            <Original>Backpacks</Original>
+            <German>Rucksäcke</German>
         </Key>
         <Key ID="STR_mts_Armory_text_doctor">
             <Original>Doctor</Original>
@@ -65,30 +69,26 @@
             <Original>Engineer</Original>
             <German>Pionier</German>
         </Key>
-        <Key ID="STR_mts_Armory_text_AdvEngineer">
-            <Original>Adv. Engineer</Original>
-            <German>Instandsetzer</German>
+        <Key ID="STR_mts_Armory_text_loadout_title">
+            <Original>Loadouts</Original>
+            <German>Ausrüstung</German>
+        </Key>
+        <Key ID="STR_mts_Armory_text_medic">
+            <Original>Medic</Original>
+            <German>Sanitäter</German>
         </Key>
         <Key ID="STR_mts_Armory_text_none">
             <Original>None</Original>
             <German>Nichts</German>
         </Key>
-        <Key ID="STR_mts_Armory_error_nameNotEmpty">
-            <Original>The equipment name must have at least one character!</Original>
-            <German>Der Ausrüstungsname muss mindestens ein Zeichen besitzen!</German>
-        </Key>
-        <Key ID="STR_mts_Armory_editbox_editors">
-            <Original>Who is permitted to edit this equipment category? Format: ["PlayerUID", "PlayerUID", ...]</Original>
-            <German>Wer darf diese Ausrüstungskategorie bearbeiten? Format: ["PlayerUID", "PlayerUID", ...]</German>
-        </Key>
         <Container name="CBA_Settings">
-            <Key ID="str_mts_Armory_openUIActionMenu">
-                <Original>Interaction menu</Original>
-                <German>Interaktionsmenü</German>
+            <Key ID="STR_mts_Armory_allowPlayerDBConnection">
+                <Original>DEBUG: Allow Player database connection</Original>
+                <German>DEBUG: Erlaube Spieler Datenbankverbindung</German>
             </Key>
-            <Key ID="str_mts_Armory_openUIActionMenu_tooltip">
-                <Original>Sets the interaction menu, for newly created equipment categories, which should be used. If ACE is not present, it will fall back to Vanilla system.</Original>
-                <German>Setzt das Interaktionsmenü, bei neu erstellen Ausrüstungskategorien, welches benutzt werden soll. Wenn ACE nicht geladen ist, wird das Vanilla system verwendet.</German>
+            <Key ID="STR_mts_Armory_allowPlayerDBConnection_tooltip">
+                <Original>DEBUG: Allow the player to connect to the armory database. The mod ExtDB3 and a proper configuration is needed!</Original>
+                <German>DEBUG: Erlaube dem Spieler, sich mit der Ausrüstungsdatenbank zu verbinden. Die Mod ExtDB3 und die entsprechende Konfigurationen wird benötigt!</German>
             </Key>
             <Key ID="STR_mts_Armory_openUIActionMenu_ace_interaction">
                 <Original>ACE Interaction</Original>
@@ -98,14 +98,14 @@
                 <Original>Scroll menu (Vanilla)</Original>
                 <German>Scrollmenü (Vanilla)</German>
             </Key>
-            <Key ID="STR_mts_Armory_allowPlayerDBConnection">
-                <Original>DEBUG: Allow Player database connection</Original>
-                <German>DEBUG: Erlaube Spieler Datenbankverbindung</German>
+            <Key ID="str_mts_Armory_openUIActionMenu">
+                <Original>Interaction menu</Original>
+                <German>Interaktionsmenü</German>
             </Key>
-            <Key ID="STR_mts_Armory_allowPlayerDBConnection_tooltip">
-                <Original>DEBUG: Allow the player to connect to the armory database. The mod ExtDB3 and a proper configuration is needed!</Original>
-                <German>DEBUG: Erlaube dem Spieler, sich mit der Ausrüstungsdatenbank zu verbinden. Die Mod ExtDB3 und die entsprechende Konfigurationen wird benötigt!</German>
+            <Key ID="str_mts_Armory_openUIActionMenu_tooltip">
+                <Original>Sets the interaction menu, for newly created equipment categories, which should be used. If ACE is not present, it will fall back to Vanilla system.</Original>
+                <German>Setzt das Interaktionsmenü, bei neu erstellen Ausrüstungskategorien, welches benutzt werden soll. Wenn ACE nicht geladen ist, wird das Vanilla system verwendet.</German>
             </Key>
         </Container>
-	</Package>
+    </Package>
 </Project>

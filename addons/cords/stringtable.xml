@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="mts">
-	<Package name="cords">
-        <Key ID="STR_mts_cords_major_rank">
-    		<Original>Major rank</Original>
-            <German>Major Dienstgrad</German>
-    	</Key>
-        <Key ID="STR_mts_cords_subCategory">
-    		<Original>Cords</Original>
-            <German>Litzen</German>
-    	</Key>
+    <Package name="cords">
         <Key ID="STR_mts_cords_cords">
-    		<Original>Add Cords</Original>
+            <Original>Add Cords</Original>
             <German>Litzen hinzufügen</German>
-    	</Key>
+        </Key>
         <Key ID="STR_mts_cords_cords_tooltip">
-    		<Original>Adds Cords to ACE interactions menu.</Original>
+            <Original>Adds Cords to ACE interactions menu.</Original>
             <German>Fügt Litzen zu dem ACE-Interaktionsmenü hinzu.</German>
-    	</Key>
-        <Key ID="STR_mts_cords_inf">
-    		<Original>Infantry</Original>
-            <German>Infanterie</German>
-    	</Key>
-        <Key ID="STR_mts_cords_pz">
-    		<Original>Armored</Original>
-            <German>Panzer</German>
-    	</Key>
+        </Key>
         <Key ID="STR_mts_cords_fa">
-    		<Original>FA Cord</Original>
+            <Original>FA Cord</Original>
             <German>FA Litze</German>
-    	</Key>
+        </Key>
+        <Key ID="STR_mts_cords_inf">
+            <Original>Infantry</Original>
+            <German>Infanterie</German>
+        </Key>
+        <Key ID="STR_mts_cords_major_rank">
+            <Original>Major rank</Original>
+            <German>Major Dienstgrad</German>
+        </Key>
         <Key ID="STR_mts_cords_oa">
-    		<Original>OA Cord</Original>
+            <Original>OA Cord</Original>
             <German>OA Litze</German>
-    	</Key>
+        </Key>
         <Key ID="STR_mts_cords_playerIDs">
-    		<Original>List of player IDs</Original>
+            <Original>List of player IDs</Original>
             <German>Liste von Spieler IDs</German>
-    	</Key>
+        </Key>
         <Key ID="STR_mts_cords_playerIDs_tooltip">
-    		<Original>List of player IDs who are allowed to use the major rank. Format: ["01234","56789"] (No Spaces between commas!)</Original>
+            <Original>List of player IDs who are allowed to use the major rank. Format: ["01234","56789"] (No Spaces between commas!)</Original>
             <German>Liste von Spieler IDs, die zugelassen sind, den Dienstgrad Major zu tragen. Format: ["012345","56789"] (Keine Leerzeichen zwischen Kommata!)</German>
-    	</Key>
-	</Package>
+        </Key>
+        <Key ID="STR_mts_cords_pz">
+            <Original>Armored</Original>
+            <German>Panzer</German>
+        </Key>
+        <Key ID="STR_mts_cords_subCategory">
+            <Original>Cords</Original>
+            <German>Litzen</German>
+        </Key>
+    </Package>
 </Project>

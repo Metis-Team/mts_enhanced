@@ -18,6 +18,7 @@
 params ["_mapCtrl"];
 
 if (!GVAR(enabled) && !GVAR(enabled3DEN)) exitWith {
+    #pragma hemtt ignore_variables ["_thisEvent", "_thisEventHandler"];
     _mapCtrl ctrlRemoveEventHandler [_thisEvent, _thisEventHandler];
     LOG("Removed 3DENComments map draw.");
 };
