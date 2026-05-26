@@ -37,9 +37,11 @@ private _saveNamespace = false;
 switch (toLower _operation) do {
     case "save": {
         private _markers = [] call EFUNC(common,getMarkers);
+        private _mtsMarkers = [] call EFUNC(common,getMtsMarkers);
 
         _namespace setVariable [QGVAR(savedMarkersWorldName), worldName];
         _namespace setVariable [QGVAR(savedMarkers), _markers];
+        _namespace setVariable [QGVAR(savedMtsMarkers), _mtsMarkers];
         _saveNamespace = true;
 
         [{systemChat _this}, format [LLSTRING(savedMarkers), _namespaceName]] call CBA_fnc_execNextFrame; // Next frame so the message is shown after command line
@@ -59,19 +61,28 @@ switch (toLower _operation) do {
         private _markers = _namespace getVariable [QGVAR(savedMarkers), []];
         GVAR(createdMarkers) = [_markers] call EFUNC(common,createMarkers);
 
+        private _mtsMarkers = _namespace getVariable [QGVAR(savedMtsMarkers), []];
+        GVAR(createdMtsMarkers) = [_mtsMarkers] call EFUNC(common,createMtsMarkers);
+
         [{systemChat _this}, format [LLSTRING(loadedMarkers), _namespaceName]] call CBA_fnc_execNextFrame;
     };
 
     case "undo": {
-        if (GVAR(createdMarkers) isEqualTo []) exitWith {
+        if (GVAR(createdMarkers) isEqualTo [] && GVAR(createdMtsMarkers) isEqualTo []) exitWith {
             [{systemChat _this}, LLSTRING(noMarkersToUndo)] call CBA_fnc_execNextFrame;
         };
 
         {
             deleteMarker _x;
         } forEach GVAR(createdMarkers);
-
         GVAR(createdMarkers) = [];
+
+        if (["mts_markers"] call EFUNC(common,isModLoaded)) then {
+            {
+                [_x] call mts_markers_fnc_deleteMarker;
+            } forEach GVAR(createdMtsMarkers);
+        };
+        GVAR(createdMtsMarkers) = [];
 
         [{systemChat _this}, LLSTRING(undoMarkers)] call CBA_fnc_execNextFrame;
     };
@@ -79,6 +90,7 @@ switch (toLower _operation) do {
     case "deletesave": {
         _namespace setVariable [QGVAR(savedMarkersWorldName), nil];
         _namespace setVariable [QGVAR(savedMarkers), nil];
+        _namespace setVariable [QGVAR(savedMtsMarkers), nil];
         _saveNamespace = true;
 
         [{systemChat _this}, format [LLSTRING(deletedSavedMarkers), _namespaceName]] call CBA_fnc_execNextFrame;
