@@ -2,3 +2,21 @@
 options.ignore = [
     "MTS_RECOMPILES", "MTS_PREP_RECOMPILE"
 ]
+
+[sqf.banned_macros]
+options.release = [
+    "DEBUG_MODE_FULL",
+    "DISABLE_COMPILE_CACHE",
+    "CBA_DEBUG_SYNCHRONOUS"
+]
+
+[sqf.function_undefined]
+options.ignore = [
+    "mts_markers_fnc_createMarker",
+    "mts_markers_fnc_getAllMarkers",
+    "mts_markers_fnc_getMarkerPos",
+    "mts_markers_fnc_getMarkerConfig",
+    "mts_markers_fnc_getMarkerScale",
+    "mts_markers_fnc_getMarkerAlpha",
+    "mts_markers_fnc_deleteMarker"
+]
