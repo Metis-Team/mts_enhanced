@@ -1,0 +1,2 @@
+# ignore mismatched $PBOPREFIX$ for addon
+ignore_pboprefix = true # Default: false

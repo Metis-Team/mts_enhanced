@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="mts">
     <Package name="drill">
-        <Key ID="STR_mts_drill_subCategory">
-            <Original>Drill</Original>
-            <German>Formaldienst</German>
-        </Key>
-		<Key ID="STR_mts_drill_StandStill">
-            <Original>Stand still</Original>
-            <German>Stillgestanden</German>
-        </Key>
-		<Key ID="STR_mts_drill_AtEase">
+        <Key ID="STR_mts_drill_AtEase">
             <Original>At ease</Original>
             <German>Rührt euch</German>
         </Key>
-		<Key ID="STR_mts_drill_FY">
+        <Key ID="STR_mts_drill_FY">
             <Original>Give the finger</Original>
             <German>Stinkefinger zeigen</German>
+        </Key>
+        <Key ID="STR_mts_drill_StandStill">
+            <Original>Stand still</Original>
+            <German>Stillgestanden</German>
         </Key>
         <Key ID="STR_mts_drill_showUI">
             <Original>Show drill stance indicator</Original>
@@ -25,5 +21,9 @@
             <Original>Show the current drill stance in bottom right corner.</Original>
             <German>Zeigt die aktuelle Haltung für den Formaldienst unten rechts.</German>
         </Key>
-	</Package>
+        <Key ID="STR_mts_drill_subCategory">
+            <Original>Drill</Original>
+            <German>Formaldienst</German>
+        </Key>
+    </Package>
 </Project>

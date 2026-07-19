@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="mts">
     <Package name="items">
-    <Container name="misc">
-        <Key ID="STR_mts_items_authors">
-            <Original>Timi007, Dan</Original>
-            <German>Timi007, Dan</German>
-        </Key>
-    </Container>
-    <Container name="markers">
-        <Key ID="STR_mts_items_markerYellowDisplayName">
-            <Original>Marker (Yellow)</Original>
-            <German>Markierung (Gelb)</German>
-        </Key>
-        <Key ID="STR_mts_items_markerMinesDisplayName">
-            <Original>Marker (Mines)</Original>
-            <German>Markierung (Minen)</German>
-        </Key>
-        <Key ID="STR_mts_items_markerDescription">
-            <Original>Can only be placed. Markers are used to mark a specific point in terrain.</Original>
-            <German>Kann nur platziert werden. Markierungen werden zur Kennzeichnung von bestimmten Geländepunkte eingesetzt.</German>
-        </Key>
-    </Container>
-    <Container name="actions">
-        <Key ID="STR_mts_items_marker">
-            <Original>Markers</Original>
-            <German>Markierungen</German>
-        </Key>
-        <Key ID="STR_mts_items_placeMarker">
-            <Original>Place %1</Original>
-            <German>%1 platzieren</German>
-        </Key>
-        <Key ID="STR_mts_items_cancel">
-            <Original>Cancel</Original>
-            <German>Abbrechen</German>
-        </Key>
-        <Key ID="STR_mts_items_adjustHeight">
-            <Original>Adjust height</Original>
-            <German>Höhe anpassen</German>
-        </Key>
-        <Key ID="STR_mts_items_pickupMarker">
-            <Original>Pickup %1</Original>
-            <German>%1 aufnehmen</German>
-        </Key>
-    </Container>
+        <Container name="actions">
+            <Key ID="STR_mts_items_adjustHeight">
+                <Original>Adjust height</Original>
+                <German>Höhe anpassen</German>
+            </Key>
+            <Key ID="STR_mts_items_cancel">
+                <Original>Cancel</Original>
+                <German>Abbrechen</German>
+            </Key>
+            <Key ID="STR_mts_items_marker">
+                <Original>Markers</Original>
+                <German>Markierungen</German>
+            </Key>
+            <Key ID="STR_mts_items_pickupMarker">
+                <Original>Pickup %1</Original>
+                <German>%1 aufnehmen</German>
+            </Key>
+            <Key ID="STR_mts_items_placeMarker">
+                <Original>Place %1</Original>
+                <German>%1 platzieren</German>
+            </Key>
+        </Container>
+        <Container name="markers">
+            <Key ID="STR_mts_items_markerDescription">
+                <Original>Can only be placed. Markers are used to mark a specific point in terrain.</Original>
+                <German>Kann nur platziert werden. Markierungen werden zur Kennzeichnung von bestimmten Geländepunkte eingesetzt.</German>
+            </Key>
+            <Key ID="STR_mts_items_markerMinesDisplayName">
+                <Original>Marker (Mines)</Original>
+                <German>Markierung (Minen)</German>
+            </Key>
+            <Key ID="STR_mts_items_markerYellowDisplayName">
+                <Original>Marker (Yellow)</Original>
+                <German>Markierung (Gelb)</German>
+            </Key>
+        </Container>
+        <Container name="misc">
+            <Key ID="STR_mts_items_authors">
+                <Original>Timi007, Dan</Original>
+                <German>Timi007, Dan</German>
+            </Key>
+        </Container>
     </Package>
 </Project>

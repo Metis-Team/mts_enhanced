@@ -6,7 +6,7 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        "**/*.pbo": true,
+        "**/*.bisign": true,
         "**/*.exe": true,
         "**/keys": true,
         "**/release": true,
@@ -26,4 +26,10 @@
         ".hemttout/build": true,
         ".hemttout/release": true,
     },
+    "git.branchProtection": [
+        "master",
+        "release"
+    ],
+    "sqf.enableACE3": true,
+    "sqf.enableCBA": true,
 }

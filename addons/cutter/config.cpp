@@ -4,7 +4,9 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {
+            QGVAR(folding_saw)
+        };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"mts_main", "ace_common", "ace_interact_menu"};
         author = ECSTRING(main,authors);
