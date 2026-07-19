@@ -28,7 +28,7 @@ private _createdMarkers = [];
 {
     _x params ["_pos", "_config", "_scale", "_alpha"];
 
-    private _marker = [_pos, 0, true, _config, _scale, _alpha] call mts_markers_fnc_createMarker;
+    private _marker = [_pos, -10, true, _config, _scale, _alpha] call mts_markers_fnc_createMarker;
     _createdMarkers pushBack _marker;
 } forEach _markers;
 
