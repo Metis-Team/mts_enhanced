@@ -1,6 +1,7 @@
 PREP(addOpenMapAction);
 PREP(addPickupMapAction);
 PREP(addPlaceMapAction);
+PREP(getPlaceMapOnVehicleAction);
 PREP(getPlaceMapOnVehicleParams);
 PREP(hasMap);
 PREP(openMap);
