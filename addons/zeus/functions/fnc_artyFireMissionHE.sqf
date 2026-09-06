@@ -62,7 +62,7 @@
                 [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, true, _duration, _timeOnTarget]
             };
             case 2: {
-                _shotsPerUnit = ceil ((_duration / _delay) / _numberOfUnits);
+                _shotsPerUnit = ceil (_duration / _delay);
                 [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, false, _delay, _timeOnTarget]
             };
         };
