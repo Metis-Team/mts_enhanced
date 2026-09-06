@@ -21,7 +21,7 @@
         params["", ["_vehicle", objNull, [objNull]]];
 
         if (!(_vehicle isKindOf "LandVehicle") || {isNull _vehicle}) exitWith {
-            [LLSTRING(unflipVehicle_noVeh)] call zen_common_fnc_showMessage;
+            [LLSTRING(noVehicle)] call zen_common_fnc_showMessage;
         };
 
         _vehicle setVectorUp (surfaceNormal (getPos _vehicle));

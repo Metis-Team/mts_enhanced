@@ -1,7 +1,7 @@
 PREP(addACEUnconsciousIconDrawEH);
 PREP(artyFireMissionHE);
-PREP(artyFireMissionSMOKE);
 PREP(artyFireMissionILLUM);
+PREP(artyFireMissionSMOKE);
 PREP(calcArtyShellQueue);
 PREP(compileArtilleryShells);
 PREP(execFireMission);
@@ -10,6 +10,8 @@ PREP(getTargetKnowledge);
 PREP(initFireMission);
 PREP(makeIntoSuicideDrone);
 PREP(moduleArtillery);
+PREP(moduleDestroyRandomTrack);
+PREP(moduleRemoveSmokeGrenades);
 PREP(moduleSuicideDrone);
 PREP(moduleTargetKnowledge);
 PREP(moduleUnflipVehicle);
