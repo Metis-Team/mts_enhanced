@@ -36,7 +36,7 @@
                 [LLSTRING(artillery_durationWithAmmo), LLSTRING(artillery_durationWithAmmo_tooltip)],
                 [LLSTRING(artillery_durationWithDelay), LLSTRING(artillery_durationWithDelay_tooltip)]
             ], 0]],
-        ["EDIT", LLSTRING(artillery_delay), ["1", FUNC(positiveNumber)]],
+        ["EDIT", LLSTRING(artillery_delay), ["6", FUNC(positiveNumber)]],
         ["EDIT", LLSTRING(artillery_duration), [DEFAULT_DURATION, FUNC(positiveNumber)]],
         ["EDIT", LLSTRING(artillery_timeOnTarget), [DEFAULT_TOT, FUNC(positiveNumber)]]
     ],
