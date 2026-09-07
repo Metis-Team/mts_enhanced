@@ -33,11 +33,11 @@ class GVAR(formatters) {
     // Formats direction: _this is direction in the range 0..360 degrees.
     class Azimuth {
         class Degree {
-            formatter = QUOTE(FORMAT_1('%1°',_this toFixed 0));
+            formatter = QUOTE(FORMAT_1('%1°',(round _this) % 360));
             priority = 100;
         };
         class NATOMil {
-            formatter = QUOTE(FORMAT_1('%1 mil',(_this * 17.7778) toFixed 0));
+            formatter = QUOTE(FORMAT_1('%1 mil',(round (_this * 17.7778)) % 6400));
             priority = 90;
         };
     };

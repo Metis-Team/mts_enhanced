@@ -36,7 +36,7 @@
                 [LLSTRING(artillery_durationWithAmmo), LLSTRING(artillery_durationWithAmmo_tooltip)],
                 [LLSTRING(artillery_durationWithDelay), LLSTRING(artillery_durationWithDelay_tooltip)]
             ], 0]],
-        ["EDIT", LLSTRING(artillery_delay), ["1", FUNC(positiveNumber)]],
+        ["EDIT", LLSTRING(artillery_delay), ["6", FUNC(positiveNumber)]],
         ["EDIT", LLSTRING(artillery_duration), [DEFAULT_DURATION, FUNC(positiveNumber)]],
         ["EDIT", LLSTRING(artillery_timeOnTarget), [DEFAULT_TOT, FUNC(positiveNumber)]]
     ],
@@ -62,7 +62,7 @@
                 [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, true, _duration, _timeOnTarget]
             };
             case 2: {
-                _shotsPerUnit = ceil ((_duration / _delay) / _numberOfUnits);
+                _shotsPerUnit = ceil (_duration / _delay);
                 [_targetArea, _ammoType, _detonationHight, _numberOfUnits, _shotsPerUnit, false, _delay, _timeOnTarget]
             };
         };

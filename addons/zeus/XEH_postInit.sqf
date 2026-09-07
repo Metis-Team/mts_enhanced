@@ -11,6 +11,8 @@
     {_x forgetTarget _target} forEach _toUnits;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     GVAR(nextTargetID) = 1;
 
@@ -56,5 +58,7 @@ if (hasInterface) then {
     call FUNC(moduleUnflipVehicle);
     call FUNC(moduleTargetKnowledge);
     call FUNC(moduleSuicideDrone);
+    call FUNC(moduleDestroyRandomTrack);
+    call FUNC(moduleRemoveSmokeGrenades);
 };
 

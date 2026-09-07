@@ -6,11 +6,6 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-ADDON = true;
-
-#include "initSettings.hpp"
-#include "initKeybinds.hpp"
-
 // Cache charges for suicide drone
 private _chargeCache = +(uiNamespace getVariable "zen_modules_minesCache");
 _chargeCache params ["_configNames", "_displayNames"];
@@ -31,3 +26,16 @@ GVAR(mortarShellsCache) = +(uiNamespace getVariable [QGVAR(mortarShellsCache), [
 
 GVAR(artilleryShellsNameCache) = (GVAR(howitzerShellsCache) apply {_x select [1, 3]}) + (GVAR(mortarShellsCache) apply {_x select [1, 3]});
 GVAR(artilleryShellsAmmoCache) = (GVAR(howitzerShellsCache) apply {_x select 2}) + (GVAR(mortarShellsCache) apply {_x select 2});
+
+private _cfgMagazines = configFile >> "CfgMagazines";
+private _cfgAmmo = configFile >> "CfgAmmo";
+GVAR(grenadesAll) = compatibleMagazines "throw";
+GVAR(grenadesSmoke) = GVAR(grenadesAll) select {
+    getText (_cfgMagazines >> _x >> "nameSound") == "smokeshell" &&
+    {"smoke" in toLower (getText (_cfgAmmo >> getText (_cfgMagazines >> _x >> "ammo") >> "effectsSmoke"))}
+};
+
+#include "initSettings.hpp"
+#include "initKeybinds.hpp"
+
+ADDON = true;

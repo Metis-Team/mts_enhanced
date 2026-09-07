@@ -317,10 +317,30 @@
                 <German>Zeitpunkt für Feuerbeginn [s]</German>
             </Key>
         </Container>
+        <Container name="destroyRandomTrack">
+            <Key ID="STR_mts_zeus_destroyRandomTrack">
+                <Original>Destroy random track</Original>
+                <German>Zufällige Kette werfen</German>
+            </Key>
+        </Container>
         <Container name="misc">
+            <Key ID="STR_mts_zeus_noVehicle">
+                <Original>No vehicle selected!</Original>
+                <German>Kein Fahrzeug ausgewählt!</German>
+            </Key>
             <Key ID="STR_mts_zeus_subCategory">
                 <Original>Zeus</Original>
                 <German>Zeus</German>
+            </Key>
+        </Container>
+        <Container name="removeSmokeGrenades">
+            <Key ID="STR_mts_zeus_removeSmokeGrenades">
+                <Original>Remove smoke grenades</Original>
+                <German>Entferne Rauchgranaten</German>
+            </Key>
+            <Key ID="STR_mts_zeus_removeSmokeGrenades_side_tooltip">
+                <Original>Remove smoke grenades for all units of the selected side.</Original>
+                <German>Entferne Rauchgranaten von allen Einheiten der ausgewählten Seite.</German>
             </Key>
         </Container>
         <Container name="suicideDrone">
@@ -353,10 +373,6 @@
             <Key ID="STR_mts_zeus_unflipVehicle">
                 <Original>Unflip vehicle</Original>
                 <German>Fahrzeug umdrehen</German>
-            </Key>
-            <Key ID="STR_mts_zeus_unflipVehicle_noVeh">
-                <Original>No vehicle selected!</Original>
-                <German>Kein Fahrzeug ausgewählt!</German>
             </Key>
         </Container>
     </Package>

@@ -40,7 +40,6 @@
                 ["SLIDER", LLSTRING(artillery_areaAngle), [0, 6399, 0, 0]]
             ],
             {
-                private "_position";
                 params ["_dialogData", "_modulePosition"];
                 _dialogData params ["_ammoType", "_positionType", "_mapPositionX", "_mapPositionY", "_area", "_areaAngle"];
 
